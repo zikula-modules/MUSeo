@@ -1,0 +1,3 @@
+{* purpose of this template: modules display json view in admin area *}
+{museoTemplateHeaders contentType='application/json'}
+{$module->toJson()}

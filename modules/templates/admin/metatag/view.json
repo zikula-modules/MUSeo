@@ -1,0 +1,8 @@
+{* purpose of this template: metatags view json view in admin area *}
+{museoTemplateHeaders contentType='application/json'}
+[
+{foreach item='item' from=$items name='metatags'}
+    {if not $smarty.foreach.metatags.first},{/if}
+    {$item->toJson()}
+{/foreach}
+]

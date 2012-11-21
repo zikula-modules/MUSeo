@@ -1,0 +1,8 @@
+{* purpose of this template: modules view json view in admin area *}
+{museoTemplateHeaders contentType='application/json'}
+[
+{foreach item='item' from=$items name='modules'}
+    {if not $smarty.foreach.modules.first},{/if}
+    {$item->toJson()}
+{/foreach}
+]

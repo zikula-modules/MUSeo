@@ -44,7 +44,7 @@
             {museoValidationError id='controllerForSingleObject' class='required'}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the paremeter for objects; for example "ot"! If you not enter the parameter "id" will be taken!' assign='toolTip'}
+            {gt text='Enter the paremeter for objects; for example "ot! If you not enter the parameter "id" will be taken!' assign='toolTip'}
             {formlabel for='parameterForObjects' __text='Parameter for objects' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='module' id='parameterForObjects' mandatory=false readOnly=false __title='Enter the parameter for objects of the module' textMode='singleline' maxLength=50 cssClass=''}
         </div>

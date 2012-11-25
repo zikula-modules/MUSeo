@@ -1,9 +1,0 @@
-{* purpose of this template: modules xml inclusion template in admin area *}
-<module id="{$item.id}" createdon="{$item.createdDate|dateformat}" updatedon="{$item.updatedDate|dateformat}">
-    <id>{$item.id}</id>
-    <name><![CDATA[{$item.name}]]></name>
-    <controllerForSingleObject><![CDATA[{$item.controllerForSingleObject}]]></controllerForSingleObject>
-    <parameterForObjects><![CDATA[{$item.parameterForObjects}]]></parameterForObjects>
-    <objectsOfModule><![CDATA[{$item.objectsOfModule}]]></objectsOfModule>
-    <nameOfIdentifier><![CDATA[{$item.nameOfIdentifier}]]></nameOfIdentifier>
-</module>

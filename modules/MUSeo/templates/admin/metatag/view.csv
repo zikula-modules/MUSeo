@@ -1,0 +1,5 @@
+{* purpose of this template: metatags view csv view in admin area *}
+{museoTemplateHeaders contentType='text/comma-separated-values; charset=iso-8859-15' asAttachment=true filename='Metatags.csv'}
+"{gt text='Title of entity'}";"{gt text='Title'}";"{gt text='Description'}";"{gt text='Keywords'}";"{gt text='The module'}";"{gt text='Function of module'}";"{gt text='Object of module'}";"{gt text='Name of identifier'}";"{gt text='Id of object'}";"{gt text='String of object'}";"{gt text='Extra infos'}"{foreach item='metatag' from=$items}
+"{$metatag.titleOfEntity|replace:"\"":""}";"{$metatag.title|replace:"\"":""}";"{$metatag.description|replace:"\"":""}";"{$metatag.keywords|replace:"\"":""}";"{$metatag.theModule|replace:"\"":""}";"{$metatag.functionOfModule|replace:"\"":""}";"{$metatag.objectOfModule|replace:"\"":""}";"{$metatag.nameOfIdentifier|replace:"\"":""}";"{$metatag.idOfObject|replace:"\"":""}";"{$metatag.stringOfObject|replace:"\"":""}";"{$metatag.extraInfos|replace:"\"":""}"{/foreach}
+

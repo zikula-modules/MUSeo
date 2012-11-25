@@ -5,5 +5,5 @@ INSTALLATIONSANLEITUNG
 
 Bei Fragen und anderen Anmerkungen besuchen Sie unsere Homepage http://webdesign-in-bremen.com.
 
-Michael ueberschaer (konakt@webdesign-in-bremen.com)
+Michael Ueberschaer (kontakt@webdesign-in-bremen.com)
 http://webdesign-in-bremen.com

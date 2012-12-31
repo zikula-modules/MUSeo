@@ -21,7 +21,7 @@ class MUSeo_Version extends MUSeo_Base_Version
     {
         $meta = array();
         // the current module version
-        $meta['version'] = '1.0.0';
+        $meta['version'] = '1.0.1';
         // the displayed name of the module
         $meta['displayname'] = $this->__('MUSeo');
         // the module description

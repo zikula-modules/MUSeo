@@ -16,5 +16,29 @@
  */
 class MUSeo_Installer extends MUSeo_Base_Installer
 {
-    // feel free to extend the installer here
+    /**
+     * Upgrade the MUSeo application from an older version.
+     *
+     * If the upgrade fails at some point, it returns the last upgraded version.
+     *
+     * @param integer $oldversion Version to upgrade from.
+     *
+     * @return boolean True on success, false otherwise.
+     */
+    public function upgrade($oldversion)
+    {
+    
+        // Upgrade dependent on old version number
+        switch ($oldversion) {
+            case '1.0.0':
+                // nothing to do
+            case '1.0.1':
+            	// further upgrade
+
+        }
+
+
+        // update successful
+        return true;
+    }
 }

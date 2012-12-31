@@ -12,15 +12,15 @@
  */
 
 /**
- * This is the HandleModules api helper class.
+ * This is the Handlemodules api helper class.
  */
-class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
+class MUSeo_Api_Handlemodules extends MUSeo_Api_Base_Handlemodules
 {
 	/**
 	 *
 	 * Enter description here ...
 	 */
-	public function checkModules()
+	public static function checkModules()
 	{
 		$modules = ModUtil::getVar('MUSeo', 'modules');
 		$modules = explode(',', $modules);
@@ -31,7 +31,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 	/**
 	 *
 	 */
-	public function setModuleMetaTags($modname, $modfunc = 'main')
+	public static function setModuleMetaTags($modname, $modfunc = 'main')
 	{
 		$metatagrepository = MUSeo_Util_Model::getMetatagRepository();
 		$where = 'tbl.theModule = \'' . DataUtil::formatForStore($modname) . '\'';

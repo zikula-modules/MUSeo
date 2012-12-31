@@ -12,9 +12,9 @@
  */
 
 /**
- * This is the HandleModules api helper class.
+ * This is the Handlemodules api helper class.
  */
-class MUSeo_Api_Base_HandleModules extends Zikula_AbstractApi
+class MUSeo_Api_Base_Handlemodules extends Zikula_AbstractApi
 {
     /**
      * get available HandleModules panel links

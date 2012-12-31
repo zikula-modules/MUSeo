@@ -47,54 +47,61 @@ class MUSeo_Listener_ModuleDispatch
 	 */
 	public static function postExecute(Zikula_Event $event)
 	{
-		// we look if a module is active for MUSeo
-		$modules = MUSeo_Api_HandleModules::checkModules();
+		// we get the module args for the event
+		$modargs = $event->getArgs();
+			
+		if ($modargs['modname'] != 'Blocks' && $modargs['modname'] != 'Admin') {
 
-		// if we found a module we can do more
-		if (is_array($modules) && count($modules) > 0) {
+			// we look if a module is active for MUSeo
+			$modules = MUSeo_Api_Handlemodules::checkModules();
 
-			// we get the module args for the event
-			$modargs = $event->getArgs();
-
-			// we get the allowed controllers
-			$controllers = ModUtil::getVar('MUSeo', 'controllers');
-			$controllers = explode(',', $controllers);
-			if (in_array($modargs['modfunc'][1], $controllers)) {
-				//LogUtil::registerStatus($modargs['modfunc'][1]);
+			// if we found a module we can do more
+			if (is_array($modules) && count($modules) > 0) {
 					
-				if ($modargs['type'] == 'admin') {
-					//LogUtil::registerStatus('Admin');
-				}
-				else {
-					//LogUtil::registerStatus('User');
-					// we look for not api functions
-					if ($modargs['api'] != 1) {
-						//LogUtil::registerStatus('keine Api');
+				// we get the allowed controllers
+				$controllers = ModUtil::getVar('MUSeo', 'controllers');
+				$controllers = explode(',', $controllers);
+				if (in_array($modargs['modfunc'][1], $controllers)) {
+					//LogUtil::registerStatus($modargs['modfunc'][1]);
+						
+					if ($modargs['type'] == 'admin') {
+						// admin call nothing to do
+					}
+					else {
+						//LogUtil::registerStatus('User');
+						// we look for not api functions
+						if ($modargs['api'] != 1) {
+							//LogUtil::registerStatus('keine Api');
 
-						// we look if there is an entry for the module with the relevant name and func
-						$metatagrepository = MUSeo_Util_Model::getMetatagRepository();
-						$where = 'tbl.theModule = \'' . DataUtil::formatForStore($modargs['modname']) . '\'';
-						$where .= ' AND ';
-						$where .= 'tbl.functionOfModule = \'' . DataUtil::formatForStore($modargs['modfunc'][1]) . '\'';
-						$count = $metatagrepository->selectCount($where);
+							// we look if there is an entry for the module with the relevant name and func
+							$metatagrepository = MUSeo_Util_Model::getMetatagRepository();
+							$where = 'tbl.theModule = \'' . DataUtil::formatForStore($modargs['modname']) . '\'';
+							$where .= ' AND ';
+							$where .= 'tbl.functionOfModule = \'' . DataUtil::formatForStore($modargs['modfunc'][1]) . '\'';
+							$count = $metatagrepository->selectCount($where);
 
-						if ($count >= 1) {
-							// we call the method to set the metatags if there is an entry
-							MUSeo_Api_HandleModules::setModuleMetaTags($modargs['modname'], $modargs['modfunc'][1]);
+							if ($count >= 1) {
+								// we call the method to set the metatags if there is an entry
+								MUSeo_Api_Handlemodules::setModuleMetaTags($modargs['modname'], $modargs['modfunc'][1]);
+							}
+						}
+						// api function - nothing to do
+						else {
+							//LogUtil::registerStatus('Api');
 						}
 					}
-					// api function - nothing to do
-					else {
-						//LogUtil::registerStatus('Api');
-					}
+				}
+				//not allowed controller - nothing to do
+				else {
+
 				}
 			}
-			//not allowed controller - nothing to do
+			// no active modules, nothing to do
 			else {
-
+					
 			}
 		}
-		// no active modules, nothing to do
+		// calling module blocks nothing to
 		else {
 
 		}

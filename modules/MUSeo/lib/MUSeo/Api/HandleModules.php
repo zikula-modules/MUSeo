@@ -12,9 +12,9 @@
  */
 
 /**
- * This is the Handlemodules api helper class.
+ * This is the HandleModules api helper class.
  */
-class MUSeo_Api_Handlemodules extends MUSeo_Api_Base_Handlemodules
+class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 {
 	/**
 	 *

@@ -53,7 +53,7 @@ class MUSeo_Listener_ModuleDispatch
 		if ($modargs['modname'] != 'Blocks' && $modargs['modname'] != 'Admin') {
 
 			// we look if a module is active for MUSeo
-			$modules = MUSeo_Api_Handlemodules::checkModules();
+			$modules = MUSeo_Api_HandleModules::checkModules();
 
 			// if we found a module we can do more
 			if (is_array($modules) && count($modules) > 0) {

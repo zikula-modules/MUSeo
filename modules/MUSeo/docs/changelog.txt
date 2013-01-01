@@ -1,6 +1,6 @@
 CHANGELOG
----------
+=========
 
-Changes in MUSeo 1.0.1
+1.0.1
 
- #2 Editing of Blocks is working now by MUSeo activated
+fixed #2 Editing of Blocks is working now by MUSeo activated

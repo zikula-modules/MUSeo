@@ -98,7 +98,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 				PageUtil::setVar('description', $entities[0]['description']);
 			}
 			if ($entities[0]['keywords']) {
-				PageUtil::setVar('title', $entities[0]['keywords']);
+				PageUtil::setVar('keywords', $entities[0]['keywords']);
 			}
 
 		}

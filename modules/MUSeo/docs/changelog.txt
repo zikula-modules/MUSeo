@@ -4,3 +4,9 @@ CHANGELOG
 1.0.1
 
 fixed #2 Editing of Blocks is working now by MUSeo activated
+
+
+
+some fixes
+
+Now the keywords will be added to the keywords tag instead of to the title tag.

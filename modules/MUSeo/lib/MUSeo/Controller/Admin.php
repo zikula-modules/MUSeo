@@ -17,5 +17,16 @@
  */
 class MUSeo_Controller_Admin extends MUSeo_Controller_Base_Admin
 {
-    // feel free to add your own controller methods here
+    /**
+     * Post initialise.
+     *
+     * Run after construction.
+     *
+     * @return void
+     */
+    protected function postInitialize()
+    {
+        // Set caching to true by default.
+        $this->view->setCaching(Zikula_View::CACHE_DISABLED);
+    }
 }

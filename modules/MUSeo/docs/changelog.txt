@@ -10,3 +10,5 @@ fixed #2 Editing of Blocks is working now by MUSeo activated
 some fixes
 
 Now the keywords will be added to the keywords tag instead of to the title tag.
+
+Now the pagination in admin view templates is working correctly.

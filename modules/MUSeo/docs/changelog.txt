@@ -5,6 +5,8 @@ CHANGELOG
 
 fixed #2 Editing of Blocks is working now by MUSeo activated
 
+#4 pot file generated
+
 
 
 some fixes

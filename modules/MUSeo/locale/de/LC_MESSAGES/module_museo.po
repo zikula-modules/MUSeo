@@ -1,0 +1,894 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MUSeo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-26 11:03+0000\n"
+"PO-Revision-Date: 2013-05-26 15:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: templates/plugins/function.museoValidationError.php:36
+msgid "This is a required field."
+msgstr "Dies ist ein Pflichtfeld."
+
+#: templates/plugins/function.museoValidationError.php:37
+msgid "Please enter a valid number in this field."
+msgstr "Bitte gib eine gültige Zahl ein."
+
+#: templates/plugins/function.museoValidationError.php:38
+msgid ""
+"Please use numbers only in this field. please avoid spaces or other "
+"characters such as dots or commas."
+msgstr ""
+"Bitte nutze nur Zahlen. Vermeide bitte Leerzeichen und andere Sonderzeichen "
+"wie Punkte oder Kommata."
+
+#: templates/plugins/function.museoValidationError.php:39
+msgid "Please use letters only (a-z) in this field."
+msgstr "Bitte nutze nur Buchstaben (a-z)."
+
+#: templates/plugins/function.museoValidationError.php:40
+msgid ""
+"Please use only letters (a-z) or numbers (0-9) only in this field. No spaces "
+"or other characters are allowed."
+msgstr ""
+"Bitte nutze nur Buchstaben (a-z) oder Zahlen (0-9). Keine Leerzeichen oder "
+"andere Sonderzeichen sind erlaubt."
+
+#: templates/plugins/function.museoValidationError.php:41
+msgid "Please enter a valid date."
+msgstr "Bitte gib ein gültiges Datum ein."
+
+#: templates/plugins/function.museoValidationError.php:42
+msgid "Please enter a valid email address. For example yourname@example.com ."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:43
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:44
+msgid ""
+"Please use this date format: dd/mm/yyyy. For example 17/03/2010 for the 17th "
+"of March, 2010."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:45
+msgid "Please enter a valid $ amount. For example $100.00 ."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:46
+msgid "Please make a selection."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:47
+msgid "Please select one of the above options."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:50
+msgid "This value must not contain spaces."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:51
+msgid "Please select a valid html colour code."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:52
+#: templates/plugins/function.museoValidationError.php:54
+#: templates/plugins/function.museoValidationError.php:56
+msgid "Please select a value in the past."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:53
+#: templates/plugins/function.museoValidationError.php:55
+#: templates/plugins/function.museoValidationError.php:57
+msgid "Please select a value in the future."
+msgstr ""
+
+#: templates/plugins/function.museoValidationError.php:58
+msgid "This value is already assigned, but must be unique. Please change it."
+msgstr ""
+
+#: templates/plugins/function.museoSelectorTemplates.php:29
+#: templates/block/itemlist_modify.tpl:28
+msgid "Only item titles"
+msgstr ""
+
+#: templates/plugins/function.museoSelectorTemplates.php:30
+#: templates/block/itemlist_modify.tpl:29
+msgid "With description"
+msgstr ""
+
+#: templates/plugins/function.museoSelectorObjectTypes.php:29
+#: lib/MUSeo/Api/Base/Admin.php:36 templates/block/itemlist_modify.tpl:6
+msgid "Metatags"
+msgstr "Metatags"
+
+#: templates/plugins/function.museoSelectorObjectTypes.php:30
+#: lib/MUSeo/Api/Base/Admin.php:41 templates/admin/config.tpl:21
+#: templates/block/itemlist_modify.tpl:7
+msgid "Modules"
+msgstr "Module"
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:278
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:307
+#: lib/MUSeo/Controller/Base/Admin.php:182
+#: lib/MUSeo/Controller/Base/Admin.php:260
+msgid "No such item."
+msgstr "Kein solches Element."
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:533
+msgid "Done! Item created."
+msgstr "Erledigt! Element erstellt."
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:535
+msgid "Error! Creation attempt failed."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:540
+msgid "Done! Item updated."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:542
+msgid "Error! Update attempt failed."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:547
+#: lib/MUSeo/Controller/Base/Admin.php:270
+msgid "Done! Item deleted."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Edit.php:549
+msgid "Error! Deletion attempt failed."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Config.php:107
+msgid "Error! Failed to set configuration variables."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Base/Config.php:110
+msgid "Done! Module configuration updated."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Metatag/Base/Edit.php:137
+msgid "Done! Metatag created."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Metatag/Base/Edit.php:140
+msgid "Done! Metatag updated."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Metatag/Base/Edit.php:143
+msgid "Done! Metatag deleted."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Module/Base/Edit.php:137
+msgid "Done! Module created."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Module/Base/Edit.php:140
+msgid "Done! Module updated."
+msgstr ""
+
+#: lib/MUSeo/Form/Handler/Admin/Module/Base/Edit.php:143
+msgid "Done! Module deleted."
+msgstr ""
+
+#: lib/MUSeo/Form/Plugin/ColourInput.php:95
+msgid "Close"
+msgstr "Schliessen"
+
+#: lib/MUSeo/Form/Plugin/ColourInput.php:139
+msgid "Error! Invalid colour."
+msgstr "Fehler! Ungültige Farbe."
+
+#: lib/MUSeo/ContentType/Base/ItemList.php:38
+#: lib/MUSeo/Block/Base/ItemList.php:143
+msgid "MUSeo items"
+msgstr ""
+
+#: lib/MUSeo/ContentType/Base/ItemList.php:44
+msgid "Display MUSeo items."
+msgstr ""
+
+#: lib/MUSeo/Base/Installer.php:31 lib/MUSeo/Base/Installer.php:104
+msgid "Doctrine Exception: "
+msgstr ""
+
+#: lib/MUSeo/Base/Installer.php:33
+#, php-format
+msgid "An error was encountered while creating the tables for the %s module."
+msgstr ""
+
+#: lib/MUSeo/Base/Installer.php:97
+#, php-format
+msgid ""
+"An error was encountered while removing stored object workflows for the %s "
+"module."
+msgstr ""
+
+#: lib/MUSeo/Base/Installer.php:106
+#, php-format
+msgid "An error was encountered while dropping the tables for the %s module."
+msgstr ""
+
+#: lib/MUSeo/Base/Version.php:25 lib/MUSeo/Version.php:26
+msgid "MUSeo"
+msgstr ""
+
+#: lib/MUSeo/Base/Version.php:27
+msgid "MUSeo module generated by ModuleStudio 0.5.4."
+msgstr ""
+
+#. ! url version of name, should be in lowercase without space
+#: lib/MUSeo/Base/Version.php:29 lib/MUSeo/Version.php:30
+msgid "museo"
+msgstr ""
+
+#: lib/MUSeo/Base/Version.php:66
+msgid "museo Metatags Display Hooks"
+msgstr ""
+
+#: lib/MUSeo/Base/Version.php:83
+msgid "museo Metatags Filter Hooks"
+msgstr ""
+
+#: lib/MUSeo/Base/Version.php:88
+msgid "museo Modules Display Hooks"
+msgstr ""
+
+#: lib/MUSeo/Base/Version.php:105
+msgid "museo Modules Filter Hooks"
+msgstr ""
+
+#: lib/MUSeo/Block/Base/ItemList.php:37
+msgid ""
+"Notice: This block will not be displayed until you activate the MUSeo module."
+msgstr ""
+
+#: lib/MUSeo/Block/Base/ItemList.php:41
+msgid "Item list"
+msgstr ""
+
+#: lib/MUSeo/Block/Base/ItemList.php:42
+msgid "Show a list of MUSeo items based on different criteria."
+msgstr ""
+
+#: lib/MUSeo/Version.php:28
+msgid "MUSeo - a module to handle SEO better."
+msgstr ""
+
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:34
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:86
+#: lib/MUSeo/Entity/Validator/Base/Module.php:34
+#, php-format
+msgid "Error! Field value may only contain digits (%s)."
+msgstr ""
+
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:38
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:42
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:50
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:54
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:58
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:62
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:70
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:78
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:82
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:90
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:94
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:98
+#: lib/MUSeo/Entity/Validator/Base/Module.php:38
+#: lib/MUSeo/Entity/Validator/Base/Module.php:42
+#: lib/MUSeo/Entity/Validator/Base/Module.php:50
+#: lib/MUSeo/Entity/Validator/Base/Module.php:54
+#: lib/MUSeo/Entity/Validator/Base/Module.php:62
+#: lib/MUSeo/Entity/Validator/Base/Module.php:66
+#: lib/MUSeo/Entity/Validator/Base/Module.php:74
+#, php-format
+msgid "Error! Length of field value must not be higher than %2$s (%1$s)."
+msgstr ""
+
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:46
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:66
+#: lib/MUSeo/Entity/Validator/Base/Metatag.php:74
+#: lib/MUSeo/Entity/Validator/Base/Module.php:46
+#: lib/MUSeo/Entity/Validator/Base/Module.php:58
+#: lib/MUSeo/Entity/Validator/Base/Module.php:70
+#, php-format
+msgid "Error! Field value must not be empty (%s)."
+msgstr ""
+
+#: lib/MUSeo/Entity/Validator/Base/Module.php:78
+#, php-format
+msgid "The name %s is already assigned. Please choose another name."
+msgstr ""
+
+#: lib/MUSeo/Entity/Base/Metatag.php:736 lib/MUSeo/Entity/Base/Module.php:581
+#: templates/admin/module/display.tpl:8 templates/admin/metatag/display.tpl:8
+msgid "Details"
+msgstr ""
+
+#: lib/MUSeo/Entity/Base/Metatag.php:746 lib/MUSeo/Entity/Base/Metatag.php:747
+#: lib/MUSeo/Entity/Base/Module.php:591 lib/MUSeo/Entity/Base/Module.php:592
+msgid "Edit"
+msgstr ""
+
+#: lib/MUSeo/Entity/Base/Metatag.php:752 lib/MUSeo/Entity/Base/Module.php:597
+msgid "Reuse for new item"
+msgstr ""
+
+#: lib/MUSeo/Entity/Base/Metatag.php:753 lib/MUSeo/Entity/Base/Module.php:598
+msgid "Reuse"
+msgstr ""
+
+#: lib/MUSeo/Entity/Base/Metatag.php:760 lib/MUSeo/Entity/Base/Metatag.php:761
+#: lib/MUSeo/Entity/Base/Module.php:605 lib/MUSeo/Entity/Base/Module.php:606
+#: templates/admin/module/delete.tpl:7 templates/admin/module/delete.tpl:20
+#: templates/admin/metatag/delete.tpl:7 templates/admin/metatag/delete.tpl:20
+msgid "Delete"
+msgstr ""
+
+#: lib/MUSeo/Entity/Base/Metatag.php:769 lib/MUSeo/Entity/Base/Metatag.php:770
+#: lib/MUSeo/Entity/Base/Module.php:614 lib/MUSeo/Entity/Base/Module.php:615
+msgid "Back to overview"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Mailz.php:31
+msgid "3 newest metatags"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Mailz.php:32
+msgid "A list of the three newest metatags."
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Mailz.php:37
+msgid "3 random metatags"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Mailz.php:38
+msgid "A list of three random metatags."
+msgstr ""
+
+#: lib/MUSeo/Api/Base/User.php:30
+msgid "Backend"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/User.php:31
+msgid "Switch to administration area."
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Admin.php:30
+msgid "Frontend"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Admin.php:31
+msgid "Switch to user area."
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Admin.php:37 templates/admin/metatag/view.tpl:4
+msgid "Metatag list"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Admin.php:42 templates/admin/module/view.tpl:4
+msgid "Module list"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Admin.php:46
+msgid "Configuration"
+msgstr ""
+
+#: lib/MUSeo/Api/Base/Admin.php:47
+msgid "Manage settings for this application"
+msgstr ""
+
+#: lib/MUSeo/Controller/Base/Admin.php:179
+#: lib/MUSeo/Controller/Base/Admin.php:257
+msgid "Error! Invalid identifier received."
+msgstr ""
+
+#: lib/MUSeo/Controller/Base/Ajax.php:63 lib/MUSeo/Controller/Base/Ajax.php:74
+msgid "Error: invalid input."
+msgstr ""
+
+#: templates/admin/config.tpl:4 templates/admin/config.tpl:7
+msgid "Settings"
+msgstr ""
+
+#: templates/admin/config.tpl:18
+msgid "Here you can manage all basic settings for this application."
+msgstr ""
+
+#: templates/admin/config.tpl:22 templates/admin/config.tpl:26
+msgid "Enter this setting."
+msgstr ""
+
+#: templates/admin/config.tpl:25
+msgid "Controllers"
+msgstr ""
+
+#: templates/admin/config.tpl:31
+msgid "Update configuration"
+msgstr ""
+
+#: templates/admin/config.tpl:32 templates/admin/module/edit.tpl:108
+#: templates/admin/module/delete.tpl:22 templates/admin/metatag/edit.tpl:135
+#: templates/admin/metatag/delete.tpl:22
+msgid "Cancel"
+msgstr ""
+
+#: templates/admin/module/display.tpl:4
+msgid "Module"
+msgstr ""
+
+#: templates/admin/module/display.tpl:14 templates/admin/module/view.tpl:49
+#: templates/admin/module/edit.tpl:37 templates/admin/module/view.csv:3
+msgid "Controller for view"
+msgstr ""
+
+#: templates/admin/module/display.tpl:16 templates/admin/module/view.tpl:52
+#: templates/admin/module/edit.tpl:42 templates/admin/module/view.csv:3
+msgid "Controller for single object"
+msgstr ""
+
+#: templates/admin/module/display.tpl:18 templates/admin/module/view.tpl:55
+#: templates/admin/module/edit.tpl:48 templates/admin/module/view.csv:3
+msgid "Parameter for objects"
+msgstr ""
+
+#: templates/admin/module/display.tpl:20 templates/admin/module/view.tpl:58
+#: templates/admin/module/edit.tpl:53 templates/admin/module/view.csv:3
+#: templates/admin/metatag/display.tpl:26 templates/admin/metatag/view.tpl:72
+#: templates/admin/metatag/edit.tpl:69 templates/admin/metatag/view.csv:3
+msgid "Name of identifier"
+msgstr ""
+
+#: templates/admin/module/display.tpl:22 templates/admin/module/view.tpl:61
+#: templates/admin/module/edit.tpl:58 templates/admin/module/view.csv:3
+msgid "Extra identifier"
+msgstr ""
+
+#: templates/admin/module/view.rss:11 templates/admin/module/view.atom:4
+msgid "Latest modules"
+msgstr ""
+
+#: templates/admin/module/view.rss:12 templates/admin/module/view.atom:5
+msgid "A direct feed showing the list of modules"
+msgstr ""
+
+#: templates/admin/module/include_displayItemListMany.tpl:10
+#: templates/admin/module/include_displayItemListOne.tpl:7
+#: templates/admin/metatag/include_displayItemListMany.tpl:10
+#: templates/admin/metatag/include_displayItemListOne.tpl:7
+msgid "Open quick view window"
+msgstr ""
+
+#: templates/admin/module/include_displayItemListMany.tpl:11
+#: templates/admin/module/include_displayItemListOne.tpl:8
+#: templates/admin/metatag/include_displayItemListMany.tpl:11
+#: templates/admin/metatag/include_displayItemListOne.tpl:8
+msgid "Quick view"
+msgstr ""
+
+#: templates/admin/module/view.tpl:13 templates/admin/module/edit.tpl:10
+#: templates/admin/module/edit.tpl:104
+msgid "Create module"
+msgstr ""
+
+#: templates/admin/module/view.tpl:21 templates/admin/metatag/view.tpl:21
+msgid "Back to paginated view"
+msgstr ""
+
+#: templates/admin/module/view.tpl:27 templates/admin/metatag/view.tpl:27
+msgid "Show all entries"
+msgstr ""
+
+#: templates/admin/module/view.tpl:46 templates/admin/module/edit.tpl:30
+#: templates/admin/module/view.csv:3
+msgid "Name"
+msgstr ""
+
+#: templates/admin/module/view.tpl:63 templates/admin/metatag/view.tpl:83
+msgid "Actions"
+msgstr ""
+
+#: templates/admin/module/view.tpl:103
+#: templates/mailz/itemlist_Module_text.tpl:7
+#: templates/mailz/itemlist_Module_html.tpl:11
+msgid "No modules found."
+msgstr ""
+
+#: templates/admin/module/edit.tpl:7 templates/admin/module/edit.tpl:13
+msgid "Edit module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:28 templates/admin/metatag/edit.tpl:28
+msgid "Content"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:31
+msgid "Enter the name of the module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:36
+msgid "Enter the controller for the view of objects; for example \"view\"."
+msgstr ""
+
+#: templates/admin/module/edit.tpl:38
+msgid "Enter the controller for view of the module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:41
+msgid "Select the controller for single entity of this module!"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:43
+msgid "Enter the controller for single object of the module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:47
+msgid ""
+"Enter the paremeter for objects; for example \"ot! If you not enter the "
+"parameter \"id\" will be taken!"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:49
+msgid "Enter the parameter for objects of the module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:52
+msgid "Enter the name of the identifier for this module; for example \"id\"!"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:54
+msgid "Enter the name of identifier of the module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:57
+msgid "Enter other additional identifiers comma seperated!"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:59
+msgid "Enter the extra identifier of the module"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:75 templates/admin/metatag/edit.tpl:102
+msgid "Hooks"
+msgstr "Hooks"
+
+#: templates/admin/module/edit.tpl:87 templates/admin/metatag/edit.tpl:114
+msgid "Return control"
+msgstr "Rückkehrkontrolle"
+
+#: templates/admin/module/edit.tpl:89 templates/admin/metatag/edit.tpl:116
+msgid "Create another item after save"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:98
+msgid "Update module"
+msgstr "Modul aktualisieren"
+
+#: templates/admin/module/edit.tpl:100
+msgid "Really delete this module?"
+msgstr ""
+
+#: templates/admin/module/edit.tpl:101 templates/admin/module/delete.tpl:4
+msgid "Delete module"
+msgstr "Modul löschen"
+
+#: templates/admin/module/edit.tpl:106 templates/admin/metatag/edit.tpl:133
+msgid "OK"
+msgstr "OK"
+
+#: templates/admin/module/delete.tpl:11
+msgid "Do you really want to delete this module ?"
+msgstr "Möchtest Du dieses Modul wirklich löschen?"
+
+#: templates/admin/module/delete.tpl:18 templates/admin/metatag/delete.tpl:18
+msgid "Confirmation prompt"
+msgstr "Sicherheitsabfrage"
+
+#: templates/admin/include_standardfields_edit.tpl:4
+#: templates/admin/include_standardfields_display.tpl:3
+msgid "Creation and update"
+msgstr "Erstellung und Aktualisierung"
+
+#: templates/admin/include_standardfields_edit.tpl:8
+#, php-format
+msgid "Created by %s"
+msgstr "Erstellt von %s"
+
+#: templates/admin/include_standardfields_edit.tpl:9
+#, php-format
+msgid "Created on %s"
+msgstr "Erstellt am %s"
+
+#: templates/admin/include_standardfields_edit.tpl:13
+#, php-format
+msgid "Updated by %s"
+msgstr "Aktualisiert von %s"
+
+#: templates/admin/include_standardfields_edit.tpl:14
+#, php-format
+msgid "Updated on %s"
+msgstr "Aktualisiert am %s"
+
+#: templates/admin/include_standardfields_display.tpl:6
+msgid "Creation"
+msgstr "Erstellung"
+
+#: templates/admin/include_standardfields_display.tpl:17
+#, php-format
+msgid "Created by %1$s on %2$s"
+msgstr ""
+
+#: templates/admin/include_standardfields_display.tpl:20
+msgid "Last update"
+msgstr ""
+
+#: templates/admin/include_standardfields_display.tpl:31
+#, php-format
+msgid "Updated by %1$s on %2$s"
+msgstr "Aktualisiert von %1$s von %2$s"
+
+#: templates/admin/metatag/display.tpl:4
+msgid "Metatag"
+msgstr "Metatag"
+
+#: templates/admin/metatag/display.tpl:14 templates/admin/metatag/view.tpl:54
+#: templates/admin/metatag/edit.tpl:37 templates/admin/metatag/view.csv:3
+msgid "Title"
+msgstr ""
+
+#: templates/admin/metatag/display.tpl:16 templates/admin/metatag/view.tpl:57
+#: templates/admin/metatag/edit.tpl:42 templates/admin/metatag/view.csv:3
+msgid "Description"
+msgstr ""
+
+#: templates/admin/metatag/display.tpl:18 templates/admin/metatag/view.tpl:60
+#: templates/admin/metatag/edit.tpl:47 templates/admin/metatag/view.csv:3
+msgid "Keywords"
+msgstr "Schlüsselwörter"
+
+#: templates/admin/metatag/display.tpl:20 templates/admin/metatag/view.tpl:63
+#: templates/admin/metatag/edit.tpl:52 templates/admin/metatag/view.csv:3
+msgid "The module"
+msgstr "Das Modul"
+
+#: templates/admin/metatag/display.tpl:22 templates/admin/metatag/view.tpl:66
+#: templates/admin/metatag/edit.tpl:58 templates/admin/metatag/view.csv:3
+msgid "Function of module"
+msgstr "Funktion des Moduls"
+
+#: templates/admin/metatag/display.tpl:24 templates/admin/metatag/view.tpl:69
+#: templates/admin/metatag/edit.tpl:64 templates/admin/metatag/view.csv:3
+msgid "Object of module"
+msgstr "Objekt des Moduls"
+
+#: templates/admin/metatag/display.tpl:28 templates/admin/metatag/view.tpl:75
+#: templates/admin/metatag/edit.tpl:74 templates/admin/metatag/view.csv:3
+msgid "Id of object"
+msgstr "Id des Objekts"
+
+#: templates/admin/metatag/display.tpl:30 templates/admin/metatag/view.tpl:78
+#: templates/admin/metatag/edit.tpl:80 templates/admin/metatag/view.csv:3
+msgid "String of object"
+msgstr "Zeichenkette des Objekts"
+
+#: templates/admin/metatag/display.tpl:32 templates/admin/metatag/view.tpl:81
+#: templates/admin/metatag/edit.tpl:85 templates/admin/metatag/view.csv:3
+msgid "Extra infos"
+msgstr "Extrainformationen"
+
+#: templates/admin/metatag/view.rss:11 templates/admin/metatag/view.atom:4
+msgid "Latest metatags"
+msgstr "Aktuellste Metatags"
+
+#: templates/admin/metatag/view.rss:12 templates/admin/metatag/view.atom:5
+msgid "A direct feed showing the list of metatags"
+msgstr ""
+
+#: templates/admin/metatag/view.tpl:13 templates/admin/metatag/edit.tpl:10
+#: templates/admin/metatag/edit.tpl:131
+msgid "Create metatag"
+msgstr "Metatag erstellen"
+
+#: templates/admin/metatag/view.tpl:51 templates/admin/metatag/edit.tpl:31
+#: templates/admin/metatag/view.csv:3
+msgid "Title of entity"
+msgstr "Titel der Entität"
+
+#: templates/admin/metatag/view.tpl:138
+#: templates/mailz/itemlist_Metatag_html.tpl:11
+#: templates/mailz/itemlist_Metatag_text.tpl:7
+msgid "No metatags found."
+msgstr "Keine Metatags gefunden."
+
+#: templates/admin/metatag/edit.tpl:7 templates/admin/metatag/edit.tpl:13
+msgid "Edit metatag"
+msgstr "Metatag bearbeiten"
+
+#: templates/admin/metatag/edit.tpl:30
+msgid "Enter the title of this entity; so you can find it!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:32
+msgid "Enter the title of entity of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:36
+msgid "Enter the title, that has to be set as title in html!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:38
+msgid "Enter the title of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:41
+msgid "Enter the description, that has to be set as description in html!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:43
+msgid "Enter the description of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:46
+msgid "Enter the keywords; comma seperated - for example: Zikula, Framework."
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:48
+msgid "Enter the keywords of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:51
+msgid "Select the module!"
+msgstr "Wähle das Modul!"
+
+#: templates/admin/metatag/edit.tpl:53
+msgid "Enter the the module of the metatag"
+msgstr "Gib das Modul für den Metatag ein"
+
+#: templates/admin/metatag/edit.tpl:57
+msgid "Enter the function of your selected module!"
+msgstr "Gib die Funktion für Dein gewähltes Modul ein!"
+
+#: templates/admin/metatag/edit.tpl:59
+msgid "Enter the function of module of the metatag"
+msgstr "Gib die Funktion des Moduls für den Metatag ein"
+
+#: templates/admin/metatag/edit.tpl:63
+msgid "Enter the object of your selected module!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:65
+msgid "Enter the object of module of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:68
+msgid "Enter the name for the single identifier! For example id!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:70
+msgid "Enter the name of identifier of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:73
+msgid ""
+"Enter the id of your selected module; only necessary if you have entered a "
+"function that calls a single entity!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:75
+msgid "Enter the id of object of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:79
+msgid "Entr the the string of an object! For example Zikula!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:81
+msgid "Enter the string of object of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:84
+msgid ""
+"Enter other parameters and their values comma seperated like "
+"parameter1=value1,parameter2=value2!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:86
+msgid "Enter the extra infos of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:125
+msgid "Update metatag"
+msgstr "Aktualisiere Metatag"
+
+#: templates/admin/metatag/edit.tpl:127
+msgid "Really delete this metatag?"
+msgstr "Diesen Metatag wirklich löschen?"
+
+#: templates/admin/metatag/edit.tpl:128 templates/admin/metatag/delete.tpl:4
+msgid "Delete metatag"
+msgstr "Lösche Metatag"
+
+#: templates/admin/metatag/delete.tpl:11
+msgid "Do you really want to delete this metatag ?"
+msgstr ""
+
+#: templates/contenttype/itemlist_Module_display_description.tpl:9
+#: templates/contenttype/itemlist_Metatag_display_description.tpl:9
+msgid "Read more"
+msgstr "Mehr lesen"
+
+#: templates/contenttype/itemlist_Module_display_description.tpl:11
+#: templates/contenttype/itemlist_Metatag_display_description.tpl:11
+msgid "No entries found."
+msgstr "Keine Einträge gefunden."
+
+#: templates/contenttype/itemlist_edit.tpl:4
+#: templates/block/itemlist_modify.tpl:4
+msgid "Object type"
+msgstr "Objekttyp"
+
+#: templates/contenttype/itemlist_edit.tpl:10
+#: templates/block/itemlist_modify.tpl:12
+msgid "Sorting"
+msgstr "Sortierung"
+
+#: templates/contenttype/itemlist_edit.tpl:13
+#: templates/block/itemlist_modify.tpl:14
+msgid "Random"
+msgstr "Zufall"
+
+#: templates/contenttype/itemlist_edit.tpl:15
+#: templates/block/itemlist_modify.tpl:15
+msgid "Newest"
+msgstr "Aktuellste"
+
+#: templates/contenttype/itemlist_edit.tpl:17
+#: templates/block/itemlist_modify.tpl:16
+msgid "Default"
+msgstr "Standard"
+
+#: templates/contenttype/itemlist_edit.tpl:22
+#: templates/block/itemlist_modify.tpl:21
+msgid "Amount"
+msgstr "Anzahl"
+
+#: templates/contenttype/itemlist_edit.tpl:27
+#: templates/block/itemlist_modify.tpl:26
+msgid "Template File"
+msgstr "Templatedatei"
+
+#: templates/contenttype/itemlist_edit.tpl:33
+#: templates/block/itemlist_modify.tpl:34
+msgid "Filter (expert option)"
+msgstr ""
+
+#: templates/contenttype/itemlist_edit.tpl:35
+#: templates/block/itemlist_modify.tpl:36
+msgid "Syntax examples"
+msgstr "Syntax Beispiele"
+
+#: templates/contenttype/itemlist_edit.tpl:35
+#: templates/block/itemlist_modify.tpl:36
+msgid "or"
+msgstr "oder"
+
+#: templates/user/main.tpl:3
+msgid "Welcome to the user section of the M u seo module."
+msgstr "Willkommen im Benutzerbereich von MUSeo"
+
+#: templates/user/header.tpl:12
+msgid "M u seo"
+msgstr "MUSeo"

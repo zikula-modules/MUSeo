@@ -44,19 +44,19 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 
 		if ($moduleinfo[0]['controllerForView'] == $modfunc) {
 			$request = new Zikula_Request_Http();
-			$objectType = $request->getGet()->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
+			$objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
 			if ($objectType != '') {
 					
 				$where .= ' AND ';
 				$where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
 			}
 				
-			$objectId = $request->getGet()->filter($moduleinfo[0]['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
+			$objectId = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
 
 				$where .= ' AND ';
 				$where .= 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
 		
-			$objectString = $request->getGet()->filter($moduleinfo[0]['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
+			$objectString = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
 
 				$where .= ' AND ';
 				$where .= 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
@@ -65,7 +65,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 
 		if ($moduleinfo[0]['controllerForSingleObject'] == $modfunc && $moduleinfo[0]['controllerForView'] != $moduleinfo[0]['controllerForSingleObject']) {
 			$request = new Zikula_Request_Http();
-			$objectType = $request->getGet()->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
+			$objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
 			if ($objectType != '') {
 					
 				$where .= ' AND ';
@@ -73,12 +73,12 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 			}
 
 			if ($modname != 'PostCalendar') {
-				$objectId = $request->getGet()->filter($moduleinfo[0]['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
+				$objectId = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
 				if ($objectId > 0) {
 					$where .= ' AND ';
 					$where .= 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
 				}
-				$objectString = $request->getGet()->filter($moduleinfo[0]['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
+				$objectString = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
 				if ($objectString != '') {
 					$where .= ' OR ';
 					$where .= 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
@@ -86,8 +86,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 			}
 		}
 
-
-
+		// we get the entity
 		$entities = $metatagrepository->selectWhere($where);
 			
 		if (count($entities) == 1) {
@@ -100,9 +99,10 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 			if ($entities[0]['keywords']) {
 				PageUtil::setVar('keywords', $entities[0]['keywords']);
 			}
-
+			if ($entities[0]['robots']) {
+			    $metatagrobots = '<meta name="ROBOTS" content="' . $entities[0]['robots'] . '" />';
+			    PageUtil::setVar('header', $metatagrobots);
+			}
 		}
-			
-			
 	}
 }

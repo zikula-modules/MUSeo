@@ -48,6 +48,11 @@
             {formtextinput group='metatag' id='keywords' mandatory=false readOnly=false __title='Enter the keywords of the metatag' textMode='singleline' maxLength=255 cssClass=''}
         </div>
         <div class="z-formrow">
+            {gt text='Enter the robots text.' assign='toolTip'}
+            {formlabel for='robots' __text='Robots' class='museoFormTooltips' title=$toolTip}
+            {formtextinput group='metatag' id='robots' mandatory=false readOnly=false __title='Enter the robots text of the metatag' textMode='singleline' maxLength=255 cssClass=''}
+        </div>
+        <div class="z-formrow">
             {gt text='Select the module!' assign='toolTip'}
             {formlabel for='theModule' __text='The module' mandatorysym='1' class='museoFormTooltips' title=$toolTip}
             {formdropdownlist group='metatag' id='theModule' mandatory=true readOnly=false __title='Enter the the module of the metatag' textMode='singleline' maxLength=50 cssClass='required'}

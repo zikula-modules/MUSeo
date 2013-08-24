@@ -87,6 +87,12 @@ abstract class MUSeo_Entity_Base_Metatag extends Zikula_EntityAccess
      * @var string $keywords.
      */
     protected $keywords = '';
+    
+    /**
+     * @ORM\Column(length=255)
+     * @var string $robots.
+     */
+    protected $robots = '';
 
 
     /**
@@ -415,6 +421,30 @@ abstract class MUSeo_Entity_Base_Metatag extends Zikula_EntityAccess
     {
         if ($keywords != $this->keywords) {
             $this->keywords = $keywords;
+        }
+    }
+    
+    /**
+     * Get robots.
+     *
+     * @return string
+     */
+    public function getRobots()
+    {
+        return $this->robots;
+    }
+    
+    /**
+     * Set robots.
+     *
+     * @param string $robots.
+     *
+     * @return void
+     */
+    public function setRobots($robots)
+    {
+        if ($robots != $this->robots) {
+            $this->robots = $robots;
         }
     }
 

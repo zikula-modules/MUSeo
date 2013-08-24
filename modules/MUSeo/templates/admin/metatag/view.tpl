@@ -36,6 +36,7 @@
         <col id="ctitle" />
         <col id="cdescription" />
         <col id="ckeywords" />
+        <col id="crobots" />
         <col id="cthemodule" />
         <col id="cfunctionofmodule" />
         <col id="cobjectofmodule" />
@@ -58,6 +59,9 @@
         </th>
         <th id="hkeywords" scope="col" class="z-left">
             {sortlink __linktext='Keywords' sort='keywords' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='metatag'}
+        </th>
+        <th id="hrobots" scope="col" class="z-left">
+            {gt text='Robots'}
         </th>
         <th id="hthemodule" scope="col" class="z-left">
             {sortlink __linktext='The module' sort='theModule' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='metatag'}
@@ -98,6 +102,9 @@
         </td>
         <td headers="hkeywords" class="z-left">
             {$metatag.keywords}
+        </td>
+        <td headers="hrobots" class="z-left">
+            {$metatag.robots}
         </td>
         <td headers="hthemodule" class="z-left">
             {$metatag.theModule}

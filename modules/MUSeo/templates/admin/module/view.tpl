@@ -37,7 +37,7 @@
         <col id="ccontrollerforsingleobject" />
         <col id="cparameterforobjects" />
         <col id="cnameofidentifier" />
-      {*  <col id="cextraidentifier" /> *}
+        <col id="cextraidentifier" />
         <col id="citemactions" />
     </colgroup>
     <thead>
@@ -57,9 +57,9 @@
         <th id="hnameofidentifier" scope="col" class="z-left">
             {sortlink __linktext='Name of identifier' sort='nameOfIdentifier' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='module'}
         </th>
-      {*  <th id="hextraidentifier" scope="col" class="z-left">
+        <th id="hextraidentifier" scope="col" class="z-left">
             {sortlink __linktext='Extra identifier' sort='extraIdentifier' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='module'}
-        </th> *}
+        </th>
         <th id="hitemactions" scope="col" class="z-right z-order-unsorted">{gt text='Actions'}</th>
     </tr>
     </thead>
@@ -82,9 +82,9 @@
         <td headers="hnameofidentifier" class="z-left">
             {$module.nameOfIdentifier}
         </td>
-      {*  <td headers="hextraidentifier" class="z-left">
+        <td headers="hextraidentifier" class="z-left">
             {$module.extraIdentifier}
-        </td> *}
+        </td>
         <td headers="hitemactions" class="z-right z-nowrap z-w02">
             {if count($module._actions) gt 0}
             {strip}

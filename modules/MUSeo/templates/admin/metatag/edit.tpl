@@ -85,11 +85,11 @@
             {formlabel for='stringOfObject' __text='String of object' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='stringOfObject' mandatory=false readOnly=false __title='Enter the string of object of the metatag' textMode='singleline' maxLength=50 cssClass=''}
         </div>
-      {*  <div class="z-formrow">
+        <div class="z-formrow">
             {gt text='Enter other parameters and their values comma seperated like parameter1=value1,parameter2=value2!' assign='toolTip'}
-            {formlabel for='extraInfos' __text='Extra infos' class='museoFormTooltips' title=$toolTip}
+            {formlabel for='extraInfos' __text='Additional parameters' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter the extra infos of the metatag' textMode='singleline' maxLength=255 cssClass=''}
-        </div> *}
+        </div>
     </fieldset>
 
     {if $mode ne 'create'}

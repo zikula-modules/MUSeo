@@ -43,7 +43,7 @@
         <col id="cnameofidentifier" />
         <col id="cidofobject" />
         <col id="cstringofobject" />
-       {* <col id="cextrainfos" /> *}
+        <col id="cextrainfos" />
         <col id="citemactions" />
     </colgroup>
     <thead>
@@ -81,9 +81,9 @@
         <th id="hstringofobject" scope="col" class="z-left">
             {sortlink __linktext='String of object' sort='stringOfObject' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='metatag'}
         </th>
-       {* <th id="hextrainfos" scope="col" class="z-left">
-            {sortlink __linktext='Extra infos' sort='extraInfos' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='metatag'}
-        </th> *}
+        <th id="hextrainfos" scope="col" class="z-left">
+            {sortlink __linktext='Additional parameters' sort='extraInfos' currentsort=$sort sortdir=$sdir all=$all modname='MUSeo' type='admin' func='view' ot='metatag'}
+        </th>
         <th id="hitemactions" scope="col" class="z-right z-order-unsorted">{gt text='Actions'}</th>
     </tr>
     </thead>
@@ -124,9 +124,9 @@
         <td headers="hstringofobject" class="z-left">
             {$metatag.stringOfObject}
         </td>
-       {* <td headers="hextrainfos" class="z-left">
+        <td headers="hextrainfos" class="z-left">
             {$metatag.extraInfos}
-        </td> *}
+        </td>
         <td headers="hitemactions" class="z-right z-nowrap z-w02">
             {if count($metatag._actions) gt 0}
             {strip}

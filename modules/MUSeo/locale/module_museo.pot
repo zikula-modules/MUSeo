@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zikula 1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-26 11:03+0000\n"
+"POT-Creation-Date: 2013-08-25 12:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,7 +197,8 @@ msgstr ""
 msgid "Display MUSeo items."
 msgstr ""
 
-#: lib/MUSeo/Base/Installer.php:31 lib/MUSeo/Base/Installer.php:104
+#: lib/MUSeo/Base/Installer.php:31 lib/MUSeo/Base/Installer.php:105
+#: lib/MUSeo/Installer.php:42
 msgid "Doctrine Exception: "
 msgstr ""
 
@@ -206,14 +207,14 @@ msgstr ""
 msgid "An error was encountered while creating the tables for the %s module."
 msgstr ""
 
-#: lib/MUSeo/Base/Installer.php:97
+#: lib/MUSeo/Base/Installer.php:98
 #, php-format
 msgid ""
 "An error was encountered while removing stored object workflows for the %s "
 "module."
 msgstr ""
 
-#: lib/MUSeo/Base/Installer.php:106
+#: lib/MUSeo/Base/Installer.php:107 lib/MUSeo/Installer.php:44
 #, php-format
 msgid "An error was encountered while dropping the tables for the %s module."
 msgstr ""
@@ -309,32 +310,32 @@ msgstr ""
 msgid "The name %s is already assigned. Please choose another name."
 msgstr ""
 
-#: lib/MUSeo/Entity/Base/Metatag.php:736 lib/MUSeo/Entity/Base/Module.php:581
+#: lib/MUSeo/Entity/Base/Metatag.php:766 lib/MUSeo/Entity/Base/Module.php:581
 #: templates/admin/module/display.tpl:8 templates/admin/metatag/display.tpl:8
 msgid "Details"
 msgstr ""
 
-#: lib/MUSeo/Entity/Base/Metatag.php:746 lib/MUSeo/Entity/Base/Metatag.php:747
+#: lib/MUSeo/Entity/Base/Metatag.php:776 lib/MUSeo/Entity/Base/Metatag.php:777
 #: lib/MUSeo/Entity/Base/Module.php:591 lib/MUSeo/Entity/Base/Module.php:592
 msgid "Edit"
 msgstr ""
 
-#: lib/MUSeo/Entity/Base/Metatag.php:752 lib/MUSeo/Entity/Base/Module.php:597
+#: lib/MUSeo/Entity/Base/Metatag.php:782 lib/MUSeo/Entity/Base/Module.php:597
 msgid "Reuse for new item"
 msgstr ""
 
-#: lib/MUSeo/Entity/Base/Metatag.php:753 lib/MUSeo/Entity/Base/Module.php:598
+#: lib/MUSeo/Entity/Base/Metatag.php:783 lib/MUSeo/Entity/Base/Module.php:598
 msgid "Reuse"
 msgstr ""
 
-#: lib/MUSeo/Entity/Base/Metatag.php:760 lib/MUSeo/Entity/Base/Metatag.php:761
+#: lib/MUSeo/Entity/Base/Metatag.php:790 lib/MUSeo/Entity/Base/Metatag.php:791
 #: lib/MUSeo/Entity/Base/Module.php:605 lib/MUSeo/Entity/Base/Module.php:606
 #: templates/admin/module/delete.tpl:7 templates/admin/module/delete.tpl:20
 #: templates/admin/metatag/delete.tpl:7 templates/admin/metatag/delete.tpl:20
 msgid "Delete"
 msgstr ""
 
-#: lib/MUSeo/Entity/Base/Metatag.php:769 lib/MUSeo/Entity/Base/Metatag.php:770
+#: lib/MUSeo/Entity/Base/Metatag.php:799 lib/MUSeo/Entity/Base/Metatag.php:800
 #: lib/MUSeo/Entity/Base/Module.php:614 lib/MUSeo/Entity/Base/Module.php:615
 msgid "Back to overview"
 msgstr ""
@@ -400,24 +401,49 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: templates/admin/config.tpl:13
+msgid "MUSeo is only working if \"compat_layer\" is enabled in the config.php."
+msgstr ""
+
 #: templates/admin/config.tpl:18
 msgid "Here you can manage all basic settings for this application."
 msgstr ""
 
-#: templates/admin/config.tpl:22 templates/admin/config.tpl:26
+#: templates/admin/config.tpl:22 templates/admin/config.tpl:27
+#: templates/admin/config.tpl:32
 msgid "Enter this setting."
 msgstr ""
 
-#: templates/admin/config.tpl:25
+#: templates/admin/config.tpl:23
+msgid ""
+"Enter the modules you wish to support comma separated without whitespace!"
+msgstr ""
+
+#: templates/admin/config.tpl:26
 msgid "Controllers"
 msgstr ""
 
-#: templates/admin/config.tpl:31
+#: templates/admin/config.tpl:28
+msgid "Enter the controller you wish to support comma separated!"
+msgstr ""
+
+#: templates/admin/config.tpl:31 templates/admin/metatag/view.tpl:64
+#: templates/admin/metatag/edit.tpl:52
+msgid "Robots"
+msgstr ""
+
+#: templates/admin/config.tpl:33
+msgid ""
+"Enter the standard text for the robots like index, nofollow! It will be "
+"set if there is no metatag set in MUSeo."
+msgstr ""
+
+#: templates/admin/config.tpl:38
 msgid "Update configuration"
 msgstr ""
 
-#: templates/admin/config.tpl:32 templates/admin/module/edit.tpl:108
-#: templates/admin/module/delete.tpl:22 templates/admin/metatag/edit.tpl:135
+#: templates/admin/config.tpl:39 templates/admin/module/edit.tpl:108
+#: templates/admin/module/delete.tpl:22 templates/admin/metatag/edit.tpl:142
 #: templates/admin/metatag/delete.tpl:22
 msgid "Cancel"
 msgstr ""
@@ -443,8 +469,8 @@ msgstr ""
 
 #: templates/admin/module/display.tpl:20 templates/admin/module/view.tpl:58
 #: templates/admin/module/edit.tpl:53 templates/admin/module/view.csv:3
-#: templates/admin/metatag/display.tpl:26 templates/admin/metatag/view.tpl:72
-#: templates/admin/metatag/edit.tpl:69 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:26 templates/admin/metatag/view.tpl:76
+#: templates/admin/metatag/edit.tpl:75 templates/admin/metatag/view.csv:3
 msgid "Name of identifier"
 msgstr ""
 
@@ -493,7 +519,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: templates/admin/module/view.tpl:63 templates/admin/metatag/view.tpl:83
+#: templates/admin/module/view.tpl:63 templates/admin/metatag/view.tpl:87
 msgid "Actions"
 msgstr ""
 
@@ -516,7 +542,7 @@ msgid "Enter the name of the module"
 msgstr ""
 
 #: templates/admin/module/edit.tpl:36
-msgid "Enter the controller for the view of objects; for example \"view\"."
+msgid "Enter the controller for the view of objects; for example view."
 msgstr ""
 
 #: templates/admin/module/edit.tpl:38
@@ -533,8 +559,8 @@ msgstr ""
 
 #: templates/admin/module/edit.tpl:47
 msgid ""
-"Enter the paremeter for objects; for example \"ot! If you not enter the "
-"parameter \"id\" will be taken!"
+"Enter the paremeter for objects; for example ot! If you not enter the "
+"parameter id will be taken!"
 msgstr ""
 
 #: templates/admin/module/edit.tpl:49
@@ -542,7 +568,7 @@ msgid "Enter the parameter for objects of the module"
 msgstr ""
 
 #: templates/admin/module/edit.tpl:52
-msgid "Enter the name of the identifier for this module; for example \"id\"!"
+msgid "Enter the name of the identifier for this module; for example id!"
 msgstr ""
 
 #: templates/admin/module/edit.tpl:54
@@ -557,15 +583,15 @@ msgstr ""
 msgid "Enter the extra identifier of the module"
 msgstr ""
 
-#: templates/admin/module/edit.tpl:75 templates/admin/metatag/edit.tpl:102
+#: templates/admin/module/edit.tpl:75 templates/admin/metatag/edit.tpl:109
 msgid "Hooks"
 msgstr ""
 
-#: templates/admin/module/edit.tpl:87 templates/admin/metatag/edit.tpl:114
+#: templates/admin/module/edit.tpl:87 templates/admin/metatag/edit.tpl:121
 msgid "Return control"
 msgstr ""
 
-#: templates/admin/module/edit.tpl:89 templates/admin/metatag/edit.tpl:116
+#: templates/admin/module/edit.tpl:89 templates/admin/metatag/edit.tpl:123
 msgid "Create another item after save"
 msgstr ""
 
@@ -581,7 +607,7 @@ msgstr ""
 msgid "Delete module"
 msgstr ""
 
-#: templates/admin/module/edit.tpl:106 templates/admin/metatag/edit.tpl:133
+#: templates/admin/module/edit.tpl:106 templates/admin/metatag/edit.tpl:140
 msgid "OK"
 msgstr ""
 
@@ -640,48 +666,47 @@ msgstr ""
 msgid "Metatag"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:14 templates/admin/metatag/view.tpl:54
+#: templates/admin/metatag/display.tpl:14 templates/admin/metatag/view.tpl:55
 #: templates/admin/metatag/edit.tpl:37 templates/admin/metatag/view.csv:3
 msgid "Title"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:16 templates/admin/metatag/view.tpl:57
+#: templates/admin/metatag/display.tpl:16 templates/admin/metatag/view.tpl:58
 #: templates/admin/metatag/edit.tpl:42 templates/admin/metatag/view.csv:3
 msgid "Description"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:18 templates/admin/metatag/view.tpl:60
+#: templates/admin/metatag/display.tpl:18 templates/admin/metatag/view.tpl:61
 #: templates/admin/metatag/edit.tpl:47 templates/admin/metatag/view.csv:3
 msgid "Keywords"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:20 templates/admin/metatag/view.tpl:63
-#: templates/admin/metatag/edit.tpl:52 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:20 templates/admin/metatag/view.tpl:67
+#: templates/admin/metatag/edit.tpl:58 templates/admin/metatag/view.csv:3
 msgid "The module"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:22 templates/admin/metatag/view.tpl:66
-#: templates/admin/metatag/edit.tpl:58 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:22 templates/admin/metatag/view.tpl:70
+#: templates/admin/metatag/edit.tpl:64 templates/admin/metatag/view.csv:3
 msgid "Function of module"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:24 templates/admin/metatag/view.tpl:69
-#: templates/admin/metatag/edit.tpl:64 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:24 templates/admin/metatag/view.tpl:73
+#: templates/admin/metatag/edit.tpl:70 templates/admin/metatag/view.csv:3
 msgid "Object of module"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:28 templates/admin/metatag/view.tpl:75
-#: templates/admin/metatag/edit.tpl:74 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:28 templates/admin/metatag/view.tpl:79
+#: templates/admin/metatag/edit.tpl:80 templates/admin/metatag/view.csv:3
 msgid "Id of object"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:30 templates/admin/metatag/view.tpl:78
-#: templates/admin/metatag/edit.tpl:80 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:30 templates/admin/metatag/view.tpl:82
+#: templates/admin/metatag/edit.tpl:86 templates/admin/metatag/view.csv:3
 msgid "String of object"
 msgstr ""
 
-#: templates/admin/metatag/display.tpl:32 templates/admin/metatag/view.tpl:81
-#: templates/admin/metatag/edit.tpl:85 templates/admin/metatag/view.csv:3
+#: templates/admin/metatag/display.tpl:32 templates/admin/metatag/view.csv:3
 msgid "Extra infos"
 msgstr ""
 
@@ -694,16 +719,20 @@ msgid "A direct feed showing the list of metatags"
 msgstr ""
 
 #: templates/admin/metatag/view.tpl:13 templates/admin/metatag/edit.tpl:10
-#: templates/admin/metatag/edit.tpl:131
+#: templates/admin/metatag/edit.tpl:138
 msgid "Create metatag"
 msgstr ""
 
-#: templates/admin/metatag/view.tpl:51 templates/admin/metatag/edit.tpl:31
+#: templates/admin/metatag/view.tpl:52 templates/admin/metatag/edit.tpl:31
 #: templates/admin/metatag/view.csv:3
 msgid "Title of entity"
 msgstr ""
 
-#: templates/admin/metatag/view.tpl:138
+#: templates/admin/metatag/view.tpl:85 templates/admin/metatag/edit.tpl:91
+msgid "Additional parameters"
+msgstr ""
+
+#: templates/admin/metatag/view.tpl:145
 #: templates/mailz/itemlist_Metatag_html.tpl:11
 #: templates/mailz/itemlist_Metatag_text.tpl:7
 msgid "No metatags found."
@@ -746,74 +775,92 @@ msgid "Enter the keywords of the metatag"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:51
-msgid "Select the module!"
+msgid "Enter the robots text."
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:53
-msgid "Enter the the module of the metatag"
+msgid "Enter the robots text of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:54
+msgid ""
+"Enter the text for the robots like index, nofollow. If it is empty, the "
+"standard \"index, follow\" will be put into the header."
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:57
-msgid "Enter the function of your selected module!"
+msgid "Select the module!"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:59
-msgid "Enter the function of module of the metatag"
+msgid "Enter the the module of the metatag"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:63
-msgid "Enter the object of your selected module!"
+msgid "Enter the function of your selected module!"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:65
+msgid "Enter the function of module of the metatag"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:69
+msgid "Enter the object of your selected module!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:71
 msgid "Enter the object of module of the metatag"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:68
+#: templates/admin/metatag/edit.tpl:74
 msgid "Enter the name for the single identifier! For example id!"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:70
+#: templates/admin/metatag/edit.tpl:76
 msgid "Enter the name of identifier of the metatag"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:73
+#: templates/admin/metatag/edit.tpl:79
 msgid ""
 "Enter the id of your selected module; only necessary if you have entered a "
 "function that calls a single entity!"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:75
+#: templates/admin/metatag/edit.tpl:81
 msgid "Enter the id of object of the metatag"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:79
-msgid "Entr the the string of an object! For example Zikula!"
+#: templates/admin/metatag/edit.tpl:85
+msgid "Enter the string of an object! For example Zikula!"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:81
+#: templates/admin/metatag/edit.tpl:87
 msgid "Enter the string of object of the metatag"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:84
+#: templates/admin/metatag/edit.tpl:90
 msgid ""
 "Enter other parameters and their values comma seperated like "
 "parameter1=value1,parameter2=value2!"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:86
+#: templates/admin/metatag/edit.tpl:92
 msgid "Enter the extra infos of the metatag"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:125
+#: templates/admin/metatag/edit.tpl:93
+msgid "Enter additional parameters like \"prop=Main,cat=Blogging\"!"
+msgstr ""
+
+#: templates/admin/metatag/edit.tpl:132
 msgid "Update metatag"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:127
+#: templates/admin/metatag/edit.tpl:134
 msgid "Really delete this metatag?"
 msgstr ""
 
-#: templates/admin/metatag/edit.tpl:128 templates/admin/metatag/delete.tpl:4
+#: templates/admin/metatag/edit.tpl:135 templates/admin/metatag/delete.tpl:4
 msgid "Delete metatag"
 msgstr ""
 

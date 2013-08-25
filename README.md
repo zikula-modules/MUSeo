@@ -17,4 +17,20 @@ Version 1.1.1
 With MUSeo you are able to set specific metatags ( title, description, keywords, robots ) for every page of an module.
 
 Configuration
-===
+----------------  
+
+You have to enter the modules and the controllers you want to activate comma separated without whitespace.
+
+Also you can enter a standard for the robots metatag.
+
+There are default values set in the module vars.
+
+Modules
+---------------
+
+After that you can create the modules and enter the relevant datas for each module.
+
+Metatags
+---------------
+
+If you have created modules you can create metatags for each site of an module.

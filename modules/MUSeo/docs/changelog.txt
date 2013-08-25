@@ -1,12 +1,17 @@
 CHANGELOG
 =========
 
-1.0.1
+1.1.0
 
-fixed #2 Editing of Blocks is working now by MUSeo activated
+# closed #1 Now it is possible to set further parameter to handle for example categories calling with a module
 
-#4 pot file generated
+# closed #2 Editing of Blocks is working now by MUSeo activated
 
+# closed #4 Pot files are there now
+
+# closed #5 german translation is complete
+
+# closed #6 the metatag for robots will be set by default and you can enter for each page now.
 
 
 some fixes

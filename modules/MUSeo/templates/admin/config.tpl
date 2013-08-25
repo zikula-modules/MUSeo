@@ -10,7 +10,7 @@
 
     {form cssClass='z-form'}
 
-
+<div class="z-informationmsg z-formnote">{gt text='MUSeo is only working if "compat_layer" is enabled in the config.php.'}</div>
         {* add validation summary and a <div> element for styling the form *}
         {museoFormFrame}
         {formsetinitialfocus inputId='modules'}
@@ -20,10 +20,17 @@
                 <div class="z-formrow">
                     {formlabel for='modules' __text='Modules' class='museoFormTooltips' title=$toolTip}
                     {formtextinput id='modules' group='config' maxLength=255 width=20em __title='Enter this setting.'}
+                    <div class="z-informationmsg z-formnote">{gt text='Enter the modules you wish to support comma separated without whitespace!'}</div>
                 </div>
                 <div class="z-formrow">
                     {formlabel for='controllers' __text='Controllers' class='museoFormTooltips' title=$toolTip}
                     {formtextinput id='controllers' group='config' maxLength=255 width=20em __title='Enter this setting.'}
+                    <div class="z-informationmsg z-formnote">{gt text='Enter the controller you wish to support comma separated!'}</div>
+                </div>
+                <div class="z-formrow">
+                    {formlabel for='robots' __text='Robots' class='museoFormTooltips' title=$toolTip}
+                    {formtextinput id='robots' group='config' maxLength=255 width=20em __title='Enter this setting.'}
+                    <div class="z-informationmsg z-formnote">{gt text='Enter the standard text for the robots like index, nofollow! It will be set if there is no metatag set in MUSeo.'}</div>
                 </div>
             </fieldset>
 

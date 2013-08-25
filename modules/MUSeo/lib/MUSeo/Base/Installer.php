@@ -36,6 +36,7 @@ class MUSeo_Base_Installer extends Zikula_AbstractInstaller
         // set up all our vars with initial values
         $this->setVar('modules', 'News');
         $this->setVar('controllers', 'main,view,display');
+        $this->setVar('robots', 'index, follow');
 
         // create the default data for MUSeo
         $this->createDefaultData();

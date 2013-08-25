@@ -51,6 +51,7 @@
             {gt text='Enter the robots text.' assign='toolTip'}
             {formlabel for='robots' __text='Robots' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='robots' mandatory=false readOnly=false __title='Enter the robots text of the metatag' textMode='singleline' maxLength=255 cssClass=''}
+            <div class="z-informationmsg z-formnote">{gt text='Enter the text for the robots like index, nofollow. If it is empty, the standard index, follow will be put into the header.'}</div>
         </div>
         <div class="z-formrow">
             {gt text='Select the module!' assign='toolTip'}
@@ -81,7 +82,7 @@
             {museoValidationError id='idOfObject' class='validate-digits'}
         </div>
         <div class="z-formrow">
-            {gt text='Entr the the string of an object! For example Zikula!' assign='toolTip'}
+            {gt text='Enter the string of an object! For example Zikula!' assign='toolTip'}
             {formlabel for='stringOfObject' __text='String of object' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='stringOfObject' mandatory=false readOnly=false __title='Enter the string of object of the metatag' textMode='singleline' maxLength=50 cssClass=''}
         </div>
@@ -89,6 +90,7 @@
             {gt text='Enter other parameters and their values comma seperated like parameter1=value1,parameter2=value2!' assign='toolTip'}
             {formlabel for='extraInfos' __text='Additional parameters' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter the extra infos of the metatag' textMode='singleline' maxLength=255 cssClass=''}
+            <div class="z-informationmsg z-formnote">{gt text='Enter additional parameters like prop=Main,cat=Blogging!'}</div> 
         </div>
     </fieldset>
 

@@ -33,7 +33,7 @@
             {museoValidationError id='name' class='validate-unique'}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the controller for the view of objects; for example "view".' assign='toolTip'}
+            {gt text='Enter the controller for the view of objects; for example view.' assign='toolTip'}
             {formlabel for='controllerForView' __text='Controller for view' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='module' id='controllerForView' mandatory=false readOnly=false __title='Enter the controller for view of the module' textMode='singleline' maxLength=50 cssClass=''}
         </div>
@@ -44,12 +44,12 @@
             {museoValidationError id='controllerForSingleObject' class='required'}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the paremeter for objects; for example "ot! If you not enter the parameter "id" will be taken!' assign='toolTip'}
+            {gt text='Enter the paremeter for objects; for example "ot! If you not enter the parameter id will be taken!' assign='toolTip'}
             {formlabel for='parameterForObjects' __text='Parameter for objects' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='module' id='parameterForObjects' mandatory=false readOnly=false __title='Enter the parameter for objects of the module' textMode='singleline' maxLength=50 cssClass=''}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the name of the identifier for this module; for example "id"!' assign='toolTip'}
+            {gt text='Enter the name of the identifier for this module; for example id!' assign='toolTip'}
             {formlabel for='nameOfIdentifier' __text='Name of identifier' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='module' id='nameOfIdentifier' mandatory=false readOnly=false __title='Enter the name of identifier of the module' textMode='singleline' maxLength=255 cssClass=''}
         </div>

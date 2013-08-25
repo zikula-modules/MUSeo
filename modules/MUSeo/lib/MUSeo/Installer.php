@@ -31,8 +31,9 @@ class MUSeo_Installer extends MUSeo_Base_Installer
         // Upgrade dependent on old version number
         switch ($oldversion) {
             case '1.0.0':
-                // do something
-                // ...
+                
+                $this->setVar('robots', 'index, follow');
+
                 // update the database schema
                 try {
                     DoctrineHelper::updateSchema($this->entityManager, $this->listEntityClasses());
@@ -41,6 +42,7 @@ class MUSeo_Installer extends MUSeo_Base_Installer
                         LogUtil::registerError($this->__('Doctrine Exception: ') . $e->getMessage());
                     }
                     return LogUtil::registerError($this->__f('An error was encountered while dropping the tables for the %s module.', array($this->getName())));
+              
                 }
             case '1.1.0':
             	// further upgrade

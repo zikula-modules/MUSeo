@@ -16,4 +16,5 @@ Version 1.1.1
 
 With MUSeo you are able to set specific metatags ( title, description, keywords, robots ) for every page of an module.
 
-== Configuration ==
+Configuration
+===

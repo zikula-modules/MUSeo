@@ -83,9 +83,6 @@ class MUSeo_Listener_ModuleDispatch
                             if ($count >= 1) {
                                 // we call the method to set the metatags if there is an entry
                                 MUSeo_Api_Handlemodules::setModuleMetaTags($modargs['modname'], $modargs['modfunc'][1]);
-                            } else {
-                                $metatagrobots = '<meta name="ROBOTS" content="index, follow" />';
-                                PageUtil::setVar('header', $metatagrobots);
                             }
                         }
                         // api function - nothing to do

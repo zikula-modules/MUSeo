@@ -24,7 +24,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
     {
         $modules = ModUtil::getVar('MUSeo', 'modules');
         $modules = explode(',', $modules);
-        	
+         
         return $modules;
     }
 
@@ -36,7 +36,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
     public static function setModuleMetaTags($modname, $modfunc = 'main')
     {
         $request = new Zikula_Request_Http();
-        
+
         $metatagrepository = MUSeo_Util_Model::getMetatagRepository();
         $where = 'tbl.theModule = \'' . DataUtil::formatForStore($modname) . '\'';
         $where .= ' AND ';
@@ -49,7 +49,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
         if ($moduleinfo[0]['controllerForView'] == $modfunc) {
             $objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
-                	
+                 
                 $where .= ' AND ';
                 $where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
@@ -67,7 +67,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
         if ($moduleinfo[0]['controllerForSingleObject'] == $modfunc && $moduleinfo[0]['controllerForView'] != $moduleinfo[0]['controllerForSingleObject']) {
             $objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
-                	
+                 
                 $where .= ' AND ';
                 $where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
@@ -95,15 +95,15 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
                     $where .= 'tbl.extraInfos LIKE \'%' . $identifier . '=' . $result . '%\'';
                 } else {
                     $where .= ' AND ';
-                    $where .= 'tbl.extraInfos NOT LIKE \'%' . $identifier . '=' . $result . '%\'';
-                    
+                    $where .= 'tbl.extraInfos NOT LIKE \'%' . $identifier . '%\'';
+
                 }
             }
         }
 
         // we get the entity
         $entities = $metatagrepository->selectWhere($where);
-        	
+         
         if (count($entities) == 1) {
             if ($entities[0]['title']) {
                 PageUtil::setVar('title', $entities[0]['title']);
@@ -117,7 +117,13 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             if ($entities[0]['robots']) {
                 $metatagrobots = '<meta name="ROBOTS" content="' . $entities[0]['robots'] . '" />';
                 PageUtil::setVar('header', $metatagrobots);
+            }  else {
+                $metatagrobots = '<meta name="ROBOTS" content="' . ModUtil::getVar('MUSeo', 'robots') . '" />';
+                PageUtil::setVar('header', $metatagrobots);
             }
+        }  else {
+            $metatagrobots = '<meta name="ROBOTS" content="' . ModUtil::getVar('MUSeo', 'robots') . '" />';
+            PageUtil::setVar('header', $metatagrobots);
         }
     }
 }

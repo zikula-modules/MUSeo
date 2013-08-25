@@ -100,6 +100,9 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
                 }
             }
         }
+        
+        // we get default string for robots
+        $robots = ModUtil::getVar('MUSeo', 'robots');
 
         // we get the entity
         $entities = $metatagrepository->selectWhere($where);
@@ -118,12 +121,16 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
                 $metatagrobots = '<meta name="ROBOTS" content="' . $entities[0]['robots'] . '" />';
                 PageUtil::setVar('header', $metatagrobots);
             }  else {
-                $metatagrobots = '<meta name="ROBOTS" content="' . ModUtil::getVar('MUSeo', 'robots') . '" />';
+                if ($robots != '') {
+                $metatagrobots = '<meta name="ROBOTS" content="' . $robots . '" />';
                 PageUtil::setVar('header', $metatagrobots);
+                }
             }
         }  else {
-            $metatagrobots = '<meta name="ROBOTS" content="' . ModUtil::getVar('MUSeo', 'robots') . '" />';
+            if ($robots != '') {
+            $metatagrobots = '<meta name="ROBOTS" content="' . $robots . '" />';
             PageUtil::setVar('header', $metatagrobots);
+            }
         }
     }
 }

@@ -30,8 +30,8 @@ There are default values set in the module vars.
 
 MUSeo requires the following entries in your header template:
  
-`<title>{pagegetvar name='title'}</title>
-<meta name="description" content="{$metatags.description}" />
+`<title>{pagegetvar name='title'}</title> 
+<meta name="description" content="{$metatags.description}" /> 
 <meta name="keywords" content="{$metatags.keywords}" />`
 
 At the moment MUSeo needs to set the metatag for robots once on the startpage (for example in the home.tpl).

@@ -51,7 +51,7 @@
             {gt text='Enter the robots text.' assign='toolTip'}
             {formlabel for='robots' __text='Robots' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='robots' mandatory=false readOnly=false __title='Enter the robots text of the metatag' textMode='singleline' maxLength=255 cssClass=''}
-            <div class="z-informationmsg z-formnote">{gt text='Enter the text for the robots like index, nofollow. If it is empty, the standard index, follow will be put into the header.'}</div>
+            <div class="z-informationmsg z-formnote">{gt text='Enter the text for the robots like index, nofollow. If it is empty, the standard will be put into the header.'}</div>
         </div>
         <div class="z-formrow">
             {gt text='Select the module!' assign='toolTip'}
@@ -89,7 +89,7 @@
         <div class="z-formrow">
             {gt text='Enter other parameters and their values comma seperated like parameter1=value1,parameter2=value2!' assign='toolTip'}
             {formlabel for='extraInfos' __text='Additional parameters' class='museoFormTooltips' title=$toolTip}
-            {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter the extra infos of the metatag' textMode='singleline' maxLength=255 cssClass=''}
+            {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter additional parameters of the metatag' textMode='singleline' maxLength=255 cssClass=''}
             <div class="z-informationmsg z-formnote">{gt text='Enter additional parameters like prop=Main,cat=Blogging!'}</div> 
         </div>
     </fieldset>

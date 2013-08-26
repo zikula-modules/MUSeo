@@ -38,7 +38,7 @@ At the moment MUSeo needs to set the metatag for robots once on the startpage (f
 For all other sites MUSeo is generating the metatag for robots automatically if set in the settings. 
 Standard is: 
 
-<meta name="ROBOTS" content="index, follow" />
+`<meta name="ROBOTS" content="index, follow" />`
 
 Modules
 ---------------

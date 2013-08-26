@@ -12,8 +12,10 @@ The result is, that we get sites with the same title or description or keyword t
 
 MUSeo will give a way to override or add metatags to the html code of any site of a website.
 
-Version 1.1.1
+Version 1.1.0
 =============
+
+Will come soon!
 
 With MUSeo you are able to set specific metatags ( title, description, keywords, robots ) for every page of an module.
 
@@ -25,6 +27,18 @@ You have to enter the modules and the controllers you want to activate comma sep
 Also you can enter a standard for the robots metatag.
 
 There are default values set in the module vars.
+
+MUSeo requires the following entries in your header template:
+ 
+<title>{pagegetvar name='title'}</title>
+<meta name="description" content="{$metatags.description}" />
+<meta name="keywords" content="{$metatags.keywords}" />
+
+At the moment MUSeo needs to set the metatag for robots once on the startpage (for example in the home.tpl).
+For all other sites MUSeo is generating the metatag for robots automatically if set in the settings. 
+Standard is: 
+
+<meta name="ROBOTS" content="index, follow" />
 
 Modules
 ---------------

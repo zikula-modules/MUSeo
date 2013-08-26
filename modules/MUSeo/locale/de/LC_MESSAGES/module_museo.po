@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MUSeo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-25 12:35+0000\n"
-"PO-Revision-Date: 2013-08-25 15:45+0100\n"
+"PO-Revision-Date: 2013-08-26 11:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -444,7 +444,7 @@ msgstr "Kontroller"
 #: templates/admin/config.tpl:28
 msgid "Enter the controller you wish to support comma separated!"
 msgstr ""
-"Gib die Kontroller ein, die Du aktivieren möchtest, komma separiert ohne "
+"Gib die Kontroller, die Du aktivieren möchtest, komma separiert ohne "
 "Leerzeichen ein!"
 
 #: templates/admin/config.tpl:31 templates/admin/metatag/view.tpl:64
@@ -805,7 +805,7 @@ msgstr "Gib die Schlüsselwörter für den Metatag ein"
 
 #: templates/admin/metatag/edit.tpl:51
 msgid "Enter the robots text."
-msgstr "Gib den Robots Text für den Metatag ein"
+msgstr "Gib den Robots Text ein"
 
 #: templates/admin/metatag/edit.tpl:53
 msgid "Enter the robots text of the metatag"
@@ -814,11 +814,10 @@ msgstr "Gib den Robots Text für den Metatag ein"
 #: templates/admin/metatag/edit.tpl:54
 msgid ""
 "Enter the text for the robots like index, nofollow. If it is empty, the "
-"standard \"index, follow\" will be put into the header."
+"standard will be put into the header."
 msgstr ""
-"Gib den Standard Text für die Roboter ein wie index, nofollow! Er wird im "
-"Header gesetzt, wenn kein eigener Eintrag in MUSeo für eine Seite "
-"gespeichert ist."
+"Gib den Text für die Roboter ein wie index, nofollow! Wenn dieses Feld leer "
+"bleibt, wird der Standard im Header ausgegeben."
 
 #: templates/admin/metatag/edit.tpl:57
 msgid "Select the module!"
@@ -887,8 +886,8 @@ msgid "Enter the extra infos of the metatag"
 msgstr "Gib die extra Informationen für den Metatag ein"
 
 #: templates/admin/metatag/edit.tpl:93
-msgid "Enter additional parameters like \"prop=Main,cat=Blogging\"!"
-msgstr "Gib zusätzliche Parameter wie \"prop=Main,cat=Blogging\" ein!"
+msgid "Enter additional parameters like prop=Main,cat=Blogging!"
+msgstr "Gib zusätzliche Parameter wie prop=Main,cat=Blogging ein!"
 
 #: templates/admin/metatag/edit.tpl:132
 msgid "Update metatag"

@@ -785,7 +785,7 @@ msgstr ""
 #: templates/admin/metatag/edit.tpl:54
 msgid ""
 "Enter the text for the robots like index, nofollow. If it is empty, the "
-"standard \"index, follow\" will be put into the header."
+"standard will be put into the header."
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:57
@@ -849,7 +849,7 @@ msgid "Enter the extra infos of the metatag"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:93
-msgid "Enter additional parameters like \"prop=Main,cat=Blogging\"!"
+msgid "Enter additional parameters like prop=Main,cat=Blogging!"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:132

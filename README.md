@@ -34,7 +34,7 @@ MUSeo requires the following entries in your header template:
 `<meta name="description" content="{$metatags.description}" />`
 `<meta name="keywords" content="{$metatags.keywords}" />`
 
-At the moment MUSeo needs to set the metatag for robots once on the startpage (for example in the home.tpl).
+At the moment MUSeo needs to set the metatag for robots once on the startpage (for example in the header.tpl or head.tpl).
 For all other sites MUSeo is generating the metatag for robots automatically if set in the settings. 
 Standard is: 
 

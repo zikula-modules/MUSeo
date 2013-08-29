@@ -15,6 +15,11 @@ Implemented Classes
 *lib/MUSeo/Installer.php
 *lib/MUSeo/Version.php
 
+*lib/MUSeo/Api/HandleModules.php
+*lib/MUSeo/Controller/Admin.php
+
+*lib/MUSeo/Util/Model.php
+
 Additional Files
 
 customisations.txt

@@ -15,8 +15,6 @@ MUSeo will give a way to override or add metatags to the html code of any site o
 Version 1.1.0
 =============
 
-Will come soon!
-
 With MUSeo you are able to set specific metatags ( title, description, keywords, robots ) for every page of an module.
 
 Configuration

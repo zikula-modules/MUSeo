@@ -30,7 +30,7 @@ class MUSeo_Version extends MUSeo_Base_Version
         $meta['url'] = $this->__('museo');
         // core requirement
         $meta['core_min'] = '1.3.4'; // requires minimum 1.3.4
-        $meta['core_max'] = '1.3.99'; // not ready for 1.4.x yet
+        $meta['core_max'] = '1.4.99'; // not ready for 1.5.x yet
 
         // define special capabilities of this module
         $meta['capabilities'] = array(

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:modulestudio="http://modulestudio.de/modulestudio" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <notation:Diagram xmi:id="_3NsU0MFwEeOx6_ivDNS_pA" type="Module" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_3UYLoMFwEeOx6_ivDNS_pA" type="2001" fontName="monospaced" fontHeight="12" lineColor="4210752">
+      <children xmi:type="notation:DecorationNode" xmi:id="_3UYysMFwEeOx6_ivDNS_pA" type="5001"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_3UYLocFwEeOx6_ivDNS_pA" diagramLink="_4p2w0MFwEeOx6_ivDNS_pA" hint="Model"/>
+      <element xmi:type="modulestudio:Models" href="MUSeo.mostapp#//@models.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3UYLosFwEeOx6_ivDNS_pA" x="135" y="287"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_3UYyscFwEeOx6_ivDNS_pA" type="2002" fontName="monospaced" fontHeight="12" lineColor="4210752">
+      <children xmi:type="notation:DecorationNode" xmi:id="_3UYytMFwEeOx6_ivDNS_pA" type="5002"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_3UYyssFwEeOx6_ivDNS_pA" diagramLink="_A_E8EMGBEeOx6_ivDNS_pA" hint="Controller"/>
+      <element xmi:type="modulestudio:Controllers" href="MUSeo.mostapp#//@controllers.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3UYys8FwEeOx6_ivDNS_pA" x="237" y="68"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_3UZZwMFwEeOx6_ivDNS_pA" type="2003" fontName="monospaced" fontHeight="12" lineColor="4210752">
+      <children xmi:type="notation:DecorationNode" xmi:id="_3UZZwsFwEeOx6_ivDNS_pA" type="5003"/>
+      <element xmi:type="modulestudio:Views" href="MUSeo.mostapp#//@views.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3UZZwcFwEeOx6_ivDNS_pA" x="368" y="286"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_GIrTIMGBEeOx6_ivDNS_pA" type="2004" fontName="monospaced" fontHeight="12" lineColor="4210752">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GIr6MMGBEeOx6_ivDNS_pA" type="5004"/>
+      <element xmi:type="modulestudio:SettingsContainer" href="MUSeo.mostapp#//@generatorSettings.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GIrTIcGBEeOx6_ivDNS_pA" x="505" y="131" width="208" height="202"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_3NsU0cFwEeOx6_ivDNS_pA"/>
+    <element xmi:type="modulestudio:Application" href="MUSeo.mostapp#/"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_4p2w0MFwEeOx6_ivDNS_pA" type="Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_4vvWYMFwEeOx6_ivDNS_pA" type="2101" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_4vvWYsFwEeOx6_ivDNS_pA" type="5102"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_4vv9cMFwEeOx6_ivDNS_pA" type="7101">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_4vv9ccFwEeOx6_ivDNS_pA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_4vv9csFwEeOx6_ivDNS_pA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_4vv9c8FwEeOx6_ivDNS_pA" type="7103"/>
+      <element xmi:type="modulestudio:Entity" href="MUSeo.mostapp#//@models.0/@entities.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4vvWYcFwEeOx6_ivDNS_pA"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_4vv9dMFwEeOx6_ivDNS_pA" type="2101" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_4vwkgMFwEeOx6_ivDNS_pA" type="5102"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_4vwkgcFwEeOx6_ivDNS_pA" type="7101">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_4vwkgsFwEeOx6_ivDNS_pA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_4vwkg8FwEeOx6_ivDNS_pA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_4vwkhMFwEeOx6_ivDNS_pA" type="7103"/>
+      <element xmi:type="modulestudio:Entity" href="MUSeo.mostapp#//@models.0/@entities.1"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4vv9dcFwEeOx6_ivDNS_pA" x="359"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_4vwkhcFwEeOx6_ivDNS_pA" type="2102" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_4vxLkMFwEeOx6_ivDNS_pA" type="5103"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_4vxLkcFwEeOx6_ivDNS_pA" type="7105">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_4vxLksFwEeOx6_ivDNS_pA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_4vxLk8FwEeOx6_ivDNS_pA"/>
+      </children>
+      <element xmi:type="modulestudio:Variables" href="MUSeo.mostapp#//@models.0/@variables.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4vwkhsFwEeOx6_ivDNS_pA" x="396" y="300"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_4p2w0cFwEeOx6_ivDNS_pA"/>
+    <element xmi:type="modulestudio:Models" href="MUSeo.mostapp#//@models.0"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_A_E8EMGBEeOx6_ivDNS_pA" type="Controller" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_BGCfsMGBEeOx6_ivDNS_pA" type="2201" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BGDGwMGBEeOx6_ivDNS_pA" type="5210"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_BGDGwcGBEeOx6_ivDNS_pA" type="7201">
+        <children xmi:type="notation:Shape" xmi:id="_BGXP0MGBEeOx6_ivDNS_pA" type="3201" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BGXP0sGBEeOx6_ivDNS_pA" type="5201"/>
+          <element xmi:type="modulestudio:MainAction" href="MUSeo.mostapp#//@controllers.0/@controllers.0/@actions.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGXP0cGBEeOx6_ivDNS_pA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_BGXP08GBEeOx6_ivDNS_pA" type="3202" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BGX24MGBEeOx6_ivDNS_pA" type="5202"/>
+          <element xmi:type="modulestudio:ViewAction" href="MUSeo.mostapp#//@controllers.0/@controllers.0/@actions.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGXP1MGBEeOx6_ivDNS_pA" x="79"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_BGX24cGBEeOx6_ivDNS_pA" type="3203" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BGX248GBEeOx6_ivDNS_pA" type="5203"/>
+          <element xmi:type="modulestudio:DisplayAction" href="MUSeo.mostapp#//@controllers.0/@controllers.0/@actions.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGX24sGBEeOx6_ivDNS_pA" x="163"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_BGX25MGBEeOx6_ivDNS_pA" type="3204" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BGYd8MGBEeOx6_ivDNS_pA" type="5204"/>
+          <element xmi:type="modulestudio:EditAction" href="MUSeo.mostapp#//@controllers.0/@controllers.0/@actions.3"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGX25cGBEeOx6_ivDNS_pA" x="15" y="55"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_BGYd8cGBEeOx6_ivDNS_pA" type="3205" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BGYd88GBEeOx6_ivDNS_pA" type="5205"/>
+          <element xmi:type="modulestudio:DeleteAction" href="MUSeo.mostapp#//@controllers.0/@controllers.0/@actions.4"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGYd8sGBEeOx6_ivDNS_pA" x="115" y="62"/>
+        </children>
+      </children>
+      <element xmi:type="modulestudio:AdminController" href="MUSeo.mostapp#//@controllers.0/@controllers.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGCfscGBEeOx6_ivDNS_pA" height="241"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_BGDGwsGBEeOx6_ivDNS_pA" type="2202" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BGDGxMGBEeOx6_ivDNS_pA" type="5211"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_BGDGxcGBEeOx6_ivDNS_pA" type="7202"/>
+      <element xmi:type="modulestudio:UserController" href="MUSeo.mostapp#//@controllers.0/@controllers.1"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGDGw8GBEeOx6_ivDNS_pA" x="324" y="24" width="181" height="181"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_BGDGxsGBEeOx6_ivDNS_pA" type="2203" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BGDt0MGBEeOx6_ivDNS_pA" type="5212"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_BGDt0cGBEeOx6_ivDNS_pA" type="7203"/>
+      <element xmi:type="modulestudio:AjaxController" href="MUSeo.mostapp#//@controllers.0/@controllers.2"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGDGx8GBEeOx6_ivDNS_pA" x="60" y="288" width="241" height="181"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_BGDt0sGBEeOx6_ivDNS_pA" type="2204" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BGDt1MGBEeOx6_ivDNS_pA" type="5213"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_BGDt1cGBEeOx6_ivDNS_pA" type="7204"/>
+      <element xmi:type="modulestudio:CustomController" href="MUSeo.mostapp#//@controllers.0/@controllers.3"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGDt08GBEeOx6_ivDNS_pA" x="850"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_A_E8EcGBEeOx6_ivDNS_pA"/>
+    <element xmi:type="modulestudio:Controllers" href="MUSeo.mostapp#//@controllers.0"/>
+  </notation:Diagram>
+</xmi:XMI>

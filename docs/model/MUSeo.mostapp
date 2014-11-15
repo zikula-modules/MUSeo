@@ -1,0 +1,181 @@
+application MUSeo {
+	vendor MU
+	author "Michael Ueberschaer"
+	email "kontakt@webdesign-in-bremen.com"
+	url "http://webdesign-in-bremen.com"
+	prefix museo
+	modelPath ""
+	targetCoreVersion ZKPRE14
+	generatorSettings {
+		settingsContainer Einstellungen
+		targetCoreVersion ZK136
+		generateAccountApi false
+		generateSearchApi false
+		generateMailzApi false
+		generateListBlock false
+		generateModerationBlock false
+		generateListContentType false
+		generateDetailContentType false
+		generateNewsletterPlugin false
+		generateModerationPanel false
+		generatePendingContentSupport false
+		generateExternalControllerAndFinder false
+		generateScribitePlugins false
+		generateTagSupport false
+		generateAtomTemplates false
+		generateCsvTemplates false
+		generateXmlTemplates false
+		generateJsonTemplates false
+		generateKmlTemplates false
+		generatePoweredByBacklinksIntoFooterTemplates false
+	}
+	modelLayer {
+		modelContainer Model {
+			numExampleRows 0
+			entities {
+				entity metatag leading {
+					nameMultiple metatags
+					displayPattern "#titleOfEntity#"
+					fields {
+						string titleOfEntity {
+							documentation "Enter the title of this entity; so you can find it!"
+						},
+						string title {
+							documentation "Enter the title, that has to be set as title in html!"
+							mandatory false
+						},
+						string description {
+							documentation "Enter the description, that has to be set as description in html!"
+							mandatory false
+						},
+						string keywords {
+							documentation "Enter the keywords; comma seperated - for example: Zikula, Framework."
+							mandatory false
+						},
+						string robots {
+							defaultValue ""
+							mandatory false
+						},
+						string theModule {
+							documentation "Select the module!"
+							length 50
+						},
+						string functionOfModule {
+							documentation "Enter the function of your selected module!"
+							length 50
+						},
+						string objectOfModule {
+							documentation "Enter the object of your selected module; if not set it will work for the main function!"
+							mandatory false
+							length 50
+						},
+						string nameOfIdentifier {
+							documentation "Enter the name for the single identifier! For example \'id\'!"
+							mandatory false
+							length 20
+						},
+						integer idOfObject {
+							documentation
+							"Enter the id of your selected module; only necessary if you have entered a function that calls a single entity!"
+							mandatory false
+						},
+						string stringOfObject {
+							documentation "Entr the the string of an object! For example \'Zikula\'!"
+							mandatory false
+							length 50
+						},
+						string extraInfos {
+							documentation
+							"Enter other parameters and their values comma seperated like parameter1=value1,parameter2=value!"
+							mandatory false
+						}
+					}
+				},
+				entity extension {
+					nameMultiple extensions
+					displayPattern "#name#"
+					fields {
+						string name unique,
+						string controllerForView {
+							documentation "Enter the controller for the view of objects; for example view."
+							mandatory false
+							length 50
+						},
+						string controllerForSingleObject {
+							documentation "Select the controller for single entity of this module!"
+							length 50
+						},
+						string parameterForObjects {
+							documentation "Enter the paremeter for objects; for example ot!"
+							defaultValue ""
+							mandatory false
+							length 50
+						},
+						string nameOfIdentifier {
+							documentation "Enter the name of the identifier for this module; for example \'id\'!"
+						},
+						string extraIdentifier {
+							documentation "Enter other additional identifiers comma seperated!"
+							mandatory false
+						}
+					}
+				}
+			}
+			variables {
+				varContainer Variables {
+					vars {
+						textVar modules {
+							documentation "Enter the allowed modules comma seperated without whitespace, for example: Content,Tags,News"
+							value News
+						},
+						textVar ^controllers {
+							documentation "Enter the allowed controllers comma seperated without whitespace!"
+							value "main,view,display"
+						},
+						textVar robots {
+							value "index, follow"
+						}
+					}
+				}
+			}
+		}
+	}
+	controllerLayer {
+		controllerContainer Controller {
+			modelContext ( "MUSeo.Model" )
+			processViews "MUSeo.View"
+			controllers {
+				adminController Admin {
+					actions {
+						mainAction Main,
+						viewAction View,
+						displayAction Display,
+						editAction Edit,
+						deleteAction Delete
+					}
+				},
+				userController User {
+					actions {
+						mainAction Main
+					}
+				},
+				ajaxController Ajax {
+					actions {
+						mainAction Main
+					}
+				},
+				customController HandleModules {
+					actions {
+						customAction CheckModule,
+						customAction GetEntities
+					}
+				}
+			}
+		}
+	}
+	viewLayer {
+		viewContainer View {
+			controller "MUSeo.Controller"
+		}
+	}
+}

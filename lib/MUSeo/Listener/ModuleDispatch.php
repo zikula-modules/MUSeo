@@ -49,7 +49,7 @@ class MUSeo_Listener_ModuleDispatch
     {
         // we get the module args for the event
         $modargs = $event->getArgs();
-        	
+
         if ($modargs['modname'] != 'Blocks' && $modargs['modname'] != 'Admin') {
 
             // we look if a module is active for MUSeo
@@ -57,7 +57,7 @@ class MUSeo_Listener_ModuleDispatch
 
             // if we found a module we can do more
             if (is_array($modules) && count($modules) > 0) {
-                	
+
                 // we get the allowed controllers
                 $controllers = ModUtil::getVar('MUSeo', 'controllers');
                 $controllers = explode(',', $controllers);
@@ -66,8 +66,7 @@ class MUSeo_Listener_ModuleDispatch
 
                     if ($modargs['type'] == 'admin') {
                         // admin call nothing to do
-                    }
-                    else {
+                    } else {
                         //LogUtil::registerStatus('User');
                         // we look for not api functions
                         if ($modargs['api'] != 1) {
@@ -93,19 +92,15 @@ class MUSeo_Listener_ModuleDispatch
                 }
                 //not allowed controller - nothing to do
                 else {
-
                 }
             }
             // no active modules, nothing to do
             else {
-                	
             }
         }
         // calling module blocks nothing to
         else {
-
         }
-
     }
 
     /**

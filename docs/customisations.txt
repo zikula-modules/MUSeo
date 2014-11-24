@@ -14,6 +14,7 @@ Implemented classes
 * lib/MUSeo/Api/HandleModules.php
 * lib/MUSeo/Controller/Admin.php
 * lib/MUSeo/Installer.php
+* lib/MUSeo/Listener/ModuleDispatch.php
 * lib/MUSeo/Util/Model.php
 * lib/MUSeo/Version.php
 

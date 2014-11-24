@@ -17,8 +17,9 @@
 class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 {
     /**
-     * This method is for returning the supported modules set in the configuration
-     * return array $modules
+     * This method returns the supported modules set in the configuration.
+     *
+     * @return array $modules
      */
     public static function checkModules()
     {
@@ -29,7 +30,8 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
     }
 
     /**
-     * This method is for setting metatags
+     * This method is for setting metatags.
+     *
      * @param string $modname
      * @param string $modfunc default main
      */
@@ -37,14 +39,14 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
     {
         $request = new Zikula_Request_Http();
 
-        $metatagrepository = MUSeo_Util_Model::getMetatagRepository();
+        $metatagRepository = MUSeo_Util_Model::getMetatagRepository();
         $where = 'tbl.theModule = \'' . DataUtil::formatForStore($modname) . '\'';
         $where .= ' AND ';
         $where .= 'tbl.functionOfModule = \'' . DataUtil::formatForStore($modfunc) . '\'';
 
-        $modulerepository = MUSeo_Util_Model::getModuleRepository();
+        $moduleRepository = MUSeo_Util_Model::getModuleRepository();
         $where2 = 'tbl.name = \'' . DataUtil::formatForStore($modname) . '\'';
-        $moduleinfo = $modulerepository->selectWhere($where2);
+        $moduleinfo = $moduleRepository->selectWhere($where2);
 
         if ($moduleinfo[0]['controllerForView'] == $modfunc) {
             $objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
@@ -105,7 +107,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
         $robots = ModUtil::getVar('MUSeo', 'robots');
 
         // we get the entity
-        $entities = $metatagrepository->selectWhere($where);
+        $entities = $metatagRepository->selectWhere($where);
          
         if (count($entities) == 1) {
             if ($entities[0]['title']) {
@@ -128,8 +130,8 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             }
         }  else {
             if ($robots != '') {
-            $metatagrobots = '<meta name="ROBOTS" content="' . $robots . '" />';
-            PageUtil::setVar('header', $metatagrobots);
+                $metatagrobots = '<meta name="ROBOTS" content="' . $robots . '" />';
+                PageUtil::setVar('header', $metatagrobots);
             }
         }
     }

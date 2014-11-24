@@ -5,7 +5,7 @@ application MUSeo {
 	url "http://webdesign-in-bremen.com"
 	prefix museo
 	generatorSettings {
-		settingsContainer Einstellungen
+		settingsContainer Settings
 		targetCoreVersion ZK136
 		generateAccountApi false
 		generateSearchApi false

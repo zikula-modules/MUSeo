@@ -76,7 +76,7 @@
             {formtextinput group='metatag' id='nameOfIdentifier' mandatory=false readOnly=false __title='Enter the name of identifier of the metatag' textMode='singleline' maxLength=20 cssClass=''}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the id of your selected module; only necessary if you have entered a function that calls a single entity!' assign='toolTip'}
+            {gt text='Enter the id of your selected module; only required if you have entered a function that calls a single entity!' assign='toolTip'}
             {formlabel for='idOfObject' __text='Id of object' class='museoFormTooltips' title=$toolTip}
             {formintinput group='metatag' id='idOfObject' mandatory=false __title='Enter the id of object of the metatag' maxLength=11 cssClass=' validate-digits'}
             {museoValidationError id='idOfObject' class='validate-digits'}

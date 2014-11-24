@@ -47,7 +47,7 @@ application MUSeo {
 							mandatory false
 						},
 						string keywords {
-							documentation "Enter the keywords; comma seperated - for example: Zikula, Framework."
+							documentation "Enter the keywords; comma separated - for example: Zikula, Framework."
 							mandatory false
 						},
 						string robots {
@@ -84,7 +84,7 @@ application MUSeo {
 						},
 						string extraInfos {
 							documentation
-							"Enter other parameters and their values comma seperated like parameter1=value1,parameter2=value!"
+							"Enter other parameters and their values comma separated like parameter1=value1,parameter2=value!"
 							mandatory false
 						}
 					}
@@ -113,7 +113,7 @@ application MUSeo {
 							documentation "Enter the name of the identifier for this module; for example \'id\'!"
 						},
 						string extraIdentifier {
-							documentation "Enter other additional identifiers comma seperated!"
+							documentation "Enter other additional identifiers comma separated!"
 							mandatory false
 						}
 					}
@@ -123,11 +123,11 @@ application MUSeo {
 				varContainer Variables {
 					vars {
 						textVar modules {
-							documentation "Enter the allowed modules comma seperated without whitespace, for example: Content,Tags,News"
+							documentation "Enter the allowed modules comma separated without whitespace, for example: Content,Tags,News"
 							value News
 						},
 						textVar ^controllers {
-							documentation "Enter the allowed controllers comma seperated without whitespace!"
+							documentation "Enter the allowed controllers comma separated without whitespace!"
 							value "main,view,display"
 						},
 						textVar robots {

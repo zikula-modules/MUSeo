@@ -576,7 +576,7 @@ msgid "Enter the name of identifier of the module"
 msgstr ""
 
 #: templates/admin/module/edit.tpl:57
-msgid "Enter other additional identifiers comma seperated!"
+msgid "Enter other additional identifiers comma separated!"
 msgstr ""
 
 #: templates/admin/module/edit.tpl:59
@@ -767,7 +767,7 @@ msgid "Enter the description of the metatag"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:46
-msgid "Enter the keywords; comma seperated - for example: Zikula, Framework."
+msgid "Enter the keywords; comma separated - for example: Zikula, Framework."
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:48
@@ -840,7 +840,7 @@ msgstr ""
 
 #: templates/admin/metatag/edit.tpl:90
 msgid ""
-"Enter other parameters and their values comma seperated like "
+"Enter other parameters and their values comma separated like "
 "parameter1=value1,parameter2=value2!"
 msgstr ""
 

@@ -33,12 +33,12 @@
             {museoValidationError id='titleOfEntity' class='required'}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the title, that has to be set as title in html!' assign='toolTip'}
+            {gt text='Enter the title that has to be set as title in html!' assign='toolTip'}
             {formlabel for='title' __text='Title' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='title' mandatory=false readOnly=false __title='Enter the title of the metatag' textMode='singleline' maxLength=255 cssClass=''}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the description, that has to be set as description in html!' assign='toolTip'}
+            {gt text='Enter the description that has to be set as description in html!' assign='toolTip'}
             {formlabel for='description' __text='Description' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='description' mandatory=false readOnly=false __title='Enter the description of the metatag' textMode='singleline' maxLength=255 cssClass=''}
         </div>

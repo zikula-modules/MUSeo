@@ -39,11 +39,11 @@ application MUSeo {
 							documentation "Enter the title of this entity; so you can find it!"
 						},
 						string title {
-							documentation "Enter the title, that has to be set as title in html!"
+							documentation "Enter the title that has to be set as title in html!"
 							mandatory false
 						},
 						string description {
-							documentation "Enter the description, that has to be set as description in html!"
+							documentation "Enter the description that has to be set as description in html!"
 							mandatory false
 						},
 						string keywords {
@@ -74,7 +74,7 @@ application MUSeo {
 						},
 						integer idOfObject {
 							documentation
-							"Enter the id of your selected module; only necessary if you have entered a function that calls a single entity!"
+							"Enter the id of your selected module; only required if you have entered a function that calls a single entity!"
 							mandatory false
 						},
 						string stringOfObject {

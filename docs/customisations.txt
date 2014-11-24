@@ -5,25 +5,19 @@ CUSTOMISATIONS
 
 MUSeo - Manual additions and amendments
 
-
 Changed Files
 
+* none yet
 
-Implemented Classes
+Implemented classes
 
-
-*lib/MUSeo/Installer.php
-*lib/MUSeo/Version.php
-
-*lib/MUSeo/Api/HandleModules.php
-*lib/MUSeo/Controller/Admin.php
-
-*lib/MUSeo/Util/Model.php
+* lib/MUSeo/Api/HandleModules.php
+* lib/MUSeo/Controller/Admin.php
+* lib/MUSeo/Installer.php
+* lib/MUSeo/Util/Model.php
+* lib/MUSeo/Version.php
 
 Additional Files
 
-customisations.txt
-
-
-
+* customisations.txt
 

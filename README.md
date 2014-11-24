@@ -1,49 +1,53 @@
 MUSeo
 =====
 
-A small module for handle SEO better
+A small Zikula module for improved SEO handling.
 
 SEO is important for websites.
 
 Modules for Zikula have their own ways to create metatags like 'title', 'description' or 'keywords'.
-Some Modules do not handle them at all.
+Some modules do not handle them at all yet.
+The result is that sites use the same title or description or keyword tag on all pages.
 
-The result is, that we get sites with the same title or description or keyword tag.
-
-MUSeo will give a way to override or add metatags to the html code of any site of a website.
+MUSeo provides a way to override or add metatags to the html code of any page of a website.
 
 Version 1.1.0
 =============
 
-With MUSeo you are able to set specific metatags ( title, description, keywords, robots ) for every page of an module.
+With MUSeo you are able to set specific metatags (title, description, keywords, robots) for arbitrary pages.
 
 Configuration
 ----------------  
 
-You have to enter the modules and the controllers you want to activate comma separated without whitespace.
+You have to enter desired modules and controllers (comma separated without whitespace) for which you want to activate enhanced SEO capabilities.
 
-Also you can enter a standard for the robots metatag.
-
-There are default values set in the module vars.
+Also you can enter a default for the robots metatag.
 
 MUSeo requires the following entries in your header template:
- 
-`<title>{pagegetvar name='title'}</title>`
-`<meta name="description" content="{$metatags.description}" />`
-`<meta name="keywords" content="{$metatags.keywords}" />`
 
-At the moment MUSeo needs to set the metatag for robots once on the startpage (for example in the header.tpl or head.tpl).
-For all other sites MUSeo is generating the metatag for robots automatically if set in the settings. 
-Standard is: 
+```
+    <title>{pagegetvar name='title'}</title>
+    <meta name="description" content="{$metatags.description}" />
+    <meta name="keywords" content="{$metatags.keywords}" />
+```
+
+At the moment MUSeo needs to set the metatag for robots once on the start page (for example in the header.tpl or head.tpl file).
+For all other pages MUSeo generates the robots metatag automatically if it has been configured in the settings.
+The default value is as follows:
 
 `<meta name="ROBOTS" content="index, follow" />`
 
 Modules
 ---------------
 
-After that you can create the modules and enter the relevant datas for each module.
+After the initial configuration you can create module references and enter the relevant data for them.
 
 Metatags
 ---------------
 
-If you have created modules you can create metatags for each site of an module.
+If you have created module references you can create metatags for each page of the corresponding modules.
+
+Version 2.0.0
+=============
+
+MUSeo is currently being developed. It is going to offer more sophisticated SEO settings.

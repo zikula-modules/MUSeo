@@ -78,7 +78,7 @@ application MUSeo {
 							mandatory false
 						},
 						string stringOfObject {
-							documentation "Enter the the string of an object! For example \'Zikula\'!"
+							documentation "Enter the string of an object! For example \'Zikula\'!"
 							mandatory false
 							length 50
 						},

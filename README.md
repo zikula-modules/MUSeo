@@ -45,7 +45,7 @@ After the initial configuration you can create module references and enter the r
 Metatags
 ---------------
 
-If you have created module references you can create metatags for each page of the corresponding modules.
+After you have created module references you can create metatags for each page of the corresponding modules.
 
 Version 2.0.0
 =============

@@ -54,7 +54,7 @@
             {formtextinput group='module' id='nameOfIdentifier' mandatory=false readOnly=false __title='Enter the name of identifier of the module' textMode='singleline' maxLength=255 cssClass=''}
         </div>
         <div class="z-formrow">
-            {gt text='Enter other additional identifiers comma seperated!' assign='toolTip'}
+            {gt text='Enter other additional identifiers comma separated!' assign='toolTip'}
             {formlabel for='extraIdentifier' __text='Extra identifier' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='module' id='extraIdentifier' mandatory=false readOnly=false __title='Enter the extra identifier of the module' textMode='singleline' maxLength=255 cssClass=''}
         </div>

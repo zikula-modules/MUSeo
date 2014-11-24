@@ -43,7 +43,7 @@
             {formtextinput group='metatag' id='description' mandatory=false readOnly=false __title='Enter the description of the metatag' textMode='singleline' maxLength=255 cssClass=''}
         </div>
         <div class="z-formrow">
-            {gt text='Enter the keywords; comma seperated - for example: Zikula, Framework.' assign='toolTip'}
+            {gt text='Enter the keywords; comma separated - for example: Zikula, Framework.' assign='toolTip'}
             {formlabel for='keywords' __text='Keywords' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='keywords' mandatory=false readOnly=false __title='Enter the keywords of the metatag' textMode='singleline' maxLength=255 cssClass=''}
         </div>
@@ -87,7 +87,7 @@
             {formtextinput group='metatag' id='stringOfObject' mandatory=false readOnly=false __title='Enter the string of object of the metatag' textMode='singleline' maxLength=50 cssClass=''}
         </div>
         <div class="z-formrow">
-            {gt text='Enter other parameters and their values comma seperated like parameter1=value1,parameter2=value2!' assign='toolTip'}
+            {gt text='Enter other parameters and their values comma separated like parameter1=value1,parameter2=value2!' assign='toolTip'}
             {formlabel for='extraInfos' __text='Additional parameters' class='museoFormTooltips' title=$toolTip}
             {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter additional parameters of the metatag' textMode='singleline' maxLength=255 cssClass=''}
             <div class="z-informationmsg z-formnote">{gt text='Enter additional parameters like prop=Main,cat=Blogging!'}</div> 

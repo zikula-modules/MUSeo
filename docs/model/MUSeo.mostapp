@@ -4,8 +4,6 @@ application MUSeo {
 	email "kontakt@webdesign-in-bremen.com"
 	url "http://webdesign-in-bremen.com"
 	prefix museo
-	modelPath ""
-	targetCoreVersion ZKPRE14
 	generatorSettings {
 		settingsContainer Einstellungen
 		targetCoreVersion ZK136

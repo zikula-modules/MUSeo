@@ -56,7 +56,7 @@
         <div class="z-formrow">
             {gt text='Select the module!' assign='toolTip'}
             {formlabel for='theModule' __text='The module' mandatorysym='1' class='museoFormTooltips' title=$toolTip}
-            {formdropdownlist group='metatag' id='theModule' mandatory=true readOnly=false __title='Enter the the module of the metatag' textMode='singleline' maxLength=50 cssClass='required'}
+            {formdropdownlist group='metatag' id='theModule' mandatory=true readOnly=false __title='Enter the module of the metatag' textMode='singleline' maxLength=50 cssClass='required'}
             {museoValidationError id='theModule' class='required'}
         </div>
         <div class="z-formrow">

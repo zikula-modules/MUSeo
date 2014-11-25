@@ -793,7 +793,7 @@ msgid "Select the module!"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:59
-msgid "Enter the the module of the metatag"
+msgid "Enter the module of the metatag"
 msgstr ""
 
 #: templates/admin/metatag/edit.tpl:63

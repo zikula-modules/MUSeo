@@ -94,7 +94,7 @@ class MUSeo_Listener_ModuleDispatch
             // there is an entry
 
             // set the metatags accordingly
-            MUSeo_Api_Handlemodules::setModuleMetaTags($modargs['modname'], $modargs['modfunc'][1]);
+            MUSeo_Api_HandleModules::setModuleMetaTags($modargs['modname'], $modargs['modfunc'][1]);
         }
     }
 

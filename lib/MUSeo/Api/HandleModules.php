@@ -51,17 +51,15 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
         if ($moduleinfo[0]['controllerForView'] == $modfunc) {
             $objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
-                 
                 $where .= ' AND ';
                 $where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
-            $objectId = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
 
+            $objectId = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
             $where .= ' AND ';
             $where .= 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
 
             $objectString = $request->query->filter($moduleinfo[0]['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
-
             $where .= ' AND ';
             $where .= 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
         }
@@ -69,7 +67,6 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
         if ($moduleinfo[0]['controllerForSingleObject'] == $modfunc && $moduleinfo[0]['controllerForView'] != $moduleinfo[0]['controllerForSingleObject']) {
             $objectType = $request->query->filter($moduleinfo[0]['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
-                 
                 $where .= ' AND ';
                 $where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
@@ -98,41 +95,33 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
                 } else {
                     $where .= ' AND ';
                     $where .= 'tbl.extraInfos NOT LIKE \'%' . $identifier . '%\'';
-
                 }
             }
         }
         
         // we get default string for robots
         $robots = ModUtil::getVar('MUSeo', 'robots');
+        $robotsTag = '<meta name="ROBOTS" content="' . $robots . '" />';
 
         // we get the entity
         $entities = $metatagRepository->selectWhere($where);
-         
+
         if (count($entities) == 1) {
-            if ($entities[0]['title']) {
-                PageUtil::setVar('title', $entities[0]['title']);
+            $entity = $entities[0];
+            if (!empty($entity['title'])) {
+                PageUtil::setVar('title', $entity['title']);
             }
-            if ($entities[0]['description']) {
-                PageUtil::setVar('description', $entities[0]['description']);
+            if (!empty($entity['description'])) {
+                PageUtil::setVar('description', $entity['description']);
             }
-            if ($entities[0]['keywords']) {
-                PageUtil::setVar('keywords', $entities[0]['keywords']);
+            if (!empty($entity['keywords'])) {
+                PageUtil::setVar('keywords', $entity['keywords']);
             }
-            if ($entities[0]['robots']) {
-                $metatagrobots = '<meta name="ROBOTS" content="' . $entities[0]['robots'] . '" />';
-                PageUtil::setVar('header', $metatagrobots);
-            }  else {
-                if ($robots != '') {
-                $metatagrobots = '<meta name="ROBOTS" content="' . $robots . '" />';
-                PageUtil::setVar('header', $metatagrobots);
-                }
-            }
-        }  else {
-            if ($robots != '') {
-                $metatagrobots = '<meta name="ROBOTS" content="' . $robots . '" />';
-                PageUtil::setVar('header', $metatagrobots);
+            if (!empty($entity['robots'])) {
+                $robotsTag = '<meta name="ROBOTS" content="' . $entity['robots'] . '" />';
             }
         }
+
+        PageUtil::setVar('header', $robotsTag);
     }
 }

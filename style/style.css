@@ -1,50 +1,68 @@
-
 /* view pages */
 div#z-maincontent.z-module-museo table tbody tr td {
     vertical-align: top;
 }
 
 /* display pages */
-div.museoRightBox {
+.museo-display.with-rightbox div.z-panel-content {
+    float: left;
+    width: 79%;
+}
+.museo-display div.museo-rightbox {
     float: right;
     margin: 0 1em;
     padding: .5em;
+    width: 20%;
     /*border: 1px solid #666;*/
 }
 
-div.museoRightBox h3 {
+.museo-display div.museo-rightbox h3 {
     color: #333;
     font-weight: 400;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
 }
 
-div.museoRightBox p.manageLink {
+.museo-display div.museo-rightbox p.managelink {
     margin-left: 18px;
 }
-
-.museoColourPicker {
-    cursor: pointer;
-}
-
 /* validation */
-input.required, textarea.required {
+div.z-formrow input.required, div.z-formrow textarea.required {
     border: 1px solid #00a8e6;
 }
-input.validation-failed, textarea.validation-failed {
+div.z-formrow input.validation-failed, div.z-formrow textarea.validation-failed {
     border: 1px solid #f30;
-    color : #f30;
+    color: #f30;
 }
-input.validation-passed, textarea.validation-passed {
+div.z-formrow input.validation-passed, div.z-formrow textarea.validation-passed {
     border: 1px solid #0c0;
-    color : #000;
+    color: #000;
 }
 
 .validation-advice {
     margin: 5px 0;
     padding: 5px;
     background-color: #f90;
-    color : #fff;
+    color: #fff;
     font-weight: 700;
 }
+div.museo-view form.museo-quicknav {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
 
+div.museo-view form.museo-quicknav fieldset {
+    padding: 3px 10px;
+    margin-bottom: 0;
+}
+
+div.museo-view form.museo-quicknav fieldset h3 {
+    margin-top: 0;
+    display: none;
+}
+
+div.museo-view form.museo-quicknav fieldset #num {
+    width: 50px;
+    text-align: right;
+}

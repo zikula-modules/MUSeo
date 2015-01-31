@@ -1,9 +1,0 @@
-{* purpose of this template: metatags view xml view in admin area *}
-{museoTemplateHeaders contentType='text/xml'}<?xml version="1.0" encoding="{charset}" ?>
-<metatags>
-{foreach item='item' from=$items}
-    {include file='admin/metatag/include.xml'}
-{foreachelse}
-    <noMetatag />
-{/foreach}
-</metatags>

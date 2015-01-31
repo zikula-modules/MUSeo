@@ -1,5 +1,0 @@
-{* purpose of this template: modules view csv view in admin area *}
-{museoTemplateHeaders contentType='text/comma-separated-values; charset=iso-8859-15' asAttachment=true filename='Modules.csv'}
-"{gt text='Name'}";"{gt text='Controller for view'}";"{gt text='Controller for single object'}";"{gt text='Parameter for objects'}";"{gt text='Name of identifier'}";"{gt text='Extra identifier'}"{foreach item='module' from=$items}
-"{$module.name|replace:"\"":""}";"{$module.controllerForView|replace:"\"":""}";"{$module.controllerForSingleObject|replace:"\"":""}";"{$module.parameterForObjects|replace:"\"":""}";"{$module.nameOfIdentifier|replace:"\"":""}";"{$module.extraIdentifier|replace:"\"":""}"{/foreach}
-

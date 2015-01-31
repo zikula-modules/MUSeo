@@ -1,4 +1,0 @@
-{* purpose of this template: modules display xml view in admin area *}
-{museoTemplateHeaders contentType='text/xml'}<?xml version="1.0" encoding="{charset}" ?>
-{getbaseurl assign='baseurl'}
-{include file='admin/module/include.xml' item=$module}

@@ -1,179 +1,496 @@
 application MUSeo {
-	vendor MU
-	author "Michael Ueberschaer"
-	email "kontakt@webdesign-in-bremen.com"
-	url "http://webdesign-in-bremen.com"
-	prefix museo
-	generatorSettings {
-		settingsContainer Settings
-		targetCoreVersion ZK136
-		generateAccountApi false
-		generateSearchApi false
-		generateMailzApi false
-		generateListBlock false
-		generateModerationBlock false
-		generateListContentType false
-		generateDetailContentType false
-		generateNewsletterPlugin false
-		generateModerationPanel false
-		generatePendingContentSupport false
-		generateExternalControllerAndFinder false
-		generateScribitePlugins false
-		generateTagSupport false
-		generateAtomTemplates false
-		generateCsvTemplates false
-		generateXmlTemplates false
-		generateJsonTemplates false
-		generateKmlTemplates false
-		generatePoweredByBacklinksIntoFooterTemplates false
-	}
-	modelLayer {
-		modelContainer Model {
-			numExampleRows 0
-			entities {
-				entity metatag leading {
-					nameMultiple metatags
-					displayPattern "#titleOfEntity#"
-					fields {
-						string titleOfEntity {
-							documentation "Enter the title of this entity; so you can find it!"
-						},
-						string title {
-							documentation "Enter the title that has to be set as title in html!"
-							mandatory false
-						},
-						string description {
-							documentation "Enter the description that has to be set as description in html!"
-							mandatory false
-						},
-						string keywords {
-							documentation "Enter the keywords; comma separated - for example: Zikula, Framework."
-							mandatory false
-						},
-						string robots {
-							defaultValue ""
-							mandatory false
-						},
-						string theModule {
-							documentation "Select the module!"
-							length 50
-						},
-						string functionOfModule {
-							documentation "Enter the function of your selected module!"
-							length 50
-						},
-						string objectOfModule {
-							documentation "Enter the object of your selected module; if not set it will work for the main function!"
-							mandatory false
-							length 50
-						},
-						string nameOfIdentifier {
-							documentation "Enter the name for the single identifier! For example \'id\'!"
-							mandatory false
-							length 20
-						},
-						integer idOfObject {
-							documentation
-							"Enter the id of your selected module; only required if you have entered a function that calls a single entity!"
-							mandatory false
-						},
-						string stringOfObject {
-							documentation "Enter the string of an object! For example \'Zikula\'!"
-							mandatory false
-							length 50
-						},
-						string extraInfos {
-							documentation
-							"Enter other parameters and their values comma separated like parameter1=value1,parameter2=value!"
-							mandatory false
-						}
-					}
-				},
-				entity extension {
-					nameMultiple extensions
-					displayPattern "#name#"
-					fields {
-						string name unique,
-						string controllerForView {
-							documentation "Enter the controller for the view of objects; for example view."
-							mandatory false
-							length 50
-						},
-						string controllerForSingleObject {
-							documentation "Select the controller for single entity of this module!"
-							length 50
-						},
-						string parameterForObjects {
-							documentation "Enter the paremeter for objects; for example ot!"
-							defaultValue ""
-							mandatory false
-							length 50
-						},
-						string nameOfIdentifier {
-							documentation "Enter the name of the identifier for this module; for example \'id\'!"
-						},
-						string extraIdentifier {
-							documentation "Enter other additional identifiers comma separated!"
-							mandatory false
-						}
-					}
-				}
-			}
-			variables {
-				varContainer Variables {
-					vars {
-						textVar modules {
-							documentation "Enter the allowed modules comma separated without whitespace, for example: Content,Tags,News"
-							value News
-						},
-						textVar ^controllers {
-							documentation "Enter the allowed controllers comma separated without whitespace!"
-							value "main,view,display"
-						},
-						textVar robots {
-							value "index, follow"
-						}
-					}
-				}
-			}
-		}
-	}
-	controllerLayer {
-		controllerContainer Controller {
-			modelContext ( "MUSeo.Model" )
-			processViews "MUSeo.View"
-			controllers {
-				adminController Admin {
-					actions {
-						mainAction Main,
-						viewAction View,
-						displayAction Display,
-						editAction Edit,
-						deleteAction Delete
-					}
-				},
-				userController User {
-					actions {
-						mainAction Main
-					}
-				},
-				ajaxController Ajax {
-					actions {
-						mainAction Main
-					}
-				},
-				customController HandleModules {
-					actions {
-						customAction CheckModule,
-						customAction GetEntities
-					}
-				}
-			}
-		}
-	}
-	viewLayer {
-		viewContainer View {
-			controller "MUSeo.Controller"
-		}
-	}
+    vendor MU
+    author "Michael Ueberschaer"
+    email "kontakt@webdesign-in-bremen.com"
+    url "http://webdesign-in-bremen.com"
+    version "2.0.0"
+    prefix museo
+    generatorSettings {
+        settingsContainer Settings
+        targetCoreVersion ZK136
+        generateAccountApi false
+        generateSearchApi false
+        generateMailzApi false
+        generateListBlock false
+        generateModerationBlock false
+        generateListContentType false
+        generateDetailContentType false
+        generateNewsletterPlugin false
+        generateModerationPanel false
+        generatePendingContentSupport false
+        generateExternalControllerAndFinder false
+        generateScribitePlugins false
+        generateTagSupport false
+        generateAtomTemplates false
+        generateCsvTemplates false
+        generateXmlTemplates false
+        generateJsonTemplates false
+        generateKmlTemplates false
+        generateIcsTemplates false
+        generatePoweredByBacklinksIntoFooterTemplates false
+        skipFiles "
+            CHANGELOG.md,
+            README.md
+        "
+        markFiles "
+            lib/MUSeo/Api/HandleModules.php,
+            lib/MUSeo/Installer.php,
+            lib/MUSeo/Listener/ModuleDispatch.php,
+            lib/MUSeo/Util/Model.php,
+            lib/MUSeo/Version.php,
+            templates/admin/config.tpl,
+            templates/extension/edit.tpl,
+            templates/metatag/display.tpl,
+            templates/metatag/edit.tpl,
+            templates/metatag/view.tpl
+        "
+    }
+    modelLayer {
+        modelContainer Model {
+            numExampleRows 0
+            entities {
+                entity metatag leading {
+                    nameMultiple metatags
+                    displayPattern "#titleOfEntity#"
+                    fields {
+                        string titleOfEntity {
+                            documentation "Enter the title of this entity; so you can find it!"
+                        },
+                        string focusKeyword {
+                            documentation "The main keyword or keyphrase that this post/page is about"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        string title {
+                            documentation "SEO title"
+                            mandatory false
+                        },
+                        string description {
+                            documentation "Meta description"
+                            mandatory false
+                        },
+                        string keywords {
+                            documentation "Comma separated list of meta keywords - for example: Zikula, Framework"
+                            mandatory false
+                        },
+                        list robotsIndex {
+                            documentation "Meta robots index"
+                            mandatory false
+                            items {
+                                default listItem Default ( "" ),
+                                listItem Index ( ^index ),
+                                listItem NoIndex ( noindex )
+                            }
+                        },
+                        list robotsFollow {
+                            dbName ""
+                            documentation "Meta robots follow"
+                            mandatory false
+                            items {
+                                default listItem Default ( "" ),
+                                listItem Follow ( follow ),
+                                listItem Nofollow ( nofollow )
+                            }
+                        },
+                        list robotsAdvanced multiple {
+                            defaultValue "-"
+                            mandatory false
+                            items {
+                                default listItem Default ( "-" ),
+                                listItem None ( none ),
+                                listItem "No ODP" ( noodp ),
+                                listItem "No YDIR" ( noydir ),
+                                listItem "No Image Index" ( noimageindex ),
+                                listItem "No Archive" ( noarchive ),
+                                listItem "No Snippet" ( nosnippet )
+                            }
+                        },
+                        url canonicalUrl {
+                            documentation "Canonical url"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        url redirectUrl {
+                            documentation "301 redirect url"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        string facebookTitle {
+                            documentation "Facebook title overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        text facebookDescription {
+                            documentation "Facebook description overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        upload facebookImage {
+                            documentation "Facebook image overriding the default value"
+                            mandatory false
+                        },
+                        string twitterTitle {
+                            dbName ""
+                            documentation "Twitter title overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        text twitterDescription {
+                            documentation "Twitter description overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        upload twitterImage {
+                            documentation "Twitter image overriding the default value"
+                            mandatory false
+                        },
+                        string googlePlusTitle {
+                            documentation "Google+ title overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        text googlePlusDescription {
+                            documentation "Google+ description overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
+                        upload googlePlusImage {
+                            documentation "Google+ image overriding the default value"
+                            mandatory false
+                        },
+                        integer pageAnalysisScore {
+                            defaultValue "0"
+                            mandatory false
+                        },
+                        string theModule {
+                            documentation "Select the module!"
+                            length 50
+                        },
+                        string functionOfModule {
+                            documentation "Enter the function of your selected module!"
+                            length 50
+                        },
+                        string objectOfModule {
+                            documentation "Enter the object of your selected module; if not set it will work for the main function!"
+                            mandatory false
+                            length 50
+                        },
+                        string nameOfIdentifier {
+                            documentation "Enter the name for the single identifier! For example \'id\'!"
+                            mandatory false
+                            length 20
+                        },
+                        integer idOfObject {
+                            documentation
+                            "Enter the id of your selected module; only required if you have entered a function that calls a single entity!"
+                            mandatory false
+                        },
+                        string stringOfObject {
+                            documentation "Enter the string of an object! For example \'Zikula\'!"
+                            mandatory false
+                            length 50
+                        },
+                        string extraInfos {
+                            documentation
+                            "Enter other parameters and their values comma separated like parameter1=value1,parameter2=value!"
+                            mandatory false
+                        }
+                    }
+                },
+                entity extension {
+                    nameMultiple extensions
+                    displayPattern "#name#"
+                    fields {
+                        string name unique,
+                        string controllerForView {
+                            documentation "Enter the controller for the view of objects; for example view."
+                            mandatory false
+                            length 50
+                        },
+                        string controllerForSingleObject {
+                            documentation "Select the controller for single entity of this module!"
+                            length 50
+                        },
+                        string parameterForObjects {
+                            documentation "Enter the paremeter for objects; for example ot!"
+                            defaultValue ""
+                            mandatory false
+                            length 50
+                        },
+                        string nameOfIdentifier {
+                            documentation "Enter the name of the identifier for this module; for example \'id\'!"
+                        },
+                        string extraIdentifier {
+                            documentation "Enter other additional identifiers comma separated!"
+                            mandatory false
+                        }
+                    }
+                }
+            }
+            variables {
+                varContainer General {
+                    documentation "Here you can define general settings."
+                    vars {
+                        textVar modules {
+                            documentation "Enter the allowed modules comma separated without whitespace, for example: Content,Tags,News"
+                            value News
+                        },
+                        textVar ^controllers {
+                            documentation "Enter the allowed controllers comma separated without whitespace!"
+                            value "main,view,display"
+                        }
+                    }
+                },
+                varContainer SEO {
+                    documentation "Here you can adjust basic SEO-related options."
+                    sortOrder 2
+                    vars {
+                        boolVar ignoreMetaDescriptionWarning {
+                            documentation "Allows to ignore a warning about meta description contained in a theme."
+                            value ^false
+                        },
+                        boolVar ignorePermalink {
+                            documentation "Allows to ignore a warning about incomplete permalink structure."
+                            value ^false
+                        },
+                        boolVar ignoreTour {
+                            documentation "Whether the introduction tour should be ignored or not."
+                            value ^false
+                        },
+                        boolVar themeDescriptionFound {
+                            documentation "Whether a meta description has been found in the theme or not."
+                            value ^false
+                        },
+                        boolVar themeHasDescription {
+                            documentation "Whether the theme has a meta description or not."
+                            value ^false
+                        },
+                        listVar robotsIndex {
+                            documentation "Default meta robots index"
+                            value ^index
+                            items {
+                                listVarItem default ^index,
+                                listVarItem noindex
+                            }
+                        },
+                        listVar robotsFollow {
+                            documentation "Default meta robots follow"
+                            value follow
+                            items {
+                                listVarItem default follow,
+                                listVarItem nofollow
+                            }
+                        },
+                        boolVar disableAdvancedMeta {
+                            documentation "Allows to disable the advanced part of the SEO meta box."
+                            value ^true
+                        },
+                        textVar alexaVerify {
+                            documentation "Alexa Verification ID"
+                            value ""
+                        },
+                        textVar googleVerify {
+                            documentation "Google Webmaster Tools"
+                            value ""
+                        },
+                        textVar msVerify {
+                            documentation "Bing Webmaster Tools"
+                            value ""
+                        },
+                        textVar pinterestVerify {
+                            documentation Pinterest
+                            value ""
+                        },
+                        textVar yandexVerify {
+                            documentation "Yandex Webmaster Tools"
+                            value ""
+                        }
+                    }
+                },
+                varContainer Permalinks {
+                    documentation "Settings relating to permalinks and canonical settings."
+                    sortOrder 3
+                    vars {
+                        boolVar enforceTrailingSlash {
+                            documentation "Enforce a trailing slash"
+                            value ^false
+                        },
+                        boolVar cleanSlugs {
+                            documentation "Remove stop words from slugs"
+                            value ^true
+                        },
+                        textVar forceTransport {
+                            documentation "Force the canonical to either http or https, when your site runs under both."
+                            value ^default
+                            maxLength 10
+                        },
+                        boolVar cleanPermalinkGoogleSiteSearch {
+                            documentation "Prevent cleaning out Google Site Search URL\'s."
+                            value ^false
+                        },
+                        boolVar cleanPermalinkGoogleCampaign {
+                            documentation "Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters."
+                            value ^false
+                        },
+                        textVar cleanPermalinkExtraVars {
+                            documentation "Other variables not to clean"
+                            value ""
+                        }
+                    }
+                },
+                varContainer Titles {
+                    sortOrder 4
+                    vars {
+                        intVar titleTest {
+                            documentation "Internal var used for testing SEO titles."
+                            value "0"
+                        },
+                        boolVar forceRewriteTitle {
+                            documentation "Force rewrite titles"
+                            value ^false
+                        },
+                        textVar titleSeparator {
+                            documentation "Symbol to use as title separator."
+                            value "sc-dash"
+                        },
+                        boolVar useMetaKeywords {
+                            documentation "Use meta keywords tag?"
+                            value ^false
+                        },
+                        boolVar noodp {
+                            documentation "Add noodp meta robots tag sitewide"
+                            value ^false
+                        },
+                        boolVar noydir {
+                            documentation "Add noydir meta robots tag sitewide"
+                            value ^false
+                        },
+                        textVar homeTitle {
+                            documentation "Homepage title template"
+                            value "%%sitename%% %%page%% %%sep%% %%sitedesc%%"
+                        },
+                        textVar homeMetaDescription {
+                            documentation "Homepage meta description template"
+                            value ""
+                        },
+                        textVar homeMetaKeywords {
+                            documentation "Homepage meta keywords template"
+                            value ""
+                        },
+                        textVar searchTitle {
+                            documentation "Search pages title template"
+                            value ""
+                        },
+                        textVar notFoundTitle {
+                            documentation "404 pages title template"
+                            value ""
+                        }
+                    }
+                },
+                varContainer SocialMedia {
+                    sortOrder 5
+                    vars {
+                        textVar facebookAdmins {
+                            documentation "List of user ids for Facebook administration"
+                            value ""
+                        },
+                        textVar facebookApps {
+                            documentation "List of linked Facebook apps id\'s => Facebook app display names"
+                            value ""
+                        },
+                        textVar facebookConnectKey {
+                            documentation "Facebook connect key"
+                            value ""
+                        },
+                        boolVar openGraphEnabled {
+                            documentation "Add Open Graph meta data to your site\'s head section."
+                            value ^true
+                        },
+                        intVar facebookAdminApp {
+                            documentation "App to use as Facebook admin"
+                            value "0"
+                        },
+                        textVar facebookSite {
+                            documentation "Facebook page url"
+                            value ""
+                        },
+                        textVar openGraphFrontpageTitle {
+                            documentation "Open Graph frontpage title"
+                            value ""
+                        },
+                        textVar openGraphFrontpageDescription {
+                            documentation "Open Graph frontpage description"
+                            value ""
+                        },
+                        textVar openGraphFrontpageImage {
+                            documentation "Open Graph frontpage image"
+                            value ""
+                        },
+                        textVar openGraphDefaultImage {
+                            documentation "OpenGraph default image url"
+                            value ""
+                        },
+                        boolVar twitterEnabled {
+                            documentation "Add Twitter card meta data"
+                            value ^false
+                        },
+                        textVar twitterSiteUser {
+                            documentation "Site Twitter username"
+                            value ""
+                        },
+                        textVar twitterDefaultCardType {
+                            documentation "The default card type to use"
+                            value summary
+                        },
+                        boolVar googlePlusEnabled {
+                            documentation "Add Google+ specific post meta data"
+                            value ^false
+                        },
+                        textVar googlePlusPublisherPage {
+                            documentation "Google publisher page"
+                            value ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+    controllerLayer {
+        controllerContainer Controller {
+            modelContext ( "MUSeo.Model" )
+            processViews "MUSeo.View"
+            controllers {
+                adminController Admin {
+                    actions {
+                        mainAction Main,
+                        viewAction View,
+                        displayAction Display,
+                        editAction Edit,
+                        deleteAction Delete
+                    }
+                },
+                userController User {
+                    actions {
+                        mainAction Main
+                    }
+                },
+                ajaxController Ajax {
+                    actions {
+                        mainAction Main
+                    }
+                },
+                customController HandleModules {
+                    actions {
+                        customAction CheckModule,
+                        customAction GetEntities
+                    }
+                }
+            }
+        }
+    }
+    viewLayer {
+        viewContainer View {
+            controller "MUSeo.Controller"
+        }
+    }
 }

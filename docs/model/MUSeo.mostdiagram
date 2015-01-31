@@ -30,6 +30,181 @@
     <children xmi:type="notation:Shape" xmi:id="_4vvWYMFwEeOx6_ivDNS_pA" type="2101" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
       <children xmi:type="notation:DecorationNode" xmi:id="_4vvWYsFwEeOx6_ivDNS_pA" type="5102"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_4vv9cMFwEeOx6_ivDNS_pA" type="7101">
+        <children xmi:type="notation:Node" xmi:id="_oeY14JsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeY14ZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Z-HFgJsXEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Z-HFgZsXEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeY14psIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.2"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeY145sIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeY15JsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.3"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeY15ZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeZc8JsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.4"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeZc8ZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_87dZMJsXEeSQq7KtKl7FzA" type="3109" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_87dZMpsXEeSQq7KtKl7FzA" type="5201"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_87dZM5sXEeSQq7KtKl7FzA" type="7102">
+            <children xmi:type="notation:Node" xmi:id="_E2-eQJsYEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.5/@items.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E2-eQZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_MjgFEJsYEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.5/@items.1"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_MjgFEZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Gxu6wJsYEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.5/@items.2"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Gxu6wZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_87dZNJsXEeSQq7KtKl7FzA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_87dZNZsXEeSQq7KtKl7FzA"/>
+          </children>
+          <element xmi:type="modulestudio:ListField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.5"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_87dZMZsXEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_xHMEcJsYEeSQq7KtKl7FzA" type="3109" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_xHMEcpsYEeSQq7KtKl7FzA" type="5201"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_xHMEc5sYEeSQq7KtKl7FzA" type="7102">
+            <children xmi:type="notation:Node" xmi:id="_0Sfi0JsYEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.6/@items.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_0Sfi0ZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_2M-5kJsYEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.6/@items.1"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_2M-5kZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3MZIIJsYEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.6/@items.2"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_3MZIIZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_xHMEdJsYEeSQq7KtKl7FzA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_xHMEdZsYEeSQq7KtKl7FzA"/>
+          </children>
+          <element xmi:type="modulestudio:ListField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.6"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xHMEcZsYEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_BMq6QJsZEeSQq7KtKl7FzA" type="3109" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_BMrhUJsZEeSQq7KtKl7FzA" type="5201"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_BMrhUZsZEeSQq7KtKl7FzA" type="7102">
+            <children xmi:type="notation:Node" xmi:id="_ICaqEJsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ICaqEZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JkObEJsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.1"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JkObEZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Ldx9sJsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.2"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ldx9sZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_McQYIJsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.3"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_McQYIZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_OdeB8JsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.4"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_OdeB8ZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZY84EJsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.5"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ZY84EZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_P6kSEJsZEeSQq7KtKl7FzA" type="3110">
+              <element xmi:type="modulestudio:ListFieldItem" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7/@items.6"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_P6kSEZsZEeSQq7KtKl7FzA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_BMrhUpsZEeSQq7KtKl7FzA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_BMrhU5sZEeSQq7KtKl7FzA"/>
+          </children>
+          <element xmi:type="modulestudio:ListField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.7"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BMq6QZsZEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oZ8LAJsZEeSQq7KtKl7FzA" type="3107">
+          <element xmi:type="modulestudio:UrlField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.8"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oZ8LAZsZEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tCDloJsZEeSQq7KtKl7FzA" type="3107">
+          <element xmi:type="modulestudio:UrlField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.9"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tCDloZsZEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_JOQ8sJsaEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.10"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_JOQ8sZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_OooToJsaEeSQq7KtKl7FzA" type="3105">
+          <element xmi:type="modulestudio:TextField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.11"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_OooToZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Z9kyoJsaEeSQq7KtKl7FzA" type="3108">
+          <element xmi:type="modulestudio:UploadField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.12"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Z9kyoZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ighrIJsaEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.13"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ighrIZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_lVRqsJsaEeSQq7KtKl7FzA" type="3105">
+          <element xmi:type="modulestudio:TextField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.14"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_lVRqsZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_pEiKsJsaEeSQq7KtKl7FzA" type="3108">
+          <element xmi:type="modulestudio:UploadField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.15"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_pEiKsZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_skUEQJsaEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.16"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_skUEQZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_vgjL4JsaEeSQq7KtKl7FzA" type="3105">
+          <element xmi:type="modulestudio:TextField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.17"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_vgjL4ZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yf6gAJsaEeSQq7KtKl7FzA" type="3108">
+          <element xmi:type="modulestudio:UploadField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.18"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yf6gAZsaEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_L_R2UJsbEeSQq7KtKl7FzA" type="3102">
+          <element xmi:type="modulestudio:IntegerField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.19"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_L_R2UZsbEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeZc9JsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.20"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeZc9ZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeZc9psIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.21"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeZc95sIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeZc-JsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.22"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeZc-ZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeaEAJsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.23"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeaEAZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeaEApsIEeSQq7KtKl7FzA" type="3102">
+          <element xmi:type="modulestudio:IntegerField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.24"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeaEA5sIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeaEBJsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.25"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeaEBZsIEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oeaEBpsIEeSQq7KtKl7FzA" type="3104">
+          <element xmi:type="modulestudio:StringField" href="MUSeo.mostapp#//@models.0/@entities.0/@fields.26"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_oeaEB5sIEeSQq7KtKl7FzA"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_4vv9ccFwEeOx6_ivDNS_pA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_4vv9csFwEeOx6_ivDNS_pA"/>
       </children>
@@ -54,7 +229,249 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_4vxLk8FwEeOx6_ivDNS_pA"/>
       </children>
       <element xmi:type="modulestudio:Variables" href="MUSeo.mostapp#//@models.0/@variables.0"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4vwkhsFwEeOx6_ivDNS_pA" x="396" y="300"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4vwkhsFwEeOx6_ivDNS_pA" x="828"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_dEV_AJsJEeSQq7KtKl7FzA" type="2102" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_dEV_ApsJEeSQq7KtKl7FzA" type="5103"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_dEV_A5sJEeSQq7KtKl7FzA" type="7105">
+        <children xmi:type="notation:Node" xmi:id="_hsyJwJsJEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hsyJwZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tNsoMJsJEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tNsoMZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_vEkqQJsJEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.2"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_vEkqQZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wbvRgJsJEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.3"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wbvRgZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yHRmQJsJEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.4"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yHRmQZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_ckLTYJsYEeSQq7KtKl7FzA" type="3124" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_ckLTYpsYEeSQq7KtKl7FzA" type="5203"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_ckLTY5sYEeSQq7KtKl7FzA" type="7106">
+            <children xmi:type="notation:Node" xmi:id="_f0-80JsYEeSQq7KtKl7FzA" type="3125">
+              <element xmi:type="modulestudio:ListVarItem" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.5/@items.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_f0-80ZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_g28wIJsYEeSQq7KtKl7FzA" type="3125">
+              <element xmi:type="modulestudio:ListVarItem" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.5/@items.1"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_g28wIZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ckLTZJsYEeSQq7KtKl7FzA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ckLTZZsYEeSQq7KtKl7FzA"/>
+          </children>
+          <element xmi:type="modulestudio:ListVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.5"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckLTYZsYEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_j2UrUJsYEeSQq7KtKl7FzA" type="3124" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+          <children xmi:type="notation:DecorationNode" xmi:id="_j2VSYJsYEeSQq7KtKl7FzA" type="5203"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_j2V5cJsYEeSQq7KtKl7FzA" type="7106">
+            <children xmi:type="notation:Node" xmi:id="_sDSFsJsYEeSQq7KtKl7FzA" type="3125">
+              <element xmi:type="modulestudio:ListVarItem" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.6/@items.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_sDSFsZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_s4cMEJsYEeSQq7KtKl7FzA" type="3125">
+              <element xmi:type="modulestudio:ListVarItem" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.6/@items.1"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_s4cMEZsYEeSQq7KtKl7FzA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_j2V5cZsYEeSQq7KtKl7FzA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_j2V5cpsYEeSQq7KtKl7FzA"/>
+          </children>
+          <element xmi:type="modulestudio:ListVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.6"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j2UrUZsYEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_2Bn78JsJEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.7"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2Bn78ZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_BIlM0JsLEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.8"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BIlM0ZsLEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_4Rg68JsJEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.9"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4Rg68ZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_6TKpoJsJEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.10"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_6TKpoZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_7J8goJsJEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.11"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_7J8goZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_8Jl_wJsJEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.1/@vars.12"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_8Jl_wZsJEeSQq7KtKl7FzA"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_dEV_BJsJEeSQq7KtKl7FzA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_dEV_BZsJEeSQq7KtKl7FzA"/>
+      </children>
+      <element xmi:type="modulestudio:Variables" href="MUSeo.mostapp#//@models.0/@variables.1"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dEV_AZsJEeSQq7KtKl7FzA" x="828" y="108"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_YMP8wJsLEeSQq7KtKl7FzA" type="2102" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_YMQj0JsLEeSQq7KtKl7FzA" type="5103"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_YMQj0ZsLEeSQq7KtKl7FzA" type="7105">
+        <children xmi:type="notation:Node" xmi:id="_lfkM8JsLEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.2/@vars.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_lfkM8ZsLEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_inEV0JsLEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.2/@vars.1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_inEV0ZsLEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_cYsSkJsMEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.2/@vars.2"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_cYsSkZsMEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_gee4sJsLEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.2/@vars.3"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_gee4sZsLEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_enyc0JsLEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.2/@vars.4"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_enyc0ZsLEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_bfRMsJsLEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.2/@vars.5"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_bfRMsZsLEeSQq7KtKl7FzA"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_YMQj0psLEeSQq7KtKl7FzA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_YMQj05sLEeSQq7KtKl7FzA"/>
+      </children>
+      <element xmi:type="modulestudio:Variables" href="MUSeo.mostapp#//@models.0/@variables.2"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YMP8wZsLEeSQq7KtKl7FzA" x="828" y="612"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_KrfbkJsNEeSQq7KtKl7FzA" type="2102" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_KrfbkpsNEeSQq7KtKl7FzA" type="5103"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Krfbk5sNEeSQq7KtKl7FzA" type="7105">
+        <children xmi:type="notation:Node" xmi:id="_fYeoAJsNEeSQq7KtKl7FzA" type="3121">
+          <element xmi:type="modulestudio:IntVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fYeoAZsNEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_kUCjEJsNEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_kUCjEZsNEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_rB9MkJsNEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.2"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_rB9MkZsNEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_XsW0YJsOEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.3"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_XsW0YZsOEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_eY2hkJsOEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.4"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_eY2hkZsOEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_pD7kMJsOEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.5"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_pD7kMZsOEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_PqHm0JsPEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.6"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_PqHm0ZsPEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ZzhfwJsPEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.7"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ZzhfwZsPEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ebl3EJsPEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.8"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ebl3EZsPEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4l2kJsSEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.9"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_E4l2kZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_JMjmIJsSEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.3/@vars.10"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_JMjmIZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_KrfblJsNEeSQq7KtKl7FzA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_KrfblZsNEeSQq7KtKl7FzA"/>
+      </children>
+      <element xmi:type="modulestudio:Variables" href="MUSeo.mostapp#//@models.0/@variables.3"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KrfbkZsNEeSQq7KtKl7FzA" x="840" y="816"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_TFhPUJsSEeSQq7KtKl7FzA" type="2102" fontColor="4210752" fontName="Lucida Grande" fontHeight="12" lineColor="0">
+      <children xmi:type="notation:DecorationNode" xmi:id="_TFhPUpsSEeSQq7KtKl7FzA" type="5103"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_TFhPU5sSEeSQq7KtKl7FzA" type="7105">
+        <children xmi:type="notation:Node" xmi:id="_cF640JsSEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_cF640ZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_dzvskJsSEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_dzvskZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fQGV0JsSEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.2"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fQGV0ZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_1H-oEJsSEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.3"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_1H-oEZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Jw5XYJsUEeSQq7KtKl7FzA" type="3121">
+          <element xmi:type="modulestudio:IntVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.4"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Jw5XYZsUEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_6yNnAJsSEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.5"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_6yNnAZsSEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_HIr0cJsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.6"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_HIr0cZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_QzMx8JsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.7"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_QzMx8ZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_UXJZ0JsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.8"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_UXJZ0ZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fRckMJsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.9"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fRckMZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_noypoJsTEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.10"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_noypoZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tij5YJsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.11"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tij5YZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_xNViAJsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.12"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_xNViAZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_2fjpkJsTEeSQq7KtKl7FzA" type="3120">
+          <element xmi:type="modulestudio:BoolVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.13"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2fjpkZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-ZFxoJsTEeSQq7KtKl7FzA" type="3122">
+          <element xmi:type="modulestudio:TextVar" href="MUSeo.mostapp#//@models.0/@variables.4/@vars.14"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_-ZFxoZsTEeSQq7KtKl7FzA"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_TFhPVJsSEeSQq7KtKl7FzA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_TFhPVZsSEeSQq7KtKl7FzA"/>
+      </children>
+      <element xmi:type="modulestudio:Variables" href="MUSeo.mostapp#//@models.0/@variables.4"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TFhPUZsSEeSQq7KtKl7FzA" x="396" y="576"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_4p2w0cFwEeOx6_ivDNS_pA"/>
     <element xmi:type="modulestudio:Models" href="MUSeo.mostapp#//@models.0"/>

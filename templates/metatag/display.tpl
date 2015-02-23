@@ -106,6 +106,8 @@
           </a>
         {else}&nbsp;{/if}
         </dd>
+        <dt>{gt text='Whats app title'}</dt>
+        <dd>{$metatag.whatsAppTitle}</dd>
         <dt>{gt text='Page analysis score'}</dt>
         <dd>{$metatag.pageAnalysisScore}</dd>
      </dl>

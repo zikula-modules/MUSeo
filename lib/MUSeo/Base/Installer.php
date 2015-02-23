@@ -92,6 +92,7 @@ class MUSeo_Base_Installer extends Zikula_AbstractInstaller
         $this->setVar('twitterDefaultCardType', 'summary');
         $this->setVar('googlePlusEnabled', false);
         $this->setVar('googlePlusPublisherPage', '');
+        $this->setVar('whatsAppEnabled', false);
     
         $categoryRegistryIdsPerEntity = array();
     

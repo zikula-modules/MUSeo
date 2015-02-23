@@ -272,6 +272,14 @@
                 </div>
             </fieldset>
             <fieldset>
+                <legend>{gt text='WhatsApp'}</legend>
+                <div class="z-formrow">
+                    {gt text='WhatsApp title overriding the default value' assign='toolTip'}
+                    {formlabel for='whatsAppTitle' __text='Whats app title' cssClass='museo-form-tooltips' title=$toolTip}
+                    {formtextinput group='metatag' id='whatsAppTitle' mandatory=false readOnly=false __title='Enter the whats app title of the metatag' textMode='singleline' maxLength=255 cssClass='' }
+                </div>
+            </fieldset>
+            <fieldset>
                 <legend>{gt text='Analysis'}</legend>
                 
                 <div class="z-formrow">

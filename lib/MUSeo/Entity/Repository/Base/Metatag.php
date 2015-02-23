@@ -63,6 +63,7 @@ class MUSeo_Entity_Repository_Base_Metatag extends EntityRepository
             'googlePlusTitle',
             'googlePlusDescription',
             'googlePlusImage',
+            'whatsAppTitle',
             'pageAnalysisScore',
             'theModule',
             'functionOfModule',
@@ -743,6 +744,8 @@ class MUSeo_Entity_Repository_Base_Metatag extends EntityRepository
             $where .= ((!empty($where)) ? ' OR ' : '');
             $where .= 'tbl.googlePlusImage = \'' . $fragment . '\'';
             $where .= ((!empty($where)) ? ' OR ' : '');
+            $where .= 'tbl.whatsAppTitle LIKE \'%' . $fragment . '%\'';
+            $where .= ((!empty($where)) ? ' OR ' : '');
             $where .= 'tbl.theModule LIKE \'%' . $fragment . '%\'';
             $where .= ((!empty($where)) ? ' OR ' : '');
             $where .= 'tbl.functionOfModule LIKE \'%' . $fragment . '%\'';
@@ -793,6 +796,8 @@ class MUSeo_Entity_Repository_Base_Metatag extends EntityRepository
             $where .= 'tbl.googlePlusDescription LIKE \'%' . $fragment . '%\'';
             $where .= ((!empty($where)) ? ' OR ' : '');
             $where .= 'tbl.googlePlusImage = \'' . $fragment . '\'';
+            $where .= ((!empty($where)) ? ' OR ' : '');
+            $where .= 'tbl.whatsAppTitle LIKE \'%' . $fragment . '%\'';
             $where .= ((!empty($where)) ? ' OR ' : '');
             $where .= 'tbl.pageAnalysisScore = \'' . $fragment . '\'';
             $where .= ((!empty($where)) ? ' OR ' : '');

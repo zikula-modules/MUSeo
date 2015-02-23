@@ -75,6 +75,7 @@
                     <option value="googlePlusTitle"{if $sort eq 'googlePlusTitle'} selected="selected"{/if}>{gt text='Google plus title'}</option>
                     <option value="googlePlusDescription"{if $sort eq 'googlePlusDescription'} selected="selected"{/if}>{gt text='Google plus description'}</option>
                     <option value="googlePlusImage"{if $sort eq 'googlePlusImage'} selected="selected"{/if}>{gt text='Google plus image'}</option>
+                    <option value="whatsAppTitle"{if $sort eq 'whatsAppTitle'} selected="selected"{/if}>{gt text='Whats app title'}</option>
                     <option value="pageAnalysisScore"{if $sort eq 'pageAnalysisScore'} selected="selected"{/if}>{gt text='Page analysis score'}</option>
                     <option value="theModule"{if $sort eq 'theModule'} selected="selected"{/if}>{gt text='The module'}</option>
                     <option value="functionOfModule"{if $sort eq 'functionOfModule'} selected="selected"{/if}>{gt text='Function of module'}</option>

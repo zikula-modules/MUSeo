@@ -115,6 +115,10 @@ class MUSeo_Entity_Validator_Base_Metatag extends MUSeo_Validator
             $errorInfo['message'] = __f('Error! Length of field value must not be higher than %2$s (%1$s).', array('google plus image', 255), $dom);
             return $errorInfo;
         }
+        if (!$this->isStringNotLongerThan('whatsAppTitle', 255)) {
+            $errorInfo['message'] = __f('Error! Length of field value must not be higher than %2$s (%1$s).', array('whats app title', 255), $dom);
+            return $errorInfo;
+        }
         if (!$this->isValidInteger('pageAnalysisScore')) {
             $errorInfo['message'] = __f('Error! Field value may only contain digits (%s).', array('page analysis score'), $dom);
             return $errorInfo;

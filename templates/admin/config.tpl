@@ -354,6 +354,14 @@
                             <span class="z-formnote">{gt text='If you have a Google+ page for your business, add that URL here and link it on your Google+ page\'s about page.'}</span>
                         </div>
                     </fieldset>
+                    <fieldset>
+                        <legend>{gt text="WhatsApp"}</legend>
+                        <div class="z-formrow">
+                            {gt text='Add WhatsApp button' assign='toolTip'}
+                            {formlabel for='whatsAppEnabled' __text='Whats app enabled' cssClass='museo-form-tooltips ' title=$toolTip}
+                            {formcheckbox id='whatsAppEnabled' group='config'}
+                        </div>
+                    </fieldset>
                 {/formtabbedpanel}
             {/formtabbedpanelset}
 

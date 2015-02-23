@@ -245,6 +245,12 @@ abstract class MUSeo_Entity_Base_Metatag extends Zikula_EntityAccess
      */
     protected $googlePlusImageFullPathUrl = '';
     /**
+     * @ORM\Column(length=255)
+     * @var string $whatsAppTitle.
+     */
+    protected $whatsAppTitle = '';
+    
+    /**
      * @ORM\Column(type="bigint")
      * @var integer $pageAnalysisScore.
      */
@@ -1131,6 +1137,28 @@ abstract class MUSeo_Entity_Base_Metatag extends Zikula_EntityAccess
     }
     
     /**
+     * Get whats app title.
+     *
+     * @return string
+     */
+    public function getWhatsAppTitle()
+    {
+        return $this->whatsAppTitle;
+    }
+    
+    /**
+     * Set whats app title.
+     *
+     * @param string $whatsAppTitle.
+     *
+     * @return void
+     */
+    public function setWhatsAppTitle($whatsAppTitle)
+    {
+        $this->whatsAppTitle = $whatsAppTitle;
+    }
+    
+    /**
      * Get page analysis score.
      *
      * @return integer
@@ -1487,6 +1515,7 @@ abstract class MUSeo_Entity_Base_Metatag extends Zikula_EntityAccess
                 $this['googlePlusImageMeta'] = $uploadManager->readMetaDataForFile($this['googlePlusImage'], $fullPath);
             }*/
         }
+        $this->formatTextualField('whatsAppTitle', $currentFunc, $usesCsvOutput);
         $this['pageAnalysisScore'] = (int) ((isset($this['pageAnalysisScore']) && !empty($this['pageAnalysisScore'])) ? DataUtil::formatForDisplay($this['pageAnalysisScore']) : 0);
         $this->formatTextualField('theModule', $currentFunc, $usesCsvOutput);
         $this->formatTextualField('functionOfModule', $currentFunc, $usesCsvOutput);

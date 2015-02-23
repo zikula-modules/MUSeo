@@ -4,8 +4,6 @@ src/modules/MUSeo/templates/metatag/view_quickNav.tpl: themes/YourTheme/template
 src/modules/MUSeo/templates/metatag/view.rss.tpl: themes/YourTheme/templates/modules/MUSeo/metatag/view.rss.tpl
 src/modules/MUSeo/templates/metatag/display.tpl: themes/YourTheme/templates/modules/MUSeo/metatag/display.tpl
 src/modules/MUSeo/templates/metatag/delete.tpl: themes/YourTheme/templates/modules/MUSeo/metatag/delete.tpl
-src/modules/MUSeo/templates/metatag/include_displayItemListOne.tpl: themes/YourTheme/templates/modules/MUSeo/metatag/include_displayItemListOne.tpl
-src/modules/MUSeo/templates/metatag/include_displayItemListMany.tpl: themes/YourTheme/templates/modules/MUSeo/metatag/include_displayItemListMany.tpl
 src/modules/MUSeo/templates/extension/main.tpl: themes/YourTheme/templates/modules/MUSeo/extension/main.tpl
 src/modules/MUSeo/templates/extension/view.tpl: themes/YourTheme/templates/modules/MUSeo/extension/view.tpl
 src/modules/MUSeo/templates/extension/view_quickNav.tpl: themes/YourTheme/templates/modules/MUSeo/extension/view_quickNav.tpl

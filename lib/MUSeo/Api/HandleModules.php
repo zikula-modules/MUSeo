@@ -170,15 +170,15 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 				}
             }
             $forceTransport = ModUtil::getVar('MUSeo', 'forceTransport');
+            $canonical = '';
             if (!empty($entity['canonicalUrl']) || $forceTransport != 'default') {
-            	$canonical = '';
             	if(empty($entity['canonicalUrl'])){
-            		$cannonical = $entity['canonicalUrl'];
+            		$canonical = $entity['canonicalUrl'];
             	}else if($forceTransport != 'default'){
-            		$cannonical = System::getCurrentUrl();
+            		$canonical = System::getCurrentUrl();
             	}
 
-				if(!empty($cannonical) && $forceTransport != System::serverGetProtocol()) {
+				if(!empty($canonical) && $forceTransport != System::serverGetProtocol()) {
 					if($forceTransport != System::serverGetProtocol()){
 						$canonical = preg_replace( '`^http[s]?`', $forceTransport, $canonical);
 					}
@@ -187,6 +187,83 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             }
             if (!empty($entity['redirectUrl'])) {
             	System::redirect($entity['redirectUrl'],'',301);
+            }
+            if(ModUtil::getVar('MUSeo', 'facebookEnabled')){
+            	if(!empty(ModUtil::getVar('MUSeo', 'facebookAdminApp'))){
+            		PageUtil::setVar('header', '<meta property="fb:app_id" content="'. ModUtil::getVar('MUSeo', 'facebookAdminApp') .'">');
+            	}else if(!empty(ModUtil::getVar('MUSeo', 'facebookAdmins'))){
+            		PageUtil::setVar('header', '<meta property="fb:admins" content="'. ModUtil::getVar('MUSeo', 'facebookAdmins') .'">');
+            	}
+            	if(!empty(ModUtil::getVar('MUSeo', 'facebookSite'))){
+            		PageUtil::setVar('header', '<meta property="article:publisher" content="'. ModUtil::getVar('MUSeo', 'facebookSite') .'">');
+            	}
+            	if (!empty($entity['facebookTitle'])) {
+            		PageUtil::setVar('header', '<meta property="og:title" content="'. $entity['facebookTitle'] .'">');
+            	}else{
+            		PageUtil::setVar('header', '<meta property="og:title" content="'. PageUtil::getVar('title') .'">');
+            	}
+            	if (!empty($entity['facebookDescription'])) {
+            		PageUtil::setVar('header', '<meta property="og:description" content="'. $entity['facebookDescription'] .'">');
+            	}else{
+            		PageUtil::setVar('header', '<meta property="og:description" content="'. PageUtil::getVar('description') .'">');
+            	}
+            	if (!empty($entity['facebookImage'])) {
+            		PageUtil::setVar('header', '<meta property="og:image" content="' . $entity['facebookImage'] . '">');
+            	}else if(!empty(ModUtil::getVar('MUSeo', 'openGraphDefaultImage'))){
+            		PageUtil::setVar('header', '<meta property="og:image" content="' . ModUtil::getVar('MUSeo', 'openGraphDefaultImage') . '">');
+            	}
+            	if($canonical){
+            		PageUtil::setVar('header', '<meta property="og:url" content="' . $canonical . '">');
+            	}else{
+            		PageUtil::setVar('header', '<meta property="og:url" content="' . System::getCurrentUrl() . '">');
+            	}
+            	PageUtil::setVar('header', '<meta property="og:site_name" content="' . System::getVar('sitename') . '">');
+            	PageUtil::setVar('header', '<meta property="article:modified_time" content="' . $entity['updatedDate'] . '">');
+            	PageUtil::setVar('header', '<meta property="og_updated_time" content="' . $entity['updatedDate'] . '">');
+            	PageUtil::setVar('header', '<meta property="og:type" content="website">');
+            	PageUtil::setVar('header', '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">');
+            	
+            }
+            if(ModUtil::getVar('MUSeo', 'googlePlusEnabled')){
+            	if (!empty($entity['googlePlusTitle'])) {
+            		PageUtil::setVar('header', '<meta itemprop="name" content="'. $entity['googlePlusTitle'] .'">');
+            	}else{
+            		PageUtil::setVar('header', '<meta itemprop="name" content="'. PageUtil::getVar('title') .'">');
+            	}
+            	if (!empty($entity['googlePlusDescription'])) {
+            		PageUtil::setVar('header', '<meta itemprop="description" content="'. $entity['googlePlusDescription'] .'">');
+            	}else{
+            		PageUtil::setVar('header', '<meta itemprop="description" content="'. PageUtil::getVar('description') .'">');
+            	}
+            	if (!empty($entity['googlePlusImage'])) {
+            		PageUtil::setVar('header', '<meta itemprop="image" content="' . $entity['googlePlusImageFullPathUrl'] . '">');
+            	}
+            	if(!empty(ModUtil::getVar('MUSeo', 'googlePlusPublisherPage'))){
+            		PageUtil::setVar('header', '<link href="' . ModUtil::getVar('MUSeo', 'googlePlusPublisherPage') . '" rel="publisher" />');
+            	}
+            }
+            if(ModUtil::getVar('MUSeo', 'twitterEnabled')){
+            	if (!empty($entity['twitterTitle'])) {
+            		PageUtil::setVar('header', '<meta property="og:title" content="'. $entity['twitterTitle'] .'">');
+            	}else{
+            		PageUtil::setVar('header', '<meta property="og:title" content="'. PageUtil::getVar('title') .'">');
+            	}
+            	if (!empty($entity['twitterDescription'])) {
+            		PageUtil::setVar('header', '<meta property="og:description" content="'. $entity['twitterDescription'] .'">');
+            	}else{
+            		PageUtil::setVar('header', '<meta property="og:description" content="'. PageUtil::getVar('description') .'">');
+            	}
+            	if (!empty($entity['twitterImage'])) {
+            		PageUtil::setVar('header', '<meta property="og:image" content="' . $entity['twitterImageFullPathUrl'] . '">');
+            	
+            	}
+            	PageUtil::setVar('header', '<meta name="twitter:site" content="' . ModUtil::getVar('MUSeo', 'twitterSiteUser') . '">');
+            	if($canonical){
+            		PageUtil::setVar('header', '<meta property="og:url" content="' . $canonical . '">');
+            	}else{
+            		PageUtil::setVar('header', '<meta property="og:url" content="' . System::getCurrentUrl() . '">');
+            	}
+            	PageUtil::setVar('header', '<meta name="twitter:card" content="' . ModUtil::getVar('MUSeo', 'twitterDefaultCardType') . '">');
             }
         }
     }

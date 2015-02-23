@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MUSeo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-23 09:35+0000\n"
-"PO-Revision-Date: 2015-02-23 11:20+0100\n"
+"PO-Revision-Date: 2015-02-23 11:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -512,7 +512,7 @@ msgstr "Kein Archiv"
 
 #: lib/MUSeo/Util/Base/ListEntries.php:296
 msgid "No snippet"
-msgstr ""
+msgstr "Kein Snippet"
 
 #: lib/MUSeo/Util/Base/View.php:220
 msgid "Bytes"
@@ -1051,11 +1051,13 @@ msgstr "SEO"
 
 #: templates/admin/config.tpl:42
 msgid "Here you can adjust basic SEO-related options."
-msgstr ""
+msgstr "Hier kannst Du grundlegende SEO relevante Optionen einstellen."
 
 #: templates/admin/config.tpl:45
 msgid "Allows to ignore a warning about meta description contained in a theme."
 msgstr ""
+"Erlaubt Warnungen über Meta Beschreibungen innerhalb eines Themes zu "
+"ignorieren."
 
 #: templates/admin/config.tpl:46
 msgid "Ignore meta description warning"
@@ -1076,7 +1078,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:58
 msgid "Ignore tour"
-msgstr ""
+msgstr "Tour ignorieren"
 
 #: templates/admin/config.tpl:63
 msgid "Whether a meta description has been found in the theme or not."
@@ -1141,7 +1143,7 @@ msgstr "Metadaten"
 
 #: templates/admin/config.tpl:94
 msgid "Webmaster Tools"
-msgstr ""
+msgstr "Webmaster Werkzeuge"
 
 #: templates/admin/config.tpl:96
 msgid ""
@@ -1166,7 +1168,7 @@ msgstr "Gib die Stadt ein"
 
 #: templates/admin/config.tpl:105 templates/admin/config.tpl:108
 msgid "Google Webmaster Tools"
-msgstr ""
+msgstr "Google Webmaster Werkzeuge"
 
 #: templates/admin/config.tpl:106
 msgid "Google verify"
@@ -1179,7 +1181,7 @@ msgstr "Gib die Stadt ein"
 
 #: templates/admin/config.tpl:111 templates/admin/config.tpl:114
 msgid "Bing Webmaster Tools"
-msgstr ""
+msgstr "Bing Webmaster Werkzeuge"
 
 #: templates/admin/config.tpl:112
 msgid "Ms verify"
@@ -1227,11 +1229,11 @@ msgstr ""
 
 #: templates/admin/config.tpl:138
 msgid "Enforce a trailing slash"
-msgstr ""
+msgstr "Erzwinge einen angehängten Schrägstrich"
 
 #: templates/admin/config.tpl:139
 msgid "Enforce trailing slash"
-msgstr ""
+msgstr "Angehängten Schrägstrich erzwingen"
 
 #: templates/admin/config.tpl:141
 msgid ""
@@ -1587,9 +1589,8 @@ msgid "Facebook site"
 msgstr ""
 
 #: templates/admin/config.tpl:291
-#, fuzzy
 msgid "Enter the facebook site."
-msgstr "Gib die Stadt ein"
+msgstr "Gib die Facebookseite ein."
 
 #: templates/admin/config.tpl:294
 #, fuzzy
@@ -1686,9 +1687,8 @@ msgid "Site Twitter username"
 msgstr ""
 
 #: templates/admin/config.tpl:331
-#, fuzzy
 msgid "Twitter site user"
-msgstr "Benutzer"
+msgstr "Twitter Nutzer der Seite"
 
 #: templates/admin/config.tpl:332
 #, fuzzy
@@ -1722,9 +1722,8 @@ msgid "Google plus enabled"
 msgstr "diese Einstellung ist aktiviert. Klicke um sie zu deaktivieren. "
 
 #: templates/admin/config.tpl:351
-#, fuzzy
 msgid "Google publisher page"
-msgstr "Seite besuchen"
+msgstr "Google Veröffentlicher Seite"
 
 #: templates/admin/config.tpl:352
 msgid "Google plus publisher page"
@@ -1801,7 +1800,7 @@ msgstr "Titel des Eintrags"
 #: templates/metatag/display.tpl:26 templates/metatag/view_quickNav.tpl:60
 #: templates/metatag/view.tpl:79 templates/metatag/edit.tpl:58
 msgid "Focus keyword"
-msgstr ""
+msgstr "Fokus Schlüsselwort"
 
 #: templates/metatag/display.tpl:28 templates/metatag/view_quickNav.tpl:61
 #: templates/metatag/view.tpl:82 templates/metatag/edit.tpl:65
@@ -1829,88 +1828,74 @@ msgstr ""
 
 #: templates/metatag/display.tpl:43 templates/metatag/view_quickNav.tpl:67
 #: templates/metatag/edit.tpl:118 templates/metatag/edit.tpl:119
-#, fuzzy
 msgid "Canonical url"
-msgstr "Url"
+msgstr "Anerkannte Url"
 
 #: templates/metatag/display.tpl:46 templates/metatag/display.tpl:55
-#, fuzzy
 msgid "Visit this page"
 msgstr "Seite besuchen"
 
 #: templates/metatag/display.tpl:46 templates/metatag/display.tpl:55
-#, fuzzy
 msgid "Homepage"
 msgstr "Homepage"
 
 #: templates/metatag/display.tpl:52 templates/metatag/view_quickNav.tpl:68
 #: templates/metatag/edit.tpl:127
-#, fuzzy
 msgid "Redirect url"
-msgstr "Url"
+msgstr "Umleitung Url"
 
 #: templates/metatag/display.tpl:64 templates/metatag/view_quickNav.tpl:69
 #: templates/metatag/view.tpl:91 templates/metatag/edit.tpl:142
-#, fuzzy
 msgid "Facebook title"
-msgstr "Titel"
+msgstr "Facebook Titel"
 
 #: templates/metatag/display.tpl:66 templates/metatag/view_quickNav.tpl:70
 #: templates/metatag/view.tpl:94 templates/metatag/edit.tpl:149
-#, fuzzy
 msgid "Facebook description"
-msgstr "Mit Beschreibung"
+msgstr "Facebook Beschreibung"
 
 #: templates/metatag/display.tpl:68 templates/metatag/view_quickNav.tpl:71
 #: templates/metatag/view.tpl:97 templates/metatag/edit.tpl:156
-#, fuzzy
 msgid "Facebook image"
-msgstr "Bildupload"
+msgstr "Facebook Bild"
 
 #: templates/metatag/display.tpl:74 templates/metatag/display.tpl:89
 #: templates/metatag/display.tpl:104 templates/metatag/view.tpl:159
 #: templates/metatag/view.tpl:176 templates/metatag/view.tpl:193
 #: templates/metatag/edit.tpl:170 templates/metatag/edit.tpl:215
 #: templates/metatag/edit.tpl:261
-#, fuzzy
 msgid "Download"
 msgstr "Download"
 
 #: templates/metatag/display.tpl:79 templates/metatag/view_quickNav.tpl:72
 #: templates/metatag/view.tpl:100 templates/metatag/edit.tpl:187
-#, fuzzy
 msgid "Twitter title"
-msgstr "Titel"
+msgstr "Twitter Titel"
 
 #: templates/metatag/display.tpl:81 templates/metatag/view_quickNav.tpl:73
 #: templates/metatag/view.tpl:103 templates/metatag/edit.tpl:194
-#, fuzzy
 msgid "Twitter description"
-msgstr "Mit Beschreibung"
+msgstr "Twitter Beschreibung"
 
 #: templates/metatag/display.tpl:83 templates/metatag/view_quickNav.tpl:74
 #: templates/metatag/view.tpl:106 templates/metatag/edit.tpl:201
-#, fuzzy
 msgid "Twitter image"
-msgstr "Bildupload"
+msgstr "Twitter Bild"
 
 #: templates/metatag/display.tpl:94 templates/metatag/view_quickNav.tpl:75
 #: templates/metatag/view.tpl:109 templates/metatag/edit.tpl:233
-#, fuzzy
 msgid "Google plus title"
-msgstr "Titel"
+msgstr "Google Plus Titel"
 
 #: templates/metatag/display.tpl:96 templates/metatag/view_quickNav.tpl:76
 #: templates/metatag/view.tpl:112 templates/metatag/edit.tpl:240
-#, fuzzy
 msgid "Google plus description"
-msgstr "Mit Beschreibung"
+msgstr "Google Plus Beschreibung"
 
 #: templates/metatag/display.tpl:98 templates/metatag/view_quickNav.tpl:77
 #: templates/metatag/view.tpl:115 templates/metatag/edit.tpl:247
-#, fuzzy
 msgid "Google plus image"
-msgstr "Bildupload"
+msgstr "Google Plus Bild"
 
 #: templates/metatag/display.tpl:109 templates/metatag/view_quickNav.tpl:78
 #: templates/metatag/view.tpl:118 templates/metatag/edit.tpl:278
@@ -1919,9 +1904,8 @@ msgid "Page analysis score"
 msgstr "Bewertung"
 
 #: templates/metatag/display.tpl:112 templates/metatag/edit.tpl:286
-#, fuzzy
 msgid "Integration"
-msgstr "Einstellungen"
+msgstr "Integration"
 
 #: templates/metatag/display.tpl:114 templates/metatag/view_quickNav.tpl:79
 #: templates/metatag/edit.tpl:291
@@ -1954,9 +1938,8 @@ msgid "Extra infos"
 msgstr "Extrainformationen"
 
 #: templates/metatag/main.tpl:7
-#, fuzzy
 msgid "Welcome to the metatag section of the M u seo application."
-msgstr "Willkommen zum Filmbereich von MUVideo"
+msgstr "Willkommen zur Sektion der Metatags von MUSeo."
 
 #: templates/metatag/include_displayItemListMany.tpl:25
 #: templates/metatag/include_displayItemListOne.tpl:21
@@ -1973,7 +1956,6 @@ msgid "Create metatag"
 msgstr "Metatag erstellen"
 
 #: templates/metatag/view.tpl:139
-#, fuzzy
 msgid "View detail page"
 msgstr "Detailseite ansehen"
 
@@ -1982,9 +1964,8 @@ msgid "No metatags found."
 msgstr "Keine Metatags gefunden."
 
 #: templates/metatag/view.tpl:232
-#, fuzzy
 msgid "With selected metatags"
-msgstr "Mit gewählten Unternehmen"
+msgstr "Gewählten Metatags"
 
 #: templates/metatag/edit.tpl:11 templates/metatag/edit.tpl:21
 msgid "Edit metatag"
@@ -2003,14 +1984,12 @@ msgid "The main keyword or keyphrase that this post/page is about"
 msgstr ""
 
 #: templates/metatag/edit.tpl:59
-#, fuzzy
 msgid "Enter the focus keyword of the metatag"
-msgstr "Gib die Schlüsselwörter für den Metatag ein"
+msgstr "Gib das Fokus Schlüsselwort für den Metatag ein"
 
 #: templates/metatag/edit.tpl:64
-#, fuzzy
 msgid "SEO title"
-msgstr "Titel"
+msgstr "SEO Titel"
 
 #: templates/metatag/edit.tpl:66
 msgid "Enter the title of the metatag"
@@ -2023,9 +2002,8 @@ msgid ""
 msgstr ""
 
 #: templates/metatag/edit.tpl:71
-#, fuzzy
 msgid "Meta description"
-msgstr "Metadaten"
+msgstr "Meta Beschreibung"
 
 #: templates/metatag/edit.tpl:73
 msgid "Enter the description of the metatag"
@@ -2039,11 +2017,10 @@ msgid ""
 msgstr ""
 
 #: templates/metatag/edit.tpl:78
-#, fuzzy
 msgid "Comma separated list of meta keywords - for example: Zikula, Framework"
 msgstr ""
-"Gib die Schlüsselwörter ein; kommasepariert - zum Beispiel: Zikula, "
-"Framework."
+"Komma separierte Liste von Meta Schlüsselwörtern - zum Beispiel: Zikula, "
+"Framework"
 
 #: templates/metatag/edit.tpl:80
 msgid "Enter the keywords of the metatag"
@@ -2068,9 +2045,8 @@ msgid "Enter the extra infos of the metatag"
 msgstr "Gib die extra Informationen für den Metatag ein"
 
 #: templates/metatag/edit.tpl:98
-#, fuzzy
 msgid "Meta robots index"
-msgstr "Index"
+msgstr "Meta"
 
 #: templates/metatag/edit.tpl:101
 msgid ""
@@ -2080,14 +2056,12 @@ msgid ""
 msgstr ""
 
 #: templates/metatag/edit.tpl:105
-#, fuzzy
 msgid "Meta robots follow"
-msgstr "Metadaten"
+msgstr "Meta Roboter folgen"
 
 #: templates/metatag/edit.tpl:113
-#, fuzzy
 msgid "Choose the robots advanced"
-msgstr "Label wählen"
+msgstr ""
 
 #: templates/metatag/edit.tpl:114
 msgid "Advanced <code>meta</code> robots settings for this page."

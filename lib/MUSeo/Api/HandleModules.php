@@ -189,12 +189,12 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             	System::redirect($entity['redirectUrl'],'',301);
             }
             if(ModUtil::getVar('MUSeo', 'facebookEnabled')){
-            	if(!empty(ModUtil::getVar('MUSeo', 'facebookAdminApp'))){
+            	if((ModUtil::getVar('MUSeo', 'facebookAdminApp')) != ''){
             		PageUtil::setVar('header', '<meta property="fb:app_id" content="'. ModUtil::getVar('MUSeo', 'facebookAdminApp') .'">');
-            	}else if(!empty(ModUtil::getVar('MUSeo', 'facebookAdmins'))){
+            	}else if((ModUtil::getVar('MUSeo', 'facebookAdmins')) != ''){
             		PageUtil::setVar('header', '<meta property="fb:admins" content="'. ModUtil::getVar('MUSeo', 'facebookAdmins') .'">');
             	}
-            	if(!empty(ModUtil::getVar('MUSeo', 'facebookSite'))){
+            	if((ModUtil::getVar('MUSeo', 'facebookSite')) != ''){
             		PageUtil::setVar('header', '<meta property="article:publisher" content="'. ModUtil::getVar('MUSeo', 'facebookSite') .'">');
             	}
             	if (!empty($entity['facebookTitle'])) {
@@ -209,7 +209,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             	}
             	if (!empty($entity['facebookImage'])) {
             		PageUtil::setVar('header', '<meta property="og:image" content="' . $entity['facebookImage'] . '">');
-            	}else if(!empty(ModUtil::getVar('MUSeo', 'openGraphDefaultImage'))){
+            	}else if((ModUtil::getVar('MUSeo', 'openGraphDefaultImage')) != ''){
             		PageUtil::setVar('header', '<meta property="og:image" content="' . ModUtil::getVar('MUSeo', 'openGraphDefaultImage') . '">');
             	}
             	if($canonical){
@@ -238,7 +238,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             	if (!empty($entity['googlePlusImage'])) {
             		PageUtil::setVar('header', '<meta itemprop="image" content="' . $entity['googlePlusImageFullPathUrl'] . '">');
             	}
-            	if(!empty(ModUtil::getVar('MUSeo', 'googlePlusPublisherPage'))){
+            	if((ModUtil::getVar('MUSeo', 'googlePlusPublisherPage')) != ''){
             		PageUtil::setVar('header', '<link href="' . ModUtil::getVar('MUSeo', 'googlePlusPublisherPage') . '" rel="publisher" />');
             	}
             }

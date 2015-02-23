@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zikula 1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-25 12:35+0000\n"
+"POT-Creation-Date: 2015-02-23 09:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: javascript/MUSeo_validation.js:8
+#: javascript/MUSeo_validation.js:139
 msgid "No spaces"
 msgstr ""
 
-#: javascript/MUSeo_validation.js:12
-msgid "Please select a valid html colour code."
+#: javascript/MUSeo_validation.js:142
+msgid "Please select a valid file extension."
 msgstr ""
 
-#: javascript/MUSeo_validation.js:16 javascript/MUSeo_validation.js:26
-#: javascript/MUSeo_validation.js:36
-msgid "Please select a value in the past."
-msgstr ""
-
-#: javascript/MUSeo_validation.js:21 javascript/MUSeo_validation.js:31
-#: javascript/MUSeo_validation.js:40
-msgid "Please select a value in the future."
-msgstr ""
-
-#: javascript/MUSeo_validation.js:44
+#: javascript/MUSeo_validation.js:145
 msgid "This value is already assigned, but must be unique. Please change it."
 msgstr ""

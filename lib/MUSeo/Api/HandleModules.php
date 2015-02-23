@@ -104,10 +104,6 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
                 }
             }
         }
-        
-        // we get default string for robots
-        $robots = ModUtil::getVar('MUSeo', 'robots');
-        $robotsTag = '<meta name="ROBOTS" content="' . $robots . '" />';
 
         // we get the entity
         $entities = $metatagRepository->selectWhere($where);
@@ -123,11 +119,75 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             if (!empty($entity['keywords'])) {
                 PageUtil::setVar('keywords', $entity['keywords']);
             }
-            if (!empty($entity['robots'])) {
-                $robotsTag = '<meta name="ROBOTS" content="' . $entity['robots'] . '" />';
+            if (!empty($entity['robotsIndex']) || !empty($entity['robotsFollow']) || !empty($entity['robotsAdvanced'])) {
+            	$robotsstr = "";
+            	$robots           = array();
+            	$robots['index']  = ModUtil::getVar('MUSeo', 'robotsIndex');
+            	$robots['follow'] = ModUtil::getVar('MUSeo', 'robotsFollow');
+            	$robots['other']  = array();
+            	
+            	if(ModUtil::getVar('MUSeo', 'noodp') == true){
+            		$robots['other'][] = 'noodp';
+            	}
+            	if(ModUtil::getVar('MUSeo', 'noydir') == true){
+            		$robots['other'][] = 'noydir';
+            	}
+            	if($entity['robotsIndex'] != ''){
+            		$robots['index'] = $entity['robotsIndex'];
+            	}
+            	if($entity['robotsFollow'] != ''){
+            		$robots['follow'] = $entity['robotsFollow'];
+            	}
+            	if(!empty($entity['robotsAdvanced'])){
+            		$listHelper = new MUSeo_Util_ListEntries(ServiceUtil::getManager());
+            		foreach ($listHelper->extractMultiList($entity['robotsAdvanced']) as $robotsAdvancedItem) {
+            			if($robotsAdvancedItem == true){
+            				$robots['other'][] = $robotsAdvancedItem;
+            			}
+            		}
+            	}  	
+            	if($robots['index'] != 'index'){
+            		if(!empty($robotsstr)){
+            			$robotsstr .= ', ';
+            		}
+            		$robotsstr .= $robots['index'];
+            	}
+            	if($robots['follow'] != 'follow'){
+            		if(!empty($robotsstr)){
+            			$robotsstr .= ', ';
+            		}
+            		$robotsstr .= $robots['follow'];
+            	}     	
+            	if(!empty($robots['other'])){
+            		if(!empty($robotsstr)){
+            			$robotsstr .= ', ';
+            		}
+            		$robotsstr .= implode( ',', array_unique( $robots['other'] ) );
+            	}
+				if(!empty($robotsstr)){
+					$robotsTag = '<meta name="ROBOTS" content="' . $robotsstr . '" />';
+					PageUtil::setVar('header', $robotsTag);
+				}
+            }
+            $forceTransport = ModUtil::getVar('MUSeo', 'forceTransport');
+            if (!empty($entity['canonicalUrl']) || $forceTransport != 'default') {
+            	$canonical = '';
+            	if(empty($entity['canonicalUrl'])){
+            		$cannonical = $entity['canonicalUrl'];
+            	}else if($forceTransport != 'default'){
+            		$cannonical = System::getCurrentUrl();
+            	}
+
+				if(!empty($cannonical) && $forceTransport != System::serverGetProtocol()) {
+					if($forceTransport != System::serverGetProtocol()){
+						$canonical = preg_replace( '`^http[s]?`', $forceTransport, $canonical);
+					}
+					PageUtil::setVar('header', '<link rel="canonical" href="' . $canonical . '" />');
+            	}
+            }
+            if (!empty($entity['redirectUrl'])) {
+            	System::redirect($entity['redirectUrl'],'',301);
             }
         }
-
-        PageUtil::setVar('header', $robotsTag);
     }
 }

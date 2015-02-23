@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MUSeo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-23 09:35+0000\n"
-"PO-Revision-Date: 2015-02-23 12:28+0100\n"
+"PO-Revision-Date: 2015-02-23 13:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -803,7 +803,7 @@ msgstr "Controller für die View Ansicht"
 #: templates/extension/view_quickNav.tpl:34 templates/extension/view.tpl:73
 #: templates/extension/edit.tpl:61
 msgid "Controller for single object"
-msgstr "Kontroller für ein alleiniges Objekt"
+msgstr "Controller für ein alleiniges Objekt"
 
 #: templates/extension/view_quickNav.tpl:35 templates/extension/view.tpl:76
 #: templates/extension/edit.tpl:69
@@ -904,21 +904,19 @@ msgstr "Gib den Namen der Erweiterung ein"
 
 #: templates/extension/edit.tpl:53
 msgid "Enter the controller for the view of objects; for example view."
-msgstr "Gib den Kontroller für die view Ansicht  eines Objekts ein; z.B. view."
+msgstr "Gib den Controller für die view Ansicht  eines Objekts ein; z.B. view."
 
 #: templates/extension/edit.tpl:55
 msgid "Enter the controller for view of the extension"
 msgstr "Gib den Controller für die Listenansicht der Erweiterung ein"
 
 #: templates/extension/edit.tpl:60
-#, fuzzy
 msgid "Select the controller for single entity of this module."
-msgstr "Wähle den Kontroller für einen alleinigen Eintrag des Moduls!"
+msgstr "Wähle den Controller für einen alleinigen Eintrag des Moduls!"
 
 #: templates/extension/edit.tpl:62
-#, fuzzy
 msgid "Enter the controller for single object of the extension"
-msgstr "Kontroller für ein alleiniges Objekt"
+msgstr "Gib den Controller für ein alleiniges Objekt der Erweiterung ein"
 
 #: templates/extension/edit.tpl:68
 #, fuzzy
@@ -959,9 +957,8 @@ msgid "Create another item after save"
 msgstr "Ein weiteres Element nach dem Speichern erstellen"
 
 #: templates/extension/edit.tpl:130
-#, fuzzy
 msgid "Really delete this extension?"
-msgstr "Sitzung wirklich löschen?"
+msgstr "Diese Erweiterung wirklich löschen?"
 
 #: templates/extension/edit.tpl:136 templates/extension/delete.tpl:30
 #: templates/admin/config.tpl:362 templates/metatag/edit.tpl:385
@@ -1021,9 +1018,8 @@ msgid "Modules"
 msgstr "Module"
 
 #: templates/admin/config.tpl:26
-#, fuzzy
 msgid "Enter the modules."
-msgstr "Gib die Stadt ein"
+msgstr "Gib die Module (Erweiterungen)ein."
 
 #: templates/admin/config.tpl:30
 #, fuzzy
@@ -1034,7 +1030,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:31
 msgid "Controllers"
-msgstr "Kontroller"
+msgstr "Controller"
 
 #: templates/admin/config.tpl:32
 #, fuzzy
@@ -1057,7 +1053,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:46
 msgid "Ignore meta description warning"
-msgstr ""
+msgstr "Warnung bzgl. Meta Beschreibung ignorieren"
 
 #: templates/admin/config.tpl:51
 msgid "Allows to ignore a warning about incomplete permalink structure."
@@ -1376,9 +1372,8 @@ msgid "Use meta keywords tag?"
 msgstr ""
 
 #: templates/admin/config.tpl:200
-#, fuzzy
 msgid "Use meta keywords"
-msgstr "Metadaten"
+msgstr "Meta Schlüsselwörter nutzen"
 
 #: templates/admin/config.tpl:202
 msgid "Check this box if you really want to use meta keywords."
@@ -1413,11 +1408,8 @@ msgid ""
 msgstr ""
 
 #: templates/admin/config.tpl:218
-#, fuzzy
 msgid "Home"
-msgstr ""
-"Bevor Du papershare nutzen kannst, musst Du einen Standort eingeben. Dieser "
-"ist normaler Weise Deine Wohnadresse."
+msgstr "Home"
 
 #: templates/admin/config.tpl:220
 #, fuzzy
@@ -1478,23 +1470,20 @@ msgid "Search pages title template"
 msgstr ""
 
 #: templates/admin/config.tpl:243
-#, fuzzy
 msgid "Search title"
-msgstr "Suchen"
+msgstr "Suchtitel"
 
 #: templates/admin/config.tpl:244
-#, fuzzy
 msgid "Enter the search title."
-msgstr "Gib einen Titel ein"
+msgstr "Gib den Suchtitel ein."
 
 #: templates/admin/config.tpl:248
 msgid "404 pages title template"
 msgstr ""
 
 #: templates/admin/config.tpl:249
-#, fuzzy
 msgid "Not found title"
-msgstr "Titel"
+msgstr "Titel nicht gefunden"
 
 #: templates/admin/config.tpl:250
 #, fuzzy
@@ -1655,7 +1644,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:319 templates/metatag/edit.tpl:184
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: templates/admin/config.tpl:321
 msgid ""
@@ -1671,7 +1660,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:325
 msgid "Twitter enabled"
-msgstr ""
+msgstr "Twitter aktiviert"
 
 #: templates/admin/config.tpl:327
 msgid ""
@@ -1706,16 +1695,15 @@ msgstr "Gib den Titel des Metatags ein"
 
 #: templates/admin/config.tpl:343 templates/metatag/edit.tpl:229
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #: templates/admin/config.tpl:345
 msgid "Add Google+ specific post meta data"
 msgstr ""
 
 #: templates/admin/config.tpl:346
-#, fuzzy
 msgid "Google plus enabled"
-msgstr "diese Einstellung ist aktiviert. Klicke um sie zu deaktivieren. "
+msgstr "Google Plus aktiviert"
 
 #: templates/admin/config.tpl:351
 msgid "Google publisher page"
@@ -1734,6 +1722,8 @@ msgid ""
 "If you have a Google+ page for your business, add that URL here and link it "
 "on your Google+ page's about page."
 msgstr ""
+"Wenn Du eine Google+ Unternehmensseite hast, füge deren URL hier hinzu und "
+"verlinke sie in Deinem Google+ Account auf der Über mich Seite."
 
 #: templates/admin/config.tpl:361
 msgid "Update configuration"
@@ -1815,7 +1805,7 @@ msgstr "Schlüsselwörter"
 
 #: templates/metatag/display.tpl:35 templates/metatag/edit.tpl:86
 msgid "Advanced"
-msgstr ""
+msgstr "Erweitert"
 
 #: templates/metatag/display.tpl:41 templates/metatag/view_quickNav.tpl:42
 #: templates/metatag/view_quickNav.tpl:66 templates/metatag/edit.tpl:112
@@ -2077,9 +2067,8 @@ msgid ""
 msgstr ""
 
 #: templates/metatag/edit.tpl:126
-#, fuzzy
 msgid "301 redirect url"
-msgstr "Url"
+msgstr "Url für 301 Umleitung"
 
 #: templates/metatag/edit.tpl:128
 #, fuzzy
@@ -2095,9 +2084,8 @@ msgid "Facebook title overriding the default value"
 msgstr ""
 
 #: templates/metatag/edit.tpl:143
-#, fuzzy
 msgid "Enter the facebook title of the metatag"
-msgstr "Gib einen Titel ein"
+msgstr "Gib den Facebook Titel für den Metatag ein."
 
 #: templates/metatag/edit.tpl:144
 msgid ""

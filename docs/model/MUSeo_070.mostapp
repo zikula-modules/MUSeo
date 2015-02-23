@@ -42,7 +42,8 @@ application MUSeo {
             templates/extension/edit.tpl,
             templates/metatag/display.tpl,
             templates/metatag/edit.tpl,
-            templates/metatag/view.tpl
+            templates/metatag/view.tpl,
+            images/admin.png
         "
     }
     entities {
@@ -153,6 +154,11 @@ application MUSeo {
                 },
                 upload googlePlusImage {
                     documentation "Google+ image overriding the default value"
+                    mandatory false
+                },
+                string whatsAppTitle {
+                    documentation "WhatsApp title overriding the default value"
+                    defaultValue ""
                     mandatory false
                 },
                 integer pageAnalysisScore {
@@ -459,7 +465,11 @@ application MUSeo {
                 textVar googlePlusPublisherPage {
                     documentation "Google publisher page"
                     value ""
-                }
+                },
+                boolVar whatsAppEnabled {
+                    documentation "Add WhatsApp button"
+                    value ^false
+                },
             }
         }
     }

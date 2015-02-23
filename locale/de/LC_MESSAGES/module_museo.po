@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MUSeo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-23 09:35+0000\n"
-"PO-Revision-Date: 2015-02-23 11:50+0100\n"
+"PO-Revision-Date: 2015-02-23 12:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -72,9 +72,8 @@ msgid "Submit content."
 msgstr "Inhalt abschicken"
 
 #: workflows/function.none_permissioncheck.php:73
-#, fuzzy
 msgid "Update"
-msgstr "Update"
+msgstr "Aktualisierung"
 
 #: workflows/function.none_permissioncheck.php:73
 msgid "Update content."
@@ -222,13 +221,12 @@ msgid "Done! Module configuration updated."
 msgstr "Erledigt! Moduleinstellungen aktualisiert."
 
 #: lib/MUSeo/Form/Handler/Metatag/Base/Edit.php:62
-#, fuzzy
 msgid ""
 "Sorry, but you can not create the metatag yet as other items are required "
 "which must be created before!"
 msgstr ""
-"Entschuldigung, aber Du kannst solange keinen Kommentar für eine Quelle "
-"erstellen bis ein anderes notwendiges Element erstellt wurde."
+"Entschuldigung, aber Du kannst solange keinen Metatag erstellen bis ein "
+"anderes notwendiges Element erstellt wurde."
 
 #: lib/MUSeo/Form/Handler/Metatag/Base/Edit.php:177
 msgid "Done! Metatag created."
@@ -247,20 +245,19 @@ msgstr "Erledigt! Metatag gelöscht."
 #: lib/MUSeo/Form/Handler/Extension/Base/Edit.php:210
 #: lib/MUSeo/Controller/Base/Metatag.php:517
 #: lib/MUSeo/Controller/Base/Extension.php:429
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Sorry, but an unknown error occured during the %s action. Please apply the "
 "changes again!"
 msgstr ""
 "Entschuldigung, aber ein unbekannter Fehler ist während der Aktion %s "
-"aufgetreten. Bitte betsätige die Änderungen erneut!"
+"aufgetreten. Bitte bestätige die Änderungen erneut!"
 
 #: lib/MUSeo/Form/Handler/Common/Base/Edit.php:249
 #: lib/MUSeo/Controller/Base/Metatag.php:387
 #: lib/MUSeo/Controller/Base/Extension.php:299
-#, fuzzy
 msgid "Error! Could not determine workflow actions."
-msgstr "Fehler! Konnte Wofkflowaktionen nicht beenden."
+msgstr "Fehler! Konnte Workflowaktionen nicht beenden."
 
 #: lib/MUSeo/Form/Handler/Common/Base/Edit.php:285
 #: lib/MUSeo/Form/Handler/Common/Base/Edit.php:317
@@ -973,9 +970,8 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #: templates/extension/delete.tpl:8
-#, fuzzy
 msgid "Delete extension"
-msgstr "Lösche Metatag"
+msgstr "Lösche Erweiterung"
 
 #: templates/extension/delete.tpl:19
 #, fuzzy
@@ -1263,7 +1259,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:151
 msgid "Force transport"
-msgstr ""
+msgstr "Transport erzwingen"
 
 #: templates/admin/config.tpl:152
 #, fuzzy

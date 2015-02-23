@@ -158,7 +158,14 @@ class MUSeo_Listener_Theme extends MUSeo_Listener_Base_Theme
     public static function postFetch(Zikula_Event $event)
     {
         parent::postFetch($event);
-    
+    	
+        if(ModUtil::getVar('MUSeo', 'facebookEnabled')){  	
+        	$output = $event->getData();
+        	$output = str_replace ( '<head' , '<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"' , $output);
+        	$event->setData($output);
+        }
+        
+        
         // you can access general data available in the event
         
         // the event name

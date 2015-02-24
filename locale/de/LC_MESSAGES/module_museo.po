@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: MUSeo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-23 09:35+0000\n"
-"PO-Revision-Date: 2015-02-23 13:29+0100\n"
+"PO-Revision-Date: 2015-02-24 13:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -298,12 +298,11 @@ msgid "Error! Deletion attempt failed."
 msgstr "Fehler! Löschen fehlgeschlagen"
 
 #: lib/MUSeo/Form/Handler/Extension/Base/Edit.php:60
-#, fuzzy
 msgid ""
 "Sorry, but you can not create the extension yet as other items are required "
 "which must be created before!"
 msgstr ""
-"Entschuldigung, aber Du kannst keinen Standort erstellen bevor andere "
+"Entschuldigung, aber Du kannst keine Erweiterung erstellen bevor andere "
 "erforderliche Elemente nicht erstellt sind!"
 
 #: lib/MUSeo/Form/Handler/Extension/Base/Edit.php:175
@@ -919,34 +918,28 @@ msgid "Enter the controller for single object of the extension"
 msgstr "Gib den Controller für ein alleiniges Objekt der Erweiterung ein"
 
 #: templates/extension/edit.tpl:68
-#, fuzzy
 msgid "Enter the paremeter for objects; for example ot."
-msgstr "Gib den Parameter für Objekte des Moduls an"
+msgstr "Gib den Parameter für Objekte an, z.B. ot."
 
 #: templates/extension/edit.tpl:70
-#, fuzzy
 msgid "Enter the parameter for objects of the extension"
-msgstr "Gib den Parameter für Objekte des Moduls an"
+msgstr "Gib den Parameter für Objekte der Erweiterung an"
 
 #: templates/extension/edit.tpl:75
-#, fuzzy
 msgid "Enter the name of the identifier for this module; for example id."
-msgstr "Gib den Namen des Bezeichners für dieses Modul ein; zum Beispiel id!"
+msgstr "Gib den Namen des Bezeichners für dieses Modul ein; zum Beispiel id."
 
 #: templates/extension/edit.tpl:77
-#, fuzzy
 msgid "Enter the name of identifier of the extension"
-msgstr "Gib deb Namen des Unternehmens ein"
+msgstr "Gib den Namen des Bezeichners für die Erweiterung ein"
 
 #: templates/extension/edit.tpl:83
-#, fuzzy
 msgid "Enter other additional identifiers comma separated."
-msgstr "Gib andere zusätzliche Bezeichner kommasepariert ein!"
+msgstr "Gib andere zusätzliche Bezeichner kommasepariert ein."
 
 #: templates/extension/edit.tpl:85
-#, fuzzy
 msgid "Enter the extra identifier of the extension"
-msgstr "Gib die zusätzlichen Bezeichner für das Module ein"
+msgstr "Gib die zusätzlichen Bezeichner der Erweiterung ein"
 
 #: templates/extension/edit.tpl:115 templates/metatag/edit.tpl:364
 msgid "Return control"
@@ -971,23 +964,20 @@ msgid "Delete extension"
 msgstr "Lösche Erweiterung"
 
 #: templates/extension/delete.tpl:19
-#, fuzzy
 msgid "Do you really want to delete this extension ?"
-msgstr "Möchtest du diese Sitzung wirklich löschen?"
+msgstr "Möchtest du diese Erweiterung wirklich löschen?"
 
 #: templates/extension/delete.tpl:26 templates/metatag/delete.tpl:26
 msgid "Confirmation prompt"
 msgstr "Sicherheitsabfrage"
 
 #: templates/extension/view.rss.tpl:15
-#, fuzzy
 msgid "Latest extensions"
-msgstr "Erlaubte Dateiendungen:"
+msgstr "Letzte Erweiterung"
 
 #: templates/extension/view.rss.tpl:16
-#, fuzzy
 msgid "A direct feed showing the list of extensions"
-msgstr "Ein Feed, der eine Liste der Tickets anzeigt"
+msgstr "Ein Feed, der eine Liste der Erweiterungen anzeigt"
 
 #: templates/admin/config.tpl:4 templates/admin/config.tpl:7
 msgid "Settings"
@@ -995,23 +985,20 @@ msgstr "Einstellungen"
 
 #: templates/admin/config.tpl:16 templates/admin/config.tpl:178
 #: templates/metatag/display.tpl:22 templates/metatag/edit.tpl:42
-#, fuzzy
 msgid "General"
 msgstr "Allgemein"
 
 #: templates/admin/config.tpl:21
-#, fuzzy
 msgid "Here you can define general settings."
-msgstr "Hier kannst Du die Grundeinstellungen für dieses Modul verwalten."
+msgstr "Hier kannst Du die Grundeinstellungen vornehmen."
 
 #: templates/admin/config.tpl:24
-#, fuzzy
 msgid ""
 "Enter the allowed modules comma separated without whitespace, for example: "
 "Content,Tags,News"
 msgstr ""
-"Gib die Module kommasepariert ohne Leerzeichen ein, die Du aktivieren "
-"möchtest!"
+"Gib die erlaubten Module kommasepariert ohne Leerzeichen ein, z.B.: Content,"
+"Tags,News"
 
 #: templates/admin/config.tpl:25
 msgid "Modules"
@@ -1022,20 +1009,16 @@ msgid "Enter the modules."
 msgstr "Gib die Module (Erweiterungen)ein."
 
 #: templates/admin/config.tpl:30
-#, fuzzy
 msgid "Enter the allowed controllers comma separated without whitespace!"
-msgstr ""
-"Gib die Module kommasepariert ohne Leerzeichen ein, die Du aktivieren "
-"möchtest!"
+msgstr "Gib die erlaubten Controller kommasepariert ohne Leerzeichen ein!"
 
 #: templates/admin/config.tpl:31
 msgid "Controllers"
 msgstr "Controller"
 
 #: templates/admin/config.tpl:32
-#, fuzzy
 msgid "Enter the controllers."
-msgstr "Gib die Stadt ein"
+msgstr "Gib die Controller ein."
 
 #: templates/admin/config.tpl:37
 msgid "SEO"
@@ -1060,9 +1043,8 @@ msgid "Allows to ignore a warning about incomplete permalink structure."
 msgstr ""
 
 #: templates/admin/config.tpl:52
-#, fuzzy
 msgid "Ignore permalink"
-msgstr "Kategorietitel zum Permalink hinzufügen"
+msgstr "Permalinks ignorieren"
 
 #: templates/admin/config.tpl:57
 msgid "Whether the introduction tour should be ignored or not."
@@ -1077,20 +1059,16 @@ msgid "Whether a meta description has been found in the theme or not."
 msgstr ""
 
 #: templates/admin/config.tpl:64
-#, fuzzy
 msgid "Theme description found"
-msgstr "Mit Beschreibung"
+msgstr "Beschreibung des Themes gefunden"
 
 #: templates/admin/config.tpl:69
-#, fuzzy
 msgid "Whether the theme has a meta description or not."
-msgstr ""
-"Gib die Beschreibung ein, die in html als Beschreibung gesetzt werden soll!"
+msgstr "Ob das Theme eine Meta Beschreibung hat oder nicht."
 
 #: templates/admin/config.tpl:70
-#, fuzzy
 msgid "Theme has description"
-msgstr "Mit Beschreibung"
+msgstr "Theme hat Beschreibung"
 
 #: templates/admin/config.tpl:75
 msgid "Default meta robots index"
@@ -1099,14 +1077,12 @@ msgstr ""
 #: templates/admin/config.tpl:76 templates/metatag/display.tpl:37
 #: templates/metatag/view_quickNav.tpl:24
 #: templates/metatag/view_quickNav.tpl:64 templates/metatag/edit.tpl:99
-#, fuzzy
 msgid "Robots index"
-msgstr "Index"
+msgstr "Roboter indexieren"
 
 #: templates/admin/config.tpl:77 templates/metatag/edit.tpl:100
-#, fuzzy
 msgid "Choose the robots index"
-msgstr "Index"
+msgstr "Wähle die Einstellung für die Indexierung durch den Roboter"
 
 #: templates/admin/config.tpl:81
 msgid "Default meta robots follow"
@@ -1115,23 +1091,20 @@ msgstr ""
 #: templates/admin/config.tpl:82 templates/metatag/display.tpl:39
 #: templates/metatag/view_quickNav.tpl:33
 #: templates/metatag/view_quickNav.tpl:65 templates/metatag/edit.tpl:106
-#, fuzzy
 msgid "Robots follow"
-msgstr "Roboter"
+msgstr "Roboter folgen"
 
 #: templates/admin/config.tpl:83 templates/metatag/edit.tpl:107
-#, fuzzy
 msgid "Choose the robots follow"
-msgstr "Label wählen"
+msgstr "Wähle die Einstellung für die Verfolgung durch den Roboter"
 
 #: templates/admin/config.tpl:87
 msgid "Disable the advanced part of the SEO meta box."
 msgstr ""
 
 #: templates/admin/config.tpl:88
-#, fuzzy
 msgid "Disable advanced meta"
-msgstr "Metadaten"
+msgstr "Deaktiviere erweiterte Meta Tags"
 
 #: templates/admin/config.tpl:94
 msgid "Webmaster Tools"
@@ -1211,9 +1184,8 @@ msgid "Enter the yandex verify."
 msgstr "Gib die Stadt ein"
 
 #: templates/admin/config.tpl:130
-#, fuzzy
 msgid "Permalinks"
-msgstr "Permalinks bereinigen"
+msgstr "Permalinks"
 
 #: templates/admin/config.tpl:135
 msgid "Settings relating to permalinks and canonical settings."
@@ -1258,9 +1230,8 @@ msgid "Force transport"
 msgstr "Transport erzwingen"
 
 #: templates/admin/config.tpl:152
-#, fuzzy
 msgid "Enter the force transport."
-msgstr "Gib die Stadt ein"
+msgstr ""
 
 #: templates/admin/config.tpl:156
 msgid "Prevent cleaning out Google Site Search URL\"s."
@@ -1291,6 +1262,9 @@ msgid ""
 "code>, check this box. It is recommended to use the hash tagged version "
 "instead."
 msgstr ""
+"Wenn Du Google Analytics Parameter, die mit <code>?utm_</code> starten, "
+"nutzt, aktiviere diese Box. Dies ist erforderlich, um die Hash markierte "
+"Version zu nutzen."
 
 #: templates/admin/config.tpl:168
 #, fuzzy
@@ -1311,9 +1285,8 @@ msgid ""
 msgstr ""
 
 #: templates/admin/config.tpl:175
-#, fuzzy
 msgid "Titles"
-msgstr "Nur in Titeln"
+msgstr "Titel"
 
 #: templates/admin/config.tpl:181
 msgid "Internal var used for testing SEO titles."
@@ -1330,9 +1303,8 @@ msgid "Enter the title test. Only digits are allowed."
 msgstr "Gib diese Einstellung ein. Nur Ziffern sind erlaubt."
 
 #: templates/admin/config.tpl:187
-#, fuzzy
 msgid "Force rewrite titles"
-msgstr "Nur in Titeln"
+msgstr ""
 
 #: templates/admin/config.tpl:188
 #, fuzzy
@@ -1348,12 +1320,11 @@ msgstr ""
 
 #: templates/admin/config.tpl:193
 msgid "Symbol to use as title separator."
-msgstr ""
+msgstr "Symbol, das als Separator für den Titel genutzt wird."
 
 #: templates/admin/config.tpl:194
-#, fuzzy
 msgid "Title separator"
-msgstr "Titel"
+msgstr "Titel Separator"
 
 #: templates/admin/config.tpl:195
 #, fuzzy
@@ -1369,7 +1340,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:199
 msgid "Use meta keywords tag?"
-msgstr ""
+msgstr "Den Meta Schlüsselwörter Tag benutzen?"
 
 #: templates/admin/config.tpl:200
 msgid "Use meta keywords"
@@ -1417,12 +1388,10 @@ msgid "Homepage title template"
 msgstr "Homepage"
 
 #: templates/admin/config.tpl:221
-#, fuzzy
 msgid "Home title"
-msgstr "Titel"
+msgstr "Titel der Homepage"
 
 #: templates/admin/config.tpl:222
-#, fuzzy
 msgid "Enter the home title."
 msgstr "Gib einen Titel ein"
 
@@ -1437,27 +1406,24 @@ msgid "Home meta description"
 msgstr "Metadaten"
 
 #: templates/admin/config.tpl:228
-#, fuzzy
 msgid "Enter the home meta description."
-msgstr "Gib die Beschreibung für die Sitzung ein"
+msgstr "Gib die Meta Beschreibung für die Homepage ein."
 
 #: templates/admin/config.tpl:232
 msgid "Homepage meta keywords template"
 msgstr ""
 
 #: templates/admin/config.tpl:233
-#, fuzzy
 msgid "Home meta keywords"
-msgstr "Metadaten"
+msgstr "Homepahe Meta Schlüsselwörter"
 
 #: templates/admin/config.tpl:234
 msgid "Enter the home meta keywords."
 msgstr ""
 
 #: templates/admin/config.tpl:239
-#, fuzzy
 msgid "Special pages"
-msgstr "Spezial"
+msgstr "Spezielle Seiten"
 
 #: templates/admin/config.tpl:240
 msgid ""
@@ -1486,14 +1452,13 @@ msgid "Not found title"
 msgstr "Titel nicht gefunden"
 
 #: templates/admin/config.tpl:250
-#, fuzzy
 msgid "Enter the not found title."
 msgstr "Gib einen Titel ein"
 
 #: templates/admin/config.tpl:255 templates/metatag/display.tpl:62
 #: templates/metatag/edit.tpl:136
 msgid "Social media"
-msgstr ""
+msgstr "Social Media"
 
 #: templates/admin/config.tpl:258 templates/metatag/edit.tpl:139
 msgid "Facebook"
@@ -1505,7 +1470,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:262
 msgid "Facebook admins"
-msgstr ""
+msgstr "Facebook Administratoren"
 
 #: templates/admin/config.tpl:263
 msgid "Enter the facebook admins."
@@ -1517,7 +1482,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:267
 msgid "Facebook apps"
-msgstr ""
+msgstr "Facebook Applikationen"
 
 #: templates/admin/config.tpl:268
 #, fuzzy
@@ -1550,7 +1515,7 @@ msgstr ""
 
 #: templates/admin/config.tpl:283
 msgid "App to use as Facebook admin"
-msgstr ""
+msgstr "Applikation zur Nutzung als Facebook Administrator"
 
 #: templates/admin/config.tpl:284
 #, fuzzy
@@ -1571,7 +1536,7 @@ msgstr "Url"
 
 #: templates/admin/config.tpl:290
 msgid "Facebook site"
-msgstr ""
+msgstr "Facebook Seite"
 
 #: templates/admin/config.tpl:291
 msgid "Enter the facebook site."
@@ -1711,7 +1676,7 @@ msgstr "Google Veröffentlicher Seite"
 
 #: templates/admin/config.tpl:352
 msgid "Google plus publisher page"
-msgstr ""
+msgstr "Google Plus Seite des Veröffentlichers"
 
 #: templates/admin/config.tpl:353
 msgid "Enter the google plus publisher page."
@@ -2095,7 +2060,7 @@ msgstr ""
 
 #: templates/metatag/edit.tpl:148
 msgid "Facebook description overriding the default value"
-msgstr ""
+msgstr "Facebook Beschreibung überschreibt den Standardwert"
 
 #: templates/metatag/edit.tpl:150
 msgid "Enter the facebook description of the metatag"
@@ -2232,7 +2197,7 @@ msgstr "Google Plus Bild löschen?"
 
 #: templates/metatag/edit.tpl:275
 msgid "Analysis"
-msgstr ""
+msgstr "Analyse"
 
 #: templates/metatag/edit.tpl:279
 #, fuzzy

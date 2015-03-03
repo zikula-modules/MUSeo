@@ -23,7 +23,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
      */
     public static function checkModules()
     {
-        $modules = $this->getVar('modules');
+        $modules = ModUtil::getVar('MUSeo', 'modules');
         $modules = explode(',', $modules);
 
         return $modules;
@@ -85,7 +85,9 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             }
         }
 
-        $forceTransport = $this->getVar('forceTransport');
+        $modVars = ModUtil::getVar('MUSeo');
+
+        $forceTransport = $modVars['forceTransport'];
         $canonical = '';
         if (!empty($entity['canonicalUrl']) || $forceTransport != 'default') {
             if (empty($entity['canonicalUrl'])) {
@@ -102,18 +104,18 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             }
         }
 
-        if ($this->getVar('facebookEnabled')) {
-            if ($this->getVar('facebookAdminApp') != '') {
-                $metaTags[] = '<meta property="fb:app_id" content="'. $this->getVar('facebookAdminApp') .'">';
-            } elseif ($this->getVar('facebookAdmins') != '') {
-                $metaTags[] = '<meta property="fb:admins" content="'. $this->getVar('facebookAdmins') .'">';
+        if ($modVars['facebookEnabled']) {
+            if ($modVars['facebookAdminApp'] != '') {
+                $metaTags[] = '<meta property="fb:app_id" content="'. $modVars['facebookAdminApp'] .'">';
+            } elseif ($modVars['facebookAdmins'] != '') {
+                $metaTags[] = '<meta property="fb:admins" content="'. $modVars['facebookAdmins'] .'">';
             }
-            if ($this->getVar('facebookSite') != '') {
-                $metaTags[] = '<meta property="article:publisher" content="'. $this->getVar('facebookSite') .'">';
+            if ($modVars['facebookSite'] != '') {
+                $metaTags[] = '<meta property="article:publisher" content="'. $modVars['facebookSite'] .'">';
             }
             $metaTags[] = '<meta property="og:title" content="'. (($entity['facebookTitle'] != '') ? $entity['facebookTitle'] : PageUtil::getVar('title')) .'">';
             $metaTags[] = '<meta property="og:description" content="'. (($entity['facebookDescription'] != '') ? $entity['facebookDescription'] : PageUtil::getVar('description')) .'">';
-            $metaTags[] = '<meta property="og:image" content="' . (($entity['facebookImage'] != '') ? $entity['facebookImage'] : $this->getVar('openGraphDefaultImage')) . '">';
+            $metaTags[] = '<meta property="og:image" content="' . (($entity['facebookImage'] != '') ? $entity['facebookImage'] : $modVars['openGraphDefaultImage']) . '">';
             $metaTags[] = '<meta property="og:url" content="' . (($canonical) ? $canonical : System::getCurrentUrl()) . '">';
             $metaTags[] = '<meta property="og:site_name" content="' . System::getVar('sitename') . '">';
             $metaTags[] = '<meta property="article:modified_time" content="' . $entity['updatedDate'] . '">';
@@ -122,25 +124,25 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             $metaTags[] = '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">';
         }
 
-        if ($this->getVar('googlePlusEnabled')) {
+        if ($modVars['googlePlusEnabled']) {
             $metaTags[] = '<meta itemprop="name" content="'. (($entity['googlePlusTitle'] != '') ? $entity['googlePlusTitle'] : PageUtil::getVar('title')) .'">';
             $metaTags[] = '<meta itemprop="description" content="'. (($entity['googlePlusDescription'] != '') ? $entity['googlePlusDescription'] : PageUtil::getVar('description')) .'">';
             if ($entity['googlePlusImage'] != '') {
                 $metaTags[] = '<meta itemprop="image" content="' . $entity['googlePlusImageFullPathUrl'] . '">';
             }
-            if ($this->getVar('googlePlusPublisherPage') != '') {
-                $metaTags[] = '<link href="' . $this->getVar('googlePlusPublisherPage') . '" rel="publisher" />';
+            if ($modVars['googlePlusPublisherPage'] != '') {
+                $metaTags[] = '<link href="' . $modVars['googlePlusPublisherPage'] . '" rel="publisher" />';
             }
         }
-        if ($this->getVar('twitterEnabled')) {
+        if ($modVars['twitterEnabled']) {
             $metaTags[] = '<meta property="og:title" content="'. (($entity['twitterTitle'] != '') ? $entity['twitterTitle'] : PageUtil::getVar('title')) .'">';
             $metaTags[] = '<meta property="og:description" content="'. (($entity['twitterDescription'] != '') ? $entity['twitterDescription'] : PageUtil::getVar('description')) .'">';
             if (!empty($entity['twitterImage'])) {
                 $metaTags[] = '<meta property="og:image" content="' . $entity['twitterImageFullPathUrl'] . '">';
             }
-            $metaTags[] = '<meta name="twitter:site" content="' . $this->getVar('twitterSiteUser') . '">';
+            $metaTags[] = '<meta name="twitter:site" content="' . $modVars['twitterSiteUser'] . '">';
             $metaTags[] = '<meta property="og:url" content="' . (($canonical) ? $canonical : System::getCurrentUrl()) . '">';
-            $metaTags[] = '<meta name="twitter:card" content="' . $this->getVar('twitterDefaultCardType') . '">';
+            $metaTags[] = '<meta name="twitter:card" content="' . $modVars['twitterDefaultCardType'] . '">';
         }
 
         if (count($metaTags) > 0) {
@@ -205,14 +207,14 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
     {
         $robotsString = '';
         $robots           = array();
-        $robots['index']  = $this->getVar('robotsIndex');
-        $robots['follow'] = $this->getVar('robotsFollow');
+        $robots['index']  = ModUtil::getVar('MUSeo', 'robotsIndex');
+        $robots['follow'] = ModUtil::getVar('MUSeo', 'robotsFollow');
         $robots['other']  = array();
 
-        if ($this->getVar('noodp') == true) {
+        if (ModUtil::getVar('MUSeo', 'noodp') == true) {
             $robots['other'][] = 'noodp';
         }
-        if ($this->getVar('noydir') == true) {
+        if (ModUtil::getVar('MUSeo', 'noydir') == true) {
             $robots['other'][] = 'noydir';
         }
         if ($entity['robotsIndex'] != '') {

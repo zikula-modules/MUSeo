@@ -36,6 +36,7 @@ application MUSeo {
             lib/MUSeo/Api/HandleModules.php,
             lib/MUSeo/Installer.php,
             lib/MUSeo/Listener/ModuleDispatch.php,
+            lib/MUSeo/Listener/Theme.php
             lib/MUSeo/Util/Model.php,
             lib/MUSeo/Version.php,
             templates/admin/config.tpl,
@@ -43,7 +44,9 @@ application MUSeo {
             templates/metatag/display.tpl,
             templates/metatag/edit.tpl,
             templates/metatag/view.tpl,
-            images/admin.png
+            images/admin.png,
+            style/style.css,
+            javascript/MUSeo.js
         "
     }
     entities {

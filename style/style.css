@@ -66,3 +66,19 @@ div.museo-view form.museo-quicknav fieldset #num {
     width: 50px;
     text-align: right;
 }
+
+.museo-edit #focuskwresults .good, .museo-edit #focuskwresults .warn, .museo-edit #focuskwresults .wrong {
+    font-weight: bold;
+}
+
+.museo-edit #focuskwresults .good {
+    color: green;
+}
+
+.museo-edit #focuskwresults .warn {
+    color: maroon;
+}
+
+.museo-edit #focuskwresults .wrong {
+    color: red;
+}

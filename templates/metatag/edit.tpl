@@ -33,6 +33,60 @@
     {else}
         <h2>{$templateTitle}</h2>
     {/if}
+    
+{pageaddvar name='javascript' value='prototype'}
+{pageaddvarblock name='header'}
+    <script type="text/javascript">               
+        Event.observe(window, 'load', function() {     
+            function iframeRef( frameRef ) {
+                return frameRef.contentWindow ? frameRef.contentWindow.document : frameRef.contentDocument;
+            }
+            
+            
+            function evaluateKeyword(){
+                var focuskw = yst_escapeFocusKw(String.trim($F('focusKeyword'))).toLowerCase();
+                if(focuskw == ''){
+                    return;
+                }
+                
+                var seoFrame = iframeRef( document.getElementById('seoFrame') );   
+                var p = new RegExp("(^|[ \s\n\r\t\.,'\(\"\+;!?:\-])" + focuskw + "($|[ \s\n\r\t.,'\)\"\+!?:;\-])", 'gim');
+                //remove diacritics of a lower cased focuskw for url matching in foreign lang
+                var focuskwNoDiacritics = removeLowerCaseDiacritics(focuskw);
+                var p2 = new RegExp(focuskwNoDiacritics.replace(/\s+/g, "[-_\\\//]"), 'gim');                            
+                
+                $('focuskwresultsPageTitle').update(ptest(seoFrame.title, p));
+                $('focuskwresultsPageURL').update(ptest(seoFrame.src, p2));
+                $('focuskwresultsPageContent').update(ptest(seoFrame.getElementsByTagName("body")[0].innerHTML, p));
+
+                var metas = seoFrame.getElementsByTagName('meta');
+                if (metas) {
+                    for (var x=0,y=metas.length; x<y; x++) {
+                        if (metas[x].name.toLowerCase() == "keywords") {
+                             console.log('Keywords ' + ptest(metas[x].content, p));
+                             $('focuskwresultsMetaKeywords').update(ptest(metas[x].content, p));
+                        }else if (metas[x].name.toLowerCase() == "description") {
+                            console.log('Description ' + ptest(metas[x].content, p));
+                            $('focuskwresultsMetaDescription').update(ptest(metas[x].content, p));
+                        }
+                    }
+                }
+            }
+            
+            evaluateKeyword();
+            
+            $('focusKeyword').observe('change', function(){
+                evaluateKeyword();
+            });
+        });
+    </script>
+{/pageaddvarblock}
+
+{if !empty($smarty.get.currentUrl)}
+    <iframe id="seoFrame" src="{$smarty.get.currentUrl}" style="display: none;">
+    </iframe>
+{/if}
+
 
     {form enctype='multipart/form-data' cssClass='z-form'}
         {* add validation summary and a <div> element for styling the form *}
@@ -56,8 +110,18 @@
                 <div class="z-formrow">
                     {gt text='The main keyword or keyphrase that this post/page is about' assign='toolTip'}
                     {formlabel for='focusKeyword' __text='Focus keyword' cssClass='museo-form-tooltips' title=$toolTip}
-                    {formtextinput group='metatag' id='focusKeyword' mandatory=false readOnly=false __title='Enter the focus keyword of the metatag' textMode='singleline' maxLength=255 cssClass='' }
-                    <span class="z-formnote">{$toolTip}</span>
+                    <div>
+                        {formtextinput group='metatag' id='focusKeyword' mandatory=false readOnly=false __title='Enter the focus keyword of the metatag' textMode='singleline' maxLength=255 cssClass='' }
+                        <span class="z-formnote">{$toolTip}</span>
+                        <div class="z-formnote" id="focuskwresults">
+                            {gt text="Your focus keyword was found in"}:<br />
+                            {gt text="Page title"}: <span id="focuskwresultsPageTitle"></span><br />
+                            {gt text="Page URL"}: <span id="focuskwresultsPageURL"></span><br />
+                            {gt text="Page Content"}: <span id="focuskwresultsPageContent"></span><br />
+                            {gt text="Meta keywords"}: <span id="focuskwresultsMetaKeywords"></span><br />
+                            {gt text="Meta description"}: <span id="focuskwresultsMetaDescription"></span><br />
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="z-formrow">

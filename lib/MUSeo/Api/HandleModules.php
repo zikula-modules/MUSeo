@@ -23,7 +23,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
      */
     public static function checkModules()
     {
-        $modules = ModUtil::getVar('MUSeo', 'modules');
+        $modules = $this->getVar('modules');
         $modules = explode(',', $modules);
 
         return $modules;
@@ -39,11 +39,6 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
     {
         $request = new Zikula_Request_Http();
 
-        $metatagRepository = MUSeo_Util_Model::getMetatagRepository();
-        $where = 'tbl.theModule = \'' . DataUtil::formatForStore($modname) . '\'';
-        $where .= ' AND ';
-        $where .= 'tbl.functionOfModule = \'' . DataUtil::formatForStore($modfunc) . '\'';
-
         $extensionRepository = MUSeo_Util_Model::getExtensionRepository();
         $where2 = 'tbl.name = \'' . DataUtil::formatForStore($modname) . '\'';
         $extensionInfo = $extensionRepository->selectWhere($where2);
@@ -52,41 +47,141 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             return;
         }
 
-        $extensionInfo = $extensionInfo[0];
+        $metatagRepository = MUSeo_Util_Model::getMetatagRepository();
+
+        $filters = self::determineRequestConditions($request, $modname, $modfunc, $extensionInfo[0]);
+        $where = implode(' AND ', $filters);
+
+        // we get the entity
+        $entities = $metatagRepository->selectWhere($where);
+        if (count($entities) < 1) {
+            return;
+        }
+
+
+        $entity = $entities[0];
+
+        if (!empty($entity['redirectUrl'])) {
+            System::redirect($entity['redirectUrl'], '', 301);
+            return;
+        }
+
+        if (!empty($entity['title'])) {
+            PageUtil::setVar('title', $entity['title']);
+        }
+        if (!empty($entity['description'])) {
+            PageUtil::setVar('description', $entity['description']);
+        }
+        if (!empty($entity['keywords'])) {
+            PageUtil::setVar('keywords', $entity['keywords']);
+        }
+
+        $metaTags = array();
+
+        if (!empty($entity['robotsIndex']) || !empty($entity['robotsFollow']) || !empty($entity['robotsAdvanced'])) {
+            $robotsString = self::determineRobotsString($entity);
+            if (!empty($robotsString)) {
+                $metaTags[] = '<meta name="robots" content="' . $robotsString . '" />';
+            }
+        }
+
+        $forceTransport = $this->getVar('forceTransport');
+        $canonical = '';
+        if (!empty($entity['canonicalUrl']) || $forceTransport != 'default') {
+            if (empty($entity['canonicalUrl'])) {
+                $canonical = $entity['canonicalUrl'];
+            } elseif ($forceTransport != 'default') {
+                $canonical = System::getCurrentUrl();
+            }
+
+            if (!empty($canonical) && $forceTransport != System::serverGetProtocol()) {
+                if ($forceTransport != System::serverGetProtocol()) {
+                    $canonical = preg_replace( '`^http[s]?`', $forceTransport, $canonical);
+                }
+                $metaTags[] = '<link rel="canonical" href="' . $canonical . '" />';
+            }
+        }
+
+        if ($this->getVar('facebookEnabled')) {
+            if ($this->getVar('facebookAdminApp') != '') {
+                $metaTags[] = '<meta property="fb:app_id" content="'. $this->getVar('facebookAdminApp') .'">';
+            } elseif ($this->getVar('facebookAdmins') != '') {
+                $metaTags[] = '<meta property="fb:admins" content="'. $this->getVar('facebookAdmins') .'">';
+            }
+            if ($this->getVar('facebookSite') != '') {
+                $metaTags[] = '<meta property="article:publisher" content="'. $this->getVar('facebookSite') .'">';
+            }
+            $metaTags[] = '<meta property="og:title" content="'. (($entity['facebookTitle'] != '') ? $entity['facebookTitle'] : PageUtil::getVar('title')) .'">';
+            $metaTags[] = '<meta property="og:description" content="'. (($entity['facebookDescription'] != '') ? $entity['facebookDescription'] : PageUtil::getVar('description')) .'">';
+            $metaTags[] = '<meta property="og:image" content="' . (($entity['facebookImage'] != '') ? $entity['facebookImage'] : $this->getVar('openGraphDefaultImage')) . '">';
+            $metaTags[] = '<meta property="og:url" content="' . (($canonical) ? $canonical : System::getCurrentUrl()) . '">';
+            $metaTags[] = '<meta property="og:site_name" content="' . System::getVar('sitename') . '">';
+            $metaTags[] = '<meta property="article:modified_time" content="' . $entity['updatedDate'] . '">';
+            $metaTags[] = '<meta property="og_updated_time" content="' . $entity['updatedDate'] . '">';
+            $metaTags[] = '<meta property="og:type" content="website">';
+            $metaTags[] = '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">';
+        }
+
+        if ($this->getVar('googlePlusEnabled')) {
+            $metaTags[] = '<meta itemprop="name" content="'. (($entity['googlePlusTitle'] != '') ? $entity['googlePlusTitle'] : PageUtil::getVar('title')) .'">';
+            $metaTags[] = '<meta itemprop="description" content="'. (($entity['googlePlusDescription'] != '') ? $entity['googlePlusDescription'] : PageUtil::getVar('description')) .'">';
+            if ($entity['googlePlusImage'] != '') {
+                $metaTags[] = '<meta itemprop="image" content="' . $entity['googlePlusImageFullPathUrl'] . '">';
+            }
+            if ($this->getVar('googlePlusPublisherPage') != '') {
+                $metaTags[] = '<link href="' . $this->getVar('googlePlusPublisherPage') . '" rel="publisher" />';
+            }
+        }
+        if ($this->getVar('twitterEnabled')) {
+            $metaTags[] = '<meta property="og:title" content="'. (($entity['twitterTitle'] != '') ? $entity['twitterTitle'] : PageUtil::getVar('title')) .'">';
+            $metaTags[] = '<meta property="og:description" content="'. (($entity['twitterDescription'] != '') ? $entity['twitterDescription'] : PageUtil::getVar('description')) .'">';
+            if (!empty($entity['twitterImage'])) {
+                $metaTags[] = '<meta property="og:image" content="' . $entity['twitterImageFullPathUrl'] . '">';
+            }
+            $metaTags[] = '<meta name="twitter:site" content="' . $this->getVar('twitterSiteUser') . '">';
+            $metaTags[] = '<meta property="og:url" content="' . (($canonical) ? $canonical : System::getCurrentUrl()) . '">';
+            $metaTags[] = '<meta name="twitter:card" content="' . $this->getVar('twitterDefaultCardType') . '">';
+        }
+
+        if (count($metaTags) > 0) {
+            PageUtil::addVar('header', implode("\n", $metaTags));
+        }
+    }
+
+    private static function determineRequestConditions($request, $modname, $modfunc, $extensionInfo)
+    {
+        $filters = array();
+
+        $filters[] = 'tbl.theModule = \'' . DataUtil::formatForStore($modname) . '\'';
+        $filters[] = 'tbl.functionOfModule = \'' . DataUtil::formatForStore($modfunc) . '\'';
 
         if ($extensionInfo['controllerForView'] == $modfunc) {
             $objectType = $request->query->filter($extensionInfo['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
-                $where .= ' AND ';
-                $where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
+                $filters[] = 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
 
             $objectId = $request->query->filter($extensionInfo['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
-            $where .= ' AND ';
-            $where .= 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
+            $filters[] = 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
 
             $objectString = $request->query->filter($extensionInfo['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
-            $where .= ' AND ';
-            $where .= 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
+            $filters[] = 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
         }
 
         if ($extensionInfo['controllerForSingleObject'] == $modfunc && $extensionInfo['controllerForView'] != $extensionInfo['controllerForSingleObject']) {
             $objectType = $request->query->filter($extensionInfo['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
-                $where .= ' AND ';
-                $where .= 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
+                $filters[] = 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
 
             if ($modname != 'PostCalendar') {
                 $objectId = $request->query->filter($extensionInfo['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
                 if ($objectId > 0) {
-                    $where .= ' AND ';
-                    $where .= 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
+                    $filters[] = 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
                 }
                 $objectString = $request->query->filter($extensionInfo['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
                 if ($objectString != '') {
-                    $where .= ' OR ';
-                    $where .= 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
+                    $filters[] = 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
                 }
             }
         }
@@ -96,175 +191,63 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             foreach ($identifiers as $identifier) {
                 $result = $request->query->filter($identifier, '');
                 if ($result != '') {
-                    $where .= ' AND ';
-                    $where .= 'tbl.extraInfos LIKE \'%' . $identifier . '=' . $result . '%\'';
+                    $filters[] = 'tbl.extraInfos LIKE \'%' . $identifier . '=' . $result . '%\'';
                 } else {
-                    $where .= ' AND ';
-                    $where .= 'tbl.extraInfos NOT LIKE \'%' . $identifier . '%\'';
+                    $filters[] = 'tbl.extraInfos NOT LIKE \'%' . $identifier . '%\'';
                 }
             }
         }
 
-        // we get the entity
-        $entities = $metatagRepository->selectWhere($where);
+        return $filters;
+    }
 
-        if (count($entities) > 0) {
-            $entity = $entities[0];
-            if (!empty($entity['title'])) {
-                PageUtil::setVar('title', $entity['title']);
-            }
-            if (!empty($entity['description'])) {
-                PageUtil::setVar('description', $entity['description']);
-            }
-            if (!empty($entity['keywords'])) {
-                PageUtil::setVar('keywords', $entity['keywords']);
-            }
-            if (!empty($entity['robotsIndex']) || !empty($entity['robotsFollow']) || !empty($entity['robotsAdvanced'])) {
-            	$robotsstr = "";
-            	$robots           = array();
-            	$robots['index']  = ModUtil::getVar('MUSeo', 'robotsIndex');
-            	$robots['follow'] = ModUtil::getVar('MUSeo', 'robotsFollow');
-            	$robots['other']  = array();
-            	
-            	if(ModUtil::getVar('MUSeo', 'noodp') == true){
-            		$robots['other'][] = 'noodp';
-            	}
-            	if(ModUtil::getVar('MUSeo', 'noydir') == true){
-            		$robots['other'][] = 'noydir';
-            	}
-            	if($entity['robotsIndex'] != ''){
-            		$robots['index'] = $entity['robotsIndex'];
-            	}
-            	if($entity['robotsFollow'] != ''){
-            		$robots['follow'] = $entity['robotsFollow'];
-            	}
-            	if(!empty($entity['robotsAdvanced'])){
-            		$listHelper = new MUSeo_Util_ListEntries(ServiceUtil::getManager());
-            		foreach ($listHelper->extractMultiList($entity['robotsAdvanced']) as $robotsAdvancedItem) {
-            			if($robotsAdvancedItem == true){
-            				$robots['other'][] = $robotsAdvancedItem;
-            			}
-            		}
-            	}  	
-            	if($robots['index'] != 'index'){
-            		if(!empty($robotsstr)){
-            			$robotsstr .= ', ';
-            		}
-            		$robotsstr .= $robots['index'];
-            	}
-            	if($robots['follow'] != 'follow'){
-            		if(!empty($robotsstr)){
-            			$robotsstr .= ', ';
-            		}
-            		$robotsstr .= $robots['follow'];
-            	}     	
-            	if(!empty($robots['other'])){
-            		if(!empty($robotsstr)){
-            			$robotsstr .= ', ';
-            		}
-            		$robotsstr .= implode( ',', array_unique( $robots['other'] ) );
-            	}
-				if(!empty($robotsstr)){
-					$robotsTag = '<meta name="ROBOTS" content="' . $robotsstr . '" />';
-					PageUtil::setVar('header', $robotsTag);
-				}
-            }
-            $forceTransport = ModUtil::getVar('MUSeo', 'forceTransport');
-            $canonical = '';
-            if (!empty($entity['canonicalUrl']) || $forceTransport != 'default') {
-            	if(empty($entity['canonicalUrl'])){
-            		$canonical = $entity['canonicalUrl'];
-            	}else if($forceTransport != 'default'){
-            		$canonical = System::getCurrentUrl();
-            	}
+    private static function determineRobotsString($entity)
+    {
+        $robotsString = '';
+        $robots           = array();
+        $robots['index']  = $this->getVar('robotsIndex');
+        $robots['follow'] = $this->getVar('robotsFollow');
+        $robots['other']  = array();
 
-				if(!empty($canonical) && $forceTransport != System::serverGetProtocol()) {
-					if($forceTransport != System::serverGetProtocol()){
-						$canonical = preg_replace( '`^http[s]?`', $forceTransport, $canonical);
-					}
-					PageUtil::setVar('header', '<link rel="canonical" href="' . $canonical . '" />');
-            	}
-            }
-            if (!empty($entity['redirectUrl'])) {
-            	System::redirect($entity['redirectUrl'],'',301);
-            }
-            if(ModUtil::getVar('MUSeo', 'facebookEnabled')){
-            	if((ModUtil::getVar('MUSeo', 'facebookAdminApp')) != ''){
-            		PageUtil::setVar('header', '<meta property="fb:app_id" content="'. ModUtil::getVar('MUSeo', 'facebookAdminApp') .'">');
-            	}else if((ModUtil::getVar('MUSeo', 'facebookAdmins')) != ''){
-            		PageUtil::setVar('header', '<meta property="fb:admins" content="'. ModUtil::getVar('MUSeo', 'facebookAdmins') .'">');
-            	}
-            	if((ModUtil::getVar('MUSeo', 'facebookSite')) != ''){
-            		PageUtil::setVar('header', '<meta property="article:publisher" content="'. ModUtil::getVar('MUSeo', 'facebookSite') .'">');
-            	}
-            	if (!empty($entity['facebookTitle'])) {
-            		PageUtil::setVar('header', '<meta property="og:title" content="'. $entity['facebookTitle'] .'">');
-            	}else{
-            		PageUtil::setVar('header', '<meta property="og:title" content="'. PageUtil::getVar('title') .'">');
-            	}
-            	if (!empty($entity['facebookDescription'])) {
-            		PageUtil::setVar('header', '<meta property="og:description" content="'. $entity['facebookDescription'] .'">');
-            	}else{
-            		PageUtil::setVar('header', '<meta property="og:description" content="'. PageUtil::getVar('description') .'">');
-            	}
-            	if (!empty($entity['facebookImage'])) {
-            		PageUtil::setVar('header', '<meta property="og:image" content="' . $entity['facebookImage'] . '">');
-            	}else if((ModUtil::getVar('MUSeo', 'openGraphDefaultImage')) != ''){
-            		PageUtil::setVar('header', '<meta property="og:image" content="' . ModUtil::getVar('MUSeo', 'openGraphDefaultImage') . '">');
-            	}
-            	if($canonical){
-            		PageUtil::setVar('header', '<meta property="og:url" content="' . $canonical . '">');
-            	}else{
-            		PageUtil::setVar('header', '<meta property="og:url" content="' . System::getCurrentUrl() . '">');
-            	}
-            	PageUtil::setVar('header', '<meta property="og:site_name" content="' . System::getVar('sitename') . '">');
-            	PageUtil::setVar('header', '<meta property="article:modified_time" content="' . $entity['updatedDate'] . '">');
-            	PageUtil::setVar('header', '<meta property="og_updated_time" content="' . $entity['updatedDate'] . '">');
-            	PageUtil::setVar('header', '<meta property="og:type" content="website">');
-            	PageUtil::setVar('header', '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">');
-            	
-            }
-            if(ModUtil::getVar('MUSeo', 'googlePlusEnabled')){
-            	if (!empty($entity['googlePlusTitle'])) {
-            		PageUtil::setVar('header', '<meta itemprop="name" content="'. $entity['googlePlusTitle'] .'">');
-            	}else{
-            		PageUtil::setVar('header', '<meta itemprop="name" content="'. PageUtil::getVar('title') .'">');
-            	}
-            	if (!empty($entity['googlePlusDescription'])) {
-            		PageUtil::setVar('header', '<meta itemprop="description" content="'. $entity['googlePlusDescription'] .'">');
-            	}else{
-            		PageUtil::setVar('header', '<meta itemprop="description" content="'. PageUtil::getVar('description') .'">');
-            	}
-            	if (!empty($entity['googlePlusImage'])) {
-            		PageUtil::setVar('header', '<meta itemprop="image" content="' . $entity['googlePlusImageFullPathUrl'] . '">');
-            	}
-            	if((ModUtil::getVar('MUSeo', 'googlePlusPublisherPage')) != ''){
-            		PageUtil::setVar('header', '<link href="' . ModUtil::getVar('MUSeo', 'googlePlusPublisherPage') . '" rel="publisher" />');
-            	}
-            }
-            if(ModUtil::getVar('MUSeo', 'twitterEnabled')){
-            	if (!empty($entity['twitterTitle'])) {
-            		PageUtil::setVar('header', '<meta property="og:title" content="'. $entity['twitterTitle'] .'">');
-            	}else{
-            		PageUtil::setVar('header', '<meta property="og:title" content="'. PageUtil::getVar('title') .'">');
-            	}
-            	if (!empty($entity['twitterDescription'])) {
-            		PageUtil::setVar('header', '<meta property="og:description" content="'. $entity['twitterDescription'] .'">');
-            	}else{
-            		PageUtil::setVar('header', '<meta property="og:description" content="'. PageUtil::getVar('description') .'">');
-            	}
-            	if (!empty($entity['twitterImage'])) {
-            		PageUtil::setVar('header', '<meta property="og:image" content="' . $entity['twitterImageFullPathUrl'] . '">');
-            	
-            	}
-            	PageUtil::setVar('header', '<meta name="twitter:site" content="' . ModUtil::getVar('MUSeo', 'twitterSiteUser') . '">');
-            	if($canonical){
-            		PageUtil::setVar('header', '<meta property="og:url" content="' . $canonical . '">');
-            	}else{
-            		PageUtil::setVar('header', '<meta property="og:url" content="' . System::getCurrentUrl() . '">');
-            	}
-            	PageUtil::setVar('header', '<meta name="twitter:card" content="' . ModUtil::getVar('MUSeo', 'twitterDefaultCardType') . '">');
+        if ($this->getVar('noodp') == true) {
+            $robots['other'][] = 'noodp';
+        }
+        if ($this->getVar('noydir') == true) {
+            $robots['other'][] = 'noydir';
+        }
+        if ($entity['robotsIndex'] != '') {
+            $robots['index'] = $entity['robotsIndex'];
+        }
+        if ($entity['robotsFollow'] != '') {
+            $robots['follow'] = $entity['robotsFollow'];
+        }
+        if (!empty($entity['robotsAdvanced'])){
+            $listHelper = new MUSeo_Util_ListEntries(ServiceUtil::getManager());
+            foreach ($listHelper->extractMultiList($entity['robotsAdvanced']) as $robotsAdvancedItem) {
+                if ($robotsAdvancedItem == true) {
+                    $robots['other'][] = $robotsAdvancedItem;
+                }
             }
         }
+        if ($robots['index'] != 'index') {
+            if (!empty($robotsString)){
+                $robotsString .= ', ';
+            }
+            $robotsString .= $robots['index'];
+        }
+        if ($robots['follow'] != 'follow') {
+            if (!empty($robotsString)) {
+                $robotsString .= ', ';
+            }
+            $robotsString .= $robots['follow'];
+        }
+        if (!empty($robots['other'])) {
+            if (!empty($robotsString)) {
+                $robotsString .= ', ';
+            }
+            $robotsString .= implode(',', array_unique($robots['other']));
+        }
+
+        return $robotsString;
     }
 }

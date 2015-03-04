@@ -38,52 +38,53 @@
 {pageaddvarblock name='header'}
     <script type="text/javascript">               
         Event.observe(window, 'load', function() {     
-            function iframeRef( frameRef ) {
+            function iframeRef(frameRef)
+            {
                 return frameRef.contentWindow ? frameRef.contentWindow.document : frameRef.contentDocument;
             }
-            
-            
-            function evaluateKeyword(){
+
+            function evaluateKeyword()
+            {
                 var focuskw = yst_escapeFocusKw(String.trim($F('focusKeyword'))).toLowerCase();
-                if(focuskw == ''){
+                if (focuskw == '') {
                     return;
                 }
-                
-                var seoFrame = iframeRef( document.getElementById('seoFrame') );   
+
+                var seoFrame = iframeRef(document.getElementById('seoFrame'));
                 var p = new RegExp("(^|[ \s\n\r\t\.,'\(\"\+;!?:\-])" + focuskw + "($|[ \s\n\r\t.,'\)\"\+!?:;\-])", 'gim');
                 //remove diacritics of a lower cased focuskw for url matching in foreign lang
                 var focuskwNoDiacritics = removeLowerCaseDiacritics(focuskw);
                 var p2 = new RegExp(focuskwNoDiacritics.replace(/\s+/g, "[-_\\\//]"), 'gim');                            
-                
+
                 $('focuskwresultsPageTitle').update(ptest(seoFrame.title, p));
                 $('focuskwresultsPageURL').update(ptest(seoFrame.src, p2));
                 $('focuskwresultsPageContent').update(ptest(seoFrame.getElementsByTagName("body")[0].innerHTML, p));
 
                 var metas = seoFrame.getElementsByTagName('meta');
                 if (metas) {
-                    for (var x=0,y=metas.length; x<y; x++) {
-                        if (metas[x].name.toLowerCase() == "keywords") {
-                             console.log('Keywords ' + ptest(metas[x].content, p));
+                    for (var x = 0, y = metas.length; x < y; x++) {
+                        if (metas[x].name.toLowerCase() == 'keywords') {
+                             //console.log('Keywords ' + ptest(metas[x].content, p));
                              $('focuskwresultsMetaKeywords').update(ptest(metas[x].content, p));
-                        }else if (metas[x].name.toLowerCase() == "description") {
-                            console.log('Description ' + ptest(metas[x].content, p));
+                        } else if (metas[x].name.toLowerCase() == 'description') {
+                            //console.log('Description ' + ptest(metas[x].content, p));
                             $('focuskwresultsMetaDescription').update(ptest(metas[x].content, p));
                         }
                     }
                 }
             }
-            
+
             evaluateKeyword();
-            
-            $('focusKeyword').observe('change', function(){
+
+            $('focusKeyword').observe('change', function() {
                 evaluateKeyword();
             });
         });
     </script>
 {/pageaddvarblock}
 
-{if !empty($smarty.get.currentUrl)}
-    <iframe id="seoFrame" src="{$smarty.get.currentUrl}" style="display: none;">
+{if $smarty.get.currentUrl ne ''}
+    <iframe id="seoFrame" src="{$smarty.get.currentUrl}" style="display: none">
     </iframe>
 {/if}
 

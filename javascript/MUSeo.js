@@ -146,7 +146,8 @@ function mUMUSeoInitQuickNavigation(objectType)
     }
 }
 
-function removeLowerCaseDiacritics(str) {
+function removeLowerCaseDiacritics(str)
+{
     var defaultDiacriticsRemovalMap = [
         {'base': 'a', 'letters': /[\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u00E4\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250]/g},
         {'base': 'aa', 'letters': /[\uA733]/g},
@@ -218,8 +219,8 @@ function ptest(str, p)
 {
     str = yst_clean(str);
     str = str.toLowerCase();
-    str = removeLowerCaseDiacritics( str );
-    //p = removeLowerCaseDiacritics( p );
+    str = removeLowerCaseDiacritics(str);
+    //p = removeLowerCaseDiacritics(p);
     var r = str.match(p);
     if (r != null) {
         return '<span class="good">Yes (' + r.length + ')</span>';

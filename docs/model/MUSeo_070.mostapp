@@ -29,24 +29,24 @@ application MUSeo {
         generateIcsTemplates false
         generatePoweredByBacklinksIntoFooterTemplates false
         skipFiles "
+            images/admin.png,
             CHANGELOG.md,
             README.md
         "
         markFiles "
+            javascript/MUSeo.js,
             lib/MUSeo/Api/HandleModules.php,
             lib/MUSeo/Installer.php,
             lib/MUSeo/Listener/ModuleDispatch.php,
             lib/MUSeo/Listener/Theme.php
             lib/MUSeo/Util/Model.php,
             lib/MUSeo/Version.php,
+            style/style.css,
             templates/admin/config.tpl,
             templates/extension/edit.tpl,
             templates/metatag/display.tpl,
             templates/metatag/edit.tpl,
-            templates/metatag/view.tpl,
-            images/admin.png,
-            style/style.css,
-            javascript/MUSeo.js
+            templates/metatag/view.tpl
         "
     }
     entities {

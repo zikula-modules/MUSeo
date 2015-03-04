@@ -83,7 +83,7 @@
     </script>
 {/pageaddvarblock}
 
-{if $smarty.get.currentUrl ne ''}
+{if isset($smarty.get.currentUrl) && $smarty.get.currentUrl ne ''}
     <iframe id="seoFrame" src="{$smarty.get.currentUrl}" style="display: none">
     </iframe>
 {/if}

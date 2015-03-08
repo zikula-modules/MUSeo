@@ -82,3 +82,80 @@ div.museo-view form.museo-quicknav fieldset #num {
 .museo-edit #focuskwresults .wrong {
     color: red;
 }
+
+.museo-edit #snippedPreview {
+    width: auto;
+    max-width: 520px;
+    margin: 0 0 10px;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.museo-edit #snippedPreview td {
+    margin: 0;
+    padding: 0;
+}
+
+.museo-edit #snippedPreview cite.url {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.museo-edit #snippedPreview a {
+    text-decoration: none;
+}
+
+.museo-edit #snippedPreview .title {
+    display: block;
+    overflow: hidden;
+    width: 512px;
+    color: #1e0fbe;
+    font-size: 18px !important;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.museo-edit #snippedPreview .desc {
+    font-size: small;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.museo-edit #snippedPreview .desc .autogen {
+    color: #777;
+}
+
+.museo-edit #snippedPreview .date {
+    color: #808080;
+}
+
+.museo-edit #snippedPreview .desc p {
+    color: #545454;
+    font-size: small;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.museo-edit #snippedPreview .url {
+    color: #006621;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.museo-edit #snippedPreview .meta {
+    color: #767676;
+}
+
+.museo-edit #snippedPreview .util {
+    color: #4272db;
+}
+
+.museo-edit #snippedPreview p {
+    margin: 0 !important;
+}
+
+.museo-edit #snippedPreview a:hover {
+    text-decoration: underline;
+}

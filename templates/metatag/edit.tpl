@@ -57,9 +57,10 @@
                 var p2 = new RegExp(focuskwNoDiacritics.replace(/\s+/g, "[-_\\\//]"), 'gim');                            
 
                 $('focuskwresultsPageTitle').update(ptest(seoFrame.title, p));
-                $('focuskwresultsPageURL').update(ptest(seoFrame.src, p2));
+                $('focuskwresultsPageURL').update(ptest(seoFrame.URL, p2));
                 $('focuskwresultsPageContent').update(ptest(seoFrame.getElementsByTagName("body")[0].innerHTML, p));
 
+                var metaDescription;
                 var metas = seoFrame.getElementsByTagName('meta');
                 if (metas) {
                     for (var x = 0, y = metas.length; x < y; x++) {
@@ -67,11 +68,12 @@
                              //console.log('Keywords ' + ptest(metas[x].content, p));
                              $('focuskwresultsMetaKeywords').update(ptest(metas[x].content, p));
                         } else if (metas[x].name.toLowerCase() == 'description') {
-                            //console.log('Description ' + ptest(metas[x].content, p));
+                            metaDescription = metas[x].content;
                             $('focuskwresultsMetaDescription').update(ptest(metas[x].content, p));
                         }
                     }
                 }
+                $('snippedPreview').update('<a class="title" href="#">' + yst_boldKeywords(seoFrame.title, false) + '</a><span class="url">' + yst_boldKeywords(seoFrame.URL, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(metaDescription,false)) + '</span></p>');
             }
 
             evaluateKeyword();
@@ -122,6 +124,13 @@
                             {gt text="Meta keywords"}: <span id="focuskwresultsMetaKeywords"></span><br />
                             {gt text="Meta description"}: <span id="focuskwresultsMetaDescription"></span><br />
                         </div>
+                    </div>
+                </div>
+                
+                <div class="z-formrow">
+                    <label title="" class="museo-form-tooltips" for="focusKeyword">{gt text="Snipped Preview"}</label>
+                    <div id="snippedPreview">
+                    
                     </div>
                 </div>
                 

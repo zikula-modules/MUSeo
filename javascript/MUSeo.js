@@ -233,3 +233,46 @@ function yst_escapeFocusKw(str)
 {
     return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
+
+function yst_boldKeywords(str, url)
+{
+	var focuskw = yst_escapeFocusKw(String.trim($F('focusKeyword'))).toLowerCase();
+    var keywords;
+
+    if (focuskw == '')
+        return str;
+
+    if (focuskw.search(' ') != -1) {
+        keywords = focuskw.split(' ');
+    } else {
+        keywords = new Array(focuskw);
+    }
+    for (var i = 0; i < keywords.length; i++) {
+        var kw = yst_clean(keywords[i]);
+        var kwregex = '';
+        if (url) {
+            kw = kw.replace(' ', '-').toLowerCase();
+            kwregex = new RegExp("([-/])(" + kw + ")([-/])?");
+        } else {
+            kwregex = new RegExp("(^|[ \s\n\r\t\.,'\(\"\+;!?:\-]+)(" + kw + ")($|[ \s\n\r\t\.,'\)\"\+;!?:\-]+)", 'gim');
+        }
+        if (str != undefined) {
+            str = str.replace(kwregex, "$1<strong>$2</strong>$3");
+        }
+    }
+    return str;
+}
+var meta_desc_lenght = 156;
+
+function yst_trimDesc(desc)
+{
+    if (desc.length > meta_desc_lenght) {
+        var space;
+        if (desc.length > meta_desc_lenght)
+            space = desc.lastIndexOf(" ", ( meta_desc_lenght - 3 ));
+        else
+            space = meta_desc_lenght;
+        desc = desc.substring(0, space).concat(' ...');
+    }
+    return desc;
+}

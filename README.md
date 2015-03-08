@@ -53,3 +53,5 @@ Version 2.0.0
 MUSeo is currently being developed. It is going to offer more sophisticated SEO settings.
 
 More information coming soon.
+
+Some parts of MUSeo are based on https://yoast.com/wordpress/plugins/seo/ and https://github.com/Yoast/wordpress-seo/.

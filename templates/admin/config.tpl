@@ -41,36 +41,6 @@
                     
                         <p class="z-confirmationmsg">{gt text='Here you can adjust basic SEO-related options.'|nl2br}</p>
                     
-                        <div class="z-formrow z-hide">
-                            {gt text='Allows to ignore a warning about meta description contained in a theme.' assign='toolTip'}
-                            {formlabel for='ignoreMetaDescriptionWarning' __text='Ignore meta description warning' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='ignoreMetaDescriptionWarning' group='config'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow z-hide">
-                            {gt text='Allows to ignore a warning about incomplete permalink structure.' assign='toolTip'}
-                            {formlabel for='ignorePermalink' __text='Ignore permalink' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='ignorePermalink' group='config'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow z-hide">
-                            {gt text='Whether the introduction tour should be ignored or not.' assign='toolTip'}
-                            {formlabel for='ignoreTour' __text='Ignore tour' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='ignoreTour' group='config'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow z-hide">
-                            {gt text='Whether a meta description has been found in the theme or not.' assign='toolTip'}
-                            {formlabel for='themeDescriptionFound' __text='Theme description found' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='themeDescriptionFound' group='config'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow z-hide">
-                            {gt text='Whether the theme has a meta description or not.' assign='toolTip'}
-                            {formlabel for='themeHasDescription' __text='Theme has description' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='themeHasDescription' group='config'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
                         <div class="z-formrow">
                             {gt text='Default meta robots index' assign='toolTip'}
                             {formlabel for='robotsIndex' __text='Robots index' cssClass='museo-form-tooltips ' title=$toolTip}
@@ -135,40 +105,10 @@
                         <p class="z-confirmationmsg">{gt text='Settings relating to permalinks and canonical settings.'|nl2br}</p>
                     
                         <div class="z-formrow">
-                            {gt text='Enforce a trailing slash' assign='toolTip'}
-                            {formlabel for='enforceTrailingSlash' __text='Enforce trailing slash' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='enforceTrailingSlash' group='config'}
-                            <span class="z-formnote">{gt text='If you choose a permalink for your posts with <code>.html</code>, or anything else but a / on the end, this will force MUSeo to add a trailing slash to non-post pages nonetheless.'}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Remove stop words from slugs' assign='toolTip'}
-                            {formlabel for='cleanSlugs' __text='Clean slugs' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='cleanSlugs' group='config'}
-                            <span class="z-formnote">{gt text='This helps you to create cleaner URLs by automatically removing the stopwords from them.'}</span>
-                        </div>
-                        <div class="z-formrow">
                             {gt text='Force the canonical to either http or https, when your site runs under both.' assign='toolTip'}
                             {formlabel for='forceTransport' __text='Force transport' cssClass='museo-form-tooltips ' title=$toolTip}
                             {formtextinput id='forceTransport' group='config' maxLength=10 __title='Enter the force transport.'}
                             <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Prevent cleaning out Google Site Search URL"s.' assign='toolTip'}
-                            {formlabel for='cleanPermalinkGoogleSiteSearch' __text='Clean permalink google site search' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='cleanPermalinkGoogleSiteSearch' group='config'}
-                            <span class="z-formnote">{gt text='Google Site Search URL\'s look weird, and ugly, but if you\'re using Google Site Search, you probably do not want them cleaned out.'}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters.' assign='toolTip'}
-                            {formlabel for='cleanPermalinkGoogleCampaign' __text='Clean permalink google campaign' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='cleanPermalinkGoogleCampaign' group='config'}
-                            <span class="z-formnote">{gt text='If you use Google Analytics campaign parameters starting with <code>?utm_</code>, check this box. It is recommended to use the hash tagged version instead.'}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Other variables not to clean' assign='toolTip'}
-                            {formlabel for='cleanPermalinkExtraVars' __text='Clean permalink extra vars' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='cleanPermalinkExtraVars' group='config' maxLength=255 __title='Enter the clean permalink extra vars.'}
-                            <span class="z-formnote">{gt text='Add extra variables you want to prevent from cleaning out, comma separated.'}</span>
                         </div>
                     </fieldset>
                 {/formtabbedpanel}
@@ -177,30 +117,6 @@
                     <fieldset>
                         <legend>{gt text="General"}</legend>
                     
-                        <div class="z-formrow z-hide">
-                            {gt text='Internal var used for testing SEO titles.' assign='toolTip'}
-                            {formlabel for='titleTest' __text='Title test' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formintinput id='titleTest' group='config' maxLength=255 __title='Enter the title test. Only digits are allowed.'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Force rewrite titles' assign='toolTip'}
-                            {formlabel for='forceRewriteTitle' __text='Force rewrite title' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='forceRewriteTitle' group='config'}
-                            <span class="z-formnote">{gt text='MUSeo has auto-detected whether it needs to force rewrite the titles for your pages, if you think it\'s wrong and you know what you\'re doing, you can change the setting here.'}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Symbol to use as title separator.' assign='toolTip'}
-                            {formlabel for='titleSeparator' __text='Title separator' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='titleSeparator' group='config' maxLength=255 __title='Enter the title separator.'}
-                            <span class="z-formnote">{gt text='Choose the symbol to use as your title separator. This will display, for instance, between your post title and site name. Symbols are shown in the size they\'ll appear in search results.'}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Use meta keywords tag?' assign='toolTip'}
-                            {formlabel for='useMetaKeywords' __text='Use meta keywords' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='useMetaKeywords' group='config'}
-                            <span class="z-formnote">{gt text='Check this box if you really want to use meta keywords.'}</span>
-                        </div>
                         <div class="z-formrow">
                             {gt text='Add noodp meta robots tag sitewide' assign='toolTip'}
                             {formlabel for='noodp' __text='Noodp' cssClass='museo-form-tooltips ' title=$toolTip}
@@ -212,43 +128,6 @@
                             {formlabel for='noydir' __text='Noydir' cssClass='museo-form-tooltips ' title=$toolTip}
                             {formcheckbox id='noydir' group='config'}
                             <span class="z-formnote">{gt text='Prevents search engines from using the Yahoo! directory description for pages from this site in the search results.'}</span>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>{gt text="Home"}</legend>
-                        <div class="z-formrow">
-                            {gt text='Homepage title template' assign='toolTip'}
-                            {formlabel for='homeTitle' __text='Home title' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='homeTitle' group='config' maxLength=255 __title='Enter the home title.'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Homepage meta description template' assign='toolTip'}
-                            {formlabel for='homeMetaDescription' __text='Home meta description' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='homeMetaDescription' group='config' maxLength=255 __title='Enter the home meta description.'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Homepage meta keywords template' assign='toolTip'}
-                            {formlabel for='homeMetaKeywords' __text='Home meta keywords' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='homeMetaKeywords' group='config' maxLength=255 __title='Enter the home meta keywords.'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>{gt text="Special pages"}</legend>
-                        <p class="z-confirmationmsg">{gt text='These pages will be noindex, followed by default, so they will never show up in search results.'|nl2br}</p>
-                        <div class="z-formrow">
-                            {gt text='Search pages title template' assign='toolTip'}
-                            {formlabel for='searchTitle' __text='Search title' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='searchTitle' group='config' maxLength=255 __title='Enter the search title.'}
-                            <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='404 pages title template' assign='toolTip'}
-                            {formlabel for='notFoundTitle' __text='Not found title' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='notFoundTitle' group='config' maxLength=255 __title='Enter the not found title.'}
-                            <span class="z-formnote">{$toolTip}</span>
                         </div>
                     </fieldset>
                 {/formtabbedpanel}
@@ -352,14 +231,6 @@
                             {formlabel for='googlePlusPublisherPage' __text='Google plus publisher page' cssClass='museo-form-tooltips ' title=$toolTip}
                             {formtextinput id='googlePlusPublisherPage' group='config' maxLength=255 __title='Enter the google plus publisher page.'}
                             <span class="z-formnote">{gt text='If you have a Google+ page for your business, add that URL here and link it on your Google+ page\'s about page.'}</span>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>{gt text="WhatsApp"}</legend>
-                        <div class="z-formrow">
-                            {gt text='Add WhatsApp button' assign='toolTip'}
-                            {formlabel for='whatsAppEnabled' __text='Whats app enabled' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='whatsAppEnabled' group='config'}
                         </div>
                     </fieldset>
                 {/formtabbedpanel}

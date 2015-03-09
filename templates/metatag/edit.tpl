@@ -97,9 +97,9 @@
                     description = metaDescription;
                 }
 
-                if (title === null || url === null || description == null){
+                if (title === null || url === null || description == null) {
                     $('snippetPreview').update('');
-                }else{
+                } else {
                     $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description, false)) + '</span></p>');
                 }
             }

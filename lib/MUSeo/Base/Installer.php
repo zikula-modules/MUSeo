@@ -47,11 +47,6 @@ class MUSeo_Base_Installer extends Zikula_AbstractInstaller
         // set up all our vars with initial values
         $this->setVar('modules', 'News');
         $this->setVar('controllers', 'main,view,display');
-        $this->setVar('ignoreMetaDescriptionWarning', false);
-        $this->setVar('ignorePermalink', false);
-        $this->setVar('ignoreTour', false);
-        $this->setVar('themeDescriptionFound', false);
-        $this->setVar('themeHasDescription', false);
         $this->setVar('robotsIndex',  'index' );
         $this->setVar('robotsFollow',  'follow' );
         $this->setVar('disableAdvancedMeta', true);
@@ -60,23 +55,9 @@ class MUSeo_Base_Installer extends Zikula_AbstractInstaller
         $this->setVar('msVerify', '');
         $this->setVar('pinterestVerify', '');
         $this->setVar('yandexVerify', '');
-        $this->setVar('enforceTrailingSlash', false);
-        $this->setVar('cleanSlugs', true);
         $this->setVar('forceTransport', 'default');
-        $this->setVar('cleanPermalinkGoogleSiteSearch', false);
-        $this->setVar('cleanPermalinkGoogleCampaign', false);
-        $this->setVar('cleanPermalinkExtraVars', '');
-        $this->setVar('titleTest', 0);
-        $this->setVar('forceRewriteTitle', false);
-        $this->setVar('titleSeparator', 'sc-dash');
-        $this->setVar('useMetaKeywords', false);
         $this->setVar('noodp', false);
         $this->setVar('noydir', false);
-        $this->setVar('homeTitle', '%%sitename%% %%page%% %%sep%% %%sitedesc%%');
-        $this->setVar('homeMetaDescription', '');
-        $this->setVar('homeMetaKeywords', '');
-        $this->setVar('searchTitle', '');
-        $this->setVar('notFoundTitle', '');
         $this->setVar('facebookAdmins', '');
         $this->setVar('facebookApps', '');
         $this->setVar('facebookConnectKey', '');
@@ -92,7 +73,6 @@ class MUSeo_Base_Installer extends Zikula_AbstractInstaller
         $this->setVar('twitterDefaultCardType', 'summary');
         $this->setVar('googlePlusEnabled', false);
         $this->setVar('googlePlusPublisherPage', '');
-        $this->setVar('whatsAppEnabled', false);
     
         $categoryRegistryIdsPerEntity = array();
     

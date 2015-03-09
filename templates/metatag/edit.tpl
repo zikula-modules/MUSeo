@@ -78,7 +78,7 @@
                     }
                 }
                 
-                var title, url, description;
+                var title = null, url = null, description = null;
                 if (fieldIdTitle !== undefined && fieldIdTitle !== null && fieldIdTitle !== '') {
                     title = $F(fieldIdTitle);
                 } else if (seoFrame !== null) {
@@ -97,7 +97,11 @@
                     description = metaDescription;
                 }
 
-                $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description, false)) + '</span></p>');
+                if (title === null || url === null || description == null){
+                    $('snippetPreview').update('');
+                }else{
+                    $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description, false)) + '</span></p>');
+                }
             }
 
             evaluateKeyword();

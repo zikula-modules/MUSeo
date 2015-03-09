@@ -154,11 +154,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="z-formrow">
                     <label title="" class="museo-form-tooltips" for="focusKeyword">{gt text='Snippet Preview'}</label>
                     <div id="snippetPreview">
-                    
                     </div>
                     <span class="z-formnote">{gt text='This is a rendering of what this page might look like in Google\'s search results.'}</span>
                 </div>
@@ -197,14 +196,6 @@
             {gt text='Advanced' assign='tabTitle'}
             {formtabbedpanel title=$tabTitle}
             <fieldset>
-                
-                <div class="z-formrow">
-                    {gt text='Enter other parameters and their values comma separated like parameter1=value1,parameter2=value!' assign='toolTip'}
-                    {formlabel for='extraInfos' __text='Extra infos' cssClass='museo-form-tooltips' title=$toolTip}
-                    {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter the extra infos of the metatag' textMode='singleline' maxLength=255 cssClass='' }
-                    <span class="z-formnote">{$toolTip}</span>
-                </div>
-                
                 <div class="z-formrow">
                     {gt text='Meta robots index' assign='toolTip'}
                     {formlabel for='robotsIndex' __text='Robots index' cssClass='museo-form-tooltips' title=$toolTip}
@@ -432,7 +423,7 @@
                     {museoValidationError id='idOfObject' class='validate-digits'}
                     <span class="z-formnote">{$toolTip}</span>
                 </div>
-                
+
                 <div class="z-formrow">
                     {gt text='Enter the string of an object! For example Zikula!' assign='toolTip'}
                     {formlabel for='stringOfObject' __text='String of object' cssClass='museo-form-tooltips' title=$toolTip}
@@ -440,6 +431,12 @@
                     <span class="z-formnote">{$toolTip}</span>
                 </div>
 
+                <div class="z-formrow">
+                    {gt text='Enter other parameters and their values comma separated like parameter1=value1,parameter2=value!' assign='toolTip'}
+                    {formlabel for='extraInfos' __text='Extra infos' cssClass='museo-form-tooltips' title=$toolTip}
+                    {formtextinput group='metatag' id='extraInfos' mandatory=false readOnly=false __title='Enter the extra infos of the metatag' textMode='singleline' maxLength=255 cssClass='' }
+                    <span class="z-formnote">{$toolTip}</span>
+                </div>
             </fieldset>
         {/formtabbedpanel}
     {/formtabbedpanelset}

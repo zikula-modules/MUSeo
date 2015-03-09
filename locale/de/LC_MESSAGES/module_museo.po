@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MUSeo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-09 09:22+0100\n"
-"PO-Revision-Date: 2015-03-09 09:46+0100\n"
+"POT-Creation-Date: 2015-03-09 15:27+0100\n"
+"PO-Revision-Date: 2015-03-09 15:40+0100\n"
 "Last-Translator: Axel Guckelsberger <info@guite.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: lib/MUSeo/Installer.php:40 lib/MUSeo/Base/Installer.php:38
-#: lib/MUSeo/Base/Installer.php:163
+#: lib/MUSeo/Base/Installer.php:143
 msgid "Doctrine Exception: "
 msgstr "Doctrine Ausnahme:"
 
@@ -53,7 +53,7 @@ msgstr ""
 "Bitte schalte den Entwicklermodus durch Bearbeiten der Datei /config/config."
 "php ein."
 
-#: lib/MUSeo/Base/Installer.php:156
+#: lib/MUSeo/Base/Installer.php:136
 #, php-format
 msgid ""
 "An error was encountered while removing stored object workflows for the %s "
@@ -62,12 +62,12 @@ msgstr ""
 "Während des Entfernens gespeicherter Objekt Arbeitsabläufe für das Modul %s "
 "ist ein Fehler aufgetreten."
 
-#: lib/MUSeo/Base/Installer.php:165
+#: lib/MUSeo/Base/Installer.php:145
 #, php-format
 msgid "An error was encountered while dropping tables for the %s extension."
 msgstr "Ein Fehler ist während des Löschens der Tabellen für %s aufgetreten."
 
-#: lib/MUSeo/Base/Installer.php:185
+#: lib/MUSeo/Base/Installer.php:165
 #, php-format
 msgid "The upload directories at [%s] can be removed manually."
 msgstr "Die Upload Ordner in [%s] können manuell gelöscht werden."
@@ -816,70 +816,70 @@ msgstr "Metatag bearbeiten"
 msgid "Create metatag"
 msgstr "Metatag erstellen"
 
-#: templates/metatag/edit.tpl:93 templates/metatag/display.tpl:22
-#: templates/admin/config.tpl:16 templates/admin/config.tpl:178
+#: templates/metatag/edit.tpl:103 templates/metatag/display.tpl:22
+#: templates/admin/config.tpl:16 templates/admin/config.tpl:118
 msgid "General"
 msgstr "Allgemein"
 
-#: templates/metatag/edit.tpl:97 templates/extension/edit.tpl:42
+#: templates/metatag/edit.tpl:107 templates/extension/edit.tpl:42
 msgid "Content"
 msgstr "Inhalt"
 
-#: templates/metatag/edit.tpl:100
+#: templates/metatag/edit.tpl:110
 msgid "Enter the title of this entity; so you can find it!"
 msgstr "Gib den Titel für diesen Eintrag ein; so kannst Du ihn besser finden!"
 
-#: templates/metatag/edit.tpl:101 templates/metatag/display.tpl:24
+#: templates/metatag/edit.tpl:111 templates/metatag/display.tpl:24
 #: templates/metatag/view.tpl:76 templates/metatag/view_quickNav.tpl:59
 msgid "Title of entity"
 msgstr "Titel des Eintrags"
 
-#: templates/metatag/edit.tpl:102
+#: templates/metatag/edit.tpl:112
 msgid "Enter the title of entity of the metatag"
 msgstr "Gib den Robots Text für den Metatag ein"
 
-#: templates/metatag/edit.tpl:108
+#: templates/metatag/edit.tpl:118
 msgid "The main keyword or keyphrase that this post/page is about"
 msgstr "Haupt-Schlüsselwort oder -satz dieser Seite"
 
-#: templates/metatag/edit.tpl:109 templates/metatag/display.tpl:26
+#: templates/metatag/edit.tpl:119 templates/metatag/display.tpl:26
 #: templates/metatag/view.tpl:79 templates/metatag/view_quickNav.tpl:60
 msgid "Focus keyword"
 msgstr "Fokus Schlüsselwort"
 
-#: templates/metatag/edit.tpl:111
+#: templates/metatag/edit.tpl:121
 msgid "Enter the focus keyword of the metatag"
 msgstr "Gib das Fokus Schlüsselwort für den Metatag ein"
 
-#: templates/metatag/edit.tpl:114
+#: templates/metatag/edit.tpl:124
 msgid "Your focus keyword was found in"
 msgstr "Der fokussierte Begriff wurde gefunden in"
 
-#: templates/metatag/edit.tpl:115
+#: templates/metatag/edit.tpl:125
 msgid "Page title"
 msgstr "Seitentitel"
 
-#: templates/metatag/edit.tpl:116
+#: templates/metatag/edit.tpl:126
 msgid "Page URL"
 msgstr "Seiten-URL"
 
-#: templates/metatag/edit.tpl:117
+#: templates/metatag/edit.tpl:127
 msgid "Page Content"
 msgstr "Seiteninhalt"
 
-#: templates/metatag/edit.tpl:118
+#: templates/metatag/edit.tpl:128
 msgid "Meta keywords"
 msgstr "Meta-Keywords"
 
-#: templates/metatag/edit.tpl:119 templates/metatag/edit.tpl:140
+#: templates/metatag/edit.tpl:129 templates/metatag/edit.tpl:150
 msgid "Meta description"
 msgstr "Meta Beschreibung"
 
-#: templates/metatag/edit.tpl:125
+#: templates/metatag/edit.tpl:135
 msgid "Snippet Preview"
 msgstr "Snippet Vorschau"
 
-#: templates/metatag/edit.tpl:129
+#: templates/metatag/edit.tpl:139
 msgid ""
 "This is a rendering of what this page might look like in Google's search "
 "results."
@@ -887,20 +887,20 @@ msgstr ""
 "Dies ist eine Darstellung, die zeigt, wie die Seite in den Suchergebnissen "
 "von Google aussehen sollte."
 
-#: templates/metatag/edit.tpl:133
+#: templates/metatag/edit.tpl:143
 msgid "SEO title"
 msgstr "SEO Titel"
 
-#: templates/metatag/edit.tpl:134 templates/metatag/display.tpl:28
+#: templates/metatag/edit.tpl:144 templates/metatag/display.tpl:28
 #: templates/metatag/view.tpl:82 templates/metatag/view_quickNav.tpl:61
 msgid "Title"
 msgstr "Titel"
 
-#: templates/metatag/edit.tpl:135
+#: templates/metatag/edit.tpl:145
 msgid "Enter the title of the metatag"
 msgstr "Gib den Titel des Metatags ein"
 
-#: templates/metatag/edit.tpl:136
+#: templates/metatag/edit.tpl:146
 msgid ""
 "The SEO title defaults to what is generated based on this sites title "
 "template for this posttype."
@@ -908,16 +908,16 @@ msgstr ""
 "Der SEO-Titel wird per Standard mit der Seitentitel-Vorlage besetzt, sofern "
 "nichts eingegeben wird."
 
-#: templates/metatag/edit.tpl:141 templates/metatag/display.tpl:30
+#: templates/metatag/edit.tpl:151 templates/metatag/display.tpl:30
 #: templates/metatag/view.tpl:85 templates/metatag/view_quickNav.tpl:62
 msgid "Description"
 msgstr "Beschreibung"
 
-#: templates/metatag/edit.tpl:142
+#: templates/metatag/edit.tpl:152
 msgid "Enter the description of the metatag"
 msgstr "Gib die Beschreibung des Metatags ein"
 
-#: templates/metatag/edit.tpl:143
+#: templates/metatag/edit.tpl:153
 msgid ""
 "The meta description is often shown as the black text under the title in a "
 "search result. For this to work it has to contain the keyword that was "
@@ -927,33 +927,32 @@ msgstr ""
 "Suchergebnisses gezeigt. Damit dies funktioniert, sollte sie das gesuchte "
 "Schlüsselwort enthalten."
 
-#: templates/metatag/edit.tpl:147
+#: templates/metatag/edit.tpl:157
 msgid "Comma separated list of meta keywords - for example: Zikula, Framework"
 msgstr ""
 "Komma separierte Liste von Meta Schlüsselwörtern - zum Beispiel: Zikula, "
 "Framework"
 
-#: templates/metatag/edit.tpl:148 templates/metatag/display.tpl:32
+#: templates/metatag/edit.tpl:158 templates/metatag/display.tpl:32
 #: templates/metatag/view.tpl:88 templates/metatag/view_quickNav.tpl:63
 msgid "Keywords"
 msgstr "Schlüsselwörter"
 
-#: templates/metatag/edit.tpl:149
+#: templates/metatag/edit.tpl:159
 msgid "Enter the keywords of the metatag"
 msgstr "Gib die Schlüsselwörter für den Metatag ein"
 
-#: templates/metatag/edit.tpl:150
+#: templates/metatag/edit.tpl:160
 msgid ""
 "If you type something here it will override your meta keywords template."
 msgstr ""
 "Wenn hier etwas eingegeben wird, überschreibt dies die Meta Keywords Vorlage."
 
-#: templates/metatag/edit.tpl:155 templates/metatag/display.tpl:35
+#: templates/metatag/edit.tpl:165 templates/metatag/display.tpl:35
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: templates/metatag/edit.tpl:160
-#, fuzzy
+#: templates/metatag/edit.tpl:170
 msgid ""
 "Enter other parameters and their values comma separated like "
 "parameter1=value1,parameter2=value!"
@@ -961,30 +960,30 @@ msgstr ""
 "Gib andere Parameter und ihre Werte kommasepariert wie parameter1=value1,"
 "parameter2=value2 ein!"
 
-#: templates/metatag/edit.tpl:161 templates/metatag/display.tpl:128
+#: templates/metatag/edit.tpl:171 templates/metatag/display.tpl:128
 #: templates/metatag/view_quickNav.tpl:86
 msgid "Extra infos"
 msgstr "Extrainformationen"
 
-#: templates/metatag/edit.tpl:162
+#: templates/metatag/edit.tpl:172
 msgid "Enter the extra infos of the metatag"
 msgstr "Gib die extra Informationen für den Metatag ein"
 
-#: templates/metatag/edit.tpl:167
+#: templates/metatag/edit.tpl:177
 msgid "Meta robots index"
 msgstr "Meta"
 
-#: templates/metatag/edit.tpl:168 templates/metatag/display.tpl:37
+#: templates/metatag/edit.tpl:178 templates/metatag/display.tpl:37
 #: templates/metatag/view_quickNav.tpl:24
-#: templates/metatag/view_quickNav.tpl:64 templates/admin/config.tpl:76
+#: templates/metatag/view_quickNav.tpl:64 templates/admin/config.tpl:46
 msgid "Robots index"
 msgstr "Roboter indexieren"
 
-#: templates/metatag/edit.tpl:169 templates/admin/config.tpl:77
+#: templates/metatag/edit.tpl:179 templates/admin/config.tpl:47
 msgid "Choose the robots index"
 msgstr "Wähle die Einstellung für die Indexierung durch den Roboter"
 
-#: templates/metatag/edit.tpl:170
+#: templates/metatag/edit.tpl:180
 msgid ""
 "Warning: even though you can set the meta robots setting here, the entire "
 "site is set to noindex in the sitewide privacy settings, so these settings "
@@ -994,94 +993,95 @@ msgstr ""
 "können, ist die komplette Seite in den seitenweiten Einstellungen auf "
 "noindex gestellt, daher werden diese Einstellungen keine Auswirkungen haben."
 
-#: templates/metatag/edit.tpl:174
+#: templates/metatag/edit.tpl:184
 msgid "Meta robots follow"
 msgstr "Meta Roboter folgen"
 
-#: templates/metatag/edit.tpl:175 templates/metatag/display.tpl:39
+#: templates/metatag/edit.tpl:185 templates/metatag/display.tpl:39
 #: templates/metatag/view_quickNav.tpl:33
-#: templates/metatag/view_quickNav.tpl:65 templates/admin/config.tpl:82
+#: templates/metatag/view_quickNav.tpl:65 templates/admin/config.tpl:52
 msgid "Robots follow"
 msgstr "Roboter folgen"
 
-#: templates/metatag/edit.tpl:176 templates/admin/config.tpl:83
+#: templates/metatag/edit.tpl:186 templates/admin/config.tpl:53
 msgid "Choose the robots follow"
 msgstr "Wähle die Einstellung für die Verfolgung durch den Roboter"
 
-#: templates/metatag/edit.tpl:181 templates/metatag/display.tpl:41
+#: templates/metatag/edit.tpl:191 templates/metatag/display.tpl:41
 #: templates/metatag/view_quickNav.tpl:42
 #: templates/metatag/view_quickNav.tpl:66
 msgid "Robots advanced"
 msgstr "Robots erweitert"
 
-#: templates/metatag/edit.tpl:182
-#, fuzzy
+#: templates/metatag/edit.tpl:192
 msgid "Choose the robots advanced"
-msgstr "Erweiterte Platzierungsoptionen"
+msgstr "Wähle die Einstellung für erweiterte Robots-Angaben"
 
-#: templates/metatag/edit.tpl:183
+#: templates/metatag/edit.tpl:193
 msgid "Advanced <code>meta</code> robots settings for this page."
 msgstr "Erweiterte <code>Meta</code> Robots Einstellungen für diese Seite."
 
-#: templates/metatag/edit.tpl:187 templates/metatag/edit.tpl:188
+#: templates/metatag/edit.tpl:197 templates/metatag/edit.tpl:198
 #: templates/metatag/display.tpl:43 templates/metatag/view_quickNav.tpl:67
 msgid "Canonical url"
 msgstr "Anerkannte Url"
 
-#: templates/metatag/edit.tpl:189
-#, fuzzy
+#: templates/metatag/edit.tpl:199
 msgid "Enter the canonical url of the metatag"
-msgstr "Bitte eine URL angeben."
+msgstr "Gebe die kanonische URL ein"
 
-#: templates/metatag/edit.tpl:191
+#: templates/metatag/edit.tpl:201
 msgid ""
 "The canonical URL that this page should point to, leave blank to default to "
 "permalink. <a target=\"_blank\" href=\"http://googlewebmastercentral."
 "blogspot.com/2009/12/handling-legitimate-cross-domain.html\">Cross domain "
 "canonical</a> supported too."
 msgstr ""
+"Die kanonische URL, auf die diese Seite zeigen soll, leer lassen zur "
+"Standardnutzung des Permalinks. <a target=\"_blank\" href=\"http://"
+"googlewebmastercentral.blogspot.com/2009/12/handling-legitimate-cross-domain."
+"html\">Cross Domain Canonicals</a> wird auch unterstützt."
 
-#: templates/metatag/edit.tpl:195
+#: templates/metatag/edit.tpl:205
 msgid "301 redirect url"
 msgstr "Url für 301 Umleitung"
 
-#: templates/metatag/edit.tpl:196 templates/metatag/display.tpl:52
+#: templates/metatag/edit.tpl:206 templates/metatag/display.tpl:52
 #: templates/metatag/view_quickNav.tpl:68
 msgid "Redirect url"
 msgstr "Umleitung Url"
 
-#: templates/metatag/edit.tpl:197
-#, fuzzy
+#: templates/metatag/edit.tpl:207
 msgid "Enter the redirect url of the metatag"
-msgstr "Bitte eine URL angeben."
+msgstr "Gebe die Weiterleitungs-URL ein"
 
-#: templates/metatag/edit.tpl:199
+#: templates/metatag/edit.tpl:209
 msgid "The URL that this page should redirect to."
 msgstr "Die URL, zu der diese Seite weiterleiten soll."
 
-#: templates/metatag/edit.tpl:205 templates/metatag/display.tpl:62
-#: templates/admin/config.tpl:255
+#: templates/metatag/edit.tpl:215 templates/metatag/display.tpl:62
+#: templates/admin/config.tpl:134
 msgid "Social media"
 msgstr "Social Media"
 
-#: templates/metatag/edit.tpl:208 templates/admin/config.tpl:258
+#: templates/metatag/edit.tpl:218 templates/admin/config.tpl:137
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/metatag/edit.tpl:210
+#: templates/metatag/edit.tpl:220
 msgid "Facebook title overriding the default value"
 msgstr "Facebook-Titel, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:211 templates/metatag/display.tpl:64
+#: templates/metatag/edit.tpl:221 templates/metatag/display.tpl:64
 #: templates/metatag/view.tpl:91 templates/metatag/view_quickNav.tpl:69
 msgid "Facebook title"
 msgstr "Facebook Titel"
 
-#: templates/metatag/edit.tpl:212
+#: templates/metatag/edit.tpl:222
 msgid "Enter the facebook title of the metatag"
 msgstr "Gib den Facebook Titel für den Metatag ein."
 
-#: templates/metatag/edit.tpl:213
+#: templates/metatag/edit.tpl:223
 msgid ""
 "If you don't want to use the post title for sharing the post on Facebook but "
 "instead want another title there, write it here."
@@ -1089,20 +1089,20 @@ msgstr ""
 "Wenn Du an Stelle des Seitentitels einen anderen Titel zum Teilen der Seite "
 "auf Facebook verwenden möchtest, trage diesen hier ein."
 
-#: templates/metatag/edit.tpl:217
+#: templates/metatag/edit.tpl:227
 msgid "Facebook description overriding the default value"
-msgstr "Facebook Beschreibung überschreibt den Standardwert"
+msgstr "Facebook Beschreibung, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:218 templates/metatag/display.tpl:66
+#: templates/metatag/edit.tpl:228 templates/metatag/display.tpl:66
 #: templates/metatag/view.tpl:94 templates/metatag/view_quickNav.tpl:70
 msgid "Facebook description"
 msgstr "Facebook Beschreibung"
 
-#: templates/metatag/edit.tpl:219
+#: templates/metatag/edit.tpl:229
 msgid "Enter the facebook description of the metatag"
 msgstr "Gib die Facebook Beschreibung des Metatags ein"
 
-#: templates/metatag/edit.tpl:220
+#: templates/metatag/edit.tpl:230
 msgid ""
 "If you don't want to use the meta description for sharing the post on "
 "Facebook but want another description there, write it here."
@@ -1110,16 +1110,16 @@ msgstr ""
 "Wenn Du an Stelle der Meta-Beschreibung eine andere Beschreibung zum Teilen "
 "der Seite auf Facebook verwenden möchtest, trage diese hier ein."
 
-#: templates/metatag/edit.tpl:224
+#: templates/metatag/edit.tpl:234
 msgid "Facebook image overriding the default value"
 msgstr "Facebook-Bild, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:225 templates/metatag/display.tpl:68
+#: templates/metatag/edit.tpl:235 templates/metatag/display.tpl:68
 #: templates/metatag/view.tpl:97 templates/metatag/view_quickNav.tpl:71
 msgid "Facebook image"
 msgstr "Facebook Bild"
 
-#: templates/metatag/edit.tpl:227
+#: templates/metatag/edit.tpl:237
 msgid ""
 "If you want to override the image used on Facebook for this post, upload an "
 "image here."
@@ -1127,57 +1127,56 @@ msgstr ""
 "Wenn Du das auf Facebook für diese Seite verwendete Bild anpassen möchtest, "
 "lade hier ein Bild hoch."
 
-#: templates/metatag/edit.tpl:228 templates/metatag/edit.tpl:273
-#: templates/metatag/edit.tpl:319
+#: templates/metatag/edit.tpl:238 templates/metatag/edit.tpl:283
+#: templates/metatag/edit.tpl:329
 msgid "Reset to empty value"
 msgstr "Zu leerem Wert zurück setzen"
 
-#: templates/metatag/edit.tpl:230 templates/metatag/edit.tpl:275
-#: templates/metatag/edit.tpl:321
+#: templates/metatag/edit.tpl:240 templates/metatag/edit.tpl:285
+#: templates/metatag/edit.tpl:331
 msgid "Allowed file extensions:"
 msgstr "Erlaubte Dateiendungen:"
 
-#: templates/metatag/edit.tpl:234 templates/metatag/edit.tpl:279
-#: templates/metatag/edit.tpl:325
+#: templates/metatag/edit.tpl:244 templates/metatag/edit.tpl:289
+#: templates/metatag/edit.tpl:335
 msgid "Current file"
 msgstr "Aktuelle Datei"
 
-#: templates/metatag/edit.tpl:239 templates/metatag/edit.tpl:284
-#: templates/metatag/edit.tpl:330 templates/metatag/display.tpl:74
+#: templates/metatag/edit.tpl:249 templates/metatag/edit.tpl:294
+#: templates/metatag/edit.tpl:340 templates/metatag/display.tpl:74
 #: templates/metatag/display.tpl:89 templates/metatag/display.tpl:104
 #: templates/metatag/view.tpl:159 templates/metatag/view.tpl:176
 #: templates/metatag/view.tpl:193
 msgid "Download"
 msgstr "Download"
 
-#: templates/metatag/edit.tpl:244
+#: templates/metatag/edit.tpl:254
 msgid "Delete facebook image ?"
 msgstr "Facebook Bild löschen?"
 
-#: templates/metatag/edit.tpl:245 templates/metatag/edit.tpl:290
-#: templates/metatag/edit.tpl:336
+#: templates/metatag/edit.tpl:255 templates/metatag/edit.tpl:300
+#: templates/metatag/edit.tpl:346
 msgid "Delete existing file"
 msgstr "Existierende Datei löschen"
 
-#: templates/metatag/edit.tpl:253 templates/admin/config.tpl:319
+#: templates/metatag/edit.tpl:263 templates/admin/config.tpl:198
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/metatag/edit.tpl:255
+#: templates/metatag/edit.tpl:265
 msgid "Twitter title overriding the default value"
 msgstr "Twitter-Titel, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:256 templates/metatag/display.tpl:79
+#: templates/metatag/edit.tpl:266 templates/metatag/display.tpl:79
 #: templates/metatag/view.tpl:100 templates/metatag/view_quickNav.tpl:72
 msgid "Twitter title"
 msgstr "Twitter Titel"
 
-#: templates/metatag/edit.tpl:257
-#, fuzzy
+#: templates/metatag/edit.tpl:267
 msgid "Enter the twitter title of the metatag"
-msgstr "Gebe einen Untertitel für das Produkt ein."
+msgstr "Gebe den Twitter-Titel ein"
 
-#: templates/metatag/edit.tpl:258
+#: templates/metatag/edit.tpl:268
 msgid ""
 "If you don't want to use the post title for sharing the post on Twitter but "
 "instead want another title there, write it here."
@@ -1185,22 +1184,20 @@ msgstr ""
 "Wenn Du an Stelle des Seitentitels einen anderen Titel zum Teilen der Seite "
 "auf Twitter verwenden möchtest, trage diesen hier ein."
 
-#: templates/metatag/edit.tpl:262
-#, fuzzy
+#: templates/metatag/edit.tpl:272
 msgid "Twitter description overriding the default value"
-msgstr "Gib die Beschreibung des Metatags ein"
+msgstr "Twitter Beschreibung, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:263 templates/metatag/display.tpl:81
+#: templates/metatag/edit.tpl:273 templates/metatag/display.tpl:81
 #: templates/metatag/view.tpl:103 templates/metatag/view_quickNav.tpl:73
 msgid "Twitter description"
 msgstr "Twitter Beschreibung"
 
-#: templates/metatag/edit.tpl:264
-#, fuzzy
+#: templates/metatag/edit.tpl:274
 msgid "Enter the twitter description of the metatag"
-msgstr "Gebe eine Kurzbeschreibung für das Produkt an."
+msgstr "Gebe die Twitter Beschreibung ein"
 
-#: templates/metatag/edit.tpl:265
+#: templates/metatag/edit.tpl:275
 msgid ""
 "If you don't want to use the meta description for sharing the post on "
 "Twitter but want another description there, write it here."
@@ -1208,16 +1205,16 @@ msgstr ""
 "Wenn Du an Stelle der Meta-Beschreibung eine andere Beschreibung zum Teilen "
 "der Seite auf Twitter verwenden möchtest, trage diese hier ein."
 
-#: templates/metatag/edit.tpl:269
+#: templates/metatag/edit.tpl:279
 msgid "Twitter image overriding the default value"
 msgstr "Twitter-Bild, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:270 templates/metatag/display.tpl:83
+#: templates/metatag/edit.tpl:280 templates/metatag/display.tpl:83
 #: templates/metatag/view.tpl:106 templates/metatag/view_quickNav.tpl:74
 msgid "Twitter image"
 msgstr "Twitter Bild"
 
-#: templates/metatag/edit.tpl:272
+#: templates/metatag/edit.tpl:282
 msgid ""
 "If you want to override the image used on Twitter for this post, upload an "
 "image here."
@@ -1225,29 +1222,28 @@ msgstr ""
 "Wenn Du das auf Twitter für diese Seite verwendete Bild anpassen möchtest, "
 "lade hier ein Bild hoch."
 
-#: templates/metatag/edit.tpl:289
+#: templates/metatag/edit.tpl:299
 msgid "Delete twitter image ?"
 msgstr "Twitter Bild löschen?"
 
-#: templates/metatag/edit.tpl:298 templates/admin/config.tpl:343
+#: templates/metatag/edit.tpl:308 templates/admin/config.tpl:222
 msgid "Google+"
 msgstr "Google+"
 
-#: templates/metatag/edit.tpl:301
+#: templates/metatag/edit.tpl:311
 msgid "Google+ title overriding the default value"
 msgstr "GooglePlus-Titel, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:302 templates/metatag/display.tpl:94
+#: templates/metatag/edit.tpl:312 templates/metatag/display.tpl:94
 #: templates/metatag/view.tpl:109 templates/metatag/view_quickNav.tpl:75
 msgid "Google plus title"
 msgstr "Google Plus Titel"
 
-#: templates/metatag/edit.tpl:303
-#, fuzzy
+#: templates/metatag/edit.tpl:313
 msgid "Enter the google plus title of the metatag"
-msgstr "Gib den Titel des Metatags ein"
+msgstr "Gebe den Google Plus Titel ein"
 
-#: templates/metatag/edit.tpl:304
+#: templates/metatag/edit.tpl:314
 msgid ""
 "If you don't want to use the post title for sharing the post on Google+ but "
 "instead want another title there, write it here."
@@ -1255,21 +1251,20 @@ msgstr ""
 "Wenn Du an Stelle des Seitentitels einen anderen Titel zum Teilen der Seite "
 "auf Google+ verwenden möchtest, trage diesen hier ein."
 
-#: templates/metatag/edit.tpl:308
+#: templates/metatag/edit.tpl:318
 msgid "Google+ description overriding the default value"
 msgstr "GooglePlus-Beschreibung, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:309 templates/metatag/display.tpl:96
+#: templates/metatag/edit.tpl:319 templates/metatag/display.tpl:96
 #: templates/metatag/view.tpl:112 templates/metatag/view_quickNav.tpl:76
 msgid "Google plus description"
 msgstr "Google Plus Beschreibung"
 
-#: templates/metatag/edit.tpl:310
-#, fuzzy
+#: templates/metatag/edit.tpl:320
 msgid "Enter the google plus description of the metatag"
-msgstr "Gib die Beschreibung des Metatags ein"
+msgstr "Gebe die Google Plus Beschreibung ein"
 
-#: templates/metatag/edit.tpl:311
+#: templates/metatag/edit.tpl:321
 msgid ""
 "If you don't want to use the meta description for sharing the post on Google"
 "+ but want another description there, write it here."
@@ -1277,16 +1272,16 @@ msgstr ""
 "Wenn Du an Stelle der Meta-Beschreibung eine andere Beschreibung zum Teilen "
 "der Seite auf Facebook verwenden möchtest, trage diese hier ein."
 
-#: templates/metatag/edit.tpl:315
+#: templates/metatag/edit.tpl:325
 msgid "Google+ image overriding the default value"
 msgstr "GooglePlus-Bild, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:316 templates/metatag/display.tpl:98
+#: templates/metatag/edit.tpl:326 templates/metatag/display.tpl:98
 #: templates/metatag/view.tpl:115 templates/metatag/view_quickNav.tpl:77
 msgid "Google plus image"
 msgstr "Google Plus Bild"
 
-#: templates/metatag/edit.tpl:318
+#: templates/metatag/edit.tpl:328
 msgid ""
 "If you want to override the image used on Google+ for this post, upload an "
 "image here."
@@ -1294,75 +1289,71 @@ msgstr ""
 "Wenn Du das auf Google+ für diese Seite verwendete Bild anpassen möchtest, "
 "lade hier ein Bild hoch."
 
-#: templates/metatag/edit.tpl:335
+#: templates/metatag/edit.tpl:345
 msgid "Delete google plus image ?"
 msgstr "Google Plus Bild löschen?"
 
-#: templates/metatag/edit.tpl:344 templates/admin/config.tpl:358
+#: templates/metatag/edit.tpl:354
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: templates/metatag/edit.tpl:346
-#, fuzzy
+#: templates/metatag/edit.tpl:356
 msgid "WhatsApp title overriding the default value"
-msgstr "Gib die Beschreibung des Metatags ein"
+msgstr "WhatsApp-Titel, überschreibt den Standardwert"
 
-#: templates/metatag/edit.tpl:347 templates/metatag/display.tpl:109
+#: templates/metatag/edit.tpl:357 templates/metatag/display.tpl:109
 #: templates/metatag/view_quickNav.tpl:78
 msgid "Whats app title"
 msgstr "WhatsApp Titel"
 
-#: templates/metatag/edit.tpl:348
-#, fuzzy
+#: templates/metatag/edit.tpl:358
 msgid "Enter the whats app title of the metatag"
-msgstr "Gib den Titel des Metatags ein"
+msgstr "Gebe den WhatsApp-Titel ein"
 
-#: templates/metatag/edit.tpl:352
+#: templates/metatag/edit.tpl:362
 msgid "Analysis"
 msgstr "Analyse"
 
-#: templates/metatag/edit.tpl:355 templates/metatag/display.tpl:111
+#: templates/metatag/edit.tpl:365 templates/metatag/display.tpl:111
 #: templates/metatag/view.tpl:118 templates/metatag/view_quickNav.tpl:79
-#, fuzzy
 msgid "Page analysis score"
-msgstr "Statische Seite erstellen"
+msgstr "Score der Seitenanalyse"
 
-#: templates/metatag/edit.tpl:356
-#, fuzzy
+#: templates/metatag/edit.tpl:366
 msgid "Enter the page analysis score of the metatag"
-msgstr "Gib die Schlüsselwörter für den Metatag ein"
+msgstr "Gebe den Seitenanalyse-Score für den Metatag ein"
 
-#: templates/metatag/edit.tpl:363 templates/metatag/display.tpl:114
+#: templates/metatag/edit.tpl:373 templates/metatag/display.tpl:114
 msgid "Integration"
 msgstr "Integration"
 
-#: templates/metatag/edit.tpl:367
+#: templates/metatag/edit.tpl:377
 msgid "Select the module!"
 msgstr "Wähle das Modul!"
 
-#: templates/metatag/edit.tpl:368 templates/metatag/display.tpl:116
+#: templates/metatag/edit.tpl:378 templates/metatag/display.tpl:116
 #: templates/metatag/view_quickNav.tpl:80
 msgid "The module"
 msgstr "Das Modul"
 
-#: templates/metatag/edit.tpl:369
+#: templates/metatag/edit.tpl:379
 msgid "Enter the module of the metatag"
 msgstr "Gib das Modul für den Metatag ein"
 
-#: templates/metatag/edit.tpl:375
+#: templates/metatag/edit.tpl:385
 msgid "Enter the function of your selected module!"
 msgstr "Gib die Funktion für Dein gewähltes Modul ein!"
 
-#: templates/metatag/edit.tpl:376 templates/metatag/display.tpl:118
+#: templates/metatag/edit.tpl:386 templates/metatag/display.tpl:118
 #: templates/metatag/view_quickNav.tpl:81
 msgid "Function of module"
 msgstr "Funktion des Moduls"
 
-#: templates/metatag/edit.tpl:377
+#: templates/metatag/edit.tpl:387
 msgid "Enter the function of module of the metatag"
 msgstr "Gib die Funktion des Moduls für den Metatag ein"
 
-#: templates/metatag/edit.tpl:383
+#: templates/metatag/edit.tpl:393
 msgid ""
 "Enter the object of your selected module; if not set it will work for the "
 "main function!"
@@ -1370,32 +1361,32 @@ msgstr ""
 "Gib die Objekt Id für das gewählte Modul ein; wenn nicht aktiviert, wird die "
 "main Funktion beeinflußt!"
 
-#: templates/metatag/edit.tpl:384 templates/metatag/display.tpl:120
+#: templates/metatag/edit.tpl:394 templates/metatag/display.tpl:120
 #: templates/metatag/view_quickNav.tpl:82
 msgid "Object of module"
 msgstr "Objekt des Moduls"
 
-#: templates/metatag/edit.tpl:385
+#: templates/metatag/edit.tpl:395
 msgid "Enter the object of module of the metatag"
 msgstr "Gib das Objekt des Moduls für den Metatag ein"
 
-#: templates/metatag/edit.tpl:390
+#: templates/metatag/edit.tpl:400
 msgid "Enter the name for the single identifier! For example id!"
 msgstr ""
 "Gib den Namen des Bezeichners für einen alleinigen Aufruf ein! Zum Beispiel "
 "id!"
 
-#: templates/metatag/edit.tpl:391 templates/metatag/display.tpl:122
+#: templates/metatag/edit.tpl:401 templates/metatag/display.tpl:122
 #: templates/metatag/view_quickNav.tpl:83 templates/extension/edit.tpl:76
 #: templates/extension/view.tpl:79 templates/extension/view_quickNav.tpl:36
 msgid "Name of identifier"
 msgstr "Name des Bezeichners"
 
-#: templates/metatag/edit.tpl:392
+#: templates/metatag/edit.tpl:402
 msgid "Enter the name of identifier of the metatag"
 msgstr "Gib den Namen des Bezeichners für den Metatag ein"
 
-#: templates/metatag/edit.tpl:397
+#: templates/metatag/edit.tpl:407
 msgid ""
 "Enter the id of your selected module; only required if you have entered a "
 "function that calls a single entity!"
@@ -1403,42 +1394,42 @@ msgstr ""
 "Gib die Id für das gewählte Modul ein; nur notwendig, wenn Du eine Funktion, "
 "die einen alleinigen Eintrag aufruft, eingegeben hast!"
 
-#: templates/metatag/edit.tpl:398 templates/metatag/display.tpl:124
+#: templates/metatag/edit.tpl:408 templates/metatag/display.tpl:124
 #: templates/metatag/view_quickNav.tpl:84
 msgid "Id of object"
 msgstr "Id des Objekts"
 
-#: templates/metatag/edit.tpl:399
+#: templates/metatag/edit.tpl:409
 msgid "Enter the id of object of the metatag"
 msgstr "Gib die Objekt Id für den Metatag ein"
 
-#: templates/metatag/edit.tpl:405
+#: templates/metatag/edit.tpl:415
 msgid "Enter the string of an object! For example Zikula!"
 msgstr "Gib die Zeichenkette des Objekts an. Zum Beispiel Zikula!"
 
-#: templates/metatag/edit.tpl:406 templates/metatag/display.tpl:126
+#: templates/metatag/edit.tpl:416 templates/metatag/display.tpl:126
 #: templates/metatag/view_quickNav.tpl:85
 msgid "String of object"
 msgstr "Zeichenkette des Objekts"
 
-#: templates/metatag/edit.tpl:407
+#: templates/metatag/edit.tpl:417
 msgid "Enter the string of object of the metatag"
 msgstr "Gib die Objekt Zeichenkette für den Metatag ein"
 
-#: templates/metatag/edit.tpl:441 templates/extension/edit.tpl:115
+#: templates/metatag/edit.tpl:451 templates/extension/edit.tpl:115
 msgid "Return control"
 msgstr "Rückkehrkontrolle"
 
-#: templates/metatag/edit.tpl:443 templates/extension/edit.tpl:117
+#: templates/metatag/edit.tpl:453 templates/extension/edit.tpl:117
 msgid "Create another item after save"
 msgstr "Ein weiteres Element nach dem Speichern erstellen"
 
-#: templates/metatag/edit.tpl:456
+#: templates/metatag/edit.tpl:466
 msgid "Really delete this metatag?"
 msgstr "Diesen Metatag wirklich löschen?"
 
-#: templates/metatag/edit.tpl:462 templates/metatag/delete.tpl:30
-#: templates/admin/config.tpl:370 templates/extension/edit.tpl:136
+#: templates/metatag/edit.tpl:472 templates/metatag/delete.tpl:30
+#: templates/admin/config.tpl:241 templates/extension/edit.tpl:136
 #: templates/extension/delete.tpl:30
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -1629,323 +1620,131 @@ msgid "Here you can adjust basic SEO-related options."
 msgstr "Hier kannst Du grundlegende SEO relevante Optionen einstellen."
 
 #: templates/admin/config.tpl:45
-msgid "Allows to ignore a warning about meta description contained in a theme."
-msgstr ""
-"Erlaubt Warnungen über Meta Beschreibungen innerhalb eines Themes zu "
-"ignorieren."
-
-#: templates/admin/config.tpl:46
-msgid "Ignore meta description warning"
-msgstr "Warnung bzgl. Meta Beschreibung ignorieren"
-
-#: templates/admin/config.tpl:51
-msgid "Allows to ignore a warning about incomplete permalink structure."
-msgstr ""
-
-#: templates/admin/config.tpl:52
-msgid "Ignore permalink"
-msgstr "Permalinks ignorieren"
-
-#: templates/admin/config.tpl:57
-msgid "Whether the introduction tour should be ignored or not."
-msgstr ""
-
-#: templates/admin/config.tpl:58
-msgid "Ignore tour"
-msgstr "Tour ignorieren"
-
-#: templates/admin/config.tpl:63
-msgid "Whether a meta description has been found in the theme or not."
-msgstr "Ob eine Meta-Beschreibung im Theme gefunden wurde oder nicht."
-
-#: templates/admin/config.tpl:64
-msgid "Theme description found"
-msgstr "Beschreibung des Themes gefunden"
-
-#: templates/admin/config.tpl:69
-msgid "Whether the theme has a meta description or not."
-msgstr "Ob das Theme eine Meta Beschreibung hat oder nicht."
-
-#: templates/admin/config.tpl:70
-msgid "Theme has description"
-msgstr "Theme hat Beschreibung"
-
-#: templates/admin/config.tpl:75
 msgid "Default meta robots index"
 msgstr "Standard Meta Robots Index"
 
-#: templates/admin/config.tpl:81
+#: templates/admin/config.tpl:51
 msgid "Default meta robots follow"
 msgstr "Standard Meta Robots Follow"
 
-#: templates/admin/config.tpl:87
+#: templates/admin/config.tpl:57
 msgid "Disable the advanced part of the SEO meta box."
 msgstr "Den erweiterten Teil der SEO Meta Box deaktivieren."
 
-#: templates/admin/config.tpl:88
+#: templates/admin/config.tpl:58
 msgid "Disable advanced meta"
 msgstr "Deaktiviere erweiterte Meta Tags"
 
-#: templates/admin/config.tpl:94
+#: templates/admin/config.tpl:64
 msgid "Webmaster Tools"
 msgstr "Webmaster Werkzeuge"
 
-#: templates/admin/config.tpl:96
+#: templates/admin/config.tpl:66
 msgid ""
 "You can use the boxes below to verify with the different Webmaster Tools, if "
 "your site is already verified, leave the boxes blank. Enter the verify meta "
 "values for:"
 msgstr ""
+"Mit den Boxen unten kann mit verschiedenen Webmaster Tools geprüft werden. "
+"Falls die Seite bereits verifiziert ist, die Boxen leer lassen. Gebe die "
+"Verifizierungs-Metawerte ein für:"
 
-#: templates/admin/config.tpl:99 templates/admin/config.tpl:102
+#: templates/admin/config.tpl:69 templates/admin/config.tpl:72
 msgid "Alexa Verification ID"
 msgstr "Alexa Verification ID"
 
-#: templates/admin/config.tpl:100
+#: templates/admin/config.tpl:70
 msgid "Alexa verify"
 msgstr "Alexa verify"
 
-#: templates/admin/config.tpl:101
-#, fuzzy
+#: templates/admin/config.tpl:71
 msgid "Enter the alexa verify."
-msgstr "Benutzerkonto verifizieren"
+msgstr "Gebe den Verifizierungscode für Alexa ein."
 
-#: templates/admin/config.tpl:105 templates/admin/config.tpl:108
+#: templates/admin/config.tpl:75 templates/admin/config.tpl:78
 msgid "Google Webmaster Tools"
 msgstr "Google Webmaster Werkzeuge"
 
-#: templates/admin/config.tpl:106
+#: templates/admin/config.tpl:76
 msgid "Google verify"
 msgstr "Google verify"
 
-#: templates/admin/config.tpl:107
-#, fuzzy
+#: templates/admin/config.tpl:77
 msgid "Enter the google verify."
-msgstr "Benutzerkonto verifizieren"
+msgstr "Gebe den Verifizierungscode für Google ein."
 
-#: templates/admin/config.tpl:111 templates/admin/config.tpl:114
+#: templates/admin/config.tpl:81 templates/admin/config.tpl:84
 msgid "Bing Webmaster Tools"
 msgstr "Bing Webmaster Werkzeuge"
 
-#: templates/admin/config.tpl:112
+#: templates/admin/config.tpl:82
 msgid "Ms verify"
 msgstr "MS verify"
 
-#: templates/admin/config.tpl:113
-#, fuzzy
+#: templates/admin/config.tpl:83
 msgid "Enter the ms verify."
-msgstr "Benutzerkonto verifizieren"
+msgstr "Gebe den Verifizierungscode für Microsoft ein."
 
-#: templates/admin/config.tpl:117 templates/admin/config.tpl:120
+#: templates/admin/config.tpl:87 templates/admin/config.tpl:90
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: templates/admin/config.tpl:118
+#: templates/admin/config.tpl:88
 msgid "Pinterest verify"
 msgstr "Pinterest verify"
 
-#: templates/admin/config.tpl:119
-#, fuzzy
+#: templates/admin/config.tpl:89
 msgid "Enter the pinterest verify."
-msgstr "Benutzerkonto verifizieren"
+msgstr "Gebe den Verifizierungscode für Pinterest ein."
 
-#: templates/admin/config.tpl:123 templates/admin/config.tpl:126
+#: templates/admin/config.tpl:93 templates/admin/config.tpl:96
 msgid "Yandex Webmaster Tools"
 msgstr "Yandex Webmaster Tools"
 
-#: templates/admin/config.tpl:124
+#: templates/admin/config.tpl:94
 msgid "Yandex verify"
 msgstr "Yandex verify"
 
-#: templates/admin/config.tpl:125
-#, fuzzy
+#: templates/admin/config.tpl:95
 msgid "Enter the yandex verify."
-msgstr "Benutzerkonto verifizieren"
+msgstr "Gebe den Verifizierungscode für Yandex ein."
 
-#: templates/admin/config.tpl:130
+#: templates/admin/config.tpl:100
 msgid "Permalinks"
 msgstr "Permalinks"
 
-#: templates/admin/config.tpl:135
+#: templates/admin/config.tpl:105
 msgid "Settings relating to permalinks and canonical settings."
-msgstr ""
+msgstr "Einstellungen in Bezug auf Permalinks und Canonical-Settings."
 
-#: templates/admin/config.tpl:138
-msgid "Enforce a trailing slash"
-msgstr "Erzwinge einen angehängten Schrägstrich"
-
-#: templates/admin/config.tpl:139
-msgid "Enforce trailing slash"
-msgstr "Angehängten Schrägstrich erzwingen"
-
-#: templates/admin/config.tpl:141
-msgid ""
-"If you choose a permalink for your posts with <code>.html</code>, or "
-"anything else but a / on the end, this will force MUSeo to add a trailing "
-"slash to non-post pages nonetheless."
-msgstr ""
-
-#: templates/admin/config.tpl:144
-msgid "Remove stop words from slugs"
-msgstr "Ausgeschlossene Wörter aus Slugs entfernen"
-
-#: templates/admin/config.tpl:145
-msgid "Clean slugs"
-msgstr "Slugs säubern"
-
-#: templates/admin/config.tpl:147
-msgid ""
-"This helps you to create cleaner URLs by automatically removing the "
-"stopwords from them."
-msgstr ""
-"Dies hilft beim Erstellen sauberer URLs, indem die ausgeschlossenen Wörter "
-"automatisch entfernt werden."
-
-#: templates/admin/config.tpl:150
+#: templates/admin/config.tpl:108
 msgid ""
 "Force the canonical to either http or https, when your site runs under both."
 msgstr ""
 "Erzwingt die Canonical entweder auf http oder https, falls die Seite mit "
 "beiden läuft."
 
-#: templates/admin/config.tpl:151
+#: templates/admin/config.tpl:109
 msgid "Force transport"
 msgstr "Transport erzwingen"
 
-#: templates/admin/config.tpl:152
-#, fuzzy
+#: templates/admin/config.tpl:110
 msgid "Enter the force transport."
-msgstr "Geben Sie einen Beförderungs-Hinweis ein"
+msgstr "Gebe die Force Transport Einstellung ein."
 
-#: templates/admin/config.tpl:156
-msgid "Prevent cleaning out Google Site Search URL\"s."
-msgstr ""
-
-#: templates/admin/config.tpl:157
-msgid "Clean permalink google site search"
-msgstr ""
-
-#: templates/admin/config.tpl:159
-msgid ""
-"Google Site Search URL's look weird, and ugly, but if you're using Google "
-"Site Search, you probably do not want them cleaned out."
-msgstr ""
-
-#: templates/admin/config.tpl:162
-msgid ""
-"Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters."
-msgstr ""
-
-#: templates/admin/config.tpl:163
-msgid "Clean permalink google campaign"
-msgstr ""
-
-#: templates/admin/config.tpl:165
-msgid ""
-"If you use Google Analytics campaign parameters starting with <code>?utm_</"
-"code>, check this box. It is recommended to use the hash tagged version "
-"instead."
-msgstr ""
-"Wenn Du Google Analytics Parameter, die mit <code>?utm_</code> starten, "
-"nutzt, aktiviere diese Box. Dies ist erforderlich, um die Hash markierte "
-"Version zu nutzen."
-
-#: templates/admin/config.tpl:168
-#, fuzzy
-msgid "Other variables not to clean"
-msgstr "Variablen"
-
-#: templates/admin/config.tpl:169
-msgid "Clean permalink extra vars"
-msgstr ""
-
-#: templates/admin/config.tpl:170
-msgid "Enter the clean permalink extra vars."
-msgstr ""
-
-#: templates/admin/config.tpl:171
-msgid ""
-"Add extra variables you want to prevent from cleaning out, comma separated."
-msgstr ""
-
-#: templates/admin/config.tpl:175
+#: templates/admin/config.tpl:115
 msgid "Titles"
 msgstr "Titel"
 
-#: templates/admin/config.tpl:181
-msgid "Internal var used for testing SEO titles."
-msgstr ""
-
-#: templates/admin/config.tpl:182
-msgid "Title test"
-msgstr "Titel-Test"
-
-#: templates/admin/config.tpl:183
-#, fuzzy
-msgid "Enter the title test. Only digits are allowed."
-msgstr "Einen Wert für diese Einstellung eingeben. Nur Zahlen sind erlaubt."
-
-#: templates/admin/config.tpl:187
-#, fuzzy
-msgid "Force rewrite titles"
-msgstr "Nur Titel der Einträge"
-
-#: templates/admin/config.tpl:188
-#, fuzzy
-msgid "Force rewrite title"
-msgstr "Geben Sie den Titel des Angebotes ein"
-
-#: templates/admin/config.tpl:190
-msgid ""
-"MUSeo has auto-detected whether it needs to force rewrite the titles for "
-"your pages, if you think it's wrong and you know what you're doing, you can "
-"change the setting here."
-msgstr ""
-"MUSeo hat erkannt, ob es nötig ist, ein Umschreiben der Seitentitel zu "
-"erzwingen; wenn Du denkst, dass dies falsch ist, und weißt, was Du tust, "
-"kannst Du diese Einstellung hier verändern."
-
-#: templates/admin/config.tpl:193
-msgid "Symbol to use as title separator."
-msgstr "Symbol, das als Separator für den Titel genutzt wird."
-
-#: templates/admin/config.tpl:194
-msgid "Title separator"
-msgstr "Titel Separator"
-
-#: templates/admin/config.tpl:195
-#, fuzzy
-msgid "Enter the title separator."
-msgstr "Gebe den Titel des Produktes ein."
-
-#: templates/admin/config.tpl:196
-msgid ""
-"Choose the symbol to use as your title separator. This will display, for "
-"instance, between your post title and site name. Symbols are shown in the "
-"size they'll appear in search results."
-msgstr ""
-
-#: templates/admin/config.tpl:199
-msgid "Use meta keywords tag?"
-msgstr "Den Meta Schlüsselwörter Tag benutzen?"
-
-#: templates/admin/config.tpl:200
-msgid "Use meta keywords"
-msgstr "Meta Schlüsselwörter nutzen"
-
-#: templates/admin/config.tpl:202
-msgid "Check this box if you really want to use meta keywords."
-msgstr ""
-
-#: templates/admin/config.tpl:205
+#: templates/admin/config.tpl:121
 msgid "Add noodp meta robots tag sitewide"
 msgstr "Meta Robots Tag noodp seitenweit hinzufügen"
 
-#: templates/admin/config.tpl:206
+#: templates/admin/config.tpl:122
 msgid "Noodp"
 msgstr "Noodp"
 
-#: templates/admin/config.tpl:208
+#: templates/admin/config.tpl:124
 msgid ""
 "Prevents search engines from using the DMOZ description for pages from this "
 "site in the search results."
@@ -1953,15 +1752,15 @@ msgstr ""
 "Verhindert, dass Suchmaschinen die DMOZ Beschreibung für diese Seite in den "
 "Suchergebnissen verwendet."
 
-#: templates/admin/config.tpl:211
+#: templates/admin/config.tpl:127
 msgid "Add noydir meta robots tag sitewide"
 msgstr "Meta Robots Tag noydir seitenweit hinzufügen"
 
-#: templates/admin/config.tpl:212
+#: templates/admin/config.tpl:128
 msgid "Noydir"
 msgstr "Noydir"
 
-#: templates/admin/config.tpl:214
+#: templates/admin/config.tpl:130
 msgid ""
 "Prevents search engines from using the Yahoo! directory description for "
 "pages from this site in the search results."
@@ -1969,301 +1768,216 @@ msgstr ""
 "Verhindert, dass Suchmaschinen die Yahoo! Directory Beschreibung für diese "
 "Seite in den Suchergebnissen verwendet."
 
-#: templates/admin/config.tpl:218
-msgid "Home"
-msgstr "Home"
-
-#: templates/admin/config.tpl:220
-#, fuzzy
-msgid "Homepage title template"
-msgstr "Zugewiesene Templatevariablen"
-
-#: templates/admin/config.tpl:221
-msgid "Home title"
-msgstr "Titel der Homepage"
-
-#: templates/admin/config.tpl:222
-msgid "Enter the home title."
-msgstr "Gib einen Titel ein"
-
-#: templates/admin/config.tpl:226
-#, fuzzy
-msgid "Homepage meta description template"
-msgstr "Gib die Beschreibung des Metatags ein"
-
-#: templates/admin/config.tpl:227
-#, fuzzy
-msgid "Home meta description"
-msgstr "Standard Meta-Description"
-
-#: templates/admin/config.tpl:228
-msgid "Enter the home meta description."
-msgstr "Gib die Meta Beschreibung für die Homepage ein."
-
-#: templates/admin/config.tpl:232
-msgid "Homepage meta keywords template"
-msgstr ""
-
-#: templates/admin/config.tpl:233
-msgid "Home meta keywords"
-msgstr "Homepahe Meta Schlüsselwörter"
-
-#: templates/admin/config.tpl:234
-msgid "Enter the home meta keywords."
-msgstr ""
-
-#: templates/admin/config.tpl:239
-msgid "Special pages"
-msgstr "Spezielle Seiten"
-
-#: templates/admin/config.tpl:240
-msgid ""
-"These pages will be noindex, followed by default, so they will never show up "
-"in search results."
-msgstr ""
-
-#: templates/admin/config.tpl:242
-#, fuzzy
-msgid "Search pages title template"
-msgstr "(z.B. Cover, Titelbild oder Vorschauseiten)"
-
-#: templates/admin/config.tpl:243
-msgid "Search title"
-msgstr "Suchtitel"
-
-#: templates/admin/config.tpl:244
-msgid "Enter the search title."
-msgstr "Gib den Suchtitel ein."
-
-#: templates/admin/config.tpl:248
-#, fuzzy
-msgid "404 pages title template"
-msgstr "(z.B. Cover, Titelbild oder Vorschauseiten)"
-
-#: templates/admin/config.tpl:249
-msgid "Not found title"
-msgstr "Titel nicht gefunden"
-
-#: templates/admin/config.tpl:250
-msgid "Enter the not found title."
-msgstr "Gib einen Titel ein"
-
-#: templates/admin/config.tpl:261
+#: templates/admin/config.tpl:140
 msgid "List of user ids for Facebook administration"
-msgstr ""
+msgstr "Liste von Benutzer-IDs zur Facebook-Administration"
 
-#: templates/admin/config.tpl:262
+#: templates/admin/config.tpl:141
 msgid "Facebook admins"
 msgstr "Facebook Administratoren"
 
-#: templates/admin/config.tpl:263
-#, fuzzy
+#: templates/admin/config.tpl:142
 msgid "Enter the facebook admins."
-msgstr "Geben Sie die URL zur Facebook-Seite ein, falls vorhanden"
+msgstr "Gebe die Facebook Admins ein."
 
-#: templates/admin/config.tpl:266
+#: templates/admin/config.tpl:145
 msgid "List of linked Facebook apps IDs : Facebook app display names"
-msgstr ""
+msgstr "Liste verlinkter Facebook Apps IDs : Facebook App Display-Namen"
 
-#: templates/admin/config.tpl:267
+#: templates/admin/config.tpl:146
 msgid "Facebook apps"
 msgstr "Facebook Applikationen"
 
-#: templates/admin/config.tpl:268
-#, fuzzy
+#: templates/admin/config.tpl:147
 msgid "Enter the facebook apps."
-msgstr "Geben Sie die URL zur Facebook-Seite ein, falls vorhanden"
+msgstr "Gebe die Facebook Apps ein."
 
-#: templates/admin/config.tpl:271 templates/admin/config.tpl:272
-#, fuzzy
+#: templates/admin/config.tpl:150 templates/admin/config.tpl:151
 msgid "Facebook connect key"
-msgstr "Google API Key"
+msgstr "Facebook Connect-Key"
 
-#: templates/admin/config.tpl:273
-#, fuzzy
+#: templates/admin/config.tpl:152
 msgid "Enter the facebook connect key."
-msgstr "Geben Sie den API Schlüssel ein."
+msgstr "Gebe den Facebook Connect-Key ein."
 
-#: templates/admin/config.tpl:276
+#: templates/admin/config.tpl:155
 msgid "Add Open Graph meta data to your site\"s head section."
-msgstr ""
+msgstr "Open Graph Metadaten zur head-Sektion der Seite hinzufügen."
 
-#: templates/admin/config.tpl:277
-#, fuzzy
+#: templates/admin/config.tpl:156
 msgid "Open graph enabled"
-msgstr "Aktivierte Template-Einstellungen"
+msgstr "Open Graph aktiviert"
 
-#: templates/admin/config.tpl:279
+#: templates/admin/config.tpl:158
 msgid ""
 "Add Open Graph meta data to your site's <code>&lt;head&gt;</code> section. "
 "You can specify some of the ID's that are sometimes needed below:"
 msgstr ""
+"Open Graph Metadaten zur <code>head</code>-Sektion der Seite hinzufügen. Man "
+"kann einige der manchmal benötigten IDs nachfolgend angeben:"
 
-#: templates/admin/config.tpl:283
+#: templates/admin/config.tpl:162
 msgid "App to use as Facebook admin"
 msgstr "Applikation zur Nutzung als Facebook Administrator"
 
-#: templates/admin/config.tpl:284
-#, fuzzy
+#: templates/admin/config.tpl:163
 msgid "Facebook admin app"
-msgstr "Zum Verwaltungsbereich"
+msgstr "Facebook Admin App"
 
-#: templates/admin/config.tpl:285
-#, fuzzy
+#: templates/admin/config.tpl:164
 msgid "Enter the facebook admin app. Only digits are allowed."
-msgstr ""
-"Gib die Seitengröße für Alben im Administrationsbereich ein. Nur Ziffern "
-"sind erlaubt."
+msgstr "Gebe die Facebook Admin App ein. Es sind nur Zahlen erlaubt."
 
-#: templates/admin/config.tpl:289
-#, fuzzy
+#: templates/admin/config.tpl:168
 msgid "Facebook page url"
-msgstr "Geben Sie die URL zur Facebook-Seite ein, falls vorhanden"
+msgstr "Facebook Seiten-URL"
 
-#: templates/admin/config.tpl:290
+#: templates/admin/config.tpl:169
 msgid "Facebook site"
 msgstr "Facebook Seite"
 
-#: templates/admin/config.tpl:291
+#: templates/admin/config.tpl:170
 msgid "Enter the facebook site."
 msgstr "Gib die Facebookseite ein."
 
-#: templates/admin/config.tpl:294
-#, fuzzy
+#: templates/admin/config.tpl:173
 msgid "Frontpage settings"
-msgstr "Benutzer-Einstellungen"
+msgstr "Startseiten-Einstellungen"
 
-#: templates/admin/config.tpl:295
+#: templates/admin/config.tpl:174
 msgid ""
 "These are the title, description and image used in the Open Graph meta tags "
 "on the front page of your site."
 msgstr ""
+"Dies sind Titel, Beschreibung und Bild zur Verwendung in den Open Graph "
+"Metatags der Startseite."
 
-#: templates/admin/config.tpl:297
+#: templates/admin/config.tpl:176
 msgid "Open Graph frontpage title"
-msgstr ""
+msgstr "Open Graph Titel für die Startseite"
 
-#: templates/admin/config.tpl:298
+#: templates/admin/config.tpl:177
 msgid "Open graph frontpage title"
-msgstr ""
+msgstr "Open Graph Titel für die Startseite"
 
-#: templates/admin/config.tpl:299
+#: templates/admin/config.tpl:178
 msgid "Enter the open graph frontpage title."
-msgstr ""
+msgstr "Gebe den Open Graph Titel für die Startseite ein."
 
-#: templates/admin/config.tpl:302
+#: templates/admin/config.tpl:181
 msgid "Open Graph frontpage description"
-msgstr ""
+msgstr "Open Graph Beschreibung für die Startseite"
 
-#: templates/admin/config.tpl:303
+#: templates/admin/config.tpl:182
 msgid "Open graph frontpage description"
-msgstr ""
+msgstr "Open Graph Beschreibung für die Startseite"
 
-#: templates/admin/config.tpl:304
+#: templates/admin/config.tpl:183
 msgid "Enter the open graph frontpage description."
-msgstr ""
+msgstr "Gebe die Open Graph Beschreibung für die Startseite ein."
 
-#: templates/admin/config.tpl:307
+#: templates/admin/config.tpl:186
 msgid "Open Graph frontpage image"
-msgstr ""
+msgstr "Open Graph Bild für die Startseite"
 
-#: templates/admin/config.tpl:308
+#: templates/admin/config.tpl:187
 msgid "Open graph frontpage image"
-msgstr ""
+msgstr "Open Graph Bild für die Startseite"
 
-#: templates/admin/config.tpl:309
-#, fuzzy
+#: templates/admin/config.tpl:188
 msgid "Enter the open graph frontpage image."
-msgstr "Gib die extra Informationen für den Metatag ein"
+msgstr "Gebe das Open Graph Bild für die Startseite ein."
 
-#: templates/admin/config.tpl:312
+#: templates/admin/config.tpl:191
 msgid "OpenGraph default image url"
-msgstr ""
+msgstr "OpenGraph Standard Bild-URL"
 
-#: templates/admin/config.tpl:313
+#: templates/admin/config.tpl:192
 msgid "Open graph default image"
-msgstr ""
+msgstr "Open Graph Standard-Bild"
 
-#: templates/admin/config.tpl:314
+#: templates/admin/config.tpl:193
 msgid "Enter the open graph default image."
-msgstr ""
+msgstr "Gebe das OpenGraph Standard Bild ein."
 
-#: templates/admin/config.tpl:315
+#: templates/admin/config.tpl:194
 msgid ""
 "This image is used if the post/page being shared does not contain any images."
 msgstr ""
+"Dieses Bild wird verwendet, wenn die aktuell geteilte Seite keine Bilder "
+"enthält."
 
-#: templates/admin/config.tpl:321
+#: templates/admin/config.tpl:200
 msgid ""
 "Note that for the Twitter Cards to work, you have to check the box below and "
 "then validate your Twitter Cards through the <a target=\"_blank\" href="
 "\"https://dev.twitter.com/docs/cards/validation/validator\">Twitter Card "
 "Validator</a>."
 msgstr ""
+"Zu beachten: damit Twitter Cards funktionieren, muss die Box unten angehakt "
+"werden. Anschließend müssen die Twitter Cards mit dem <a target=\"_blank\" "
+"href=\"https://dev.twitter.com/docs/cards/validation/validator\">Twitter "
+"Card Validator</a> validiert werden."
 
-#: templates/admin/config.tpl:324
+#: templates/admin/config.tpl:203
 msgid "Add Twitter card meta data"
-msgstr ""
+msgstr "Twitter Card Metadaten hinzufügen"
 
-#: templates/admin/config.tpl:325
+#: templates/admin/config.tpl:204
 msgid "Twitter enabled"
 msgstr "Twitter aktiviert"
 
-#: templates/admin/config.tpl:327
+#: templates/admin/config.tpl:206
 msgid ""
 "Add Twitter card meta data to your site's <code>&lt;head&gt;</code> section."
 msgstr ""
+"Twitter Card Metadaten zur <code>head</code>-Sektion der Seite hinzufügen."
 
-#: templates/admin/config.tpl:330
-#, fuzzy
+#: templates/admin/config.tpl:209
 msgid "Site Twitter username"
-msgstr "Fehler! Ungültiger Benutzername."
+msgstr "Twitter Nutzer der Seite"
 
-#: templates/admin/config.tpl:331
+#: templates/admin/config.tpl:210
 msgid "Twitter site user"
 msgstr "Twitter Nutzer der Seite"
 
-#: templates/admin/config.tpl:332
-#, fuzzy
+#: templates/admin/config.tpl:211
 msgid "Enter the twitter site user."
-msgstr "Gebe den Benutzernamen für die Datenbank ein"
+msgstr "Gebe den Twitter-Benutzernamen ein."
 
-#: templates/admin/config.tpl:336
-#, fuzzy
+#: templates/admin/config.tpl:215
 msgid "The default card type to use"
-msgstr "Standardsprache für diese Website"
+msgstr "Der zu verwendende Standard-Kartentyp"
 
-#: templates/admin/config.tpl:337
-#, fuzzy
+#: templates/admin/config.tpl:216
 msgid "Twitter default card type"
-msgstr "Erledigt! Kartentyp erstellt."
+msgstr "Twitter Standard-Kartentyp"
 
-#: templates/admin/config.tpl:338
-#, fuzzy
+#: templates/admin/config.tpl:217
 msgid "Enter the twitter default card type."
-msgstr "Gib den Titel des Metatags ein"
+msgstr "Gebe den Twitter Standard-Kartentyp ein."
 
-#: templates/admin/config.tpl:345
+#: templates/admin/config.tpl:224
 msgid "Add Google+ specific post meta data"
-msgstr ""
+msgstr "Google+ spezifische Metadaten hinzufügen"
 
-#: templates/admin/config.tpl:346
+#: templates/admin/config.tpl:225
 msgid "Google plus enabled"
 msgstr "Google Plus aktiviert"
 
-#: templates/admin/config.tpl:351
+#: templates/admin/config.tpl:230
 msgid "Google publisher page"
 msgstr "Google Veröffentlicher Seite"
 
-#: templates/admin/config.tpl:352
+#: templates/admin/config.tpl:231
 msgid "Google plus publisher page"
 msgstr "Google Plus Seite des Veröffentlichers"
 
-#: templates/admin/config.tpl:353
+#: templates/admin/config.tpl:232
 msgid "Enter the google plus publisher page."
 msgstr "Gebe die Google Plus Publisher Seite ein."
 
-#: templates/admin/config.tpl:354
+#: templates/admin/config.tpl:233
 msgid ""
 "If you have a Google+ page for your business, add that URL here and link it "
 "on your Google+ page's about page."
@@ -2271,15 +1985,7 @@ msgstr ""
 "Wenn Du eine Google+ Unternehmensseite hast, füge deren URL hier hinzu und "
 "verlinke sie in Deinem Google+ Account auf der Über mich Seite."
 
-#: templates/admin/config.tpl:360
-msgid "Add WhatsApp button"
-msgstr "WhatsApp Button hinzufügen"
-
-#: templates/admin/config.tpl:361
-msgid "Whats app enabled"
-msgstr "WhatsApp aktiviert"
-
-#: templates/admin/config.tpl:369
+#: templates/admin/config.tpl:240
 msgid "Update configuration"
 msgstr "Einstellungen aktualisieren"
 
@@ -2391,6 +2097,161 @@ msgstr "Letzte Erweiterung"
 #: templates/extension/view.rss.tpl:16
 msgid "A direct feed showing the list of extensions"
 msgstr "Ein Feed, der eine Liste der Erweiterungen anzeigt"
+
+#~ msgid ""
+#~ "Allows to ignore a warning about meta description contained in a theme."
+#~ msgstr ""
+#~ "Erlaubt Warnungen über Meta Beschreibungen innerhalb eines Themes zu "
+#~ "ignorieren."
+
+#~ msgid "Ignore meta description warning"
+#~ msgstr "Warnung bzgl. Meta Beschreibung ignorieren"
+
+#~ msgid "Ignore permalink"
+#~ msgstr "Permalinks ignorieren"
+
+#~ msgid "Ignore tour"
+#~ msgstr "Tour ignorieren"
+
+#~ msgid "Whether a meta description has been found in the theme or not."
+#~ msgstr "Ob eine Meta-Beschreibung im Theme gefunden wurde oder nicht."
+
+#~ msgid "Theme description found"
+#~ msgstr "Beschreibung des Themes gefunden"
+
+#~ msgid "Whether the theme has a meta description or not."
+#~ msgstr "Ob das Theme eine Meta Beschreibung hat oder nicht."
+
+#~ msgid "Theme has description"
+#~ msgstr "Theme hat Beschreibung"
+
+#~ msgid "Enforce a trailing slash"
+#~ msgstr "Erzwinge einen angehängten Schrägstrich"
+
+#~ msgid "Enforce trailing slash"
+#~ msgstr "Angehängten Schrägstrich erzwingen"
+
+#~ msgid "Remove stop words from slugs"
+#~ msgstr "Ausgeschlossene Wörter aus Slugs entfernen"
+
+#~ msgid "Clean slugs"
+#~ msgstr "Slugs säubern"
+
+#~ msgid ""
+#~ "This helps you to create cleaner URLs by automatically removing the "
+#~ "stopwords from them."
+#~ msgstr ""
+#~ "Dies hilft beim Erstellen sauberer URLs, indem die ausgeschlossenen "
+#~ "Wörter automatisch entfernt werden."
+
+#~ msgid ""
+#~ "If you use Google Analytics campaign parameters starting with <code>?"
+#~ "utm_</code>, check this box. It is recommended to use the hash tagged "
+#~ "version instead."
+#~ msgstr ""
+#~ "Wenn Du Google Analytics Parameter, die mit <code>?utm_</code> starten, "
+#~ "nutzt, aktiviere diese Box. Dies ist erforderlich, um die Hash markierte "
+#~ "Version zu nutzen."
+
+#, fuzzy
+#~ msgid "Other variables not to clean"
+#~ msgstr "Variablen"
+
+#~ msgid "Title test"
+#~ msgstr "Titel-Test"
+
+#, fuzzy
+#~ msgid "Enter the title test. Only digits are allowed."
+#~ msgstr "Einen Wert für diese Einstellung eingeben. Nur Zahlen sind erlaubt."
+
+#, fuzzy
+#~ msgid "Force rewrite titles"
+#~ msgstr "Nur Titel der Einträge"
+
+#, fuzzy
+#~ msgid "Force rewrite title"
+#~ msgstr "Geben Sie den Titel des Angebotes ein"
+
+#~ msgid ""
+#~ "MUSeo has auto-detected whether it needs to force rewrite the titles for "
+#~ "your pages, if you think it's wrong and you know what you're doing, you "
+#~ "can change the setting here."
+#~ msgstr ""
+#~ "MUSeo hat erkannt, ob es nötig ist, ein Umschreiben der Seitentitel zu "
+#~ "erzwingen; wenn Du denkst, dass dies falsch ist, und weißt, was Du tust, "
+#~ "kannst Du diese Einstellung hier verändern."
+
+#~ msgid "Symbol to use as title separator."
+#~ msgstr "Symbol, das als Separator für den Titel genutzt wird."
+
+#~ msgid "Title separator"
+#~ msgstr "Titel Separator"
+
+#, fuzzy
+#~ msgid "Enter the title separator."
+#~ msgstr "Gebe den Titel des Produktes ein."
+
+#~ msgid "Use meta keywords tag?"
+#~ msgstr "Den Meta Schlüsselwörter Tag benutzen?"
+
+#~ msgid "Use meta keywords"
+#~ msgstr "Meta Schlüsselwörter nutzen"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#, fuzzy
+#~ msgid "Homepage title template"
+#~ msgstr "Zugewiesene Templatevariablen"
+
+#~ msgid "Home title"
+#~ msgstr "Titel der Homepage"
+
+#~ msgid "Enter the home title."
+#~ msgstr "Gib einen Titel ein"
+
+#, fuzzy
+#~ msgid "Homepage meta description template"
+#~ msgstr "Gib die Beschreibung des Metatags ein"
+
+#, fuzzy
+#~ msgid "Home meta description"
+#~ msgstr "Standard Meta-Description"
+
+#~ msgid "Enter the home meta description."
+#~ msgstr "Gib die Meta Beschreibung für die Homepage ein."
+
+#~ msgid "Home meta keywords"
+#~ msgstr "Homepahe Meta Schlüsselwörter"
+
+#~ msgid "Special pages"
+#~ msgstr "Spezielle Seiten"
+
+#, fuzzy
+#~ msgid "Search pages title template"
+#~ msgstr "(z.B. Cover, Titelbild oder Vorschauseiten)"
+
+#~ msgid "Search title"
+#~ msgstr "Suchtitel"
+
+#~ msgid "Enter the search title."
+#~ msgstr "Gib den Suchtitel ein."
+
+#, fuzzy
+#~ msgid "404 pages title template"
+#~ msgstr "(z.B. Cover, Titelbild oder Vorschauseiten)"
+
+#~ msgid "Not found title"
+#~ msgstr "Titel nicht gefunden"
+
+#~ msgid "Enter the not found title."
+#~ msgstr "Gib einen Titel ein"
+
+#~ msgid "Add WhatsApp button"
+#~ msgstr "WhatsApp Button hinzufügen"
+
+#~ msgid "Whats app enabled"
+#~ msgstr "WhatsApp aktiviert"
 
 #~ msgid "Please select a valid html colour code."
 #~ msgstr "Bitte wähle einen gültigen Farbcode."

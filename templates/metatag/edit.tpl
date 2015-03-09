@@ -184,6 +184,14 @@
                     <span class="z-formnote">{$toolTip} {gt text='If you type something here it will override your meta keywords template.'}</span>
                 </div>
             </fieldset>
+            <fieldset class="z-hide">
+                <legend>{gt text='Analysis'}</legend>
+                <div class="z-formrow">
+                    {formlabel for='pageAnalysisScore' __text='Page analysis score' cssClass=''}
+                    {formintinput group='metatag' id='pageAnalysisScore' mandatory=false __title='Enter the page analysis score of the metatag' maxLength=11 cssClass=' validate-digits' }
+                    {museoValidationError id='pageAnalysisScore' class='validate-digits'}
+                </div>
+            </fieldset>
             {/formtabbedpanel}
             
             {gt text='Advanced' assign='tabTitle'}
@@ -381,16 +389,6 @@
                     {formlabel for='whatsAppTitle' __text='Whats app title' cssClass='museo-form-tooltips' title=$toolTip}
                     {formtextinput group='metatag' id='whatsAppTitle' mandatory=false readOnly=false __title='Enter the whats app title of the metatag' textMode='singleline' maxLength=255 cssClass='' }
                 </div>
-            </fieldset>
-            <fieldset>
-                <legend>{gt text='Analysis'}</legend>
-                
-                <div class="z-formrow">
-                    {formlabel for='pageAnalysisScore' __text='Page analysis score' cssClass=''}
-                    {formintinput group='metatag' id='pageAnalysisScore' mandatory=false __title='Enter the page analysis score of the metatag' maxLength=11 cssClass=' validate-digits' }
-                    {museoValidationError id='pageAnalysisScore' class='validate-digits'}
-                </div>
-                
             </fieldset>
             {/formtabbedpanel}
             

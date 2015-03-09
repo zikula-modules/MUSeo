@@ -193,9 +193,7 @@
             </fieldset>
             {/formtabbedpanel}
             
-            {modgetvar module='MUSeo' name='disableAdvancedMeta' assign='disableAdvancedMeta'}
-            
-            {if $disableAdvancedMeta eq false}
+            {if $modvars.MUSeo.disableAdvancedMeta eq false}
                 {gt text='Advanced' assign='tabTitle'}
                 {formtabbedpanel title=$tabTitle}
                 <fieldset>
@@ -241,6 +239,7 @@
             
             {gt text='Social media' assign='tabTitle'}
             {formtabbedpanel title=$tabTitle}
+            {if $modvars.MUSeo.openGraphEnabled ne false}
             <fieldset>
                 <legend>{gt text='Facebook'}</legend>
                 <div class="z-formrow">
@@ -286,6 +285,8 @@
                     {museoValidationError id='facebookImage' class='validate-upload'}
                 </div>
             </fieldset>
+            {/if}
+            {if $modvars.MUSeo.twitterEnabled ne false}
             <fieldset>
                 <legend>{gt text='Twitter'}</legend>
                 <div class="z-formrow">
@@ -331,6 +332,8 @@
                     {museoValidationError id='twitterImage' class='validate-upload'}
                 </div>
             </fieldset>
+            {/if}
+            {if $modvars.MUSeo.googlePlusEnabled ne false}
             <fieldset>
                 <legend>{gt text='Google+'}</legend>
                 
@@ -377,6 +380,7 @@
                     {museoValidationError id='googlePlusImage' class='validate-upload'}
                 </div>
             </fieldset>
+            {/if}
             <fieldset>
                 <legend>{gt text='WhatsApp'}</legend>
                 <div class="z-formrow">

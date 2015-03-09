@@ -141,7 +141,6 @@
                             {formcheckbox id='openGraphEnabled' group='config'}
                             <span class="z-formnote">{gt text='Add Open Graph meta data to your site\'s <code>&lt;head&gt;</code> section. You can specify some of the ID\'s that are sometimes needed below:'}</span>
                         </div>
-            {*TODO : echo $fbconnect;*}
                         <div class="z-formrow">
                             {gt text='App to use as Facebook admin' assign='toolTip'}
                             {formlabel for='facebookAdminApp' __text='Facebook admin app' cssClass='museo-form-tooltips ' title=$toolTip}

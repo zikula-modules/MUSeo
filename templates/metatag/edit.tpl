@@ -73,7 +73,28 @@
                         }
                     }
                 }
-                $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(seoFrame.title, false) + '</a><span class="url">' + yst_boldKeywords(seoFrame.URL, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(metaDescription,false)) + '</span></p>');
+                
+                var title, url, description;
+                if (fieldIdTitle !== undefined && fieldIdTitle !== null && fieldIdTitle !== ''){
+                    title = $F(fieldIdTitle);
+                }else{
+                    title = seoFrame.title;
+                }
+                
+                if (fieldIdUrl !== undefined && fieldIdUrl !== null && fieldIdUrl !== ''){
+                    url = $F(fieldIdUrl);
+                }else{
+                    url = seoFrame.URL;
+                }
+                
+                if (fieldIdDescription !== undefined && fieldIdDescription !== null && fieldIdDescription !== ''){
+                    description = $F(fieldIdDescription);
+                }else{
+                    description = metaDescription;
+                }
+                 
+                 
+                $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description,false)) + '</span></p>');
             }
 
             evaluateKeyword();

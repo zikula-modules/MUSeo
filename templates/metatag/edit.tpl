@@ -50,7 +50,11 @@
                     return;
                 }
 
-                var seoFrame = iframeRef(document.getElementById('seoFrame'));
+                var seoFrameObj, seoFrame;
+                seoFrameObj = document.getElementById('seoFrame');
+                if (seoFrameObj !== undefined) {
+                    seoFrame = iframeRef(seoFrameObj);
+                }
                 var p = new RegExp("(^|[ \s\n\r\t\.,'\(\"\+;!?:\-])" + focuskw + "($|[ \s\n\r\t.,'\)\"\+!?:;\-])", 'gim');
                 //remove diacritics of a lower cased focuskw for url matching in foreign lang
                 var focuskwNoDiacritics = removeLowerCaseDiacritics(focuskw);
@@ -75,26 +79,25 @@
                 }
                 
                 var title, url, description;
-                if (fieldIdTitle !== undefined && fieldIdTitle !== null && fieldIdTitle !== ''){
+                if (fieldIdTitle !== undefined && fieldIdTitle !== null && fieldIdTitle !== '') {
                     title = $F(fieldIdTitle);
-                }else{
+                } else if (seoFrame !== null) {
                     title = seoFrame.title;
                 }
                 
-                if (fieldIdUrl !== undefined && fieldIdUrl !== null && fieldIdUrl !== ''){
+                if (fieldIdUrl !== undefined && fieldIdUrl !== null && fieldIdUrl !== '') {
                     url = $F(fieldIdUrl);
-                }else{
+                } else if (seoFrame !== null) {
                     url = seoFrame.URL;
                 }
                 
-                if (fieldIdDescription !== undefined && fieldIdDescription !== null && fieldIdDescription !== ''){
+                if (fieldIdDescription !== undefined && fieldIdDescription !== null && fieldIdDescription !== '') {
                     description = $F(fieldIdDescription);
-                }else{
+                } else if (seoFrame !== null) {
                     description = metaDescription;
                 }
-                 
-                 
-                $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description,false)) + '</span></p>');
+
+                $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description, false)) + '</span></p>');
             }
 
             evaluateKeyword();

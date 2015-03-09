@@ -59,6 +59,18 @@
                             {formcheckbox id='disableAdvancedMeta' group='config'}
                             <span class="z-formnote">{$toolTip}</span>
                         </div>
+                        <div class="z-formrow">
+                            {gt text='Add noodp meta robots tag sitewide' assign='toolTip'}
+                            {formlabel for='noodp' __text='Noodp' cssClass='museo-form-tooltips ' title=$toolTip}
+                            {formcheckbox id='noodp' group='config'}
+                            <span class="z-formnote">{gt text='Prevents search engines from using the DMOZ description for pages from this site in the search results.'}</span>
+                        </div>
+                        <div class="z-formrow">
+                            {gt text='Add noydir meta robots tag sitewide' assign='toolTip'}
+                            {formlabel for='noydir' __text='Noydir' cssClass='museo-form-tooltips ' title=$toolTip}
+                            {formcheckbox id='noydir' group='config'}
+                            <span class="z-formnote">{gt text='Prevents search engines from using the Yahoo! directory description for pages from this site in the search results.'}</span>
+                        </div>
                     </fieldset>  
                     <fieldset>
                         <legend>{gt text='Webmaster Tools'}</legend>
@@ -100,18 +112,6 @@
                             {formlabel for='forceTransport' __text='Force transport' cssClass='museo-form-tooltips ' title=$toolTip}
                             {formtextinput id='forceTransport' group='config' maxLength=10 __title='Enter the force transport.'}
                             <span class="z-formnote">{$toolTip}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Add noodp meta robots tag sitewide' assign='toolTip'}
-                            {formlabel for='noodp' __text='Noodp' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='noodp' group='config'}
-                            <span class="z-formnote">{gt text='Prevents search engines from using the DMOZ description for pages from this site in the search results.'}</span>
-                        </div>
-                        <div class="z-formrow">
-                            {gt text='Add noydir meta robots tag sitewide' assign='toolTip'}
-                            {formlabel for='noydir' __text='Noydir' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formcheckbox id='noydir' group='config'}
-                            <span class="z-formnote">{gt text='Prevents search engines from using the Yahoo! directory description for pages from this site in the search results.'}</span>
                         </div>
                     </fieldset>
                 {/formtabbedpanel}

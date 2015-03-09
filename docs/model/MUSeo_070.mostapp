@@ -264,26 +264,6 @@ application MUSeo {
             documentation "Here you can adjust basic SEO-related options."
             sortOrder 2
             vars {
-                boolVar ignoreMetaDescriptionWarning {
-                    documentation "Allows to ignore a warning about meta description contained in a theme."
-                    value ^false
-                },
-                boolVar ignorePermalink {
-                    documentation "Allows to ignore a warning about incomplete permalink structure."
-                    value ^false
-                },
-                boolVar ignoreTour {
-                    documentation "Whether the introduction tour should be ignored or not."
-                    value ^false
-                },
-                boolVar themeDescriptionFound {
-                    documentation "Whether a meta description has been found in the theme or not."
-                    value ^false
-                },
-                boolVar themeHasDescription {
-                    documentation "Whether the theme has a meta description or not."
-                    value ^false
-                },
                 listVar robotsIndex {
                     documentation "Default meta robots index"
                     value ^index
@@ -330,52 +310,16 @@ application MUSeo {
             documentation "Settings relating to permalinks and canonical settings."
             sortOrder 3
             vars {
-                boolVar enforceTrailingSlash {
-                    documentation "Enforce a trailing slash"
-                    value ^false
-                },
-                boolVar cleanSlugs {
-                    documentation "Remove stop words from slugs"
-                    value ^true
-                },
                 textVar forceTransport {
                     documentation "Force the canonical to either http or https, when your site runs under both."
                     value ^default
                     maxLength 10
-                },
-                boolVar cleanPermalinkGoogleSiteSearch {
-                    documentation "Prevent cleaning out Google Site Search URL\'s."
-                    value ^false
-                },
-                boolVar cleanPermalinkGoogleCampaign {
-                    documentation "Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters."
-                    value ^false
-                },
-                textVar cleanPermalinkExtraVars {
-                    documentation "Other variables not to clean"
-                    value ""
                 }
             }
         },
         varContainer Titles {
             sortOrder 4
             vars {
-                intVar titleTest {
-                    documentation "Internal var used for testing SEO titles."
-                    value "0"
-                },
-                boolVar forceRewriteTitle {
-                    documentation "Force rewrite titles"
-                    value ^false
-                },
-                textVar titleSeparator {
-                    documentation "Symbol to use as title separator."
-                    value "sc-dash"
-                },
-                boolVar useMetaKeywords {
-                    documentation "Use meta keywords tag?"
-                    value ^false
-                },
                 boolVar noodp {
                     documentation "Add noodp meta robots tag sitewide"
                     value ^false
@@ -383,26 +327,6 @@ application MUSeo {
                 boolVar noydir {
                     documentation "Add noydir meta robots tag sitewide"
                     value ^false
-                },
-                textVar homeTitle {
-                    documentation "Homepage title template"
-                    value "%%sitename%% %%page%% %%sep%% %%sitedesc%%"
-                },
-                textVar homeMetaDescription {
-                    documentation "Homepage meta description template"
-                    value ""
-                },
-                textVar homeMetaKeywords {
-                    documentation "Homepage meta keywords template"
-                    value ""
-                },
-                textVar searchTitle {
-                    documentation "Search pages title template"
-                    value ""
-                },
-                textVar notFoundTitle {
-                    documentation "404 pages title template"
-                    value ""
                 }
             }
         },
@@ -468,11 +392,7 @@ application MUSeo {
                 textVar googlePlusPublisherPage {
                     documentation "Google publisher page"
                     value ""
-                },
-                boolVar whatsAppEnabled {
-                    documentation "Add WhatsApp button"
-                    value ^false
-                },
+                }
             }
         }
     }

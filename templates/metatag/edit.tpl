@@ -193,47 +193,51 @@
             </fieldset>
             {/formtabbedpanel}
             
-            {gt text='Advanced' assign='tabTitle'}
-            {formtabbedpanel title=$tabTitle}
-            <fieldset>
-                <div class="z-formrow">
-                    {gt text='Meta robots index' assign='toolTip'}
-                    {formlabel for='robotsIndex' __text='Robots index' cssClass='museo-form-tooltips' title=$toolTip}
-                    {formdropdownlist group='metatag' id='robotsIndex' mandatory=false __title='Choose the robots index' selectionMode='single'}
-                    <span class="z-formnote z-errormsg">{gt text='Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won\'t have an effect.'}</span>
-                </div>
-                
-                <div class="z-formrow">
-                    {gt text='Meta robots follow' assign='toolTip'}
-                    {formlabel for='robotsFollow' __text='Robots follow' cssClass='museo-form-tooltips' title=$toolTip}
-                    {formdropdownlist group='metatag' id='robotsFollow' mandatory=false __title='Choose the robots follow' selectionMode='single'}
-                    <span class="z-formnote">{$toolTip}</span>
-                </div>
-                
-                <div class="z-formrow">
-                    {formlabel for='robotsAdvanced' __text='Robots advanced' cssClass=''}
-                    {formdropdownlist group='metatag' id='robotsAdvanced' mandatory=false __title='Choose the robots advanced' selectionMode='multiple'}
-                    <span class="z-formnote">{gt text='Advanced <code>meta</code> robots settings for this page.'}</span>
-                </div>
-                
-                <div class="z-formrow">
-                    {gt text='Canonical url' assign='toolTip'}
-                    {formlabel for='canonicalUrl' __text='Canonical url' cssClass='museo-form-tooltips' title=$toolTip}
-                    {formurlinput group='metatag' id='canonicalUrl' mandatory=false readOnly=false __title='Enter the canonical url of the metatag' textMode='singleline' maxLength=255 cssClass=' validate-url' }
-                    {museoValidationError id='canonicalUrl' class='validate-url'}
-                    <span class="z-formnote">{gt text='The canonical URL that this page should point to, leave blank to default to permalink. <a target="_blank" href="http://googlewebmastercentral.blogspot.com/2009/12/handling-legitimate-cross-domain.html">Cross domain canonical</a> supported too.'}</span>
-                </div>
-                
-                <div class="z-formrow">
-                    {gt text='301 redirect url' assign='toolTip'}
-                    {formlabel for='redirectUrl' __text='Redirect url' cssClass='museo-form-tooltips' title=$toolTip}
-                    {formurlinput group='metatag' id='redirectUrl' mandatory=false readOnly=false __title='Enter the redirect url of the metatag' textMode='singleline' maxLength=255 cssClass=' validate-url' }
-                    {museoValidationError id='redirectUrl' class='validate-url'}
-                    <span class="z-formnote">{gt text='The URL that this page should redirect to.'}</span>
-                </div>
-                
-            </fieldset>
-            {/formtabbedpanel}
+            {modgetvar module='MUSeo' name='disableAdvancedMeta' assign='disableAdvancedMeta'}
+            
+            {if $disableAdvancedMeta eq false}
+                {gt text='Advanced' assign='tabTitle'}
+                {formtabbedpanel title=$tabTitle}
+                <fieldset>
+                    <div class="z-formrow">
+                        {gt text='Meta robots index' assign='toolTip'}
+                        {formlabel for='robotsIndex' __text='Robots index' cssClass='museo-form-tooltips' title=$toolTip}
+                        {formdropdownlist group='metatag' id='robotsIndex' mandatory=false __title='Choose the robots index' selectionMode='single'}
+                        <span class="z-formnote z-errormsg">{gt text='Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won\'t have an effect.'}</span>
+                    </div>
+                    
+                    <div class="z-formrow">
+                        {gt text='Meta robots follow' assign='toolTip'}
+                        {formlabel for='robotsFollow' __text='Robots follow' cssClass='museo-form-tooltips' title=$toolTip}
+                        {formdropdownlist group='metatag' id='robotsFollow' mandatory=false __title='Choose the robots follow' selectionMode='single'}
+                        <span class="z-formnote">{$toolTip}</span>
+                    </div>
+                    
+                    <div class="z-formrow">
+                        {formlabel for='robotsAdvanced' __text='Robots advanced' cssClass=''}
+                        {formdropdownlist group='metatag' id='robotsAdvanced' mandatory=false __title='Choose the robots advanced' selectionMode='multiple'}
+                        <span class="z-formnote">{gt text='Advanced <code>meta</code> robots settings for this page.'}</span>
+                    </div>
+                    
+                    <div class="z-formrow">
+                        {gt text='Canonical url' assign='toolTip'}
+                        {formlabel for='canonicalUrl' __text='Canonical url' cssClass='museo-form-tooltips' title=$toolTip}
+                        {formurlinput group='metatag' id='canonicalUrl' mandatory=false readOnly=false __title='Enter the canonical url of the metatag' textMode='singleline' maxLength=255 cssClass=' validate-url' }
+                        {museoValidationError id='canonicalUrl' class='validate-url'}
+                        <span class="z-formnote">{gt text='The canonical URL that this page should point to, leave blank to default to permalink. <a target="_blank" href="http://googlewebmastercentral.blogspot.com/2009/12/handling-legitimate-cross-domain.html">Cross domain canonical</a> supported too.'}</span>
+                    </div>
+                    
+                    <div class="z-formrow">
+                        {gt text='301 redirect url' assign='toolTip'}
+                        {formlabel for='redirectUrl' __text='Redirect url' cssClass='museo-form-tooltips' title=$toolTip}
+                        {formurlinput group='metatag' id='redirectUrl' mandatory=false readOnly=false __title='Enter the redirect url of the metatag' textMode='singleline' maxLength=255 cssClass=' validate-url' }
+                        {museoValidationError id='redirectUrl' class='validate-url'}
+                        <span class="z-formnote">{gt text='The URL that this page should redirect to.'}</span>
+                    </div>
+                    
+                </fieldset>
+                {/formtabbedpanel}
+            {/if}
             
             {gt text='Social media' assign='tabTitle'}
             {formtabbedpanel title=$tabTitle}

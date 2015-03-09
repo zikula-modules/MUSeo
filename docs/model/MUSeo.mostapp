@@ -162,6 +162,11 @@ application MUSeo {
                             documentation "Google+ image overriding the default value"
                             mandatory false
                         },
+                        string whatsAppTitle {
+                            documentation "WhatsApp title overriding the default value"
+                            defaultValue ""
+                            mandatory false
+                        },
                         integer pageAnalysisScore {
                             defaultValue "0"
                             mandatory false

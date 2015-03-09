@@ -236,11 +236,12 @@ function yst_escapeFocusKw(str)
 
 function yst_boldKeywords(str, url)
 {
-	var focuskw = yst_escapeFocusKw(String.trim($F('focusKeyword'))).toLowerCase();
+    var focuskw = yst_escapeFocusKw(String.trim($F('focusKeyword'))).toLowerCase();
     var keywords;
 
-    if (focuskw == '')
+    if (focuskw == '') {
         return str;
+    }
 
     if (focuskw.search(' ') != -1) {
         keywords = focuskw.split(' ');
@@ -260,19 +261,22 @@ function yst_boldKeywords(str, url)
             str = str.replace(kwregex, "$1<strong>$2</strong>$3");
         }
     }
+
     return str;
 }
-var meta_desc_lenght = 156;
+var meta_desc_length = 156;
 
 function yst_trimDesc(desc)
 {
-    if (desc.length > meta_desc_lenght) {
+    if (desc.length > meta_desc_length) {
         var space;
-        if (desc.length > meta_desc_lenght)
-            space = desc.lastIndexOf(" ", ( meta_desc_lenght - 3 ));
-        else
-            space = meta_desc_lenght;
+        if (desc.length > meta_desc_length) {
+            space = desc.lastIndexOf(' ', (meta_desc_length - 3));
+        } else {
+            space = meta_desc_length;
+        }
         desc = desc.substring(0, space).concat(' ...');
     }
+
     return desc;
 }

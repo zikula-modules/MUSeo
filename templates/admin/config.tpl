@@ -95,28 +95,12 @@
                             {formtextinput id='yandexVerify' group='config' maxLength=255 __title='Enter the yandex verify.'}
                             <span class="z-formnote"><a target="_blank" href="http://help.yandex.com/webmaster/service/rights.xml#how-to">{gt text='Yandex Webmaster Tools'}</a></span>
                         </div>
-                    </fieldset>
-                {/formtabbedpanel}
-                {gt text='Permalinks' assign='tabTitle'}
-                {formtabbedpanel title=$tabTitle}
-                    <fieldset>
-                        <legend>{$tabTitle}</legend>
-                    
-                        <p class="z-confirmationmsg">{gt text='Settings relating to permalinks and canonical settings.'|nl2br}</p>
-                    
                         <div class="z-formrow">
                             {gt text='Force the canonical to either http or https, when your site runs under both.' assign='toolTip'}
                             {formlabel for='forceTransport' __text='Force transport' cssClass='museo-form-tooltips ' title=$toolTip}
                             {formtextinput id='forceTransport' group='config' maxLength=10 __title='Enter the force transport.'}
                             <span class="z-formnote">{$toolTip}</span>
                         </div>
-                    </fieldset>
-                {/formtabbedpanel}
-                {gt text='Titles' assign='tabTitle'}
-                {formtabbedpanel title=$tabTitle}
-                    <fieldset>
-                        <legend>{gt text="General"}</legend>
-                    
                         <div class="z-formrow">
                             {gt text='Add noodp meta robots tag sitewide' assign='toolTip'}
                             {formlabel for='noodp' __text='Noodp' cssClass='museo-form-tooltips ' title=$toolTip}

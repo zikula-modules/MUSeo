@@ -293,23 +293,12 @@ application MUSeo {
                         textVar yandexVerify {
                             documentation "Yandex Webmaster Tools"
                             value ""
-                        }
-                    }
-                },
-                varContainer Permalinks {
-                    documentation "Settings relating to permalinks and canonical settings."
-                    sortOrder 3
-                    vars {
+                        },
                         textVar forceTransport {
                             documentation "Force the canonical to either http or https, when your site runs under both."
                             value ^default
                             maxLength 10
-                        }
-                    }
-                },
-                varContainer Titles {
-                    sortOrder 4
-                    vars {
+                        },
                         boolVar noodp {
                             documentation "Add noodp meta robots tag sitewide"
                             value ^false

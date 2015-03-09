@@ -161,37 +161,37 @@ class MUSeo_Listener_ModuleDispatch extends MUSeo_Listener_Base_ModuleDispatch
             return;
         }
         
-        if(PageUtil::isHomepage()){
-        	$modVars = ModUtil::getVar('MUSeo');
-        	$metaTags = array();
-        	
-        	if ( $modVars['alexaVerify'] !== '' ) {
-        		$metaTags = '<meta name="alexaVerifyID" content="' . $modVars['alexaVerify'] . '">';
-        	}
-        	
-        	// Bing
-        	if ( $modVars['msVerify'] !== '' ) {
-        		$metaTags = '<meta name="msvalidate.01" content="' . $modVars['msVerify'] . '">';
-        	}
-        	
-        	// Google
-        	if ( $modVars['googleVerify'] !== '' ) {
-        		$metaTags = '<meta name="google-site-verification" content="' . $modVars['googleVerify'] . '">';
-        	}
-        	
-        	// Pinterest
-        	if ( $modVars['pinterestVerify'] !== '' ) {
-        		$metaTags = '<meta name="p:domain_verify" content="' . $modVars['pinterestVerify'] . '">';
-        	}
-        	
-        	// Yandex
-        	if ( $modVars['yandexVerify'] !== '' ) {
-        		$metaTags = '<meta name="yandex-verification" content="' . $modVars['yandexVerify'] . '">';;
-        	}
-        	
-        	if (count($metaTags) > 0) {
-        		PageUtil::addVar('header', implode("\n", $metaTags));
-        	}
+        if (PageUtil::isHomepage()) {
+            $modVars = ModUtil::getVar('MUSeo');
+            $metaTags = array();
+
+            if ($modVars['alexaVerify'] !== '') {
+                $metaTags[] = '<meta name="alexaVerifyID" content="' . $modVars['alexaVerify'] . '">';
+            }
+
+            // Bing
+            if ($modVars['msVerify'] !== '') {
+                $metaTags[] = '<meta name="msvalidate.01" content="' . $modVars['msVerify'] . '">';
+            }
+
+            // Google
+            if ($modVars['googleVerify'] !== '') {
+                $metaTags[] = '<meta name="google-site-verification" content="' . $modVars['googleVerify'] . '">';
+            }
+
+            // Pinterest
+            if ($modVars['pinterestVerify'] !== '') {
+                $metaTags[] = '<meta name="p:domain_verify" content="' . $modVars['pinterestVerify'] . '">';
+            }
+
+            // Yandex
+            if ($modVars['yandexVerify'] !== '') {
+                $metaTags[] = '<meta name="yandex-verification" content="' . $modVars['yandexVerify'] . '">';;
+            }
+
+            if (count($metaTags) > 0) {
+                PageUtil::addVar('header', implode("\n", $metaTags));
+            }
         }
 
         // now check if an entry for the module exists with corresponding name and func

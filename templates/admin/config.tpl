@@ -150,7 +150,7 @@
                         <div class="z-formrow">
                             {gt text='Facebook page url' assign='toolTip'}
                             {formlabel for='facebookSite' __text='Facebook site' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='facebookSite' group='config' maxLength=255 __title='Enter the facebook site.'}
+                            {formurlinput id='facebookSite' group='config' maxLength=255 __title='Enter the facebook site.'}
                             <span class="z-formnote">{$toolTip}</span>
                         </div>
                         <h4 class="z-formnote">{gt text="Frontpage settings"}</h4>
@@ -168,12 +168,12 @@
                         <div class="z-formrow">
                             {gt text='Open Graph frontpage image' assign='toolTip'}
                             {formlabel for='openGraphFrontpageImage' __text='Open graph frontpage image' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='openGraphFrontpageImage' group='config' maxLength=255 __title='Enter the open graph frontpage image.'}
+                            {formurlinput id='openGraphFrontpageImage' group='config' maxLength=255 __title='Enter the open graph frontpage image.'}
                         </div>
                         <div class="z-formrow">
                             {gt text='OpenGraph default image url' assign='toolTip'}
                             {formlabel for='openGraphDefaultImage' __text='Open graph default image' cssClass='museo-form-tooltips ' title=$toolTip}
-                            {formtextinput id='openGraphDefaultImage' group='config' maxLength=255 __title='Enter the open graph default image.'}
+                            {formurlinput id='openGraphDefaultImage' group='config' maxLength=255 __title='Enter the open graph default image.'}
                             <span class="z-formnote">{gt text='This image is used if the post/page being shared does not contain any images.'}</span>
                         </div>
                     </fieldset>

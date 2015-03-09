@@ -73,7 +73,7 @@
                         }
                     }
                 }
-                $('snippedPreview').update('<a class="title" href="#">' + yst_boldKeywords(seoFrame.title, false) + '</a><span class="url">' + yst_boldKeywords(seoFrame.URL, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(metaDescription,false)) + '</span></p>');
+                $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(seoFrame.title, false) + '</a><span class="url">' + yst_boldKeywords(seoFrame.URL, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(metaDescription,false)) + '</span></p>');
             }
 
             evaluateKeyword();
@@ -117,37 +117,38 @@
                         {formtextinput group='metatag' id='focusKeyword' mandatory=false readOnly=false __title='Enter the focus keyword of the metatag' textMode='singleline' maxLength=255 cssClass='' }
                         <span class="z-formnote">{$toolTip}</span>
                         <div class="z-formnote" id="focuskwresults">
-                            {gt text="Your focus keyword was found in"}:<br />
-                            {gt text="Page title"}: <span id="focuskwresultsPageTitle"></span><br />
-                            {gt text="Page URL"}: <span id="focuskwresultsPageURL"></span><br />
-                            {gt text="Page Content"}: <span id="focuskwresultsPageContent"></span><br />
-                            {gt text="Meta keywords"}: <span id="focuskwresultsMetaKeywords"></span><br />
-                            {gt text="Meta description"}: <span id="focuskwresultsMetaDescription"></span><br />
+                            {gt text='Your focus keyword was found in'}:<br />
+                            {gt text='Page title'}: <span id="focuskwresultsPageTitle"></span><br />
+                            {gt text='Page URL'}: <span id="focuskwresultsPageURL"></span><br />
+                            {gt text='Page Content'}: <span id="focuskwresultsPageContent"></span><br />
+                            {gt text='Meta keywords'}: <span id="focuskwresultsMetaKeywords"></span><br />
+                            {gt text='Meta description'}: <span id="focuskwresultsMetaDescription"></span><br />
                         </div>
                     </div>
                 </div>
                 
                 <div class="z-formrow">
-                    <label title="" class="museo-form-tooltips" for="focusKeyword">{gt text="Snipped Preview"}</label>
-                    <div id="snippedPreview">
+                    <label title="" class="museo-form-tooltips" for="focusKeyword">{gt text='Snippet Preview'}</label>
+                    <div id="snippetPreview">
                     
                     </div>
+                    <span class="z-formnote">{gt text='This is a rendering of what this page might look like in Google\'s search results.'}</span>
                 </div>
-                
+
                 <div class="z-formrow">
                     {gt text='SEO title' assign='toolTip'}
                     {formlabel for='title' __text='Title' cssClass='museo-form-tooltips' title=$toolTip}
                     {formtextinput group='metatag' id='title' mandatory=false readOnly=false __title='Enter the title of the metatag' textMode='singleline' maxLength=255 cssClass='' }
                     <span class="z-formnote">{gt text='The SEO title defaults to what is generated based on this sites title template for this posttype.'}</span>
                 </div>
-                
+
                 <div class="z-formrow">
                     {gt text='Meta description' assign='toolTip'}
                     {formlabel for='description' __text='Description' cssClass='museo-form-tooltips' title=$toolTip}
                     {formtextinput group='metatag' id='description' mandatory=false readOnly=false __title='Enter the description of the metatag' textMode='singleline' maxLength=255 cssClass='' }
                     <span class="z-formnote">{gt text='The meta description is often shown as the black text under the title in a search result. For this to work it has to contain the keyword that was searched for.'}</span>
                 </div>
-                
+
                 <div class="z-formrow">
                     {gt text='Comma separated list of meta keywords - for example: Zikula, Framework' assign='toolTip'}
                     {formlabel for='keywords' __text='Keywords' cssClass='museo-form-tooltips' title=$toolTip}

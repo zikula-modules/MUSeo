@@ -192,6 +192,34 @@ class MUSeo_Listener_ModuleDispatch extends MUSeo_Listener_Base_ModuleDispatch
             if (count($metaTags) > 0) {
                 PageUtil::addVar('header', implode("\n", $metaTags));
             }
+            
+            if (System::getVar('startpage', '') == '') {
+            	$metTags = array();
+            	
+            	if ($modVars['facebookEnabled']) {
+            		if ($modVars['facebookAdminApp'] != '') {
+            			$metaTags[] = '<meta property="fb:app_id" content="'. $modVars['facebookAdminApp'] .'">';
+            		} elseif ($modVars['facebookAdmins'] != '') {
+            			$metaTags[] = '<meta property="fb:admins" content="'. $modVars['facebookAdmins'] .'">';
+            		}
+            		if ($modVars['facebookSite'] != '') {
+            			$metaTags[] = '<meta property="article:publisher" content="'. $modVars['facebookSite'] .'">';
+            		}
+            		$metaTags[] = '<meta property="og:title" content="'. (($modVars['openGraphFrontpageTitle'] != '') ? $modVars['openGraphFrontpageTitle'] : PageUtil::getVar('title')) .'">';
+            		$metaTags[] = '<meta property="og:description" content="'. (($modVars['openGraphFrontpageDescription'] != '') ? $modVars['openGraphFrontpageDescription'] : PageUtil::getVar('description')) .'">';
+            		$metaTags[] = '<meta property="og:image" content="' . (($modVars['openGraphFrontpageImage'] != '') ? $modVars['openGraphFrontpageImage'] : $modVars['openGraphDefaultImage']) . '">';
+            		$metaTags[] = '<meta property="og:url" content="' .  System::getCurrentUrl() . '">';
+            		$metaTags[] = '<meta property="og:site_name" content="' . System::getVar('sitename') . '">';
+            		$metaTags[] = '<meta property="og:type" content="website">';
+            		$metaTags[] = '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">';
+            	}
+            	
+            	if (count($metaTags) > 0) {
+            		PageUtil::addVar('header', implode("\n", $metaTags));
+            	}
+            	
+            	return;
+            }
         }
 
         // now check if an entry for the module exists with corresponding name and func

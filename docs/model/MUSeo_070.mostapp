@@ -41,6 +41,7 @@ application MUSeo {
             lib/MUSeo/Listener/Theme.php
             lib/MUSeo/Util/Model.php,
             lib/MUSeo/Version.php,
+            lib/MUSeo/Controller/Ajax.php,
             style/style.css,
             templates/admin/config.tpl,
             templates/extension/edit.tpl,

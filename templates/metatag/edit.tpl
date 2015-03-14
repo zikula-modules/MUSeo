@@ -79,19 +79,19 @@
                 }
                 
                 var title = null, url = null, description = null;
-                if (fieldIdTitle !== undefined && fieldIdTitle !== null && fieldIdTitle !== '') {
+                if (typeof fieldIdTitle != 'undefined' && fieldIdTitle !== null && fieldIdTitle !== '') {
                     title = $F(fieldIdTitle);
                 } else if (seoFrame !== null) {
                     title = seoFrame.title;
                 }
                 
-                if (fieldIdUrl !== undefined && fieldIdUrl !== null && fieldIdUrl !== '') {
+                if (typeof fieldIdUrl != 'undefined' && fieldIdUrl !== null && fieldIdUrl !== '') {
                     url = $F(fieldIdUrl);
                 } else if (seoFrame !== null) {
                     url = seoFrame.URL;
                 }
                 
-                if (fieldIdDescription !== undefined && fieldIdDescription !== null && fieldIdDescription !== '') {
+                if (typeof fieldIdDescription != 'undefined' && fieldIdDescription !== null && fieldIdDescription !== '') {
                     description = $F(fieldIdDescription);
                 } else if (seoFrame !== null) {
                     description = metaDescription;
@@ -102,6 +102,29 @@
                 } else {
                     $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description, false)) + '</span></p>');
                 }
+                
+                var  request = new Zikula.Ajax.Request(
+                    Zikula.Config.baseURL + 'ajax.php?module=MUSeo&func=scoreURL',
+                    {
+                        method: 'get',
+                        parameters: {url: url, keyword: focuskw },
+                        onComplete: function(req) {
+                            // check if request was successful
+                            if (!req.isSuccess()) {
+                                Zikula.showajaxerror(req.getMessage());
+                                return;
+                            }
+                            var data = req.getData();
+                            var html = '';
+                            for (var key in data) {
+                                html += data[key].val + " - " + data[key].msg + "<br />";
+                            }
+                            
+                            $('pageScore').update(html);
+                            $('pageScoreTotal').update(data.total);
+                        }
+                    }
+                );
             }
 
             evaluateKeyword();
@@ -156,10 +179,17 @@
                 </div>
 
                 <div class="z-formrow">
-                    <label title="" class="museo-form-tooltips" for="focusKeyword">{gt text='Snippet Preview'}</label>
+                    <label title="" class="museo-form-tooltips">{gt text='Snippet Preview'}</label>
                     <div id="snippetPreview">
                     </div>
                     <span class="z-formnote">{gt text='This is a rendering of what this page might look like in Google\'s search results.'}</span>
+                </div>
+                
+                <div class="z-formrow">
+                    <label title="" class="museo-form-tooltips" >{gt text='Page Score'}</label>
+                    {gt text='Total'}: <span id="pageScoreTotal"></span>
+                    <div id="pageScore">
+                    </div>
                 </div>
 
                 <div class="z-formrow">

@@ -439,7 +439,7 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
      *                              - for all other operations, the result will either be an integer (preferred)
      *                              or a float
      */
-    private function calc($number1, $action, $number2, $round = false, $decimals = 0, $precision = 10) {
+    function calc($number1, $action, $number2, $round = false, $decimals = 0, $precision = 10) {
         static $bc;
     
         if (! is_scalar($number1) || ! is_scalar($number2)) {

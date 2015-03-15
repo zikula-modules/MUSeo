@@ -107,7 +107,7 @@
                     Zikula.Config.baseURL + 'ajax.php?module=MUSeo&func=scoreURL',
                     {
                         method: 'get',
-                        parameters: {url: url, keyword: focuskw },
+                        parameters: { url: url, keyword: focuskw },
                         onComplete: function(req) {
                             // check if request was successful
                             if (!req.isSuccess()) {
@@ -117,9 +117,9 @@
                             var data = req.getData();
                             var html = '';
                             for (var key in data) {
-                                html += data[key].val + " - " + data[key].msg + "<br />";
+                                html += data[key].val + ' - ' + data[key].msg + '<br />';
                             }
-                            
+
                             $('pageScore').update(html);
                             $('pageScoreTotal').update(data.total);
                         }

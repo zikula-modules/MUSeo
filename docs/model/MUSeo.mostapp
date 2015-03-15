@@ -36,6 +36,7 @@ application MUSeo {
         markFiles "
             javascript/MUSeo.js,
             lib/MUSeo/Api/HandleModules.php,
+            lib/MUSeo/Controller/Ajax.php,
             lib/MUSeo/Installer.php,
             lib/MUSeo/Listener/ModuleDispatch.php,
             lib/MUSeo/Listener/Theme.php

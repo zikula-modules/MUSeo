@@ -18,31 +18,29 @@ class MUSeo_Controller_Ajax extends MUSeo_Controller_Base_Ajax
 {
     // feel free to add your own controller methods here
     
-	/**
-	 * Checks whether a field value is a duplicate or not.
-	 *
-	 * @param string $ot Treated object type.
-	 * @param string $fn Name of field to be checked.
-	 * @param string $v  The value to be checked for uniqueness.
-	 * @param string $ex Optional identifier to be excluded from search.
-	 *
-	 * @return Zikula_Response_Ajax
-	 */
-	public function scoreURL()
-	{
-		$this->checkAjaxToken();
-		$this->throwForbiddenUnless(SecurityUtil::checkPermission($this->name . '::Ajax', '::', ACCESS_EDIT));
-		
-		$url = $this->request->query->filter('url', '', FILTER_SANITIZE_STRING);
-		$keyword = $this->request->query->filter('keyword', '', FILTER_SANITIZE_STRING);
-	
-		if (empty($url) || empty($keyword)) {
-			return new Zikula_Response_Ajax_BadData($this->__('Error: invalid input.'));
-		}
-	
-		$scoringApi = new MUSeo_Api_Scoring($this->serviceManager);
-		$result = $scoringApi->score($url, $keyword);
-		
-		return new Zikula_Response_Ajax($result);
-	}
+    /**
+     * Determines the score for a given url.
+     *
+     * @param string $url Treated url.
+     * @param string $keyword Name of focus keyword.
+     *
+     * @return Zikula_Response_Ajax
+     */
+    public function scoreURL()
+    {
+        $this->checkAjaxToken();
+        $this->throwForbiddenUnless(SecurityUtil::checkPermission($this->name . '::Ajax', '::', ACCESS_EDIT));
+
+        $url = $this->request->query->filter('url', '', FILTER_SANITIZE_STRING);
+        $keyword = $this->request->query->filter('keyword', '', FILTER_SANITIZE_STRING);
+
+        if (empty($url) || empty($keyword)) {
+            return new Zikula_Response_Ajax_BadData($this->__('Error: invalid input.'));
+        }
+
+        $scoringApi = new MUSeo_Api_Scoring($this->serviceManager);
+        $result = $scoringApi->score($url, $keyword);
+
+        return new Zikula_Response_Ajax($result);
+    }
 }

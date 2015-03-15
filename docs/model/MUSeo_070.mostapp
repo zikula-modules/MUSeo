@@ -36,12 +36,12 @@ application MUSeo {
         markFiles "
             javascript/MUSeo.js,
             lib/MUSeo/Api/HandleModules.php,
+            lib/MUSeo/Controller/Ajax.php,
             lib/MUSeo/Installer.php,
             lib/MUSeo/Listener/ModuleDispatch.php,
             lib/MUSeo/Listener/Theme.php
             lib/MUSeo/Util/Model.php,
             lib/MUSeo/Version.php,
-            lib/MUSeo/Controller/Ajax.php,
             style/style.css,
             templates/admin/config.tpl,
             templates/extension/edit.tpl,

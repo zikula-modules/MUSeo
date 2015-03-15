@@ -149,6 +149,7 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
 
             // Cache it and return
             $clean[ $key ] = $strText;
+
             return $strText;
         }
 
@@ -235,6 +236,7 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
             $strText = $this->clean_text( $strText );
             // Will be tripped by em dashes with spaces either side, among other similar characters
             $intWords = 1 + $this->text_length( preg_replace( '`[^ ]`', '', $strText ) ); // Space count + 1 is word count
+
             return $intWords;
         }
 
@@ -248,6 +250,7 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
             $strText          = $this->clean_text( $strText );
             $intSentenceCount = $this->sentence_count( $strText );
             $intWordCount     = $this->word_count( $strText );
+
             return ( $this->calc( $intWordCount, '/', $intSentenceCount ) );
         }
 
@@ -265,6 +268,7 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
             for ( $i = 0; $i < $intWordCount; $i++ ) {
                 $intSyllableCount += $this->syllable_count( $arrWords[ $i ] );
             }
+
             return ( $this->calc( $intSyllableCount, '/', $intWordCount ) );
         }
 
@@ -377,6 +381,7 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
                 $intSyllableCount += preg_match( '`' . $strSyllable . '`', $strWord );
             }
             $intSyllableCount = ( $intSyllableCount == 0 ) ? 1 : $intSyllableCount;
+
             return $intSyllableCount;
         }
 
@@ -438,101 +443,99 @@ if ( ! class_exists( 'Yoast_TextStatistics' ) ) {
          *                              or a float
          */
          public function calc($number1, $action, $number2, $round = false, $decimals = 0, $precision = 10) {
-        	static $bc;
+            static $bc;
         
-        	if (! is_scalar($number1) || ! is_scalar($number2)) {
-        		return false;
-        	}
+            if (! is_scalar($number1) || ! is_scalar($number2)) {
+                return false;
+            }
         
-        	if (! isset($bc)) {
-        		$bc = extension_loaded('bcmath');
-        	}
+            if (! isset($bc)) {
+                $bc = extension_loaded('bcmath');
+            }
         
-        	if ($bc) {
-        		$number1 = number_format($number1, 10, '.', '');
-        		$number2 = number_format($number2, 10, '.', '');
-        	}
+            if ($bc) {
+                $number1 = number_format($number1, 10, '.', '');
+                $number2 = number_format($number2, 10, '.', '');
+            }
         
-        	$result  = null;
-        	$compare = false;
+            $result  = null;
+            $compare = false;
         
-        	switch ($action) {
-        	    case '+':
-        	    case 'add':
-        	    case 'addition':
-        	    	$result = ($bc) ? bcadd($number1, $number2, $precision) /* string */ : ($number1 + $number2);
-        	    	break;
+            switch ($action) {
+                case '+':
+                case 'add':
+                case 'addition':
+                    $result = ($bc) ? bcadd($number1, $number2, $precision) /* string */ : ($number1 + $number2);
+                    break;
         
-        	    case '-':
-        	    case 'sub':
-        	    case 'subtract':
-        	    	$result = ($bc) ? bcsub($number1, $number2, $precision) /* string */ : ($number1 - $number2);
-        	    	break;
+                case '-':
+                case 'sub':
+                case 'subtract':
+                    $result = ($bc) ? bcsub($number1, $number2, $precision) /* string */ : ($number1 - $number2);
+                    break;
         
-        	    case '*':
-        	    case 'mul':
-        	    case 'multiply':
-        	    	$result = ($bc) ? bcmul($number1, $number2, $precision) /* string */ : ($number1 * $number2);
-        	    	break;
+                case '*':
+                case 'mul':
+                case 'multiply':
+                    $result = ($bc) ? bcmul($number1, $number2, $precision) /* string */ : ($number1 * $number2);
+                    break;
         
-        	    case '/':
-        	    case 'div':
-        	    case 'divide':
-        	    	if ($bc) {
-        	    		$result = bcdiv($number1, $number2, $precision); // string, or NULL if right_operand is 0
-        	    	}
-        	    	elseif ($number2 != 0) {
-        	    		$result = $number1 / $number2;
-        	    	}
+                case '/':
+                case 'div':
+                case 'divide':
+                    if ($bc) {
+                        $result = bcdiv($number1, $number2, $precision); // string, or NULL if right_operand is 0
+                    } elseif ($number2 != 0) {
+                        $result = $number1 / $number2;
+                    }
         
-        	    	if (! isset($result)) {
-        	    		$result = 0;
-        	    	}
-        	    	break;
+                    if (! isset($result)) {
+                        $result = 0;
+                    }
+                    break;
         
-        	    case '%':
-        	    case 'mod':
-        	    case 'modulus':
-        	    	if ($bc) {
-        	    		$result = bcmod($number1, $number2, $precision); // string, or NULL if modulus is 0.
-        	    	}
-        	    	elseif ($number2 != 0) {
-        	    		$result = $number1 % $number2;
-        	    	}
+                case '%':
+                case 'mod':
+                case 'modulus':
+                    if ($bc) {
+                        $result = bcmod($number1, $number2, $precision); // string, or NULL if modulus is 0.
+                    } elseif ($number2 != 0) {
+                        $result = $number1 % $number2;
+                    }
         
-        	    	if (! isset($result)) {
-        	    		$result = 0;
-        	    	}
-        	    	break;
+                    if (! isset($result)) {
+                        $result = 0;
+                    }
+                    break;
         
-        	    case '=':
-        	    case 'comp':
-        	    case 'compare':
-        	    	$compare = true;
-        	    	if ($bc) {
-        	    		$result = bccomp($number1, $number2, $precision); // returns int 0, 1 or -1
-        	    	}
-        	    	else {
-        	    		$result = ($number1 == $number2) ? 0 : (($number1 > $number2) ? 1 : -1);
-        	    	}
-        	    	break;
-        	}
+                case '=':
+                case 'comp':
+                case 'compare':
+                    $compare = true;
+                    if ($bc) {
+                        $result = bccomp($number1, $number2, $precision); // returns int 0, 1 or -1
+                    } else {
+                        $result = ($number1 == $number2) ? 0 : (($number1 > $number2) ? 1 : -1);
+                    }
+                    break;
+            }
         
-        	if (isset($result)) {
-        		if ($compare === false) {
-        			if ($round === true) {
-        				$result = round(floatval($result), $decimals);
-        				if ($decimals === 0) {
-        					$result = (int) $result;
-        				}
-        			}
-        			else {
-        				$result = (intval($result) == $result) ? intval($result) : floatval($result);
-        			}
-        		}
-        		return $result;
-        	}
-        	return false;
+            if (isset($result)) {
+                if ($compare === false) {
+                    if ($round === true) {
+                        $result = round(floatval($result), $decimals);
+                        if ($decimals === 0) {
+                            $result = (int) $result;
+                        }
+                    } else {
+                        $result = (intval($result) == $result) ? intval($result) : floatval($result);
+                    }
+                }
+
+                return $result;
+            }
+
+            return false;
         }
 
     } /* End of class */

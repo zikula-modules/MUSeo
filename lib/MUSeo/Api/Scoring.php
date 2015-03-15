@@ -307,11 +307,11 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
                 }
 
                 if ($keywordDensity < 1) {
-                    $this->save_score_result(4, $this->__f('The keyword density is %s%%, which is a bit low, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
+                    $this->save_score_result(4, $this->__f('The keyword density is %s%, which is a bit low, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
                 } elseif ($keywordDensity > 4.5) {
-                    $this->save_score_result(- 50, $this->__f('The keyword density is %s%%, which is over the advised 4.5%% maximum, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
+                    $this->save_score_result(- 50, $this->__f('The keyword density is %s%, which is over the advised 4.5% maximum, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
                 } else {
-                    $this->save_score_result(9, $this->__f('The keyword density is %s%%, which is great, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
+                    $this->save_score_result(9, $this->__f('The keyword density is %s%, which is great, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
                 }
             }
         }
@@ -360,9 +360,8 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
             }
 
             $fleschurl   = '<a href="http://en.wikipedia.org/wiki/Flesch-Kincaid_readability_test#Flesch_Reading_Ease">' . $this->__('Flesch Reading Ease') . '</a>';
-            $scoreFlesch = $this->__('The copy scores %s in the %s test, which is considered %s to read. %s');
 
-            $this->save_score_result($score, $this->__f('The copy scores %s in the %s test, which is considered %s to read. %s', array($flesch, '<a href="http://en.wikipedia.org/wiki/Flesch-Kincaid_readability_test#Flesch_Reading_Ease">' . $this->__('Flesch Reading Ease') . '</a>', $level, $note)), 'flesch_kincaid');
+            $this->save_score_result($score, $this->__f('The copy scores %s in the %s test, which is considered %s to read. %s', array($flesch, $fleschurl, $level, $note)), 'flesch_kincaid');
         }
     }
 

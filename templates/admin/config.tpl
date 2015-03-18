@@ -153,6 +153,7 @@
                             {formurlinput id='facebookSite' group='config' maxLength=255 __title='Enter the facebook site.'}
                             <span class="z-formnote">{$toolTip}</span>
                         </div>
+                    {if $modvars.ZConfig.startpage eq ''}
                         <h4 class="z-formnote">{gt text="Frontpage settings"}</h4>
                         <p class="z-formnote z-confirmationmsg">{gt text='These are the title, description and image used in the Open Graph meta tags on the front page of your site.'}</p>
                         <div class="z-formrow">
@@ -176,6 +177,7 @@
                             {formurlinput id='openGraphDefaultImage' group='config' maxLength=255 __title='Enter the open graph default image.'}
                             <span class="z-formnote">{gt text='This image is used if the post/page being shared does not contain any images.'}</span>
                         </div>
+                    {/if}
                     </fieldset>
                     <fieldset>
                         <legend>{gt text="Twitter"}</legend>

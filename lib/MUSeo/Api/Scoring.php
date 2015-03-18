@@ -29,6 +29,7 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
         $dom->strictErrorChecking = false;
         $dom->preserveWhiteSpace  = false;
 
+        libxml_use_internal_errors(true);
         $dom->loadHTMLFile($url);
 
 
@@ -98,7 +99,7 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
 
         $this->aasort($this->totalScore , 'val');
 
-        $overall     = 0;
+        $overall = 0;
         $overall_max = 0;
 
         foreach ($this->totalScore as $result) {
@@ -127,9 +128,9 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
     function save_score_result($scoreValue, $scoreMessage, $scoreLabel, $rawScore = null)
     {
         $score = array(
-                'val' => $scoreValue,
-                'msg' => $scoreMessage,
-                'raw' => $rawScore,
+            'val' => $scoreValue,
+            'msg' => $scoreMessage,
+            'raw' => $rawScore
         );
         $this->totalScore[$scoreLabel] = $score;
     }
@@ -279,7 +280,7 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
         $wordCount = $this->statistics->word_count($body);
 
         if ($wordCount < $lengthScore['bad']) {
-            $this->save_score_result(- 20, $this->__f('There are %d words contained in the body copy. This is far too low and should be increased.', array($wordCount, $lengthScore['good'])), 'body_length', array($wordCount));
+            $this->save_score_result(- 20, $this->__f('There are %d words contained in the body copy. This is far too low and should be increased.', array($wordCount/*, $lengthScore['good']*/)), 'body_length', array($wordCount));
         } elseif ($wordCount < $lengthScore['poor']) {
             $this->save_score_result(- 10, $this->__f('There are %d words contained in the body copy, this is below the %d word recommended minimum. Add more useful content on this topic for readers.', array($wordCount, $lengthScore['good'])), 'body_length', $wordCount);
         } elseif ($wordCount < $lengthScore['ok']) {
@@ -307,11 +308,11 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
                 }
 
                 if ($keywordDensity < 1) {
-                    $this->save_score_result(4, $this->__f('The keyword density is %s%, which is a bit low, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
+                    $this->save_score_result(4, $this->__f('The keyword density is %s%%, which is a bit low, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
                 } elseif ($keywordDensity > 4.5) {
-                    $this->save_score_result(- 50, $this->__f('The keyword density is %s%, which is over the advised 4.5% maximum, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
+                    $this->save_score_result(- 50, $this->__f('The keyword density is %s%%, which is over the advised 4.5%% maximum, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
                 } else {
-                    $this->save_score_result(9, $this->__f('The keyword density is %s%, which is great, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
+                    $this->save_score_result(9, $this->__f('The keyword density is %s%%, which is great, the keyword was found %s times.', array($keywordDensity, $keywordCount)), 'keyword_density');
                 }
             }
         }
@@ -439,7 +440,7 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
      */
     function get_anchor_texts(&$xpath)
     {
-        $query        = '//a|//A';
+        $query = '//a|//A';
         $dom_objects  = $xpath->query($query);
         $anchor_texts = array();
         if (is_object($dom_objects) && is_a($dom_objects, 'DOMNodeList') && $dom_objects->length > 0) {

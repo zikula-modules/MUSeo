@@ -70,10 +70,12 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             PageUtil::setVar('title', $entity['title']);
         }
         if (!empty($entity['description'])) {
-            PageUtil::setVar('description', $entity['description']);
+            $sm = ServiceUtil::getManager();
+            $sm['zikula_view.metatags']['description'] = $entity['description'];
         }
         if (!empty($entity['keywords'])) {
-            PageUtil::setVar('keywords', $entity['keywords']);
+            $sm = ServiceUtil::getManager();
+            $sm['zikula_view.metatags']['keywords'] = $entity['keywords'];
         }
 
         $metaTags = array();

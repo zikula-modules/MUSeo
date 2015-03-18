@@ -117,7 +117,9 @@
                             var data = req.getData();
                             var html = '';
                             for (var key in data) {
-                                html += data[key].val + ' - ' + data[key].msg + '<br />';
+                                if (typeof data[key] != 'undefined' && typeof data[key].val != 'undefined') {
+                                    html += data[key].val + ' - ' + data[key].msg + '<br />';
+                                }
                             }
 
                             $('pageScore').update(html);

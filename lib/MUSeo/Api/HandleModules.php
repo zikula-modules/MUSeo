@@ -106,7 +106,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             }
         }
 
-        if ($modVars['facebookEnabled']) {
+        if ($modVars['openGraphEnabled']) {
             if ($modVars['facebookAdminApp'] != '') {
                 $metaTags[] = '<meta property="fb:app_id" content="'. $modVars['facebookAdminApp'] .'">';
             } elseif ($modVars['facebookAdmins'] != '') {
@@ -120,8 +120,15 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             $metaTags[] = '<meta property="og:image" content="' . (($entity['facebookImage'] != '') ? $entity['facebookImage'] : $modVars['openGraphDefaultImage']) . '">';
             $metaTags[] = '<meta property="og:url" content="' . (($canonical) ? $canonical : System::getCurrentUrl()) . '">';
             $metaTags[] = '<meta property="og:site_name" content="' . System::getVar('sitename') . '">';
-            $metaTags[] = '<meta property="article:modified_time" content="' . $entity['updatedDate'] . '">';
-            $metaTags[] = '<meta property="og_updated_time" content="' . $entity['updatedDate'] . '">';
+            if (isset($entity['updatedDate'])) {
+                if ($entity['updatedDate'] instanceof \DateTime) {
+                    $metaTags[] = '<meta property="article:modified_time" content="' . $entity['updatedDate']->format(\DateTime::ISO8601) . '">';
+                    $metaTags[] = '<meta property="og_updated_time" content="' . $entity['updatedDate']->format(\DateTime::ISO8601) . '">';
+                } else {
+                    $metaTags[] = '<meta property="article:modified_time" content="' . $entity['updatedDate'] . '">';
+                    $metaTags[] = '<meta property="og_updated_time" content="' . $entity['updatedDate'] . '">';
+                }
+            }
             $metaTags[] = '<meta property="og:type" content="website">';
             $metaTags[] = '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">';
         }

@@ -51,8 +51,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 
         $filters = self::determineRequestConditions($request, $modname, $modfunc, $extensionInfo[0]);
         $where = implode(' AND ', $filters);
-die('A S '.$where);
-return;
+
         // we get the entity
         $entities = $metatagRepository->selectWhere($where);
         if (count($entities) < 1) {
@@ -61,7 +60,7 @@ return;
 
 
         $entity = $entities[0];
-die('A');
+
         if (!empty($entity['redirectUrl'])) {
             System::redirect($entity['redirectUrl'], '', 301);
             return;

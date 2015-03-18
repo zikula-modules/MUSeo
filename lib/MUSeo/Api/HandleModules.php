@@ -51,7 +51,8 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 
         $filters = self::determineRequestConditions($request, $modname, $modfunc, $extensionInfo[0]);
         $where = implode(' AND ', $filters);
-
+die('A S '.$where);
+return;
         // we get the entity
         $entities = $metatagRepository->selectWhere($where);
         if (count($entities) < 1) {
@@ -60,7 +61,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
 
 
         $entity = $entities[0];
-
+die('A');
         if (!empty($entity['redirectUrl'])) {
             System::redirect($entity['redirectUrl'], '', 301);
             return;
@@ -157,34 +158,34 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
         $filters[] = 'tbl.theModule = \'' . DataUtil::formatForStore($modname) . '\'';
         $filters[] = 'tbl.functionOfModule = \'' . DataUtil::formatForStore($modfunc) . '\'';
 
-        if ($extensionInfo['controllerForView'] == $modfunc) {
+        if ($modfunc == $extensionInfo['controllerForView']) {
             $objectType = $request->query->filter($extensionInfo['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
                 $filters[] = 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
 
-            $objectId = $request->query->filter($extensionInfo['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
+            $objectId = $request->query->filter($extensionInfo['nameOfIdentifier'], 0, FILTER_VALIDATE_INT);
             $filters[] = 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
 
-            $objectString = $request->query->filter($extensionInfo['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
-            $filters[] = 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
+            /*$objectString = $request->query->filter($extensionInfo['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
+            $filters[] = 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';*/
         }
 
-        if ($extensionInfo['controllerForSingleObject'] == $modfunc && $extensionInfo['controllerForView'] != $extensionInfo['controllerForSingleObject']) {
+        if ($modfunc == $extensionInfo['controllerForSingleObject'] && $extensionInfo['controllerForView'] != $extensionInfo['controllerForSingleObject']) {
             $objectType = $request->query->filter($extensionInfo['parameterForObjects'], '', FILTER_SANITIZE_STRING);
             if ($objectType != '') {
                 $filters[] = 'tbl.objectOfModule = \'' . DataUtil::formatForStore($objectType) . '\'';
             }
 
             if ($modname != 'PostCalendar') {
-                $objectId = $request->query->filter($extensionInfo['nameOfIdentifier'], 0, FILTER_SANITIZE_STRING);
+                $objectId = $request->query->filter($extensionInfo['nameOfIdentifier'], 0, FILTER_VALIDATE_INT);
                 if ($objectId > 0) {
                     $filters[] = 'tbl.idOfObject = \'' . DataUtil::formatForStore($objectId) . '\'';
                 }
-                $objectString = $request->query->filter($extensionInfo['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
+                /*$objectString = $request->query->filter($extensionInfo['nameOfIdentifier'], '', FILTER_SANITIZE_STRING);
                 if ($objectString != '') {
                     $filters[] = 'tbl.stringOfObject = \'' . DataUtil::formatForStore($objectString) . '\'';
-                }
+                }*/
             }
         }
         if ($extensionInfo['extraIdentifier'] != '') {

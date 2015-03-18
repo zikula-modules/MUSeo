@@ -43,6 +43,48 @@ class MUSeo_Installer extends MUSeo_Base_Installer
               
                 }
             case '1.1.0':
+                // remove obsolete modvar
+                $this->delVar('robots');
+
+                // update the database schema
+                try {
+                    DoctrineHelper::updateSchema($this->entityManager, $this->listEntityClasses());
+                } catch (Exception $e) {
+                    if (System::isDevelopmentMode()) {
+                        LogUtil::registerError($this->__('Doctrine Exception: ') . $e->getMessage());
+                    }
+                    return LogUtil::registerError($this->__f('An error was encountered while dropping the tables for the %s module.', array($this->getName())));
+              
+                }
+
+                // add new modvars
+                $this->setVar('robotsIndex',  'index' );
+                $this->setVar('robotsFollow',  'follow' );
+                $this->setVar('disableAdvancedMeta', true);
+                $this->setVar('alexaVerify', '');
+                $this->setVar('googleVerify', '');
+                $this->setVar('msVerify', '');
+                $this->setVar('pinterestVerify', '');
+                $this->setVar('yandexVerify', '');
+                $this->setVar('forceTransport', 'default');
+                $this->setVar('noodp', false);
+                $this->setVar('noydir', false);
+                $this->setVar('facebookAdmins', '');
+                $this->setVar('facebookApps', '');
+                $this->setVar('facebookConnectKey', '');
+                $this->setVar('openGraphEnabled', true);
+                $this->setVar('facebookAdminApp', 0);
+                $this->setVar('facebookSite', '');
+                $this->setVar('openGraphFrontpageTitle', '');
+                $this->setVar('openGraphFrontpageDescription', '');
+                $this->setVar('openGraphFrontpageImage', '');
+                $this->setVar('openGraphDefaultImage', '');
+                $this->setVar('twitterEnabled', false);
+                $this->setVar('twitterSiteUser', '');
+                $this->setVar('twitterDefaultCardType', 'summary');
+                $this->setVar('googlePlusEnabled', false);
+                $this->setVar('googlePlusPublisherPage', '');
+            case '2.0.0':
                 // further upgrade
 
         }

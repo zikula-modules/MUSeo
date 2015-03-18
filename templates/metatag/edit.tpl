@@ -103,7 +103,7 @@
                     $('snippetPreview').update('<a class="title" href="#">' + yst_boldKeywords(title, false) + '</a><span class="url">' + yst_boldKeywords(url, true) + '</span><p class="desc"><span class="content">' + yst_trimDesc(yst_boldKeywords(description, false)) + '</span></p>');
                 }
                 
-                var  request = new Zikula.Ajax.Request(
+                var request = new Zikula.Ajax.Request(
                     Zikula.Config.baseURL + 'ajax.php?module=MUSeo&func=scoreURL',
                     {
                         method: 'get',
@@ -182,15 +182,17 @@
 
                 <div class="z-formrow">
                     <label title="" class="museo-form-tooltips">{gt text='Snippet Preview'}</label>
-                    <div id="snippetPreview">
+                    <div id="snippetPreview" style="margin-left: 30%">
                     </div>
                     <span class="z-formnote">{gt text='This is a rendering of what this page might look like in Google\'s search results.'}</span>
                 </div>
                 
                 <div class="z-formrow">
                     <label title="" class="museo-form-tooltips" >{gt text='Page Score'}</label>
-                    {gt text='Total'}: <span id="pageScoreTotal"></span>
-                    <div id="pageScore">
+                    <div>
+                        <p>{gt text='Total'}: <span id="pageScoreTotal"></span></p>
+                        <div id="pageScore" style="margin-left: 30%" class="z-sub">
+                        </div>
                     </div>
                 </div>
 

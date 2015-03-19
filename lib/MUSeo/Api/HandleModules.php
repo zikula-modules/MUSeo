@@ -117,7 +117,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             }
             $metaTags[] = '<meta property="og:title" content="'. (($entity['facebookTitle'] != '') ? $entity['facebookTitle'] : PageUtil::getVar('title')) .'">';
             $metaTags[] = '<meta property="og:description" content="'. (($entity['facebookDescription'] != '') ? $entity['facebookDescription'] : PageUtil::getVar('description')) .'">';
-            $metaTags[] = '<meta property="og:image" content="' . (($entity['facebookImage'] != '') ? $entity['facebookImage'] : $modVars['openGraphDefaultImage']) . '">';
+            $metaTags[] = '<meta property="og:image" content="' . (($entity['facebookImage'] != '') ? $entity['facebookImageFullPathUrl'] : $modVars['openGraphDefaultImage']) . '">';
             $metaTags[] = '<meta property="og:url" content="' . (($canonical) ? $canonical : System::getCurrentUrl()) . '">';
             $metaTags[] = '<meta property="og:site_name" content="' . System::getVar('sitename') . '">';
             if (isset($entity['updatedDate'])) {

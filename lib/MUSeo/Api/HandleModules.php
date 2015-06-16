@@ -130,7 +130,7 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
                 }
             }
             $metaTags[] = '<meta property="og:type" content="website">';
-            $metaTags[] = '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">';
+            //$metaTags[] = '<meta property="og:locale" content="' . ZLanguage::getLocale() . '">';
         }
 
         if ($modVars['googlePlusEnabled']) {

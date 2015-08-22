@@ -21,7 +21,7 @@ class MUSeo_Api_Scoring extends Zikula_AbstractApi
     public function score($url, $keyword)
     {
         $this->pageUrl = $url;
-        $this->keyword = $keyword;
+        $this->keyword = urldecode($keyword);
         $this->keywordFolded = $this->strip_separators_and_fold($this->keyword);
 
 

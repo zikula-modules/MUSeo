@@ -66,8 +66,11 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             return;
         }
 
+        $metaTags = array();
+
         if (!empty($entity['title'])) {
             PageUtil::setVar('title', $entity['title']);
+            $metaTags[] = '<meta name="title" content="' . $entity['title'] . '" />';
         }
         if (!empty($entity['description'])) {
             $sm = ServiceUtil::getManager();
@@ -77,8 +80,6 @@ class MUSeo_Api_HandleModules extends MUSeo_Api_Base_HandleModules
             $sm = ServiceUtil::getManager();
             $sm['zikula_view.metatags']['keywords'] = $entity['keywords'];
         }
-
-        $metaTags = array();
 
         if (!empty($entity['robotsIndex']) || !empty($entity['robotsFollow']) || !empty($entity['robotsAdvanced'])) {
             $robotsString = self::determineRobotsString($entity);

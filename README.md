@@ -1,5 +1,4 @@
-MUSeo
-=====
+# MUSeo
 
 A small Zikula module for improved SEO handling.
 
@@ -11,13 +10,11 @@ The result is that sites use the same title or description or keyword tag on all
 
 MUSeo provides a way to override or add metatags to the html code of any page of a website.
 
-Version 1.1.0
-=============
+## Version 1.1.0
 
 With MUSeo you are able to set specific metatags (title, description, keywords, robots) for arbitrary pages.
 
-Configuration
-----------------  
+### Configuration
 
 You have to enter desired modules and controllers (comma separated without whitespace) for which you want to activate enhanced SEO capabilities.
 
@@ -37,18 +34,15 @@ The default value is as follows:
 
 `<meta name="ROBOTS" content="index, follow" />`
 
-Modules
----------------
+### Modules
 
 After the initial configuration you can create module references and enter the relevant data for them.
 
-Metatags
----------------
+### Metatags
 
 After you have created module references you can create metatags for each page of the corresponding modules.
 
-Version 2.0.0
-=============
+## Version 2.0.0
 
 MUSeo is currently being developed. It is going to offer more sophisticated SEO settings.
 

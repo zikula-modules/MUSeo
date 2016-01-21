@@ -1,14 +1,11 @@
-MUSeo changelog
-===============
+# MUSeo changelog
 
-2.0.0
------
+## 2.0.0
 
 * Added many new fields and options (like social media support).
 
 
-1.1.0
------
+## 1.1.0
 
 # closed #1 Now it is possible to set further parameter to handle for example categories calling with a module
 
